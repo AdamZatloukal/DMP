@@ -8,6 +8,7 @@ uint8_t LED_data[NUM_OF_LEDS][3];				// Stores RGB decimal RGB values for each L
 uint16_t PWM_DCL[24 * NUM_OF_LEDS + 50];		// 24 bits (each RGB color has 8 bits) + 50 as the reset signal after all data for the LEDs are sent, holds the DCL value for each bit
 uint8_t PWM_completed = 0;
 int LED_index = 0;
+uint8_t channel = 1;
 
 
 /*
@@ -59,7 +60,13 @@ void send_data(uint8_t channel){
 }
 
 void HAL_TIM_PWM_PulseFinishedCallback( TIM_HandleTypeDef *htim){
-	HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_1);
+	if(channel == 1){
+		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_1);
+	}
+	else if(channel == 2){
+		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_2);
+	}
+
 	PWM_completed = 0;
 }
 
