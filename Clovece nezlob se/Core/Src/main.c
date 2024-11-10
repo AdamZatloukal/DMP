@@ -99,11 +99,9 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  set_LED_color(1, 0, 0, 100);
-  set_LED_color(2, 255, 100, 0);
-  set_LED_color(3, 0, 0, 100);
-  set_LED_color(5, 100, 0, 0);
-  send_data(2);
+  turn_on_all_led(1, 255, 0, 255);
+  turn_on_all_led(2, 255, 255, 255);
+  turn_on_all_led(3, 0, 255, 0);
   while (1)
   {
     /* USER CODE END WHILE */
