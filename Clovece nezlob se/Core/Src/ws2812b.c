@@ -7,7 +7,9 @@ extern TIM_HandleTypeDef htim1;					//makes htim1 a global variable
 
 uint8_t channel;
 uint16_t number_of_leds = NUM_OF_LEDS_BOARD;
-uint8_t LED_data[NUM_OF_LEDS_BOARD][3];
+uint8_t LED_data_ch1[NUM_OF_LEDS_BOARD][3];
+uint8_t LED_data_ch2[NUM_OF_LEDS_START][3];
+uint8_t LED_data_ch3[NUM_OF_LEDS_END][3];
 uint16_t PWM_DCL_CH1[24 * NUM_OF_LEDS_BOARD + 50];
 uint16_t PWM_DCL_CH2[24 * NUM_OF_LEDS_START + 50];
 uint16_t PWM_DCL_CH3[24 * NUM_OF_LEDS_END + 50];
@@ -59,14 +61,27 @@ uint8_t set_num_of_leds(uint8_t channel){
  * Sets the input values into the LED_data array
  * Parameters:
  * LED_index - index of the LED
+ * channel - channel of TIM1 (1 - 3)
  * Red 	   - value of Red (0 - 255)
  * Green     - value of Green (0 - 255)
  * Blue	   - value of Blue (0 - 255)
 */
-void set_LED_color(int LED_index,uint8_t Red, uint8_t Green, uint8_t Blue){
-	LED_data[LED_index][0] = Red;
-	LED_data[LED_index][1] = Green;
-	LED_data[LED_index][2] = Blue;
+void set_LED_color(int LED_index,uint8_t channel,uint8_t Red, uint8_t Green, uint8_t Blue){
+	if(channel == 1){
+		LED_data_ch1[LED_index][0] = Red;
+		LED_data_ch1[LED_index][1] = Green;
+		LED_data_ch1[LED_index][2] = Blue;
+	}
+	else if(channel == 2){
+		LED_data_ch2[LED_index][0] = Red;
+		LED_data_ch2[LED_index][1] = Green;
+		LED_data_ch2[LED_index][2] = Blue;
+	}
+	else if(channel == 3){
+		LED_data_ch3[LED_index][0] = Red;
+		LED_data_ch3[LED_index][1] = Green;
+		LED_data_ch3[LED_index][2] = Blue;
+	}
 }
 
 /*
@@ -84,7 +99,15 @@ void send_data(uint8_t channel){
 	number_of_leds = set_num_of_leds(channel);
 
 	for(i =0; i < number_of_leds; i++){
-		color_bits = (LED_data[i][1]<<16) | (LED_data[i][0]<<8) | (LED_data[i][2]);		// Shifts the bits into the position that is in the datasheet (GRB)
+		if(channel == 1){
+			color_bits = (LED_data_ch1[i][1]<<16) | (LED_data_ch1[i][0]<<8) | (LED_data_ch1[i][2]);		// Shifts the bits into the position that is in the datasheet (GRB)
+		}
+		else if(channel == 2){
+			color_bits = (LED_data_ch2[i][1]<<16) | (LED_data_ch2[i][0]<<8) | (LED_data_ch2[i][2]);
+		}
+		else if(channel == 3){
+			color_bits = (LED_data_ch3[i][1]<<16) | (LED_data_ch3[i][0]<<8) | (LED_data_ch3[i][2]);
+		}
 
 
 		for(j = 23; j >= 0; j--){		// Iterates 24 times to go thorough each bit of color_bits
@@ -134,11 +157,9 @@ void HAL_TIM_PWM_PulseFinishedCallback( TIM_HandleTypeDef *htim){
 void turn_on_all_led(uint8_t channel, uint8_t Red, uint8_t Green, uint8_t Blue){
 	int i;
 
-	for(i = 0; i < number_of_leds; i++){
-		set_LED_color(i, Red, Green, Blue);
+	for(i = 0; i < set_num_of_leds(channel); i++){
+		set_LED_color(i, channel, Red, Green, Blue);
 	}
-
-	send_data(channel);
 }
 
 /*
@@ -196,3 +217,4 @@ uint16_t* set_data_array(uint8_t channel){
 			return PWM_DCL_CH1;
 	}
 }
+

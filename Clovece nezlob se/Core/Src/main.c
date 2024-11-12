@@ -99,11 +99,22 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  turn_on_all_led(1, 255, 0, 255);
-  turn_on_all_led(2, 255, 255, 255);
-  turn_on_all_led(3, 0, 255, 0);
+
+
+  //turn_on_all_led(2, 255, 255, 255);
+  //turn_on_all_led(3, 0, 255, 0);
   while (1)
   {
+	  turn_on_all_led(1, 100, 0, 0);
+	  turn_on_all_led(3, 0, 100, 0);
+	  send_data(1);
+	  send_data(3);
+	  HAL_Delay(500);
+	  turn_on_all_led(1, 0, 0, 0);
+	  turn_on_all_led(3, 0, 0, 0);
+	  send_data(3);
+	  send_data(1);
+	  HAL_Delay(500);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
