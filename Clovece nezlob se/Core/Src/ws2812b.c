@@ -1,18 +1,26 @@
 #include "main.h"
 #include "ws2812b.h"
 #include "string.h"
+#include "math.h"
 
 extern TIM_HandleTypeDef htim1;					//makes htim1 a global variable
 
 
 uint8_t channel;
 uint16_t number_of_leds = NUM_OF_LEDS_BOARD;
+
 uint8_t LED_data_ch1[NUM_OF_LEDS_BOARD][3];
 uint8_t LED_data_ch2[NUM_OF_LEDS_START][3];
 uint8_t LED_data_ch3[NUM_OF_LEDS_END][3];
+
+uint8_t LED_mod_ch1[NUM_OF_LEDS_BOARD][3];
+uint8_t LED_mod_ch2[NUM_OF_LEDS_START][3];
+uint8_t LED_mod_ch3[NUM_OF_LEDS_END][3];
+
 uint16_t PWM_DCL_CH1[24 * NUM_OF_LEDS_BOARD + 50];
 uint16_t PWM_DCL_CH2[24 * NUM_OF_LEDS_START + 50];
 uint16_t PWM_DCL_CH3[24 * NUM_OF_LEDS_END + 50];
+
 uint8_t PWM_completed = 0;
 int LED_index = 0;
 
@@ -93,12 +101,21 @@ void set_LED_color(int LED_index,uint8_t channel,uint8_t Red, uint8_t Green, uin
 void send_data(uint8_t channel){
 	uint32_t color_bits;
 	LED_index = 0;
-	int i;
-	int j;
 
 	number_of_leds = set_num_of_leds(channel);
 
-	for(i =0; i < number_of_leds; i++){
+	for(int i = 0; i < number_of_leds; i++){
+#if USE_BRIGHTNESS
+		if(channel == 1){
+			color_bits = (LED_mod_ch1[i][1]<<16) | (LED_mod_ch1[i][0]<<8) | (LED_mod_ch1[i][2]);
+		}
+		else if(channel == 2){
+			color_bits = (LED_mod_ch2[i][1]<<16) | (LED_mod_ch2[i][0]<<8) | (LED_mod_ch2[i][2]);
+		}
+		else if(channel == 3){
+			color_bits = (LED_mod_ch3[i][1]<<16) | (LED_mod_ch3[i][0]<<8) | (LED_mod_ch3[i][2]);
+		}
+#else
 		if(channel == 1){
 			color_bits = (LED_data_ch1[i][1]<<16) | (LED_data_ch1[i][0]<<8) | (LED_data_ch1[i][2]);		// Shifts the bits into the position that is in the datasheet (GRB)
 		}
@@ -108,9 +125,10 @@ void send_data(uint8_t channel){
 		else if(channel == 3){
 			color_bits = (LED_data_ch3[i][1]<<16) | (LED_data_ch3[i][0]<<8) | (LED_data_ch3[i][2]);
 		}
+#endif
 
 
-		for(j = 23; j >= 0; j--){		// Iterates 24 times to go thorough each bit of color_bits
+		for(int j = 23; j >= 0; j--){		// Iterates 24 times to go thorough each bit of color_bits
 			if(color_bits & (1 << j)){	// Creates a 24b mask where only jth bit is 1 and compares it to color_bits - the result of the applied mask are 24 bits and if only 1 bit it 1 it is considered True
 				set_data_array_value(LED_index, channel, "high");	// If the result is 1 than the bit gets assigned DCL of 64%
 			}
@@ -121,7 +139,7 @@ void send_data(uint8_t channel){
 		}
 	}
 
-	for(i = 0; i < 50; i++){		// Creates 50 values with the DCL of 0 to act as the reset pulse (ws2812b datasheet)
+	for(int i = 0; i < 50; i++){		// Creates 50 values with the DCL of 0 to act as the reset pulse (ws2812b datasheet)
 		set_data_array_value(LED_index, channel, "none");
 		LED_index++;
 	}
@@ -218,3 +236,24 @@ uint16_t* set_data_array(uint8_t channel){
 	}
 }
 
+void set_brightness(uint8_t channel, uint8_t brightness){
+#if USE_BRIGHTNESS
+	float normalized_brightness = brightness / 255.0f;
+	float gamma = 2.2f;
+	float scale_factor = pow(normalized_brightness, gamma);
+
+	for(int i = 0; i < set_num_of_leds(channel); i++){
+		for(int j = 0; j < 3; j++){
+			if(channel == 1){
+				LED_mod_ch1[i][j] = (int)(LED_data_ch1[i][j] * scale_factor);
+			}
+			else if(channel == 2){
+				LED_mod_ch2[i][j] = (int)(LED_data_ch2[i][j] * scale_factor);
+			}
+			else if(channel == 3){
+				LED_mod_ch3[i][j] = (int)(LED_data_ch3[i][j] * scale_factor);
+			}
+		}
+	}
+#endif
+}

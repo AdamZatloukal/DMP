@@ -12,6 +12,7 @@
 #define NUM_OF_LEDS_BOARD 70
 #define NUM_OF_LEDS_START	16
 #define NUM_OF_LEDS_END		16
+#define USE_BRIGHTNESS		1
 
 // Functions
 void set_LED_color(int LED_index,uint8_t channel,uint8_t Red, uint8_t Green, uint8_t Blue);
@@ -21,5 +22,7 @@ uint8_t set_num_of_leds(uint8_t channel);
 void turn_on_all_led(uint8_t channel, uint8_t Red, uint8_t Green, uint8_t Blue);
 void set_data_array_value(uint16_t LED_index, uint8_t channel,char* level);
 uint16_t* set_data_array(uint8_t channel);
+void set_brightness(uint8_t channel, uint8_t brightness);
+
 
 #endif /* INC_WS2812B_H_ */
