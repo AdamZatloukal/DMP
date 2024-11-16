@@ -5,24 +5,37 @@
 
 extern TIM_HandleTypeDef htim1;					//makes htim1 a global variable
 
+typedef struct{
+	uint8_t led_data[NUM_OF_LEDS_BOARD][3];
+	uint8_t led_mod[NUM_OF_LEDS_BOARD][3];
+	uint16_t pwm_dcl[24 * NUM_OF_LEDS_BOARD + 50];
+}CH1_data;
+
+typedef struct{
+	uint8_t led_data[NUM_OF_LEDS_START][3];
+	uint8_t led_mod[NUM_OF_LEDS_START][3];
+	uint16_t pwm_dcl[24 * NUM_OF_LEDS_START + 50];
+}CH2_data;
+
+typedef struct{
+	uint8_t led_data[NUM_OF_LEDS_END][3];
+	uint8_t led_mod[NUM_OF_LEDS_END][3];
+	uint16_t pwm_dcl[24 * NUM_OF_LEDS_END + 50];
+}CH3_data;
+
+typedef struct{
+	CH1_data ch1;
+	CH2_data ch2;
+	CH3_data ch3;
+}Channel_data;
 
 uint8_t channel;
 uint16_t number_of_leds = NUM_OF_LEDS_BOARD;
+uint8_t pwm_completed = 0;
+int led_index = 0;
+float scale_factors[256];
 
-uint8_t LED_data_ch1[NUM_OF_LEDS_BOARD][3];
-uint8_t LED_data_ch2[NUM_OF_LEDS_START][3];
-uint8_t LED_data_ch3[NUM_OF_LEDS_END][3];
-
-uint8_t LED_mod_ch1[NUM_OF_LEDS_BOARD][3];
-uint8_t LED_mod_ch2[NUM_OF_LEDS_START][3];
-uint8_t LED_mod_ch3[NUM_OF_LEDS_END][3];
-
-uint16_t PWM_DCL_CH1[24 * NUM_OF_LEDS_BOARD + 50];
-uint16_t PWM_DCL_CH2[24 * NUM_OF_LEDS_START + 50];
-uint16_t PWM_DCL_CH3[24 * NUM_OF_LEDS_END + 50];
-
-uint8_t PWM_completed = 0;
-int LED_index = 0;
+Channel_data channel_data;		//Creates an instance of Channel_data struct
 
 /*
  * Sets channel of the timer
@@ -34,16 +47,16 @@ int LED_index = 0;
  */
 void set_PWM_channel(uint8_t channel){
 	if(channel == 1){
-		HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1,(uint32_t*)set_data_array(channel), LED_index);
+		HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1,(uint32_t*)set_data_array(channel), led_index);
 	}
 	else if(channel == 2){
-		HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_2, (uint32_t*) set_data_array(channel), LED_index);
+		HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_2, (uint32_t*) set_data_array(channel), led_index);
 	}
 	else if(channel == 3){
-		HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_3, (uint32_t*) set_data_array(channel), LED_index);
+		HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_3, (uint32_t*) set_data_array(channel), led_index);
 	}
-	while(PWM_completed == 0){};
-	PWM_completed = 0;
+	while(pwm_completed == 0){};
+	pwm_completed = 0;
 }
 
 /*
@@ -68,27 +81,27 @@ uint8_t set_num_of_leds(uint8_t channel){
 /*
  * Sets the input values into the LED_data array
  * Parameters:
- * LED_index - index of the LED
+ * led_index - index of the LED
  * channel - channel of TIM1 (1 - 3)
  * Red 	   - value of Red (0 - 255)
  * Green     - value of Green (0 - 255)
  * Blue	   - value of Blue (0 - 255)
 */
-void set_LED_color(int LED_index,uint8_t channel,uint8_t Red, uint8_t Green, uint8_t Blue){
+void set_LED_color(int led_index,uint8_t channel,uint8_t Red, uint8_t Green, uint8_t Blue){
 	if(channel == 1){
-		LED_data_ch1[LED_index][0] = Red;
-		LED_data_ch1[LED_index][1] = Green;
-		LED_data_ch1[LED_index][2] = Blue;
+		channel_data.ch1.led_data[led_index][0] = Red;
+		channel_data.ch1.led_data[led_index][1] = Green;
+		channel_data.ch1.led_data[led_index][2] = Blue;
 	}
 	else if(channel == 2){
-		LED_data_ch2[LED_index][0] = Red;
-		LED_data_ch2[LED_index][1] = Green;
-		LED_data_ch2[LED_index][2] = Blue;
+		channel_data.ch2.led_data[led_index][0] = Red;
+		channel_data.ch2.led_data[led_index][1] = Green;
+		channel_data.ch2.led_data[led_index][2] = Blue;
 	}
 	else if(channel == 3){
-		LED_data_ch3[LED_index][0] = Red;
-		LED_data_ch3[LED_index][1] = Green;
-		LED_data_ch3[LED_index][2] = Blue;
+		channel_data.ch3.led_data[led_index][0] = Red;
+		channel_data.ch3.led_data[led_index][1] = Green;
+		channel_data.ch3.led_data[led_index][2] = Blue;
 	}
 }
 
@@ -100,55 +113,55 @@ void set_LED_color(int LED_index,uint8_t channel,uint8_t Red, uint8_t Green, uin
 */
 void send_data(uint8_t channel){
 	uint32_t color_bits;
-	LED_index = 0;
+	led_index = 0;
 
 	number_of_leds = set_num_of_leds(channel);
 
 	for(int i = 0; i < number_of_leds; i++){
 #if USE_BRIGHTNESS
 		if(channel == 1){
-			color_bits = (LED_mod_ch1[i][1]<<16) | (LED_mod_ch1[i][0]<<8) | (LED_mod_ch1[i][2]);
+			color_bits = (channel_data.ch1.led_mod[i][1]<<16) | (channel_data.ch1.led_mod[i][0]<<8) | (channel_data.ch1.led_mod[i][2]);
 		}
 		else if(channel == 2){
-			color_bits = (LED_mod_ch2[i][1]<<16) | (LED_mod_ch2[i][0]<<8) | (LED_mod_ch2[i][2]);
+			color_bits = (channel_data.ch2.led_mod[i][1]<<16) | (channel_data.ch2.led_mod[i][0]<<8) | (channel_data.ch2.led_mod[i][2]);
 		}
 		else if(channel == 3){
-			color_bits = (LED_mod_ch3[i][1]<<16) | (LED_mod_ch3[i][0]<<8) | (LED_mod_ch3[i][2]);
+			color_bits = (channel_data.ch3.led_mod[i][1]<<16) | (channel_data.ch3.led_mod[i][0]<<8) | (channel_data.ch3.led_mod[i][2]);
 		}
 #else
 		if(channel == 1){
-			color_bits = (LED_data_ch1[i][1]<<16) | (LED_data_ch1[i][0]<<8) | (LED_data_ch1[i][2]);		// Shifts the bits into the position that is in the datasheet (GRB)
+			color_bits = (channel_data.ch1.led_data[i][1]<<16) | (channel_data.ch1.led_data[i][0]<<8) | (channel_data.ch1.led_data[i][2]);		// Shifts the bits into the position that is in the datasheet (GRB)
 		}
 		else if(channel == 2){
-			color_bits = (LED_data_ch2[i][1]<<16) | (LED_data_ch2[i][0]<<8) | (LED_data_ch2[i][2]);
+			color_bits = (channel_data.ch2.led_data[i][1]<<16) | (channel_data.ch2.led_data[i][0]<<8) | (channel_data.ch2.led_data[i][2]);
 		}
 		else if(channel == 3){
-			color_bits = (LED_data_ch3[i][1]<<16) | (LED_data_ch3[i][0]<<8) | (LED_data_ch3[i][2]);
+			color_bits = (channel_data.ch3.led_data[i][1]<<16) | (channel_data.ch3.led_data[i][0]<<8) | (channel_data.ch3.led_data[i][2]);
 		}
 #endif
 
 
 		for(int j = 23; j >= 0; j--){		// Iterates 24 times to go thorough each bit of color_bits
 			if(color_bits & (1 << j)){	// Creates a 24b mask where only jth bit is 1 and compares it to color_bits - the result of the applied mask are 24 bits and if only 1 bit it 1 it is considered True
-				set_data_array_value(LED_index, channel, "high");	// If the result is 1 than the bit gets assigned DCL of 64%
+				set_data_array_value(led_index, channel, "high");	// If the result is 1 than the bit gets assigned DCL of 64%
 			}
 			else{
-				set_data_array_value(LED_index, channel, "low");	// If the result is 0 DCL is 32%
+				set_data_array_value(led_index, channel, "low");	// If the result is 0 DCL is 32%
 			}
-			LED_index++;
+			led_index++;
 		}
 	}
 
-	for(int i = 0; i < 50; i++){		// Creates 50 values with the DCL of 0 to act as the reset pulse (ws2812b datasheet)
-		set_data_array_value(LED_index, channel, "none");
-		LED_index++;
+	for(int i = 0; i < RESET_PULSE_COUNT; i++){		// Creates 50 values with the DCL of 0 to act as the reset pulse (ws2812b datasheet)
+		set_data_array_value(led_index, channel, "none");
+		led_index++;
 	}
 	set_PWM_channel(channel);
 }
 
 /*
  * Stops PWM when all data is sent
- * Sets the PWM_completed flag
+ * Sets the pwm_completed flag
  */
 void HAL_TIM_PWM_PulseFinishedCallback( TIM_HandleTypeDef *htim){
 	if(channel == 1){
@@ -161,7 +174,7 @@ void HAL_TIM_PWM_PulseFinishedCallback( TIM_HandleTypeDef *htim){
 		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_3);
 	}
 
-	PWM_completed = 1;
+	pwm_completed = 1;
 }
 
 /*
@@ -183,18 +196,18 @@ void turn_on_all_led(uint8_t channel, uint8_t Red, uint8_t Green, uint8_t Blue){
 /*
  * Sets the DCL of a bit based on it´s channel and level
  * Parameters:
- * LED_index - LED number
+ * led_index - LED number
  * channel - TIM1 PWM channel (1 - 3)
  * level - "high" - DCL = 60
  * 		   "low"  - DCL = 30
  */
-void set_data_array_value(uint16_t LED_index, uint8_t channel,char* level){
+void set_data_array_value(uint16_t led_index, uint8_t channel,char* level){
 	uint8_t DCL;
 	if (strcmp(level, "high") == 0){
-		DCL = 60;
+		DCL = 64;
 	}
 	else if(strcmp(level, "low") == 0){
-		DCL = 30;
+		DCL = 32;
 	}
 	else if(strcmp(level, "none") == 0){
 		DCL = 0;
@@ -205,13 +218,13 @@ void set_data_array_value(uint16_t LED_index, uint8_t channel,char* level){
 
 	switch(channel){
 		case 1:
-			PWM_DCL_CH1[LED_index] = DCL;
+			channel_data.ch1.pwm_dcl[led_index] = DCL;
 			break;
 		case 2:
-			PWM_DCL_CH2[LED_index] = DCL;
+			channel_data.ch2.pwm_dcl[led_index] = DCL;
 			break;
 		case 3:
-			PWM_DCL_CH3[LED_index] = DCL;
+			channel_data.ch3.pwm_dcl[led_index] = DCL;
 			break;
 		default:
 			break;
@@ -226,34 +239,79 @@ void set_data_array_value(uint16_t LED_index, uint8_t channel,char* level){
 uint16_t* set_data_array(uint8_t channel){
 	switch(channel){
 		case 1:
-			return PWM_DCL_CH1;
+			return channel_data.ch1.pwm_dcl;
 		case 2:
-			return PWM_DCL_CH2;
+			return channel_data.ch2.pwm_dcl;
 		case 3:
-			return PWM_DCL_CH3;
+			return channel_data.ch3.pwm_dcl;
 		default:
-			return PWM_DCL_CH1;
+			return channel_data.ch1.pwm_dcl;
 	}
 }
 
+
+
+/*
+ * Sets the brightness of all LEDs
+ * Parameters:
+ * channel - TIM1 channel (1 - 3)
+ * brightness - brightness value (0 - 255)
+ */
 void set_brightness(uint8_t channel, uint8_t brightness){
 #if USE_BRIGHTNESS
-	float normalized_brightness = brightness / 255.0f;
-	float gamma = 2.2f;
-	float scale_factor = pow(normalized_brightness, gamma);
+	float scale_factor = scale_factors[brightness];
 
 	for(int i = 0; i < set_num_of_leds(channel); i++){
 		for(int j = 0; j < 3; j++){
 			if(channel == 1){
-				LED_mod_ch1[i][j] = (int)(LED_data_ch1[i][j] * scale_factor);
+				channel_data.ch1.led_mod[i][j] = (int)(channel_data.ch1.led_data[i][j] * scale_factor);
 			}
 			else if(channel == 2){
-				LED_mod_ch2[i][j] = (int)(LED_data_ch2[i][j] * scale_factor);
+				channel_data.ch2.led_mod[i][j] = (int)(channel_data.ch2.led_data[i][j] * scale_factor);
 			}
 			else if(channel == 3){
-				LED_mod_ch3[i][j] = (int)(LED_data_ch3[i][j] * scale_factor);
+				channel_data.ch3.led_mod[i][j] = (int)(channel_data.ch3.led_data[i][j] * scale_factor);
 			}
 		}
 	}
 #endif
+}
+
+/*
+ * Sets the brightness of an individual LED
+ * Parameters:
+ * led_index  - LED you want to change the brightness of
+ * channel - TIM1 channel (1 - 3)
+ * brightness - brightness value (0 - 255)
+ */
+void set_brightness_individually(uint8_t led_index,uint8_t channel, uint8_t brightness){
+#if USE_BRIGHTNESS
+	float scale_factor = scale_factors[brightness];
+
+	for(int j = 0; j < 3; j++){
+			if(channel == 1){
+				channel_data.ch1.led_mod[led_index][j] = (int)(channel_data.ch1.led_data[led_index][j] * scale_factor);
+			}
+			else if(channel == 2){
+				channel_data.ch2.led_mod[led_index][j] = (int)(channel_data.ch2.led_data[led_index][j] * scale_factor);
+			}
+			else if(channel == 3){
+				channel_data.ch3.led_mod[led_index][j] = (int)(channel_data.ch3.led_data[led_index][j] * scale_factor);
+			}
+		}
+#endif
+}
+
+
+/*
+ * Initializes the brightness calculations
+ * Results are put into a lookup table
+ */
+void init_brightness(void){
+	float gamma = 2.2f;
+
+	for(int brightness = 0; brightness < 256; brightness++){
+		float normalized_brightness = brightness / 255.0f;
+		scale_factors[brightness]= pow(normalized_brightness, gamma);
+	}
 }

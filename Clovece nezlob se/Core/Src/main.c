@@ -99,14 +99,13 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  for(int i = 0; i < 255; i++){
-	  turn_on_all_led(1, 0, 255, 200);
-	  set_brightness(1, i);
+  init_brightness();
+  turn_on_all_led(1, 200, 0, 0);
+
+  for(int i = 20; i < 255; i++){
+	  set_brightness_individually(i, 1, i);
 	  send_data(1);
-	  turn_on_all_led(2, 255, 255, 255);
-	  set_brightness(2, i);
-	  send_data(2);
-	  HAL_Delay(50);
+	  HAL_Delay(1000);
   }
 
 
