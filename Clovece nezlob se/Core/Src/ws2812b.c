@@ -42,7 +42,7 @@ Channel_data channel_data;		//Creates an instance of Channel_data struct
  * Parameters:
  * channel - Sets the PWM channel of timer 1
  * 			1 - TIM_CHANNEL_1
- * 			2 - TIM_CHANNEL_2
+ * 			2 - TIM_CHANNEL_4
  * 			3 - TIM_CHANNEL_3
  */
 void set_PWM_channel(uint8_t channel){
@@ -50,7 +50,7 @@ void set_PWM_channel(uint8_t channel){
 		HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_1,(uint32_t*)set_data_array(channel), led_index);
 	}
 	else if(channel == 2){
-		HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_2, (uint32_t*) set_data_array(channel), led_index);
+		HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_4, (uint32_t*) set_data_array(channel), led_index);
 	}
 	else if(channel == 3){
 		HAL_TIM_PWM_Start_DMA(&htim1, TIM_CHANNEL_3, (uint32_t*) set_data_array(channel), led_index);
@@ -82,7 +82,10 @@ uint8_t set_num_of_leds(uint8_t channel){
  * Sets the input values into the LED_data array
  * Parameters:
  * led_index - index of the LED
- * channel - channel of TIM1 (1 - 3)
+ * channel - channel of TIM1
+ * 			1 - board
+ * 			2 - start
+ * 			3 - end
  * Red 	   - value of Red (0 - 255)
  * Green     - value of Green (0 - 255)
  * Blue	   - value of Blue (0 - 255)
@@ -165,10 +168,10 @@ void send_data(uint8_t channel){
  */
 void HAL_TIM_PWM_PulseFinishedCallback( TIM_HandleTypeDef *htim){
 	if(channel == 1){
-		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_1);
+		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_1);			//never gets called since the global channel variable is always 0
 	}
 	else if(channel == 2){
-		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_2);
+		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_4);
 	}
 	else if(channel == 3){
 		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_3);
