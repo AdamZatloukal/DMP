@@ -60,19 +60,25 @@ void init_player(uint8_t player){
 			break;
 	}
 
+	for(int position = start_pos; position < start_pos + 4; position++){
+		set_LED_color(position, START, set_color(player, 0), set_color(player, 0), set_color(player, 0));		// sets all the led_data to 0
+	}
 	for(int position = start_pos; position < start_pos + player_struct->figures_at_start; position++){
 		set_LED_color(position, START, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE)); //set the color based on the player
 	}
 }
 
 /*
- * Initializes the board for a game based on how many players are playing
- * Parameters:
- * num_of_player - (1 - 4)
- *
- * to do: init different game modes, rules, etc.
+ * Sets the starting values of each player´s struct
  */
-void init_board(uint8_t num_of_players){
+void init_player_data(uint8_t number_of_players){
+	for(int player = 1; player <= 4; player++){
+		Player* player_struct = select_player(player);
+
+		for(int figure = 0; figure < 4; figure++){
+			player_struct->position[figure] = AT_START_POSITION;
+		}
+	}
 	// Color init
 	player_data.player1.color[0] = 255;		// Red		//SET THE VALUES OF ONLY PLAYERS THAT ARE PLAYING
 	player_data.player1.color[1] = 0;
@@ -96,7 +102,30 @@ void init_board(uint8_t num_of_players){
 	player_data.player3.figures_at_start = 4;
 	player_data.player4.figures_at_start = 4;
 
-	for(int player = 1; player <= num_of_players; player++){
+	// Board start and end positions
+	player_data.player1.board_start_position = 2;
+	player_data.player1.board_end_position = 1;
+
+	player_data.player2.board_start_position = 12;
+	player_data.player2.board_end_position = 11;
+
+	player_data.player3.board_start_position = 22;
+	player_data.player3.board_end_position = 21;
+
+	player_data.player4.board_start_position = 32;
+	player_data.player4.board_end_position = 31;
+}
+
+/*
+ * Initializes the board for a game based on how many players are playing
+ * Parameters:
+ * num_of_player - (1 - 4)
+ *
+ * to do: init different game modes, rules, etc.
+ */
+void init_board(uint8_t number_of_players){
+	init_player_data(number_of_players);
+	for(int player = 1; player <= number_of_players; player++){
 		init_player(player);
 	}
 	set_brightness(START, 100); //placeholder brightness
@@ -119,8 +148,9 @@ uint8_t roll_dice(uint8_t min, uint8_t max){
 
 /*
  * Add documentation
+ * figure - (0 - 3)
  */
-void select_figure(uint8_t figure, uint8_t player){			// add logic for buttons for now (take a look at the display)
+void select_figure(uint8_t player, uint8_t figure){			// add logic for buttons for now (take a look at the display)
 	switch(player){
 		case 1:
 			 player_data.player1.selected_figure = figure;
@@ -163,7 +193,7 @@ Player* select_player(uint8_t player){
  * Position 255 -> END
  *	Pointer shenanigans
  */
-void move_figure(uint8_t player,uint8_t figure, uint8_t number){
+void move_figure(uint8_t player, uint8_t number){
 	Player* player_struct = select_player(player);
 
 	// If the figure is at start and 6 is rolled the figure is set to the starting pos on the board
@@ -171,7 +201,14 @@ void move_figure(uint8_t player,uint8_t figure, uint8_t number){
 		if(player_struct->position[player_struct->selected_figure] == AT_START_POSITION){		//If the position of the selected figure is at start
 			player_struct->position[player_struct->selected_figure] = player_struct->board_start_position;		//set the position of the figure to the starting position of that color
 			player_struct->figures_at_start--;//Set the number of figures at start based on this number
-			init_player(player);		//updated the figures at start
-		}
+			init_player(player);		//updated the figures at start	-> add blinking or fade animation when you move figure from home
+			set_LED_color(player_struct->position[player_struct->selected_figure], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE)); //puts the figure on the board
+		}	//works tested
 	}
+	set_brightness(START, 100); //placeholder brightness
+	set_brightness(BOARD, 100);
+
+	send_data(START);
+	send_data(BOARD);
+	send_data(END);
 }

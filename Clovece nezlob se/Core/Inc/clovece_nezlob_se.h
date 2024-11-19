@@ -68,12 +68,12 @@ typedef enum{
 /*--------------------- Function declarations ---------------------*/
 
 uint8_t set_color(uint8_t player, Color color);
-void init_board(uint8_t num_of_players);
+void init_board(uint8_t number_of_players);
 void init_player(uint8_t player);
 
 uint8_t roll_dice(uint8_t min, uint8_t max);
 Player* select_player(uint8_t player);
-void select_figure(uint8_t figure, uint8_t player);
-void move_figure(uint8_t player,uint8_t figure, uint8_t number);
+void select_figure(uint8_t player, uint8_t figure);
+void move_figure(uint8_t player, uint8_t number);
 
 #endif /* INC_CLOVECE_NEZLOB_SE_H_ */

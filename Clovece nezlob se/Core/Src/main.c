@@ -102,6 +102,22 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   init_brightness();
   init_board(4);
+  // move figure from start player 2
+  select_figure(2, 1);
+  move_figure(2, 6);
+
+  select_figure(2, 3);
+  move_figure(2, 6);
+
+  select_figure(2, 2);
+  move_figure(2, 6);
+
+  select_figure(2, 0);
+  move_figure(2, 6);
+
+  //move figure from player 4
+  select_figure(4, 0);
+  move_figure(4, 6);
   //roll_dice(1, 6);
 
   while (1)

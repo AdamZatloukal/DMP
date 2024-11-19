@@ -9,7 +9,7 @@
 #define INC_WS2812B_H_
 
 // Macros
-#define NUM_OF_LEDS_BOARD   70
+#define NUM_OF_LEDS_BOARD   40
 #define NUM_OF_LEDS_START	16
 #define NUM_OF_LEDS_END		16
 #define USE_BRIGHTNESS		1
