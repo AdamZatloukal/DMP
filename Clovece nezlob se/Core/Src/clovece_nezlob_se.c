@@ -6,10 +6,9 @@
 #include "clovece_nezlob_se.h"
 #include "main.h"
 
-
+uint8_t num_of_players;
 
 PlayerData player_data;
-uint8_t num_of_players;
 
 
 /*--------------------- Board Initialization ---------------------*/
@@ -71,6 +70,8 @@ void init_player(uint8_t player){
 
 /*
  * Sets the starting values of each player´s struct
+ * Parameters:
+ * number_of_players - amount of players playing the game (2 - 4)
  */
 void init_player_data(uint8_t number_of_players){
 	num_of_players = number_of_players;
@@ -141,7 +142,8 @@ void init_board(uint8_t number_of_players){
 /*--------------------- Dice, figure movement ---------------------*/
 
 /*
- * Add documentation
+ * Placeholder function currently
+ * Generates pseudo random numbers using a seed
  */
 uint8_t roll_dice(uint8_t min, uint8_t max){
 	srand(time(0));
@@ -150,7 +152,9 @@ uint8_t roll_dice(uint8_t min, uint8_t max){
 }
 
 /*
- * Add documentation
+ * Selects the figure
+ * !!!Placeholder function currently!!!
+ * Parameters:
  * figure - (0 - 3)
  */
 void select_figure(uint8_t player, uint8_t figure){			// add logic for buttons for now (take a look at the display)
@@ -174,7 +178,13 @@ void select_figure(uint8_t player, uint8_t figure){			// add logic for buttons f
 }
 
 /*
- * Add documentation
+ * Selects player struct based on the input player
+ * Parameters:
+ * player - current player
+ *
+ * Notes:
+ * Function returns a pointer to the struct -> store the returned value
+ * in a Player pointer
  */
 Player* select_player(uint8_t player){
 	switch(player){
@@ -192,9 +202,14 @@ Player* select_player(uint8_t player){
 }
 
 /*
+ * Handles all movement of figures on the board
+ * Parameters:
+ * player - player whose turn currently is
+ * number - number that was rolled
+ *
+ * Notes:
  * Position 254 -> START
  * Position 255 -> END
- *	Pointer shenanigans
  */
 void move_figure(uint8_t player, uint8_t number){
 	Player* player_struct = select_player(player);
@@ -210,13 +225,21 @@ void move_figure(uint8_t player, uint8_t number){
 		set_LED_color(*figure_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE)); //puts the figure on the board
 
 	}
+	// Figure movement on the board
 	else{
 		for(int step = 0; step < number; step++){
-			(*figure_position)++;
+			if(*figure_position == 39){
+				*figure_position = 0;
 
+				set_LED_color(*figure_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+				set_LED_color(39, BOARD, set_color(player, 0), set_color(player, 0), set_color(player, 0));
+			}
+			else{
+				(*figure_position)++;
 
-			set_LED_color(*figure_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
-			set_LED_color(*figure_position - 1, BOARD, set_color(player, 0), set_color(player, 0), set_color(player, 0));
+				set_LED_color(*figure_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+				set_LED_color(*figure_position - 1, BOARD, set_color(player, 0), set_color(player, 0), set_color(player, 0));
+			}
 
 			set_position_of_all_figures();
 
@@ -226,7 +249,9 @@ void move_figure(uint8_t player, uint8_t number){
 			HAL_Delay(1000);
 		}
 	}
-	set_brightness(START, 100); //placeholder brightness
+
+	// Send the data to the LED strip
+	set_brightness(START, 100); // 100 is placeholder brightness
 	set_brightness(BOARD, 100);
 	set_brightness(END, 100);
 
@@ -237,7 +262,9 @@ void move_figure(uint8_t player, uint8_t number){
 
 
 /*
- * This function doesn't send the data but only sets the RGB values for each position
+ * Sets the position of all figures
+ * Used when 2 figures overlap to light up the figure that the other figure went over
+ * !!!This function doesn't send the data but only sets the RGB values for each position!!!
  */
 void set_position_of_all_figures(void){
 	for(int player = 1; player <= num_of_players; player++){
