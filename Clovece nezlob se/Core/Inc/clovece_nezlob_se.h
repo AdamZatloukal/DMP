@@ -75,5 +75,6 @@ uint8_t roll_dice(uint8_t min, uint8_t max);
 Player* select_player(uint8_t player);
 void select_figure(uint8_t player, uint8_t figure);
 void move_figure(uint8_t player, uint8_t number);
+void set_position_of_all_figures(void);
 
 #endif /* INC_CLOVECE_NEZLOB_SE_H_ */

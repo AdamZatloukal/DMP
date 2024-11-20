@@ -9,6 +9,7 @@
 
 
 PlayerData player_data;
+uint8_t num_of_players;
 
 
 /*--------------------- Board Initialization ---------------------*/
@@ -72,6 +73,7 @@ void init_player(uint8_t player){
  * Sets the starting values of each player´s struct
  */
 void init_player_data(uint8_t number_of_players){
+	num_of_players = number_of_players;
 	for(int player = 1; player <= 4; player++){
 		Player* player_struct = select_player(player);
 
@@ -130,6 +132,7 @@ void init_board(uint8_t number_of_players){
 	}
 	set_brightness(START, 100); //placeholder brightness
 	send_data(START);
+	send_data(BOARD);
 }
 
 
@@ -195,20 +198,57 @@ Player* select_player(uint8_t player){
  */
 void move_figure(uint8_t player, uint8_t number){
 	Player* player_struct = select_player(player);
+	uint8_t* figure_position = &player_struct->position[player_struct->selected_figure];
 
-	// If the figure is at start and 6 is rolled the figure is set to the starting pos on the board
-	if(number == 6){
-		if(player_struct->position[player_struct->selected_figure] == AT_START_POSITION){		//If the position of the selected figure is at start
-			player_struct->position[player_struct->selected_figure] = player_struct->board_start_position;		//set the position of the figure to the starting position of that color
-			player_struct->figures_at_start--;//Set the number of figures at start based on this number
-			init_player(player);		//updated the figures at start	-> add blinking or fade animation when you move figure from home
-			set_LED_color(player_struct->position[player_struct->selected_figure], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE)); //puts the figure on the board
-		}	//works tested
+
+	// Removes the figure from start and puts it on the board
+	if(number == 6 && *figure_position == AT_START_POSITION){
+		*figure_position = player_struct->board_start_position;
+		player_struct->figures_at_start--;
+
+		init_player(player);		//updated the figures at start	-> add blinking or fade animation when you move figure from home
+		set_LED_color(*figure_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE)); //puts the figure on the board
+
+	}
+	else{
+		for(int step = 0; step < number; step++){
+			(*figure_position)++;
+
+
+			set_LED_color(*figure_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+			set_LED_color(*figure_position - 1, BOARD, set_color(player, 0), set_color(player, 0), set_color(player, 0));
+
+			set_position_of_all_figures();
+
+			set_brightness(BOARD, 100);
+			send_data(BOARD);
+
+			HAL_Delay(1000);
+		}
 	}
 	set_brightness(START, 100); //placeholder brightness
 	set_brightness(BOARD, 100);
+	set_brightness(END, 100);
 
 	send_data(START);
 	send_data(BOARD);
 	send_data(END);
+}
+
+
+/*
+ * This function doesn't send the data but only sets the RGB values for each position
+ */
+void set_position_of_all_figures(void){
+	for(int player = 1; player <= num_of_players; player++){
+		Player* player_struct = select_player(player);
+
+		for(int figure = 0; figure < 4; figure++){
+			uint8_t* figure_position = &player_struct->position[figure];
+
+			if(*figure_position != AT_START_POSITION || *figure_position != IN_FINISH_POSITION){
+				set_LED_color(*figure_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+			}
+		}
+	}
 }

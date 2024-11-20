@@ -118,6 +118,22 @@ int main(void)
   //move figure from player 4
   select_figure(4, 0);
   move_figure(4, 6);
+
+  //move figure on the board
+  select_figure(2, 2);
+  move_figure(2, 3);
+
+  select_figure(2, 1);
+  move_figure(2, 5);
+
+  select_figure(2, 3);
+  move_figure(2, 6);
+
+  select_figure(2, 0);
+  move_figure(2, 2);
+
+  select_figure(4, 0);
+  move_figure(4, 2);
   //roll_dice(1, 6);
 
   while (1)
