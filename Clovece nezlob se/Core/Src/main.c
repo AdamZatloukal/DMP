@@ -133,10 +133,10 @@ int main(void)
   move_figure(2, 2);
 
   select_figure(4, 0);
-  move_figure(4, 7);
+  move_figure(4, 2);
 
   // Sets the figure to the start of the board
-  move_figure(4, 1);
+  move_figure(2, 40);
 
   //roll_dice(1, 6);
 

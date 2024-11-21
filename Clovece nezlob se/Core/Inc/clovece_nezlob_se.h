@@ -14,7 +14,7 @@
 /*
  * Each player has a struct with these parameters
  * position - the current position on the board of each figure
- * positions_moved - how many positions a figure has moved - needed to calculate when the figure reaches the end
+ * positions_moved - how many positions a figure has moved - needed to calculate when the figure reaches the end		UPDATE
  * at_start - how many figures are still at start
  * color - color of each player
  */
@@ -76,5 +76,6 @@ Player* select_player(uint8_t player);
 void select_figure(uint8_t player, uint8_t figure);
 void move_figure(uint8_t player, uint8_t number);
 void set_position_of_all_figures(void);
+void kick_out_figure(uint8_t player);
 
 #endif /* INC_CLOVECE_NEZLOB_SE_H_ */

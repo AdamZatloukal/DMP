@@ -242,6 +242,7 @@ void move_figure(uint8_t player, uint8_t number){
 			}
 
 			set_position_of_all_figures();
+			kick_out_figure(player);
 
 			set_brightness(BOARD, 100);
 			send_data(BOARD);
@@ -275,6 +276,45 @@ void set_position_of_all_figures(void){
 
 			if(*figure_position != AT_START_POSITION || *figure_position != IN_FINISH_POSITION){
 				set_LED_color(*figure_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+			}
+		}
+	}
+}
+
+
+/*
+ * Checks if 2 figure that are not from the same player overlap
+ * If they do the figure that was originally there gets kicked to the START
+ * Parameters:
+ * player - the player whose turn currently is
+ */
+void kick_out_figure(uint8_t player){
+	Player* player_struct = select_player(player);
+
+	for(int current_player = 1;  current_player < 5; current_player++){
+		// Checks if the iterated player is the same as the player whose figure moved (you cannot kick out your own figure)
+		if(current_player == player){
+			continue;
+		}
+		// Figures overlap -> figure that was originally in that place gets kicked out
+		else{
+			Player* iterated_player_struct = select_player(current_player);
+
+			for(int figure = 0; figure < 4; figure++){
+				uint8_t* iterated_figure = &iterated_player_struct->position[figure];
+
+				if(*iterated_figure == player_struct->position[player_struct->selected_figure]){
+					set_LED_color(*iterated_figure, BOARD, set_color(current_player, 0), set_color(current_player, 0), set_color(current_player, 0));
+					set_LED_color(player_struct->position[player_struct->selected_figure], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+
+					*iterated_figure = AT_START_POSITION;
+					iterated_player_struct->figures_at_start++;
+
+					init_player(current_player);		//Put the figure back to start
+
+					set_brightness(START, 100);			// Updates the START
+					send_data(START);
+				}
 			}
 		}
 	}
