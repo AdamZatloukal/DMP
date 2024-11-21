@@ -105,6 +105,11 @@ void init_player_data(uint8_t number_of_players){
 	player_data.player3.figures_at_start = 4;
 	player_data.player4.figures_at_start = 4;
 
+	player_data.player1.figures_in_finish = 0;
+	player_data.player2.figures_in_finish = 0;
+	player_data.player3.figures_in_finish = 0;
+	player_data.player4.figures_in_finish = 0;
+
 	// Board start and end positions
 	player_data.player1.board_start_position = 2;
 	player_data.player1.board_end_position = 1;
@@ -117,6 +122,12 @@ void init_player_data(uint8_t number_of_players){
 
 	player_data.player4.board_start_position = 32;
 	player_data.player4.board_end_position = 31;
+
+	// Set where home of each player begins
+	player_data.player1.home_start_position = 3;
+	player_data.player2.home_start_position = 7;
+	player_data.player3.home_start_position = 8;
+	player_data.player4.home_start_position = 12;
 }
 
 /*
@@ -242,7 +253,7 @@ void move_figure(uint8_t player, uint8_t number){
 			}
 
 			set_position_of_all_figures();
-			kick_out_figure(player);
+			kick_out_figure(player_struct, player);
 
 			set_brightness(BOARD, 100);
 			send_data(BOARD);
@@ -253,7 +264,7 @@ void move_figure(uint8_t player, uint8_t number){
 
 	// Send the data to the LED strip
 	set_brightness(START, 100); // 100 is placeholder brightness
-	set_brightness(BOARD, 100);
+	set_brightness(BOARD, 100); // some of these are probably redundant
 	set_brightness(END, 100);
 
 	send_data(START);
@@ -288,9 +299,7 @@ void set_position_of_all_figures(void){
  * Parameters:
  * player - the player whose turn currently is
  */
-void kick_out_figure(uint8_t player){
-	Player* player_struct = select_player(player);
-
+void kick_out_figure(Player* player_struct, uint8_t player){
 	for(int current_player = 1;  current_player < 5; current_player++){
 		// Checks if the iterated player is the same as the player whose figure moved (you cannot kick out your own figure)
 		if(current_player == player){
@@ -318,4 +327,37 @@ void kick_out_figure(uint8_t player){
 			}
 		}
 	}
+}
+
+/*
+ * Add documentation
+ */
+void check_finish_figure(Player* player_struct, uint8_t player){
+	uint8_t* figure_position = player_struct->position[player_struct->selected_figure];
+
+	// Checks if the player has reached the end position (+1 because you need to move the figure into the end home)
+	if(*figure_position  == player_struct->board_end_position + 1){
+		player_struct->figures_in_finish++;
+		init_finish();
+	}
+}
+/*
+ * Add documentation
+ */
+void init_finish(Player* player_struct, uint8_t player){
+	uint8_t* figure_position = player_struct->position[player_struct->selected_figure];
+
+	set_LED_color(*figure_position, BOARD, set_color(player, 0), set_color(player, 0), set_color(player, 0));		//Turns of the LEDs last position on board
+
+	if(player == 1 || player == 2){
+		for(int position = player_struct->home_start_position; position < player_struct->home_start_position - 3; position--){
+			//logic for setting the figure into home
+		}
+	}
+	if(player == 3 || player == 4){
+		for(int position = player_struct->home_start_position; position < player_struct->home_start_position + 3; position++){
+			//logic for setting the figure into home
+		}
+	}
+	*figure_position = IN_FINISH_POSITION;
 }

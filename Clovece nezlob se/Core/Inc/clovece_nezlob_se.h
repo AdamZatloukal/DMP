@@ -20,12 +20,13 @@
  */
 typedef struct{
 	uint8_t position[4];
-	uint8_t positions_moved[4];		// Probably wont be used since we will use start and end pos for each player
 	uint8_t figures_at_start;
+	uint8_t figures_in_finish;
 	uint8_t color[3];
 	uint8_t selected_figure;
 	uint8_t board_start_position;
 	uint8_t board_end_position;
+	uint8_t home_start_position;
 }Player;
 
 
@@ -76,6 +77,6 @@ Player* select_player(uint8_t player);
 void select_figure(uint8_t player, uint8_t figure);
 void move_figure(uint8_t player, uint8_t number);
 void set_position_of_all_figures(void);
-void kick_out_figure(uint8_t player);
+void kick_out_figure(Player* player_struct, uint8_t player);
 
 #endif /* INC_CLOVECE_NEZLOB_SE_H_ */
