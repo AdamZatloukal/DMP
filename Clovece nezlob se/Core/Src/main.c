@@ -61,7 +61,7 @@ static void MX_TIM1_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void test_game(void);
 /* USER CODE END 0 */
 
 /**
@@ -102,68 +102,15 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   init_brightness();
   init_board(4);
-  // move figure from start player 2
-  select_figure(2, 1);
-  move_figure(2, 6);
 
-  select_figure(2, 3);
-  move_figure(2, 6);
-
-  select_figure(2, 2);
-  move_figure(2, 6);
-
-  select_figure(2, 0);
-  move_figure(2, 6);
-
-  //move figure from player 4
-  select_figure(4, 0);
-  move_figure(4, 6);
-
-  //move figure on the board
-  select_figure(2, 2);
-  move_figure(2, 3);
-
-  select_figure(2, 1);
-  move_figure(2, 5);
-
-  select_figure(2, 3);
-  move_figure(2, 6);
-
-  select_figure(2, 0);
-  move_figure(2, 2);
-
-  select_figure(4, 0);
-  move_figure(4, 2);
-
-  // Sets the figure to the start of the board
-  move_figure(2, 40);
-
-  select_figure(2, 1);
-  move_figure(2, 40);
-
-  select_figure(2, 2);
-  move_figure(2, 40);
-
-  select_figure(2, 3);
-  move_figure(2, 40);
-
-  select_figure(1, 2);		//player 3 figures at start increases for some reason
-  move_figure(1, 2);
-
-  move_figure(1, 6);
-  move_figure(1, 40);
-
-  select_figure(1, 3);
-  move_figure(1, 6);
-  move_figure(1, 6);
-
-  select_figure(3, 3);
-  move_figure(3, 6);		//player 3 and 4 turn yellow at start  -> this instruction does it
-  move_figure(3, 40);
-
-  select_figure(4, 0);
-  move_figure(4, 6);
-  move_figure(4, 40);		// green stays at start
+  // Test if all the figures can reach the end
+  for(int player = 1; player < 5; player++){
+	  for(int figure = 0; figure < 4; figure++){
+		  select_figure(player, figure);
+		  move_figure(player, 6);
+		  move_figure(player, 50);
+	  }
+  }
 
   //roll_dice(1, 6);
 
@@ -345,7 +292,70 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
+void test_game(void){
+	  select_figure(2, 1);
+	  move_figure(2, 6);
 
+	  select_figure(2, 3);
+	  move_figure(2, 6);
+
+	  select_figure(2, 2);
+	  move_figure(2, 6);
+
+	  select_figure(2, 0);
+	  move_figure(2, 6);
+
+	  //move figure from player 4
+	  select_figure(4, 0);
+	  move_figure(4, 6);
+
+	  //move figure on the board
+	  select_figure(2, 2);
+	  move_figure(2, 3);
+
+	  select_figure(2, 1);
+	  move_figure(2, 5);
+
+	  select_figure(2, 3);
+	  move_figure(2, 6);
+
+	  select_figure(2, 0);
+	  move_figure(2, 2);
+
+	  select_figure(4, 0);
+	  move_figure(4, 2);
+
+	  // Sets the figure to the start of the board
+	  move_figure(2, 40);
+
+	  select_figure(2, 1);
+	  move_figure(2, 40);
+
+	  select_figure(2, 2);
+	  move_figure(2, 40);
+
+	  select_figure(2, 3);
+	  move_figure(2, 40);
+
+	  select_figure(1, 2);
+	  move_figure(1, 2);
+
+	  move_figure(1, 6);
+	  move_figure(1, 40);
+
+	  select_figure(1, 3);
+	  move_figure(1, 6);
+	  move_figure(1, 6);
+
+	  select_figure(3, 3);
+	  move_figure(3, 6);
+	  move_figure(3, 40);
+
+	  select_figure(4, 0);
+	  move_figure(4, 6);
+	  move_figure(4, 40);
+
+}
 /* USER CODE END 4 */
 
 /**
