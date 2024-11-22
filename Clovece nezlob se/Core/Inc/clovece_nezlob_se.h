@@ -78,5 +78,7 @@ void select_figure(uint8_t player, uint8_t figure);
 void move_figure(uint8_t player, uint8_t number);
 void set_position_of_all_figures(void);
 void kick_out_figure(Player* player_struct, uint8_t player);
+void check_finish_figure(Player* player_struct, uint8_t player);
+void init_finish(Player* player_struct, uint8_t player);
 
 #endif /* INC_CLOVECE_NEZLOB_SE_H_ */

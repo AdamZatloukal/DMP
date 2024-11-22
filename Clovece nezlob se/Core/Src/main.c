@@ -138,6 +138,33 @@ int main(void)
   // Sets the figure to the start of the board
   move_figure(2, 40);
 
+  select_figure(2, 1);
+  move_figure(2, 40);
+
+  select_figure(2, 2);
+  move_figure(2, 40);
+
+  select_figure(2, 3);
+  move_figure(2, 40);
+
+  select_figure(1, 2);		//player 3 figures at start increases for some reason
+  move_figure(1, 2);
+
+  move_figure(1, 6);
+  move_figure(1, 40);
+
+  select_figure(1, 3);
+  move_figure(1, 6);
+  move_figure(1, 6);
+
+  select_figure(3, 3);
+  move_figure(3, 6);		//player 3 and 4 turn yellow at start  -> this instruction does it
+  move_figure(3, 40);
+
+  select_figure(4, 0);
+  move_figure(4, 6);
+  move_figure(4, 40);		// green stays at start
+
   //roll_dice(1, 6);
 
   while (1)

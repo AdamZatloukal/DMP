@@ -61,7 +61,7 @@ void init_player(uint8_t player){
 	}
 
 	for(int position = start_pos; position < start_pos + 4; position++){
-		set_LED_color(position, START, set_color(player, 0), set_color(player, 0), set_color(player, 0));		// sets all the led_data to 0
+		set_LED_color(position, START, set_color(0, 0), set_color(0, 0), set_color(0, 0));		// sets all the led_data to 0
 	}
 	for(int position = start_pos; position < start_pos + player_struct->figures_at_start; position++){
 		set_LED_color(position, START, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE)); //set the color based on the player
@@ -243,22 +243,23 @@ void move_figure(uint8_t player, uint8_t number){
 				*figure_position = 0;
 
 				set_LED_color(*figure_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
-				set_LED_color(39, BOARD, set_color(player, 0), set_color(player, 0), set_color(player, 0));
+				set_LED_color(39, BOARD, set_color(0, 0), set_color(0, 0), set_color(0, 0));
 			}
-			else{
+			else if(*figure_position != IN_FINISH_POSITION && *figure_position != AT_START_POSITION){
 				(*figure_position)++;
 
 				set_LED_color(*figure_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
-				set_LED_color(*figure_position - 1, BOARD, set_color(player, 0), set_color(player, 0), set_color(player, 0));
+				set_LED_color(*figure_position - 1, BOARD, set_color(0, 0), set_color(0, 0), set_color(0, 0));
 			}
 
 			set_position_of_all_figures();
 			kick_out_figure(player_struct, player);
+			check_finish_figure(player_struct, player);
 
 			set_brightness(BOARD, 100);
 			send_data(BOARD);
 
-			HAL_Delay(1000);
+			HAL_Delay(100);
 		}
 	}
 
@@ -312,8 +313,8 @@ void kick_out_figure(Player* player_struct, uint8_t player){
 			for(int figure = 0; figure < 4; figure++){
 				uint8_t* iterated_figure = &iterated_player_struct->position[figure];
 
-				if(*iterated_figure == player_struct->position[player_struct->selected_figure]){
-					set_LED_color(*iterated_figure, BOARD, set_color(current_player, 0), set_color(current_player, 0), set_color(current_player, 0));
+				if(*iterated_figure == player_struct->position[player_struct->selected_figure] && *iterated_figure != AT_START_POSITION && *iterated_figure != IN_FINISH_POSITION){
+					set_LED_color(*iterated_figure, BOARD, set_color(0, 0), set_color(0, 0), set_color(0, 0));
 					set_LED_color(player_struct->position[player_struct->selected_figure], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
 
 					*iterated_figure = AT_START_POSITION;
@@ -333,30 +334,33 @@ void kick_out_figure(Player* player_struct, uint8_t player){
  * Add documentation
  */
 void check_finish_figure(Player* player_struct, uint8_t player){
-	uint8_t* figure_position = player_struct->position[player_struct->selected_figure];
+	uint8_t* figure_position = &player_struct->position[player_struct->selected_figure];
 
 	// Checks if the player has reached the end position (+1 because you need to move the figure into the end home)
 	if(*figure_position  == player_struct->board_end_position + 1){
 		player_struct->figures_in_finish++;
-		init_finish();
+		init_finish(player_struct, player);
+
+		set_brightness(END, 100);
+		send_data(END);
 	}
 }
 /*
  * Add documentation
  */
 void init_finish(Player* player_struct, uint8_t player){
-	uint8_t* figure_position = player_struct->position[player_struct->selected_figure];
+	uint8_t* figure_position = &player_struct->position[player_struct->selected_figure];
 
-	set_LED_color(*figure_position, BOARD, set_color(player, 0), set_color(player, 0), set_color(player, 0));		//Turns of the LEDs last position on board
+	set_LED_color(*figure_position, BOARD, set_color(0, 0), set_color(0, 0), set_color(0, 0));		//Turns of the LEDs last position on board
 
 	if(player == 1 || player == 2){
-		for(int position = player_struct->home_start_position; position < player_struct->home_start_position - 3; position--){
-			//logic for setting the figure into home
+		for(int position = player_struct->home_start_position; position > player_struct->home_start_position - player_struct->figures_in_finish; position--){
+			set_LED_color(position, END, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
 		}
 	}
 	if(player == 3 || player == 4){
-		for(int position = player_struct->home_start_position; position < player_struct->home_start_position + 3; position++){
-			//logic for setting the figure into home
+		for(int position = player_struct->home_start_position; position < player_struct->home_start_position + player_struct->figures_in_finish; position++){	// Probably use figure_in_the_end
+			set_LED_color(position, END, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
 		}
 	}
 	*figure_position = IN_FINISH_POSITION;
