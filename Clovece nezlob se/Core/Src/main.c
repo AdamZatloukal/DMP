@@ -101,9 +101,11 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   init_brightness();
-  init_board(4);
-
+  init_board(4);		//Bug - when more figure of the same color are on the same postion and a figure is meant to be kicked out all the figures of the same color get kicked out instead of just one
+  	  	  	  	  	  	//Add: animation effect when figures of the same colora are oń the same position
+  	  	  	  	  	  	//Add: cannot kickout when on the player x start postion, at the start of the game yiu can roll 3 times if you dont roll a 6
   // Test if all the figures can reach the end
+  /*
   for(int player = 1; player < 5; player++){
 	  for(int figure = 0; figure < 4; figure++){
 		  select_figure(player, figure);
@@ -111,7 +113,29 @@ int main(void)
 		  move_figure(player, 50);
 	  }
   }
+  */
+  test_game();
 
+
+/*
+  select_figure(2, 0);
+  move_figure(2, 6);
+
+  select_figure(2, 1);
+  move_figure(2, 6);
+
+  select_figure(2, 2);
+  move_figure(2, 6);
+
+  select_figure(1, 0);
+  move_figure(1, 6);
+
+  select_figure(1, 1);
+  move_figure(1, 6);
+
+  select_figure(4, 0);
+  move_figure(4, 6);
+*/
   //roll_dice(1, 6);
 
   while (1)

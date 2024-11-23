@@ -7,6 +7,7 @@
 #include "main.h"
 
 uint8_t num_of_players;
+uint8_t overlaping_positions[NUM_OF_LEDS_BOARD];
 
 PlayerData player_data;
 
@@ -313,7 +314,7 @@ void kick_out_figure(Player* player_struct, uint8_t player){
 			for(int figure = 0; figure < 4; figure++){
 				uint8_t* iterated_figure = &iterated_player_struct->position[figure];
 
-				if(*iterated_figure == player_struct->position[player_struct->selected_figure] && *iterated_figure != AT_START_POSITION && *iterated_figure != IN_FINISH_POSITION){
+				if(*iterated_figure == player_struct->position[player_struct->selected_figure] && *iterated_figure != AT_START_POSITION && *iterated_figure != IN_FINISH_POSITION && *iterated_figure != iterated_player_struct->board_start_position){
 					set_LED_color(*iterated_figure, BOARD, set_color(0, 0), set_color(0, 0), set_color(0, 0));
 					set_LED_color(player_struct->position[player_struct->selected_figure], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
 
@@ -364,4 +365,40 @@ void init_finish(Player* player_struct, uint8_t player){
 		}
 	}
 	*figure_position = IN_FINISH_POSITION;
+}
+
+
+/*
+ * Add documentation
+ */
+void check_for_overlap(void){
+	//	Iterates over each player and each figure of that player to get its position
+	for(int player = 1; player < 5; player++){
+		Player* player_struct = select_player(player);
+
+		for(int figure = 0; figure < 4; figure++){
+			uint8_t position = player_struct->position[figure];
+
+			//Stores the value of the position if its on the board
+			if(position != AT_START_POSITION && position != IN_FINISH_POSITION){
+				overlaping_positions[position]++;
+			}
+		}
+
+		for(int position = 0; position < sizeof(overlaping_positions); position++){
+				overlaping_positions[position] = (overlaping_positions[position] == 1) ? 0 : overlaping_positions[position];
+			}
+			//overlap_animation(player); doesnt work for now
+	}
+
+}
+
+void overlap_animation(uint8_t player){
+	for(int i = 0; i < sizeof(overlaping_positions); i++){
+
+		// We only want to apply the animation to indexes that have 2 or more figures
+		if(overlaping_positions[i] != 0){
+			// Weird stuff will be going on here
+		}
+	}
 }
