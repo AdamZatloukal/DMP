@@ -257,6 +257,10 @@ void move_pawn(uint8_t player, uint8_t number){
 			}
 
 			set_position_of_all_pawns();
+
+			set_brightness(BOARD, 100);
+			send_data(BOARD);
+
 			kick_out_pawn(player_struct, player);
 
 			set_LED_color(*pawn_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
@@ -266,7 +270,7 @@ void move_pawn(uint8_t player, uint8_t number){
 			set_brightness(BOARD, 100);
 			send_data(BOARD);
 
-			HAL_Delay(700);
+			HAL_Delay(300);
 		}
 	}
 
@@ -505,4 +509,4 @@ void pawn_kick_set_start_animation(uint8_t i, uint8_t player, char* state){
 }
 
 
-// Fix when kick happens the blue pawn is 1 spot away from where the pawn is kicked
+// Add animation for when end is reached
