@@ -13,17 +13,17 @@
 
 /*
  * Each player has a struct with these parameters
- * position - the current position on the board of each figure
- * positions_moved - how many positions a figure has moved - needed to calculate when the figure reaches the end		UPDATE
- * at_start - how many figures are still at start
+ * position - the current position on the board of each pawn
+ * positions_moved - how many positions a pawn has moved - needed to calculate when the pawn reaches the end		UPDATE
+ * at_start - how many pawns are still at start
  * color - color of each player
  */
 typedef struct{
 	uint8_t position[4];
-	uint8_t figures_at_start;
-	uint8_t figures_in_finish;
+	uint8_t pawns_at_start;
+	uint8_t pawns_in_finish;
 	uint8_t color[3];
-	uint8_t selected_figure;
+	uint8_t selected_pawn;
 	uint8_t board_start_position;
 	uint8_t board_end_position;
 	uint8_t home_start_position;
@@ -74,14 +74,17 @@ void init_player(uint8_t player);
 
 uint8_t roll_dice(uint8_t min, uint8_t max);
 Player* select_player(uint8_t player);
-void select_figure(uint8_t player, uint8_t figure);
-void move_figure(uint8_t player, uint8_t number);
-void set_position_of_all_figures(void);
-void kick_out_figure(Player* player_struct, uint8_t player);
-void check_finish_figure(Player* player_struct, uint8_t player);
+void select_pawn(uint8_t player, uint8_t pawn);
+void move_pawn(uint8_t player, uint8_t number);
+void set_position_of_all_pawns(void);
+void kick_out_pawn(Player* player_struct, uint8_t player);
+void check_finish_pawn(Player* player_struct, uint8_t player);
 void init_finish(Player* player_struct, uint8_t player);
 void check_for_overlap(void);
-void overlap_animation(uint8_t player);
+void overlap_animation(void);
+void selected_pawn_animation(uint8_t player);
+void pawn_kick_set_board_animation(uint8_t player);
+void pawn_kick_set_start_animation(uint8_t i, uint8_t player, char* state);
 
 
 #endif /* INC_CLOVECE_NEZLOB_SE_H_ */

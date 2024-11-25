@@ -144,18 +144,18 @@ void send_data(uint8_t channel){
 #endif
 
 
-		for(int j = 23; j >= 0; j--){		// Iterates 24 times to go thorough each bit of color_bits
-			if(color_bits & (1 << j)){	// Creates a 24b mask where only jth bit is 1 and compares it to color_bits - the result of the applied mask are 24 bits and if only 1 bit it 1 it is considered True
-				set_data_array_value(led_index, channel, "high");	// If the result is 1 than the bit gets assigned DCL of 64%
+		for(int j = 23; j >= 0; j--){																						// Iterates 24 times to go thorough each bit of color_bits
+			if(color_bits & (1 << j)){																						// Creates a 24b mask where only jth bit is 1 and compares it to color_bits - the result of the applied mask are 24 bits and if only 1 bit it 1 it is considered True
+				set_data_array_value(led_index, channel, "high");															// If the result is 1 than the bit gets assigned DCL of 64%
 			}
 			else{
-				set_data_array_value(led_index, channel, "low");	// If the result is 0 DCL is 32%
+				set_data_array_value(led_index, channel, "low");															// If the result is 0 DCL is 32%
 			}
 			led_index++;
 		}
 	}
 
-	for(int i = 0; i < RESET_PULSE_COUNT; i++){		// Creates 50 values with the DCL of 0 to act as the reset pulse (ws2812b datasheet)
+	for(int i = 0; i < RESET_PULSE_COUNT; i++){																				// Creates 50 values with the DCL of 0 to act as the reset pulse (ws2812b datasheet)
 		set_data_array_value(led_index, channel, "none");
 		led_index++;
 	}
@@ -235,7 +235,7 @@ void set_data_array_value(uint16_t led_index, uint8_t channel,char* level){
 }
 
 /*
- * Returns the PWM_DCL array baed on the channel
+ * Returns the PWM_DCL array based on the channel
  * Parameters:
  * channel - TIM1 PWM channel (1 - 3)
  */

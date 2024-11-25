@@ -62,6 +62,7 @@ static void MX_TIM1_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 void test_game(void);
+void indivudual_bright(void);
 /* USER CODE END 0 */
 
 /**
@@ -83,14 +84,14 @@ int main(void)
 
   /* USER CODE END Init */
 
-  /* Configure the system clock */
+  /* Conpawn the system clock */
   SystemClock_Config();
 
   /* USER CODE BEGIN SysInit */
 
   /* USER CODE END SysInit */
 
-  /* Initialize all configured peripherals */
+  /* Initialize all conpawnd peripherals */
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_TIM1_Init();
@@ -101,16 +102,16 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   init_brightness();
-  init_board(4);		//Bug - when more figure of the same color are on the same postion and a figure is meant to be kicked out all the figures of the same color get kicked out instead of just one
-  	  	  	  	  	  	//Add: animation effect when figures of the same colora are oń the same position
+  init_board(4);		//Bug - when more pawn of the same color are on the same postion and a pawn is meant to be kicked out all the pawns of the same color get kicked out instead of just one
+  	  	  	  	  	  	//Add: animation effect when pawns of the same colora are oń the same position
   	  	  	  	  	  	//Add: cannot kickout when on the player x start postion, at the start of the game yiu can roll 3 times if you dont roll a 6
-  // Test if all the figures can reach the end
+  // Test if all the pawns can reach the end
   /*
   for(int player = 1; player < 5; player++){
-	  for(int figure = 0; figure < 4; figure++){
-		  select_figure(player, figure);
-		  move_figure(player, 6);
-		  move_figure(player, 50);
+	  for(int pawn = 0; pawn < 4; pawn++){
+		  select_pawn(player, pawn);
+		  move_pawn(player, 6);
+		  move_pawn(player, 50);
 	  }
   }
   */
@@ -118,28 +119,34 @@ int main(void)
 
 
 /*
-  select_figure(2, 0);
-  move_figure(2, 6);
+  select_pawn(2, 0);
+  move_pawn(2, 6);
 
-  select_figure(2, 1);
-  move_figure(2, 6);
+  select_pawn(2, 1);
+  move_pawn(2, 6);
 
-  select_figure(2, 2);
-  move_figure(2, 6);
+  select_pawn(2, 2);
+  move_pawn(2, 6);
 
-  select_figure(1, 0);
-  move_figure(1, 6);
+  select_pawn(1, 0);
+  move_pawn(1, 6);
 
-  select_figure(1, 1);
-  move_figure(1, 6);
+  select_pawn(1, 1);
+  move_pawn(1, 6);
 
-  select_figure(4, 0);
-  move_figure(4, 6);
-*/
+  select_pawn(4, 0);
+  move_pawn(4, 6);
+
+  check_for_overlap();
   //roll_dice(1, 6);
+  */
+  check_for_overlap();
+
 
   while (1)
   {
+	  overlap_animation();
+	  selected_pawn_animation(4);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -156,7 +163,7 @@ void SystemClock_Config(void)
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
 
-  /** Configure the main internal regulator output voltage
+  /** Conpawn the main internal regulator output voltage
   */
   __HAL_RCC_PWR_CLK_ENABLE();
   __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE2);
@@ -317,68 +324,78 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void test_game(void){
-	  select_figure(2, 1);
-	  move_figure(2, 6);
+	  select_pawn(2, 1);
+	  move_pawn(2, 6);
 
-	  select_figure(2, 3);
-	  move_figure(2, 6);
+	  select_pawn(2, 3);
+	  move_pawn(2, 6);
 
-	  select_figure(2, 2);
-	  move_figure(2, 6);
+	  select_pawn(2, 2);
+	  move_pawn(2, 6);
 
-	  select_figure(2, 0);
-	  move_figure(2, 6);
+	  select_pawn(2, 0);
+	  move_pawn(2, 6);
 
-	  //move figure from player 4
-	  select_figure(4, 0);
-	  move_figure(4, 6);
+	  //move pawn from player 4
+	  select_pawn(4, 0);
+	  move_pawn(4, 6);
 
-	  //move figure on the board
-	  select_figure(2, 2);
-	  move_figure(2, 3);
+	  //move pawn on the board
+	  select_pawn(2, 2);
+	  move_pawn(2, 3);
 
-	  select_figure(2, 1);
-	  move_figure(2, 5);
+	  select_pawn(2, 1);
+	  move_pawn(2, 5);
 
-	  select_figure(2, 3);
-	  move_figure(2, 6);
+	  select_pawn(2, 3);
+	  move_pawn(2, 6);
 
-	  select_figure(2, 0);
-	  move_figure(2, 2);
+	  select_pawn(2, 0);
+	  move_pawn(2, 2);
 
-	  select_figure(4, 0);
-	  move_figure(4, 2);
+	  select_pawn(4, 0);
+	  move_pawn(4, 2);
 
-	  // Sets the figure to the start of the board
-	  move_figure(2, 40);
+	  // Sets the pawn to the start of the board
+	  move_pawn(2, 40);
 
-	  select_figure(2, 1);
-	  move_figure(2, 40);
+	  select_pawn(2, 1);
+	  move_pawn(2, 40);
 
-	  select_figure(2, 2);
-	  move_figure(2, 40);
+	  select_pawn(2, 2);
+	  move_pawn(2, 40);
 
-	  select_figure(2, 3);
-	  move_figure(2, 40);
+	  select_pawn(2, 3);
+	  move_pawn(2, 40);
 
-	  select_figure(1, 2);
-	  move_figure(1, 2);
+	  select_pawn(1, 2);
+	  move_pawn(1, 2);
 
-	  move_figure(1, 6);
-	  move_figure(1, 40);
+	  move_pawn(1, 6);
+	  move_pawn(1, 40);
 
-	  select_figure(1, 3);
-	  move_figure(1, 6);
-	  move_figure(1, 6);
+	  select_pawn(1, 3);
+	  move_pawn(1, 6);
+	  move_pawn(1, 6);
 
-	  select_figure(3, 3);
-	  move_figure(3, 6);
-	  move_figure(3, 40);
+	  select_pawn(3, 3);
+	  move_pawn(3, 6);
+	  move_pawn(3, 40);
 
-	  select_figure(4, 0);
-	  move_figure(4, 6);
-	  move_figure(4, 40);
+	  select_pawn(4, 0);
+	  move_pawn(4, 6);
+	  move_pawn(4, 40);
 
+}
+
+void indivudual_bright(void){
+
+	for(int i = 0; i < NUM_OF_LEDS_START; i++){
+		set_LED_color(i, START, 229, 83, 0);
+		set_brightness_individually(i, START, i + 50);
+		send_data(START);
+		HAL_Delay(200);
+	}
 }
 /* USER CODE END 4 */
 
