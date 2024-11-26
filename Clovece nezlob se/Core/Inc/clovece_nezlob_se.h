@@ -85,6 +85,8 @@ void overlap_animation(void);
 void selected_pawn_animation(uint8_t player);
 void pawn_kick_set_board_animation(uint8_t player);
 void pawn_kick_set_start_animation(uint8_t i, uint8_t player, char* state);
+void pawn_finish_animation(uint8_t player);
+void player_finish_animation(uint8_t player);
 
 
 #endif /* INC_CLOVECE_NEZLOB_SE_H_ */

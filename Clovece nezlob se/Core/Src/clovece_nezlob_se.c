@@ -14,6 +14,7 @@ PlayerData player_data;
 
 
 /*--------------------- Board Initialization ---------------------*/
+
 /*
  * Returns R, G or B color value based on the player
  * Parameters:
@@ -150,8 +151,6 @@ void init_board(uint8_t number_of_players){
 }
 
 
-
-
 /*--------------------- Dice, pawn movement ---------------------*/
 
 /*
@@ -270,7 +269,7 @@ void move_pawn(uint8_t player, uint8_t number){
 			set_brightness(BOARD, 100);
 			send_data(BOARD);
 
-			HAL_Delay(300);
+			HAL_Delay(200);
 		}
 	}
 
@@ -283,7 +282,6 @@ void move_pawn(uint8_t player, uint8_t number){
 	send_data(BOARD);
 	send_data(END);
 }
-
 
 /*
  * Sets the position of all pawns
@@ -305,10 +303,13 @@ void set_position_of_all_pawns(void){
 }
 
 
+/*--------------------- Kick, finish logic ---------------------*/
+
 /*
  * Checks if 2 pawn that are not from the same player overlap
  * If they do the pawn that was originally there gets kicked to the START
  * Parameters:
+ * player_struct - player data of the current player (pointer)
  * player - the player whose turn currently is
  */
 void kick_out_pawn(Player* player_struct, uint8_t player){
@@ -345,7 +346,10 @@ void kick_out_pawn(Player* player_struct, uint8_t player){
 }
 
 /*
- * Add documentation
+ * Checks if a pawn has reached its end position on BOARD
+ * Parameters:
+ * player_struct - player data of the current player (pointer)
+ * player - current player (1  - 4)
  */
 void check_finish_pawn(Player* player_struct, uint8_t player){
 	uint8_t* pawn_position = &player_struct->position[player_struct->selected_pawn];
@@ -354,13 +358,22 @@ void check_finish_pawn(Player* player_struct, uint8_t player){
 	if(*pawn_position  == player_struct->board_end_position + 1){
 		player_struct->pawns_in_finish++;
 		init_finish(player_struct, player);
+		pawn_finish_animation(player);
+
+		if(player_struct->pawns_in_finish == 4){
+			player_finish_animation(player);
+		}
 
 		set_brightness(END, 100);
 		send_data(END);
 	}
 }
 /*
- * Add documentation
+ * Turns of the last LED on BOARD and
+ * sets the correct LED on in END
+ * Parameters:
+ * player_struct - player data of the current player (pointer)
+ * player - current player (1  - 4)
  */
 void init_finish(Player* player_struct, uint8_t player){
 	uint8_t* pawn_position = &player_struct->position[player_struct->selected_pawn];
@@ -380,6 +393,8 @@ void init_finish(Player* player_struct, uint8_t player){
 	*pawn_position = IN_FINISH_POSITION;
 }
 
+
+/*--------------------- Animations ---------------------*/
 
 /*
  * Checks if there are any overlapping pawn
@@ -448,6 +463,8 @@ void selected_pawn_animation(uint8_t player){
 /*
  * Blink animation when a pawn is set on the board
  * or kicked from it
+ * Parameters:
+ * player - (1 - 4)
  */
 void pawn_kick_set_board_animation(uint8_t player){
 	Player* player_struct = select_player(player);
@@ -474,6 +491,12 @@ void pawn_kick_set_board_animation(uint8_t player){
 /*
  * Part of pawn_kick_set_board_animation
  * Applies the animation to START
+ * Parameters:
+ * i - current iteration of pawn_kick_set_board_animation
+ * player - (1 - 4)
+ * state - state of the animation
+ * 		"low_brightness"
+ * 		"high_brightness"
  */
 void pawn_kick_set_start_animation(uint8_t i, uint8_t player, char* state){
 	uint8_t start_pos;
@@ -508,5 +531,73 @@ void pawn_kick_set_start_animation(uint8_t i, uint8_t player, char* state){
 	send_data(START);
 }
 
+/*
+ * This animation plays when
+ * a pawn reaches home
+ * Parameters:
+ * player - (1 -4)
+ */
+void pawn_finish_animation(uint8_t player){
+	Player* player_struct = select_player(player);
 
-// Add animation for when end is reached
+	for(int i = 0; i < 4; i++){
+		if(player == 1 || player == 2){
+			for(int position = player_struct->home_start_position; position > player_struct->home_start_position - player_struct->pawns_in_finish; position--){
+				set_brightness_individually(position, END, 30);
+				send_data(END);
+				HAL_Delay(120);
+				set_brightness_individually(position, END, 250);
+				send_data(END);
+				HAL_Delay(120);
+			}
+		}
+		if(player == 3 || player == 4){
+			for(int position = player_struct->home_start_position; position < player_struct->home_start_position + player_struct->pawns_in_finish; position++){	// Probably use pawn_in_the_end
+				set_brightness_individually(position, END, 30);
+				send_data(END);
+				HAL_Delay(120);
+				set_brightness_individually(position, END, 250);
+				send_data(END);
+				HAL_Delay(120);
+			}
+		}
+	}
+}
+
+/*
+ * This blinking animation plays when
+ * all pawn of a player reach home
+ * Parameters:
+ * player - (1 - 4)
+ */
+void player_finish_animation(uint8_t player){
+	Player* player_struct = select_player(player);
+
+	for(int i = 0; i < 20; i++){
+		if(player == 1 || player == 2){
+			for(int j = player_struct->home_start_position; j > player_struct->home_start_position - 4 ; j--){
+				if(i % 2 ==0){
+					set_brightness_individually(j, END, 0);
+				}
+				else{
+					set_brightness_individually(j, END, 250);
+				}
+			}
+		}
+		else if(player == 3 || player == 4){
+			for(int j = player_struct->home_start_position; j < player_struct->home_start_position + 4; j++){
+				if(i % 2 ==0){
+					set_brightness_individually(j, END, 0);
+				}
+				else{
+					set_brightness_individually(j, END, 250);
+				}
+			}
+
+		}
+		send_data(END);
+		HAL_Delay(200);
+	}
+}
+
+// to do: you cannot select a pawn that is in END
