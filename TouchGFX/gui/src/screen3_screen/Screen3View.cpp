@@ -32,7 +32,7 @@ void Screen3View::tearDownScreen()
     Screen3ViewBase::tearDownScreen();
 }
 
-void Screen3View::handleTickEvent(){	//Called 60x per second (60Hz)
+void Screen3View::handleTickEvent(){	// Called 60x per second (60Hz)
 	if(delay_event == ROLL){
 		delay_event = tick < 60 ? ROLL : NONE;	// Takes 1 second to be true
 		tick++;
@@ -96,6 +96,6 @@ void Screen3View::handleRollDice(){
 		}
 		diceAnimatedImage.invalidate();
 
-		delay_event = ROLL;	//1 second delay
+		delay_event = ROLL;	// 1 second delay
 	}
 }

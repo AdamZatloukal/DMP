@@ -10,7 +10,7 @@
 
 void delay(int animation_delay_event);
 
-extern volatile int miliseconds;	// extern because we need to reset this value when a new game starts
+extern volatile int miliseconds;
 
 extern uint32_t last_toggle_time;
 extern uint32_t last_toggle;

@@ -23,6 +23,7 @@ extern "C" {
  * positions_moved - how many positions a pawn has moved - needed to calculate when the pawn reaches the end		UPDATE
  * at_start - how many pawns are still at start
  * color - color of each player
+ * etc
  */
 typedef struct{
 	uint8_t position[4];

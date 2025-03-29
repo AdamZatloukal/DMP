@@ -15,7 +15,7 @@ void Screen6View::setupScreen()
 {
     Screen6ViewBase::setupScreen();
 
-    // Only show stats of players that are playing
+    // Only shows stats of players that are playing
 
 
     if(game_info.number_of_players == 2){

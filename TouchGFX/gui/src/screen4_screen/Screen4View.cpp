@@ -80,7 +80,7 @@ void Screen4View::setupScreen()
 		//Execute AI pawn selection logic
 		game_info.selected_pawn = handle_ai_player_movement();
 
-		setPawnAlpha(game_info.selected_pawn + 1);	// Weird numbering - can reach no. 5
+		setPawnAlpha(game_info.selected_pawn + 1);	// Weird numbering - can reach no. 5 - fixed
 		counter = game_info.selected_pawn + 1;
 		Unicode::snprintf(textCounterBuffer, TEXTCOUNTER_SIZE, "%d", counter);
 		textCounter.invalidate();
@@ -126,7 +126,7 @@ void Screen4View::incrementPawn(){
 	Unicode::snprintf(textCounterBuffer, TEXTCOUNTER_SIZE, "%d", counter);
 	textCounter.invalidate();
 
-	// The if statement prevents alpha blinking of finished pawns ALPHA BLINKING IS STILL AND ISSUE
+	// The if statement prevents alpha blinking of finished pawns ALPHA BLINKING IS STILL AND ISSUE - ver. 3 still an issue but is now managable (isnt easy to notice)
 	setPawnAlpha(counter);
 
 

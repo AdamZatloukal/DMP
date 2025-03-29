@@ -323,6 +323,6 @@ void init_brightness(void){
 
 	for(int brightness = 0; brightness < 256; brightness++){
 		float normalized_brightness = brightness / 255.0f;
-		scale_factors[brightness]= pow(normalized_brightness, gamma);		// Change to log
+		scale_factors[brightness]= pow(normalized_brightness, gamma);
 	}
 }

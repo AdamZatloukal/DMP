@@ -2,11 +2,6 @@
 #include <main.h>
 
 
-/*
- * ARROW AND TEXT ANIMATION FOR NUM OF REAL AND AI PLAYERS!!!
- * MAKE SETTINGS NAVIGATION EASIER
- */
-
 Screen2View::Screen2View()
 {
 
