@@ -11,11 +11,6 @@ uint32_t last_toggle_overlap = 0;
 
 volatile int miliseconds = 0;
 
-/*
- * ADD Other animations,
- *
- */
-
 extern TIM_HandleTypeDef htim7;
 
 void delay(int animation_delay_event){
@@ -51,7 +46,7 @@ void handle_selected_pawn_delay(void){
 	static uint8_t last_selected_pawn = 255;		// defined on the first execute of this function
 	static uint8_t last_brightness = 1; 			//0 - no light, 1 - light
 
-	// Makes sure the neopixel lights up when the last animation stage was brightness 0 and selected pawn changed
+	// Makes sure the Pixel lights up when the last animation stage was brightness 0 and selected pawn changed
 	if(*selected_pawn != last_selected_pawn){
 		set_brightness_individually(player_struct->position[last_selected_pawn], BOARD, 200);
 		send_data(BOARD);
@@ -61,7 +56,7 @@ void handle_selected_pawn_delay(void){
 		return;	// So we dont have to worry about the rest of the function executing
 	}
 
-	// Blinking animation with 500ms delay
+	// Blinking animation with 500 ms delay
 	if(player_struct->position[*selected_pawn] != AT_START_POSITION && player_struct->position[*selected_pawn] != IN_FINISH_POSITION){
 		if(miliseconds - last_toggle_time >= 500){
 			last_toggle_time = miliseconds;
@@ -171,7 +166,7 @@ void handle_settings_animation_start_delay(void){
 			set_LED_color(colorIndex[player][step2], START, color[player][0], color[player][1], color[player][2]); // Asi je špatně
 
 			set_brightness_individually(colorIndex[player][step1], START, 200);
-			set_brightness_individually(colorIndex[player][step2], START, 50); // Změnit zpět na 200 a 30
+			set_brightness_individually(colorIndex[player][step2], START, 50);
 
 		}
 
@@ -258,7 +253,7 @@ void handle_overlap_animation(uint8_t overlap_index){
 }
 
 /*
- * Timer 7 callback after 1ms (period of the TIM)
+ * Timer 7 callback after 1 ms (period of the TIM)
  */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef* htim)
 {

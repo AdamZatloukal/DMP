@@ -8,11 +8,6 @@
 #include "main.h"
 #include "milis.h"
 
-/*
- * BUGS TO FIX:
- * Pawn is not kicked when a pawn of different color is set on board, because of that they blink the wrong color when selected
- */
-
 
 uint8_t num_of_players;
 uint8_t overlaping_positions[NUM_OF_LEDS_BOARD];
@@ -48,7 +43,7 @@ uint8_t set_color(uint8_t player, Colors color){
 }
 
 /*
- * Initialized the board for each player
+ * Initializes the board for each player
  * Parameters:
  * player - player for whom we are initializing the board (1 - 4)
  */
@@ -94,7 +89,7 @@ void init_player_data(uint8_t number_of_players){
 		}
 	}
 	// Color init
-	player_data.player1.color[0] = 255;		// Red		//SET THE VALUES OF ONLY PLAYERS THAT ARE PLAYING
+	player_data.player1.color[0] = 255;		// Red
 	player_data.player1.color[1] = 0;
 	player_data.player1.color[2] = 0;
 
@@ -111,7 +106,7 @@ void init_player_data(uint8_t number_of_players){
 	player_data.player4.color[2] = 0;
 
 	// Amount of pawns init
-	player_data.player1.pawns_at_start = 4;		//to do: add custom number of pawns
+	player_data.player1.pawns_at_start = 4;
 	player_data.player2.pawns_at_start = 4;
 	player_data.player3.pawns_at_start = 4;
 	player_data.player4.pawns_at_start = 4;
@@ -162,8 +157,6 @@ void init_player_data(uint8_t number_of_players){
  * Initializes the board for a game based on how many players are playing
  * Parameters:
  * num_of_player - (1 - 4)
- *
- * to do: init different game modes, rules, etc.
  */
 void init_board(uint8_t number_of_players){
 	// Needed to reset the board from the init animations
@@ -185,7 +178,7 @@ void init_board(uint8_t number_of_players){
 		init_player(player);
 	}
 
-	finish_num = 1; // When a player finishes this numebr will be assigned to its struct and incremented for the second finisher
+	finish_num = 1; // When a player finishes this number will be assigned to its struct and incremented for the second finisher
 
 	set_brightness(START, 100); //placeholder brightness
 	send_data(START);
@@ -207,16 +200,15 @@ uint8_t roll_dice(uint8_t min, uint8_t max){
 
 	srand(tick);
 
-	 return (rand() % (max - min + 1)) + min;		//placeholder for random numbers
+	 return (rand() % (max - min + 1)) + min;
 }
 
 /*
  * Selects the pawn
- * !!!Placeholder function currently!!!
  * Parameters:
  * pawn - (0 - 3)
  */
-void select_pawn(uint8_t player, uint8_t pawn){			// add logic for buttons for now (take a look at the display)
+void select_pawn(uint8_t player, uint8_t pawn){
 	switch(player){
 		case 1:
 			 player_data.player1.selected_pawn = pawn;
@@ -281,11 +273,11 @@ void move_pawn(uint8_t player, uint8_t number){
 		player_struct->pawns_at_start--;
 		game_info.number_of_set_pawns++; // Used to keep track of game stats
 
-		init_player(player);		//updated the pawns at start
+		init_player(player);		// updates the pawns at start
 		pawn_kick_set_board_animation(player);
 		kick_out_pawn(player_struct, player);
 
-		set_LED_color(*pawn_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE)); //puts the pawn on the board
+		set_LED_color(*pawn_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE)); // puts the pawn on the board
 
 		set_brightness(BOARD, 100);
 		send_data(BOARD);
@@ -317,7 +309,7 @@ void move_pawn(uint8_t player, uint8_t number){
 			set_LED_color(*pawn_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
 
 			check_finish_pawn(player_struct, player);	// Checks if the pawn has reached finish
-			check_player_finish(player_struct);			// Checks if all 4 pawns have reached finish -> if so they cannot play again
+			check_player_finish(player_struct);			// Checks if all 4 pawns have reached finish -> if so the player cannot play again
 
 			check_end_game();
 
@@ -331,8 +323,8 @@ void move_pawn(uint8_t player, uint8_t number){
 	}
 
 	// Send the data to the LED strip
-	set_brightness(START, 100); // 100 is placeholder brightness
-	set_brightness(BOARD, 100); // some of these are probably redundant
+	set_brightness(START, 100);
+	set_brightness(BOARD, 100);
 	set_brightness(END, 100);
 
 	send_data(START);
@@ -392,7 +384,7 @@ void kick_out_pawn(Player* player_struct, uint8_t player){
 					iterated_player_struct->pawns_at_start++;
 					game_info.number_of_kicked_pawns++;
 
-					init_player(current_player);		//Put the pawn back to start
+					init_player(current_player);		// Put the pawn back to start
 
 					set_brightness(START, 100);			// Updates the START
 					send_data(START);
@@ -426,7 +418,7 @@ void check_finish_pawn(Player* player_struct, uint8_t player){
 	}
 }
 /*
- * Turns of the last LED on BOARD and
+ * Turns off the last LED on BOARD and
  * sets the correct LED on in END
  * Parameters:
  * player_struct - player data of the current player (pointer)
@@ -435,7 +427,7 @@ void check_finish_pawn(Player* player_struct, uint8_t player){
 void init_finish(Player* player_struct, uint8_t player){
 	uint8_t* pawn_position = &player_struct->position[player_struct->selected_pawn];
 
-	set_LED_color(*pawn_position, BOARD, set_color(0, 0), set_color(0, 0), set_color(0, 0));		//Turns of the LEDs last position on board
+	set_LED_color(*pawn_position, BOARD, set_color(0, 0), set_color(0, 0), set_color(0, 0));		// Turns off the LEDs last position on board
 
 	if(player == 1 || player == 2){
 		for(int position = player_struct->home_start_position; position > player_struct->home_start_position - player_struct->pawns_in_finish; position--){
@@ -454,7 +446,7 @@ void init_finish(Player* player_struct, uint8_t player){
 /*--------------------- Animations ---------------------*/
 
 /*
- * Checks if there are any overlapping pawn
+ * Checks if there are any overlapping pawns
  * Call this function every time a pawn moves
  * Call overlap_animation to display visual change
  */
@@ -482,6 +474,7 @@ void check_for_overlap(void){
  * check_for_overlap()
  *
  * Brightness change indicates there are pawns that are overlapping
+ * Not used in the final build
  */
 void overlap_animation(void){
 	for(int i = 0; i < sizeof(overlaping_positions); i++){
@@ -595,7 +588,7 @@ void pawn_finish_animation(uint8_t player){
 			}
 		}
 		if(player == 3 || player == 4){
-			for(int position = player_struct->home_start_position; position < player_struct->home_start_position + player_struct->pawns_in_finish; position++){	// Probably use pawn_in_the_end
+			for(int position = player_struct->home_start_position; position < player_struct->home_start_position + player_struct->pawns_in_finish; position++){
 				set_brightness_individually(position, END, 30);
 				send_data(END);
 				HAL_Delay(120);
@@ -609,7 +602,7 @@ void pawn_finish_animation(uint8_t player){
 
 /*
  * This blinking animation plays when
- * all pawn of a player reach home
+ * all 4 pawns of a player reach home
  * Parameters:
  * player - (1 - 4)
  */
@@ -662,7 +655,7 @@ void sync_info(void){
  * Return the pawn
  * !!!This function CANNOT BE executed after all 4 pawns are in finish!!!
  * More complex  algorithm could be implemented right now its basically just random movement
- * Could implement things like move a pawn that the closest to another pawn or closesst to finish etc.
+ * Could implement things like move a pawn that is the closest to another pawn or closest to finish etc.
  */
 uint8_t handle_ai_player_movement(void){
 	Player* player_struct = select_player(game_info.current_player);
@@ -672,7 +665,7 @@ uint8_t handle_ai_player_movement(void){
 
 
 	while(pawn_position == IN_FINISH_POSITION){
-		pawn = (pawn + 1) % 4;  // Corrected reset logic
+		pawn = (pawn + 1) % 4;
 		pawn_position = player_struct->position[pawn];
 	}
 
@@ -705,7 +698,7 @@ uint8_t handle_ai_player_movement(void){
 }
 
 void check_player_finish(Player* player_struct){
-	// We only want to assign a finish value if the player isn't finished already
+	// We only want to assign a finish value if the player hasnt finished already
 	if(player_struct->pawns_in_finish == 4 && player_struct->is_finished == false){
 		player_struct->finish_position = finish_num;
 		player_struct->is_finished = true;
@@ -731,6 +724,3 @@ void check_end_game(void){
 		game_info.game_stage = num_of_finished_players >= (game_info.number_of_players - 1) ? FINISH : game_info.game_stage;
 	}
 }
-/*
- * Add GUI for finish and make it able to start another game
- */

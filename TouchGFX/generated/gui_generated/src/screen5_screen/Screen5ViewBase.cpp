@@ -15,7 +15,7 @@ Screen5ViewBase::Screen5ViewBase()
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    backgroundImage.setXY(-26, -16);
+    backgroundImage.setXY(-24, -16);
     backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_CLAY_THEME_IMAGES_BACKGROUNDS_480X272_BURLY_ID));
     add(backgroundImage);
 

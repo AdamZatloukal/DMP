@@ -1,12 +1,12 @@
 /*
- * Change all the variables that contain DCL to something like CCR
+ * DCL variable name is not accurate, since it represents the CCR value
  */
 #include "main.h"
 #include "ws2812b.h"
 #include "string.h"
 #include "math.h"
 
-extern TIM_HandleTypeDef htim1;					//makes htim1 a global variable
+extern TIM_HandleTypeDef htim1;
 
 typedef struct{
 	uint8_t led_data[NUM_OF_LEDS_BOARD][3];
@@ -38,7 +38,7 @@ volatile uint8_t pwm_completed = 0;
 int led_index = 0;
 float scale_factors[256];
 
-Channel_data channel_data;		//Creates an instance of Channel_data struct
+Channel_data channel_data;		// Creates an instance of Channel_data struct
 
 /*
  * Sets channel of the timer
@@ -66,7 +66,7 @@ void set_PWM_channel(uint8_t selected_channel){
 }
 
 /*
- * Sets the number of LEDS based on the PWM channel¨
+ * Sets the number of LEDS based on the PWM channel
  * to reduce the number of iterations in send_data
  * Parameters:
  * channel - sets the PWM channel output of TIM1
@@ -116,7 +116,7 @@ void set_LED_color(int led_index,uint8_t channel,uint8_t Red, uint8_t Green, uin
 
 /*
  * Puts the data into correct position and each bit
- * gets assigned DCL which is then sent using PWM on timer 1
+ * gets assigned CCR which is then sent using PWM on timer 1
  * Parameters:
  * channel - sets the PWM channel output of TIM1
 */
@@ -174,7 +174,7 @@ void send_data(uint8_t channel){
  */
 void HAL_TIM_PWM_PulseFinishedCallback( TIM_HandleTypeDef *htim){
 	if(channel == 1){
-		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_1);			//never gets called since the global channel variable is always 0
+		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_1);			// never gets called since the global channel variable is always 0
 	}
 	else if(channel == 2){
 		HAL_TIM_PWM_Stop_DMA(&htim1, TIM_CHANNEL_2);

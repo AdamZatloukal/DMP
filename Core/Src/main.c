@@ -122,8 +122,8 @@ int main(void)
   MX_TouchGFX_Init();
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim7);	// Enables interrupts for TIM7
-  init_brightness();
-  set_player_color(); 	// Needed for settings animation
+  init_brightness();				// Calculates scale_factors
+  set_player_color(); 				// Needed for settings animation
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -600,7 +600,7 @@ void init_game(uint8_t num_of_players){
 	miliseconds = 0;
 	last_toggle_overlap = 0;
 
-	// Reset game stats values (MORE TC)
+	// Reset game stats values
 	game_info.number_of_rolls = 0;
 	game_info.number_of_set_pawns = 0;
 	game_info.number_of_kicked_pawns = 0;

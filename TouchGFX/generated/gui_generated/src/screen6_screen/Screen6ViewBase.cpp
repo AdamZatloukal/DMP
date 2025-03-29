@@ -139,7 +139,7 @@ Screen6ViewBase::Screen6ViewBase()
     secondPlayerEndTimeTextCounter.setTypedText(touchgfx::TypedText(T___SINGLEUSE_U7NR));
     add(secondPlayerEndTimeTextCounter);
 
-    thirdPlayerEndTimeTextCounter.setXY(262, 170);
+    thirdPlayerEndTimeTextCounter.setXY(262, 168);
     thirdPlayerEndTimeTextCounter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     thirdPlayerEndTimeTextCounter.setLinespacing(0);
     thirdPlayerEndTimeTextCounter.setWideTextAction(WIDE_TEXT_WORDWRAP);
