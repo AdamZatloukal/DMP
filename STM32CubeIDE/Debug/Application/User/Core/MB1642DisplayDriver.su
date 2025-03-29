@@ -1,0 +1,15 @@
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:18:13:Display_DCS_Send	12	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:79:13:Display_DCS_Send_With_Data	16	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:108:6:DisplayDriver_DisplayOn	8	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:115:6:Display_OFF	8	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:124:6:Display_Set_Area	40	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:157:6:Display_Bitmap	32	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:210:6:HAL_GPIO_EXTI_Rising_Callback	16	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:240:6:HAL_GPIO_EXTI_Falling_Callback	8	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:248:6:DisplayDriver_DisplayInit	24	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:293:6:DisplayDriver_DisplayReset	8	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:301:6:DisplayDriver_Init	8	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:309:5:touchgfxDisplayDriverTransmitActive	0	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:314:6:touchgfxDisplayDriverTransmitBlock	16	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:319:6:DisplayDriver_DMACallback	8	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DisplayDriver.c:359:5:touchgfxDisplayDriverShouldTransferBlock	0	static

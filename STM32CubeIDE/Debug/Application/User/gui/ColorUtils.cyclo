@@ -1,0 +1,2 @@
+../Application/User/gui/ColorUtils.cpp:9:6:void setBoxColor(touchgfx::Box&, uint8_t)	5
+../Application/User/gui/ColorUtils.cpp:37:6:void setCircleColor(touchgfx::PainterRGB565&, touchgfx::Circle&, uint8_t)	5

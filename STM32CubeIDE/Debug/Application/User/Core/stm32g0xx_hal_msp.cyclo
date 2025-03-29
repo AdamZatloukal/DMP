@@ -1,0 +1,8 @@
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_hal_msp.c:76:6:HAL_MspInit	1
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_hal_msp.c:103:6:HAL_CRC_MspInit	2
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_hal_msp.c:126:6:HAL_CRC_MspDeInit	2
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_hal_msp.c:148:6:HAL_SPI_MspInit	6
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_hal_msp.c:284:6:HAL_SPI_MspDeInit	3
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_hal_msp.c:346:6:HAL_TIM_Base_MspInit	8
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_hal_msp.c:456:6:HAL_TIM_MspPostInit	2
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_hal_msp.c:498:6:HAL_TIM_Base_MspDeInit	4

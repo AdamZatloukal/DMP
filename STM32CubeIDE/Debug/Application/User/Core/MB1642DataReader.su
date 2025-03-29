@@ -1,0 +1,8 @@
+C:/TouchGFXProjects/App/Core/Src/MB1642DataReader.c:23:6:readData	32	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DataReader.c:106:6:readDataDMA	32	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DataReader.c:188:6:DataReader_DMACallback	12	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DataReader.c:209:6:DataReader_ReadData	8	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DataReader.c:214:6:DataReader_StartDMAReadData	8	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DataReader.c:219:10:DataReader_IsReceivingData	0	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DataReader.c:224:6:DataReader_WaitForReceiveDone	0	static
+C:/TouchGFXProjects/App/Core/Src/MB1642DataReader.c:229:6:DataReader_Init	0	static

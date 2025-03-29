@@ -1,0 +1,12 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:97:6:virtual void Screen4View::tearDownScreen()	0	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:257:6:virtual void Screen4View::setPawnAlpha(uint8_t)	48	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:269:6:virtual void Screen4View::handleArrowAnimation(uint8_t)	16	static
+../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:15:13:Screen4View::~Screen4View()	8	static
+../../TouchGFX/gui/include/gui/screen4_screen/Screen4View.hpp:15:13:virtual Screen4View::~Screen4View()	8	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:186:6:virtual void Screen4View::selectPawn()	8	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:11:1:Screen4View::Screen4View()	8	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:26:6:virtual void Screen4View::setupScreen()	32	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:111:6:virtual void Screen4View::incrementPawn()	16	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:151:6:virtual void Screen4View::decrementPawn()	16	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen4_screen/Screen4View.cpp:201:6:virtual void Screen4View::handleTickEvent()	16	static

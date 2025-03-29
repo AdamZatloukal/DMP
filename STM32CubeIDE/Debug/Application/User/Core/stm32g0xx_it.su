@@ -1,0 +1,13 @@
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:81:6:NMI_Handler	0	static
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:94:6:HardFault_Handler	0	static
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:109:6:SVC_Handler	0	static
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:122:6:PendSV_Handler	0	static
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:135:6:SysTick_Handler	8	static
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:156:6:EXTI0_1_IRQHandler	8	static
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:170:6:DMA1_Channel1_IRQHandler	8	static
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:184:6:DMA1_Channel2_3_IRQHandler	8	static
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:197:6:DMA1_Ch4_7_DMAMUX1_OVR_IRQHandler	8	static
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:213:6:TIM6_DAC_LPTIM1_IRQHandler	8	static
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:227:6:TIM7_LPTIM2_IRQHandler	8	static
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:241:6:SPI1_IRQHandler	8	static
+C:/TouchGFXProjects/App/Core/Src/stm32g0xx_it.c:255:6:SPI2_IRQHandler	8	static

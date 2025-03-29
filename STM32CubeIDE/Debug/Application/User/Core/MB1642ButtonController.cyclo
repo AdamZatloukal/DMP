@@ -1,0 +1,6 @@
+../../Middlewares/ST/touchgfx/framework/include/platform/driver/button/ButtonController.hpp:48:18:virtual void touchgfx::ButtonController::reset()	1
+C:/TouchGFXProjects/App/Core/Src/MB1642ButtonController.cpp:5:6:virtual void MB1642ButtonController::init()	1
+../../Core/Inc/MB1642ButtonController.hpp:6:7:MB1642ButtonController::~MB1642ButtonController()	1
+../../Core/Inc/MB1642ButtonController.hpp:6:7:virtual MB1642ButtonController::~MB1642ButtonController()	1
+C:/TouchGFXProjects/App/Core/Src/MB1642ButtonController.cpp:26:9:uint8_t MB1642ButtonController::getKeyState()	16
+C:/TouchGFXProjects/App/Core/Src/MB1642ButtonController.cpp:10:6:virtual bool MB1642ButtonController::sample(uint8_t&)	3

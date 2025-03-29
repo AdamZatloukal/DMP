@@ -1,0 +1,22 @@
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:315:18:virtual void touchgfx::Drawable::setX(int16_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:327:18:virtual void touchgfx::Drawable::setY(int16_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:356:18:virtual void touchgfx::Drawable::setWidth(int16_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:368:18:virtual void touchgfx::Drawable::setHeight(int16_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:378:18:virtual void touchgfx::Drawable::childGeometryChanged()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:389:18:virtual void touchgfx::Drawable::handleClickEvent(const touchgfx::ClickEvent&)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:401:18:virtual void touchgfx::Drawable::handleGestureEvent(const touchgfx::GestureEvent&)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:490:18:virtual void touchgfx::Drawable::handleDragEvent(const touchgfx::DragEvent&)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	1
+C:/TouchGFXProjects/App/TouchGFX/gui/src/containers/numberOfRealPlayersSetting.cpp:53:6:virtual void numberOfRealPlayersSetting::handleColorCircles(uint8_t)	4
+C:/TouchGFXProjects/App/TouchGFX/gui/src/containers/numberOfRealPlayersSetting.cpp:13:6:virtual void numberOfRealPlayersSetting::changeNumberOfPlayers(uint8_t)	1
+C:/TouchGFXProjects/App/TouchGFX/gui/src/containers/numberOfRealPlayersSetting.cpp:77:6:virtual void numberOfRealPlayersSetting::hideText()	1
+C:/TouchGFXProjects/App/TouchGFX/gui/src/containers/numberOfRealPlayersSetting.cpp:82:6:virtual void numberOfRealPlayersSetting::showText()	1
+../../TouchGFX/gui/include/gui/containers/numberOfRealPlayersSetting.hpp:10:13:numberOfRealPlayersSetting::~numberOfRealPlayersSetting()	1
+../../TouchGFX/gui/include/gui/containers/numberOfRealPlayersSetting.hpp:10:13:virtual numberOfRealPlayersSetting::~numberOfRealPlayersSetting()	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
+C:/TouchGFXProjects/App/TouchGFX/gui/src/containers/numberOfRealPlayersSetting.cpp:23:6:virtual void numberOfRealPlayersSetting::hideArrow(uint8_t)	3
+C:/TouchGFXProjects/App/TouchGFX/gui/src/containers/numberOfRealPlayersSetting.cpp:39:6:virtual void numberOfRealPlayersSetting::showArrow(uint8_t)	3
+C:/TouchGFXProjects/App/TouchGFX/gui/src/containers/numberOfRealPlayersSetting.cpp:3:1:numberOfRealPlayersSetting::numberOfRealPlayersSetting()	1
+C:/TouchGFXProjects/App/TouchGFX/gui/src/containers/numberOfRealPlayersSetting.cpp:8:6:virtual void numberOfRealPlayersSetting::initialize()	1

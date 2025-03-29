@@ -1,0 +1,9 @@
+C:/TouchGFXProjects/App/Core/Src/main.c:163:6:SystemClock_Config	80	static,ignoring_inline_asm
+C:/TouchGFXProjects/App/Core/Src/main.c:589:6:settings_animation	8	static
+C:/TouchGFXProjects/App/Core/Src/main.c:595:6:init_game	16	static
+C:/TouchGFXProjects/App/Core/Src/main.c:617:6:handle_initialization	8	static
+C:/TouchGFXProjects/App/Core/Src/main.c:623:6:handle_in_progress	16	static
+C:/TouchGFXProjects/App/Core/Src/main.c:663:6:handle_finish	0	static
+C:/TouchGFXProjects/App/Core/Src/main.c:667:6:set_player_color	16	static
+C:/TouchGFXProjects/App/Core/Src/main.c:90:5:main	152	static,ignoring_inline_asm
+C:/TouchGFXProjects/App/Core/Src/main.c:699:6:Error_Handler	0	static,ignoring_inline_asm
