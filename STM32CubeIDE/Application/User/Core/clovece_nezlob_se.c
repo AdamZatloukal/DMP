@@ -275,7 +275,7 @@ void move_pawn(uint8_t player, uint8_t number){
 
 		init_player(player);		// updates the pawns at start
 		pawn_kick_set_board_animation(player);
-		kick_out_pawn(player_struct, player);
+		kick_out_pawn(player_struct, player);   // If a pawn from another player is at start it gets kicked out
 
 		set_LED_color(*pawn_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE)); // puts the pawn on the board
 
@@ -304,8 +304,6 @@ void move_pawn(uint8_t player, uint8_t number){
 			set_brightness(BOARD, 100);
 			send_data(BOARD);
 
-			kick_out_pawn(player_struct, player);
-
 			set_LED_color(*pawn_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
 
 			check_finish_pawn(player_struct, player);	// Checks if the pawn has reached finish
@@ -319,6 +317,7 @@ void move_pawn(uint8_t player, uint8_t number){
 
 			HAL_Delay(200);
 		}
+		kick_out_pawn(player_struct, player);	// kick out pawns only after the player has moved
 		game_info.number_of_rolls++;
 	}
 
