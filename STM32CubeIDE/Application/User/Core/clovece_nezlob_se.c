@@ -261,6 +261,8 @@ Player* select_player(uint8_t player){
  * Notes:
  * Position 254 -> START
  * Position 255 -> END
+ * 
+ * Needs to be updated for new rules
  */
 void move_pawn(uint8_t player, uint8_t number){
 	Player* player_struct = select_player(player);
