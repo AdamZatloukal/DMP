@@ -8,7 +8,7 @@
 ### Vytvořeno ve spolupráci s:
 <p align="center">
   <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfjmonqkV4UOW-nPw5itsyJrX0hYYcPJbNww&s" alt="ST logo" />
-   <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcuok.cz%2Fstredni-skoly-cuok&psig=AOvVaw1iReFpf1MbaL53g2t75i8C&ust=1748630930804000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCMiz1f2ryY0DFQAAAAAdAAAAABAL", alt = "SPSEOL logo"/)
+   <img src="https://www.spravazeleznic.cz/documents/50004227/150269818/VO%C5%A0_SP%C5%A0E_olomouc.png/a65d7daa-3c10-4f95-b309-72d694906f1a?t=1662624581417", alt = "SPSEOL logo"/)
 </p>
  
 
