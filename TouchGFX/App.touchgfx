@@ -498,6 +498,7 @@
             "Name": "diceResultImage6",
             "Width": 80,
             "Height": 80,
+            "Visible": false,
             "RelativeFilename": "resultDiceSmall6.png"
           },
           {

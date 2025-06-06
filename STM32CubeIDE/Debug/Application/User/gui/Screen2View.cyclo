@@ -1,18 +1,18 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	1
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:23:6:virtual void Screen2View::tearDownScreen()	1
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:28:6:virtual void Screen2View::incrementValue()	5
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:47:6:virtual void Screen2View::decrementValue()	5
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:259:6:virtual void Screen2View::handleTickEvent()	1
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:18:6:virtual void Screen2View::tearDownScreen()	1
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:23:6:virtual void Screen2View::incrementValue()	5
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:42:6:virtual void Screen2View::decrementValue()	5
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:254:6:virtual void Screen2View::handleTickEvent()	1
 ../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:11:13:Screen2View::~Screen2View()	1
 ../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:11:13:virtual Screen2View::~Screen2View()	1
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:10:1:Screen2View::Screen2View()	1
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:15:6:virtual void Screen2View::setupScreen()	1
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:66:6:virtual void Screen2View::select()	6
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:101:6:virtual void Screen2View::scrollUp()	2
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:119:6:virtual void Screen2View::scrollDown()	4
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:148:6:virtual void Screen2View::selectWidget(uint8_t)	6
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:212:6:virtual void Screen2View::handleNumberOfPlayersTotal(uint8_t)	4
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:249:6:virtual void Screen2View::handleFillWithBots(uint8_t)	2
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:269:6:virtual void Screen2View::handleArrowAnimation()	16
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:340:6:virtual void Screen2View::handleNumberOfPlayersReal(uint8_t)	4
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:379:6:virtual void Screen2View::handleNumberOfPlayersAI(uint8_t)	3
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:5:1:Screen2View::Screen2View()	1
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:10:6:virtual void Screen2View::setupScreen()	1
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:61:6:virtual void Screen2View::select()	6
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:96:6:virtual void Screen2View::scrollUp()	2
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:114:6:virtual void Screen2View::scrollDown()	4
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:143:6:virtual void Screen2View::selectWidget(uint8_t)	6
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:207:6:virtual void Screen2View::handleNumberOfPlayersTotal(uint8_t)	4
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:244:6:virtual void Screen2View::handleFillWithBots(uint8_t)	2
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:264:6:virtual void Screen2View::handleArrowAnimation()	16
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:335:6:virtual void Screen2View::handleNumberOfPlayersReal(uint8_t)	4
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:374:6:virtual void Screen2View::handleNumberOfPlayersAI(uint8_t)	3

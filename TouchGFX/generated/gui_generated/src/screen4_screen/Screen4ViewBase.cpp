@@ -79,6 +79,7 @@ Screen4ViewBase::Screen4ViewBase()
 
     diceResultImage6.setXY(0, 0);
     diceResultImage6.setBitmap(touchgfx::Bitmap(BITMAP_RESULTDICESMALL6_ID));
+    diceResultImage6.setVisible(false);
     add(diceResultImage6);
 
     AIText.setXY(270, 2);

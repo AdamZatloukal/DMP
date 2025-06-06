@@ -15,22 +15,19 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:115:18:virtual void touchgfx::Screen::tearDownScreen()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:144:18:virtual void touchgfx::Screen::handleTickEvent()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:154:18:virtual void touchgfx::Screen::handleKeyEvent(uint8_t)	0	static
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	0	static
-../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:30:18:virtual void Screen2ViewBase::decrementValue()	0	static
-../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:34:18:virtual void Screen2ViewBase::incrementValue()	0	static
-../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:38:18:virtual void Screen2ViewBase::select()	0	static
-../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:42:18:virtual void Screen2ViewBase::scrollUp()	0	static
-../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:46:18:virtual void Screen2ViewBase::scrollDown()	0	static
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:29:18:virtual void Screen2ViewBase::decrementValue()	0	static
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:33:18:virtual void Screen2ViewBase::incrementValue()	0	static
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:37:18:virtual void Screen2ViewBase::select()	0	static
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:41:18:virtual void Screen2ViewBase::scrollUp()	0	static
+../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:45:18:virtual void Screen2ViewBase::scrollDown()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen2Presenter>::~View()	0	static
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:66:6:virtual void Screen2ViewBase::handleKeyEvent(uint8_t)	8	static
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:59:6:virtual void Screen2ViewBase::handleKeyEvent(uint8_t)	8	static
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen2Presenter>::~View()	8	static
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:57:6:virtual void Screen2ViewBase::setupScreen()	8	static
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:50:6:virtual void Screen2ViewBase::setupScreen()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:52:1:Screen2ViewBase::~Screen2ViewBase()	8	static
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:52:1:virtual Screen2ViewBase::~Screen2ViewBase()	8	static
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:45:1:Screen2ViewBase::~Screen2ViewBase()	8	static
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:45:1:virtual Screen2ViewBase::~Screen2ViewBase()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	0	static
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	16	static
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:10:1:Screen2ViewBase::Screen2ViewBase()	96	static
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	8	static
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:9:1:Screen2ViewBase::Screen2ViewBase()	72	static
