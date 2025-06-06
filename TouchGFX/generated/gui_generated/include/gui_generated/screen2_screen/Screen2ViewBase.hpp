@@ -15,7 +15,7 @@
 #include <gui/containers/numberOfRealPlayersSetting.hpp>
 #include <gui/containers/startGame.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
-#include <touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
 {
@@ -66,9 +66,9 @@ protected:
     startGame startGame1;
     touchgfx::Image scrollUpImage;
     touchgfx::Image scrollDownImage;
-    touchgfx::Circle circle1;
-    touchgfx::PainterRGB565Bitmap circle1Painter;
-    touchgfx::Image image1;
+    touchgfx::Circle settingsCircle;
+    touchgfx::PainterRGB565 settingsCirclePainter;
+    touchgfx::Image settingsImage;
 
 private:
 

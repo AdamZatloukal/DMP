@@ -161,34 +161,34 @@
             "Type": "Image",
             "Name": "scrollDownImage",
             "X": 125,
-            "Y": 152,
+            "Y": 149,
             "Width": 70,
             "Height": 70,
             "RelativeFilename": "__generated\\icon_theme_images_navigation_expand_more_70_70_03234B.svg.png"
           },
           {
             "Type": "Circle",
-            "Name": "circle1",
-            "X": -40,
-            "Y": -40,
-            "Width": 133,
-            "Height": 119,
-            "FileNameImage": "__generated\\alternate_theme_images_containers_medium_wide_dark.png",
+            "Name": "settingsCircle",
+            "X": -35,
+            "Y": -39,
+            "Width": 117,
+            "Height": 118,
             "Color": {
-              "Red": 255,
-              "Green": 255,
-              "Blue": 255
+              "Red": 13,
+              "Green": 27,
+              "Blue": 54
             },
             "CenterX": 40.0,
             "CenterY": 40.0,
-            "Radius": 65.0,
+            "Radius": 70.0,
             "EndAngle": 360.0,
             "CapPrecision": "Butt"
           },
           {
             "Type": "Image",
-            "Name": "image1",
-            "X": 1,
+            "Name": "settingsImage",
+            "X": 6,
+            "Y": 6,
             "Width": 50,
             "Height": 50,
             "RelativeFilename": "__generated\\icon_theme_images_action_settings_50_50_FFFFFF.svg.png"
