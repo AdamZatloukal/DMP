@@ -108,6 +108,9 @@
                   <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
                   <additionalInput kind="additionalinput" paths="$(LIBS)"/>
                 </inputType>
+                <option valueType="userObjs" IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.option.additionalobjs.1286972324" name="Additional object files" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.option.additionalobjs" useByScannerDiscovery="false">
+                  <listOptionValue builtIn="false" value="../../TouchGFX/generated/videos/obj/Slide6-ver.2.mp4.bin.o"/>
+                </option>
               </tool>
               <tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.archiver.974296729" name="MCU GCC Archiver" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.archiver"/>
               <tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.size.752854331" name="MCU Size" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.size"/>
@@ -219,6 +222,9 @@
                   <additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
                   <additionalInput kind="additionalinput" paths="$(LIBS)"/>
                 </inputType>
+                <option valueType="userObjs" IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.option.additionalobjs.5241267422" name="Additional object files" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.cpp.linker.option.additionalobjs" useByScannerDiscovery="false">
+                  <listOptionValue builtIn="false" value="../../TouchGFX/generated/videos/obj/Slide6-ver.2.mp4.bin.o"/>
+                </option>
               </tool>
               <tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.archiver.1819391157" name="MCU GCC Archiver" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.archiver"/>
               <tool id="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.size.454875670" name="MCU Size" superClass="com.st.stm32cube.ide.mcu.gnu.managedbuild.tool.size"/>

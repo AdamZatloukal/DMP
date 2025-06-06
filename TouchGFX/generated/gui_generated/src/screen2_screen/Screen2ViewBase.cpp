@@ -18,27 +18,27 @@ Screen2ViewBase::Screen2ViewBase()
     backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_CLAY_THEME_IMAGES_BACKGROUNDS_480X272_BURLY_ID));
     add(backgroundImage);
 
-    fillWithBotsSetting1.setXY(24, 95);
+    fillWithBotsSetting1.setXY(20, 120);
     add(fillWithBotsSetting1);
 
-    numberOfPlayersSetting1.setXY(24, 79);
+    numberOfPlayersSetting1.setXY(20, 104);
     add(numberOfPlayersSetting1);
 
-    numberOfAIPlayersSetting1.setXY(24, 79);
+    numberOfAIPlayersSetting1.setXY(20, 104);
     add(numberOfAIPlayersSetting1);
 
-    numberOfRealPlayersSetting1.setXY(24, 79);
+    numberOfRealPlayersSetting1.setXY(20, 104);
     add(numberOfRealPlayersSetting1);
 
-    startGame1.setXY(24, 79);
+    startGame1.setXY(20, 104);
     add(startGame1);
 
-    scrollUpImage.setXY(125, 25);
-    scrollUpImage.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_EXPAND_LESS_70_70_03234B_SVG_ID));
+    scrollUpImage.setXY(121, 50);
+    scrollUpImage.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_EXPAND_LESS_70_70_FFD200_SVG_ID));
     add(scrollUpImage);
 
-    scrollDownImage.setXY(125, 149);
-    scrollDownImage.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_EXPAND_MORE_70_70_03234B_SVG_ID));
+    scrollDownImage.setXY(121, 180);
+    scrollDownImage.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_EXPAND_MORE_70_70_FFD200_SVG_ID));
     add(scrollDownImage);
 
     settingsCircle.setPosition(-35, -39, 117, 118);
@@ -53,6 +53,10 @@ Screen2ViewBase::Screen2ViewBase()
     settingsImage.setXY(6, 6);
     settingsImage.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_SETTINGS_50_50_FFFFFF_SVG_ID));
     add(settingsImage);
+
+    image1.setXY(191, 0);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_LOGO_NEW_ID));
+    add(image1);
 }
 
 Screen2ViewBase::~Screen2ViewBase()

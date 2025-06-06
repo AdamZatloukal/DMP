@@ -24,13 +24,13 @@
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:43:18:virtual void Screen2ViewBase::scrollUp()	1
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:47:18:virtual void Screen2ViewBase::scrollDown()	1
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen2Presenter>::~View()	1
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:72:6:virtual void Screen2ViewBase::handleKeyEvent(uint8_t)	6
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:76:6:virtual void Screen2ViewBase::handleKeyEvent(uint8_t)	6
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen2Presenter>::~View()	1
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:63:6:virtual void Screen2ViewBase::setupScreen()	1
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:67:6:virtual void Screen2ViewBase::setupScreen()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:58:1:Screen2ViewBase::~Screen2ViewBase()	1
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:58:1:virtual Screen2ViewBase::~Screen2ViewBase()	1
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:62:1:Screen2ViewBase::~Screen2ViewBase()	1
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen2_screen/Screen2ViewBase.cpp:62:1:virtual Screen2ViewBase::~Screen2ViewBase()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	1

@@ -32,7 +32,7 @@ struct TypographyFontIndex
     static const touchgfx::FontId SMALL = 2;               // TCB______TTF_10_4bpp
     static const touchgfx::FontId TYPOGRAPHY_00 = 3;       // verdana_120_4bpp
     static const touchgfx::FontId SETTINGNAMEFONT = 4;     // segoeuib_18_4bpp
-    static const touchgfx::FontId STARTGAMEFONT = 5;       // segoeuib_25_4bpp
+    static const touchgfx::FontId STARTGAMEFONT = 5;       // segoeuib_22_4bpp
     static const touchgfx::FontId STATNAMEFONT = 6;        // TCB______TTF_14_4bpp
     static const touchgfx::FontId LARGEBUTSMALLER = 7;     // TCB______TTF_35_4bpp
     static const touchgfx::FontId STATNAMEFONTSMALLER = 8; // TCB______TTF_12_4bpp

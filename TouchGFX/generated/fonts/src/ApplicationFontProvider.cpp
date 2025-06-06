@@ -27,7 +27,7 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
         // segoeuib_18_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[4]);
     case Typography::STARTGAMEFONT:
-        // segoeuib_25_4bpp
+        // segoeuib_22_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[5]);
     case Typography::STATNAMEFONT:
         // TCB______TTF_14_4bpp

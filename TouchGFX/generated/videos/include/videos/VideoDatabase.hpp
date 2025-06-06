@@ -5,4 +5,11 @@
 
 #include <touchgfx/hal/Types.hpp>
 
+const uint32_t video_Slide6-ver_2_mp4_bin_length = 139508;
+#ifdef SIMULATOR
+extern const uint8_t* video_Slide6-ver_2_mp4_bin_start;
+#else
+extern const uint8_t video_Slide6-ver_2_mp4_bin_start[];
+#endif
+
 #endif // TOUCHGFX_VIDEODATABASE_HPP

@@ -8,13 +8,13 @@
 
 numberOfRealPlayersSettingBase::numberOfRealPlayersSettingBase()
 {
-    setWidth(273);
-    setHeight(85);
-    backgroundImage.setXY(-49, -89);
-    backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_CONTAINERS_MEDIUM_WIDE_DARK_ID));
+    setWidth(280);
+    setHeight(90);
+    backgroundImage.setXY(0, 0);
+    backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_CONTAINER_BACKGROUND_ID));
     add(backgroundImage);
 
-    settingNameText.setXY(3, 3);
+    settingNameText.setXY(14, 6);
     settingNameText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     settingNameText.setLinespacing(0);
     settingNameText.setWideTextAction(WIDE_TEXT_CHARWRAP_ELLIPSIS);
@@ -31,11 +31,11 @@ numberOfRealPlayersSettingBase::numberOfRealPlayersSettingBase()
     add(realPlayerTextCounter);
 
     arrowLeft.setXY(184, 0);
-    arrowLeft.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_CHEVRON_LEFT_50_50_FFD200_SVG_ID));
+    arrowLeft.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_LEFT_50_50_FFD200_SVG_ID));
     add(arrowLeft);
 
     arrowRight.setXY(223, -1);
-    arrowRight.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_CHEVRON_RIGHT_50_50_FFD200_SVG_ID));
+    arrowRight.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_RIGHT_50_50_FFD200_SVG_ID));
     add(arrowRight);
 
     redCircle.setPosition(43, 25, 80, 75);

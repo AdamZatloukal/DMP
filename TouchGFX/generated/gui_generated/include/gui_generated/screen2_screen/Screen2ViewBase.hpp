@@ -69,6 +69,7 @@ protected:
     touchgfx::Circle settingsCircle;
     touchgfx::PainterRGB565 settingsCirclePainter;
     touchgfx::Image settingsImage;
+    touchgfx::Image image1;
 
 private:
 

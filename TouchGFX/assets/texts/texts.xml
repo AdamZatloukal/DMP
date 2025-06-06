@@ -117,17 +117,14 @@
       <Text Id="__SingleUse_JZBY" Alignment="Left" TypographyId="startGameFont">
         <Translation Language="GB">4</Translation>
       </Text>
-      <Text Id="__SingleUse_9S4Q" Alignment="Center" TypographyId="startGameFont">
-        <Translation Language="GB">START</Translation>
+      <Text Id="__SingleUse_9S4Q" Alignment="Left" TypographyId="startGameFont">
+        <Translation Language="GB">Začít hru</Translation>
       </Text>
       <Text Id="__SingleUse_S3QA" Alignment="Left" TypographyId="settingNameFont">
         <Translation Language="GB">Počet skutečných&#10;hráčů</Translation>
       </Text>
       <Text Id="__SingleUse_FD7P" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">&lt;d&gt;</Translation>
-      </Text>
-      <Text Id="__SingleUse_5925" Alignment="Left" TypographyId="Typography_00">
-        <Translation Language="GB">...</Translation>
       </Text>
       <Text Id="__SingleUse_E5QY" Alignment="Left" TypographyId="Default">
         <Translation Language="GB">&lt;d&gt;</Translation>
@@ -161,7 +158,7 @@
     <Typography Id="Small" Font="TCB_____.TTF" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
     <Typography Id="Typography_00" Font="verdana.ttf" Size="120" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
     <Typography Id="settingNameFont" Font="segoeuib.ttf" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
-    <Typography Id="startGameFont" Font="segoeuib.ttf" Size="25" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
+    <Typography Id="startGameFont" Font="segoeuib.ttf" Size="22" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
     <Typography Id="statNameFont" Font="TCB_____.TTF" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="largeButSmaller" Font="TCB_____.TTF" Size="35" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="statNameFontSmaller" Font="TCB_____.TTF" Size="12" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />

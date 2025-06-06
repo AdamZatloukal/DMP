@@ -18,6 +18,8 @@ void Screen1View::tearDownScreen()
 }
 
 void Screen1View::handleTickEvent(){
+	/*
+	 * DONE FOR TESTING POURPOSES!!!
 	switch (game_info.current_event){
 		case ROLL_DICE:		// Dice screen
 			static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
@@ -34,5 +36,7 @@ void Screen1View::handleTickEvent(){
 			break;
 		default:
 			break;
+
 	}
+	*/
 }

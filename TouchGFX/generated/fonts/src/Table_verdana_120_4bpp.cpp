@@ -4,23 +4,21 @@
 
 FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_verdana_120_4bpp[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE = {
-    {     0, 0x002E,  15,  17,  17,  14,  44,   0,   0, 0x00 },
-    {   136, 0x0030,  61,  91,  89,   8,  76,   0,   0, 0x00 },
-    {  2957, 0x0031,  48,  87,  87,  16,  76,   0,   0, 0x00 },
-    {  5045, 0x0032,  60,  89,  89,   9,  76,   0,   0, 0x00 },
-    {  7715, 0x0033,  59,  91,  89,   9,  76,   0,   0, 0x00 },
-    { 10445, 0x0034,  67,  87,  87,   4,  76,   0,   0, 0x00 },
-    { 13403, 0x0035,  58,  89,  87,  10,  76,   0,   0, 0x00 },
-    { 15984, 0x0036,  62,  90,  88,   8,  76,   0,   0, 0x00 },
-    { 18774, 0x0037,  60,  88,  88,   9,  76,   0,   0, 0x00 },
-    { 21414, 0x0038,  63,  91,  89,   7,  76,   0,   0, 0x00 },
-    { 24326, 0x0039,  63,  91,  89,   6,  76,   0,   0, 0x00 },
-    { 27238, 0x003F,  50,  89,  89,   9,  65,   0,   0, 0x00 }
+    {     0, 0x0030,  61,  91,  89,   8,  76,   0,   0, 0x00 },
+    {  2821, 0x0031,  48,  87,  87,  16,  76,   0,   0, 0x00 },
+    {  4909, 0x0032,  60,  89,  89,   9,  76,   0,   0, 0x00 },
+    {  7579, 0x0033,  59,  91,  89,   9,  76,   0,   0, 0x00 },
+    { 10309, 0x0034,  67,  87,  87,   4,  76,   0,   0, 0x00 },
+    { 13267, 0x0035,  58,  89,  87,  10,  76,   0,   0, 0x00 },
+    { 15848, 0x0036,  62,  90,  88,   8,  76,   0,   0, 0x00 },
+    { 18638, 0x0037,  60,  88,  88,   9,  76,   0,   0, 0x00 },
+    { 21278, 0x0038,  63,  91,  89,   7,  76,   0,   0, 0x00 },
+    { 24190, 0x0039,  63,  91,  89,   6,  76,   0,   0, 0x00 },
+    { 27102, 0x003F,  50,  89,  89,   9,  65,   0,   0, 0x00 }
 };
 
 FONT_SEARCHTABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const uint16_t unicodelist_verdana_120_4bpp[] FONT_SEARCHTABLE_LOCATION_FLASH_ATTRIBUTE = {
-    0x002E,
     0x0030,
     0x0031,
     0x0032,
@@ -49,6 +47,6 @@ touchgfx::UnmappedDataFont& getFont_verdana_120_4bpp();
 
 touchgfx::UnmappedDataFont& getFont_verdana_120_4bpp()
 {
-    static touchgfx::UnmappedDataFont verdana_120_4bpp(glyphs_verdana_120_4bpp, unicodelist_verdana_120_4bpp, 12, 122, 120, 0, 0, 4, 1, 0, 0, unicodes_verdana_120_4bpp, kerning_verdana_120_4bpp, 63, 0, 0, 0);
+    static touchgfx::UnmappedDataFont verdana_120_4bpp(glyphs_verdana_120_4bpp, unicodelist_verdana_120_4bpp, 11, 122, 120, 0, 0, 4, 1, 0, 0, unicodes_verdana_120_4bpp, kerning_verdana_120_4bpp, 63, 0, 0, 0);
     return verdana_120_4bpp;
 }
