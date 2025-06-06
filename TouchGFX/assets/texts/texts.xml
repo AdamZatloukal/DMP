@@ -117,9 +117,6 @@
       <Text Id="__SingleUse_JZBY" Alignment="Left" TypographyId="startGameFont">
         <Translation Language="GB">4</Translation>
       </Text>
-      <Text Id="__SingleUse_WTKH" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">NASTAVENÍ</Translation>
-      </Text>
       <Text Id="__SingleUse_9S4Q" Alignment="Left" TypographyId="startGameFont">
         <Translation Language="GB">Začít hru</Translation>
       </Text>

@@ -104,20 +104,6 @@
             "RelativeFilename": "__generated\\clay_theme_images_backgrounds_480x272_burly.png"
           },
           {
-            "Type": "TextArea",
-            "Name": "textArea1",
-            "X": 8,
-            "Width": 197,
-            "Height": 41,
-            "TextId": "__SingleUse_WTKH",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 210
-            },
-            "AutoSize": true
-          },
-          {
             "Type": "CustomContainerInstance",
             "Name": "fillWithBotsSetting1",
             "X": 24,

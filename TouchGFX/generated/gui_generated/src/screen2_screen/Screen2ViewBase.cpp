@@ -5,7 +5,6 @@
 #include <touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
-#include <texts/TextKeysAndLanguages.hpp>
 
 Screen2ViewBase::Screen2ViewBase()
 {
@@ -18,12 +17,6 @@ Screen2ViewBase::Screen2ViewBase()
     backgroundImage.setXY(-61, -22);
     backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_CLAY_THEME_IMAGES_BACKGROUNDS_480X272_BURLY_ID));
     add(backgroundImage);
-
-    textArea1.setXY(8, 0);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 210, 0));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_WTKH));
-    add(textArea1);
 
     fillWithBotsSetting1.setXY(24, 95);
     add(fillWithBotsSetting1);

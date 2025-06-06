@@ -9,7 +9,6 @@
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <gui/containers/fillWithBotsSetting.hpp>
 #include <gui/containers/numberOfPlayersSetting.hpp>
 #include <gui/containers/numberOfAIPlayersSetting.hpp>
@@ -58,7 +57,6 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Image backgroundImage;
-    touchgfx::TextArea textArea1;
     fillWithBotsSetting fillWithBotsSetting1;
     numberOfPlayersSetting numberOfPlayersSetting1;
     numberOfAIPlayersSetting numberOfAIPlayersSetting1;

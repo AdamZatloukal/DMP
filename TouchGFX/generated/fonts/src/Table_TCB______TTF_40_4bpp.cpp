@@ -32,8 +32,7 @@ KEEP extern const touchgfx::GlyphNode glyphs_TCB______TTF_40_4bpp[] FONT_TABLE_L
     {  5517, 0x0074,  10,  23,  23,   0,  10,   0,   0, 0x00 }, // t
     {  5632, 0x0077,  32,  17,  17,   0,  32,  22,   4, 0x00 }, // w
     {  5904, 0x0078,  21,  17,  17,   0,  21,  26,   1, 0x00 }, // x
-    {  6091, 0x00CD,   9,  33,  33,   2,  10,   0,   0, 0x00 }, // Iacute
-    {  6256, 0x00DD,  23,  33,  33,   0,  23,   0,   0, 0x00 }  // Yacute
+    {  6091, 0x00DD,  23,  33,  33,   0,  23,   0,   0, 0x00 }  // Yacute
 };
 
 FONT_SEARCHTABLE_LOCATION_FLASH_PRAGMA
@@ -66,7 +65,6 @@ KEEP extern const uint16_t unicodelist_TCB______TTF_40_4bpp[] FONT_SEARCHTABLE_L
     0x0074,
     0x0077,
     0x0078,
-    0x00CD,
     0x00DD
 };
 
@@ -85,6 +83,6 @@ touchgfx::UnmappedDataFont& getFont_TCB______TTF_40_4bpp();
 
 touchgfx::UnmappedDataFont& getFont_TCB______TTF_40_4bpp()
 {
-    static touchgfx::UnmappedDataFont TCB______TTF_40_4bpp(glyphs_TCB______TTF_40_4bpp, unicodelist_TCB______TTF_40_4bpp, 30, 41, 40, 0, 0, 4, 1, 0, 1, unicodes_TCB______TTF_40_4bpp, kerning_TCB______TTF_40_4bpp, 63, 0, 0, 0);
+    static touchgfx::UnmappedDataFont TCB______TTF_40_4bpp(glyphs_TCB______TTF_40_4bpp, unicodelist_TCB______TTF_40_4bpp, 29, 41, 40, 0, 0, 4, 1, 0, 0, unicodes_TCB______TTF_40_4bpp, kerning_TCB______TTF_40_4bpp, 63, 0, 0, 0);
     return TCB______TTF_40_4bpp;
 }
