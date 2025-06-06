@@ -79,6 +79,8 @@ Application/User/generated/Screen2ViewBase.o: \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/numberOfRealPlayersSettingBase.hpp \
  ../../TouchGFX/gui/include/gui/containers/startGame.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/startGameBase.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp \
+ ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterBitmap.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
  ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp
@@ -161,6 +163,8 @@ Application/User/generated/Screen2ViewBase.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/numberOfRealPlayersSettingBase.hpp:
 ../../TouchGFX/gui/include/gui/containers/startGame.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/startGameBase.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/PainterRGB565Bitmap.hpp:
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/canvas/AbstractPainterBitmap.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/canvas_widget_renderer/CanvasWidgetRenderer.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
 ../../TouchGFX/generated/images/include/images/BitmapDatabase.hpp:

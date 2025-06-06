@@ -28,7 +28,7 @@ protected:
     touchgfx::Image backgroundImage;
     touchgfx::TextArea settingNameText;
     touchgfx::Image joystick;
-    touchgfx::Box joystick box;
+    touchgfx::Box joystickBox;
 
 private:
 

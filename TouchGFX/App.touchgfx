@@ -1653,7 +1653,7 @@
           },
           {
             "Type": "Box",
-            "Name": "joystick box",
+            "Name": "joystickBox",
             "X": 128,
             "Y": 42,
             "Width": 19,

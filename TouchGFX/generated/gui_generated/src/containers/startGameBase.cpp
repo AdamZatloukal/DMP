@@ -24,9 +24,9 @@ startGameBase::startGameBase()
     joystick.setBitmap(touchgfx::Bitmap(BITMAP_JOYSTICK_YELLOW_ID));
     add(joystick);
 
-    joystick box.setPosition(128, 42, 19, 19);
-    joystick box.setColor(touchgfx::Color::getColorFromRGB(12, 27, 55));
-    add(joystick box);
+    joystickBox.setPosition(128, 42, 19, 19);
+    joystickBox.setColor(touchgfx::Color::getColorFromRGB(12, 27, 55));
+    add(joystickBox);
 }
 
 startGameBase::~startGameBase()
