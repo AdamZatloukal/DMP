@@ -9,8 +9,8 @@ extern touchgfx::UnmappedDataFont& getFont_TCB______TTF_20_4bpp();
 extern touchgfx::UnmappedDataFont& getFont_TCB______TTF_40_4bpp();
 extern touchgfx::UnmappedDataFont& getFont_TCB______TTF_10_4bpp();
 extern touchgfx::UnmappedDataFont& getFont_verdana_120_4bpp();
-extern touchgfx::UnmappedDataFont& getFont_TCB______TTF_18_4bpp();
-extern touchgfx::UnmappedDataFont& getFont_TCB______TTF_25_4bpp();
+extern touchgfx::UnmappedDataFont& getFont_segoeuib_18_4bpp();
+extern touchgfx::UnmappedDataFont& getFont_segoeuib_25_4bpp();
 extern touchgfx::UnmappedDataFont& getFont_TCB______TTF_14_4bpp();
 extern touchgfx::UnmappedDataFont& getFont_TCB______TTF_35_4bpp();
 extern touchgfx::UnmappedDataFont& getFont_TCB______TTF_12_4bpp();
@@ -21,8 +21,8 @@ const touchgfx::Font* touchgfx_fonts[] = {
     &(getFont_TCB______TTF_40_4bpp()),
     &(getFont_TCB______TTF_10_4bpp()),
     &(getFont_verdana_120_4bpp()),
-    &(getFont_TCB______TTF_18_4bpp()),
-    &(getFont_TCB______TTF_25_4bpp()),
+    &(getFont_segoeuib_18_4bpp()),
+    &(getFont_segoeuib_25_4bpp()),
     &(getFont_TCB______TTF_14_4bpp()),
     &(getFont_TCB______TTF_35_4bpp()),
     &(getFont_TCB______TTF_12_4bpp()),
@@ -71,7 +71,7 @@ const touchgfx::TypedText::TypedTextData typedText_database_DEFAULT[] TEXT_LOCAT
     { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
-    { 5, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
+    { 5, touchgfx::CENTER, touchgfx::TEXT_DIRECTION_LTR },
     { 4, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 0, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
     { 3, touchgfx::LEFT, touchgfx::TEXT_DIRECTION_LTR },
@@ -131,10 +131,10 @@ void resetFont(touchgfx::FontId fontId)
         touchgfx_fonts[3] = &(getFont_verdana_120_4bpp());
         break;
     case 4:
-        touchgfx_fonts[4] = &(getFont_TCB______TTF_18_4bpp());
+        touchgfx_fonts[4] = &(getFont_segoeuib_18_4bpp());
         break;
     case 5:
-        touchgfx_fonts[5] = &(getFont_TCB______TTF_25_4bpp());
+        touchgfx_fonts[5] = &(getFont_segoeuib_25_4bpp());
         break;
     case 6:
         touchgfx_fonts[6] = &(getFont_TCB______TTF_14_4bpp());

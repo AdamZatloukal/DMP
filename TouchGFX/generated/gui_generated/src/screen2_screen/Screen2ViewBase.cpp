@@ -40,6 +40,19 @@ Screen2ViewBase::Screen2ViewBase()
     scrollDownImage.setXY(125, 152);
     scrollDownImage.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_EXPAND_MORE_70_70_03234B_SVG_ID));
     add(scrollDownImage);
+
+    circle1.setPosition(-40, -40, 133, 119);
+    circle1.setCenter(40, 40);
+    circle1.setRadius(65);
+    circle1.setLineWidth(0);
+    circle1.setArc(0, 360);
+    circle1Painter.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_CONTAINERS_MEDIUM_WIDE_DARK_ID));
+    circle1.setPainter(circle1Painter);
+    add(circle1);
+
+    image1.setXY(1, 0);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_ACTION_SETTINGS_50_50_FFFFFF_SVG_ID));
+    add(image1);
 }
 
 Screen2ViewBase::~Screen2ViewBase()

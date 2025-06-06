@@ -165,6 +165,33 @@
             "Width": 70,
             "Height": 70,
             "RelativeFilename": "__generated\\icon_theme_images_navigation_expand_more_70_70_03234B.svg.png"
+          },
+          {
+            "Type": "Circle",
+            "Name": "circle1",
+            "X": -40,
+            "Y": -40,
+            "Width": 133,
+            "Height": 119,
+            "FileNameImage": "__generated\\alternate_theme_images_containers_medium_wide_dark.png",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "CenterX": 40.0,
+            "CenterY": 40.0,
+            "Radius": 65.0,
+            "EndAngle": 360.0,
+            "CapPrecision": "Butt"
+          },
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "X": 1,
+            "Width": 50,
+            "Height": 50,
+            "RelativeFilename": "__generated\\icon_theme_images_action_settings_50_50_FFFFFF.svg.png"
           }
         ],
         "Interactions": [
@@ -1135,8 +1162,8 @@
             "Name": "settingNameText",
             "X": 6,
             "Y": 7,
-            "Width": 88,
-            "Height": 21,
+            "Width": 101,
+            "Height": 22,
             "TextId": "__SingleUse_N2KV",
             "TextRotation": "0",
             "Color": {
@@ -1276,8 +1303,8 @@
             "Name": "settingNameText",
             "X": 8,
             "Y": 12,
-            "Width": 60,
-            "Height": 21,
+            "Width": 66,
+            "Height": 22,
             "TextId": "__SingleUse_V41E",
             "TextRotation": "0",
             "Color": {
@@ -1323,8 +1350,8 @@
             "Name": "settingNameText",
             "X": 9,
             "Y": 13,
-            "Width": 110,
-            "Height": 21,
+            "Width": 125,
+            "Height": 22,
             "TextId": "__SingleUse_OL82",
             "TextRotation": "0",
             "Color": {
@@ -1464,8 +1491,8 @@
             "Name": "settingNameText",
             "X": 3,
             "Y": 3,
-            "Width": 130,
-            "Height": 42,
+            "Width": 149,
+            "Height": 44,
             "TextId": "__SingleUse_S3QA",
             "TextRotation": "0",
             "Color": {
@@ -1595,7 +1622,7 @@
             "Type": "Image",
             "Name": "backgroundImage",
             "X": -49,
-            "Y": -83,
+            "Y": -87,
             "Width": 370,
             "Height": 270,
             "RelativeFilename": "__generated\\alternate_theme_images_containers_medium_wide_dark.png"
@@ -1603,10 +1630,9 @@
           {
             "Type": "TextArea",
             "Name": "settingNameText",
-            "X": 90,
-            "Y": 7,
-            "Width": 93,
-            "Height": 26,
+            "X": 99,
+            "Width": 76,
+            "Height": 25,
             "TextId": "__SingleUse_9S4Q",
             "TextRotation": "0",
             "Color": {
@@ -1618,12 +1644,25 @@
           },
           {
             "Type": "Image",
-            "Name": "startGameImage",
+            "Name": "joystick",
             "X": 112,
-            "Y": 33,
-            "Width": 51,
-            "Height": 48,
-            "RelativeFilename": "__generated\\icon_theme_images_navigation_unfold_less_51_48_FFD200.svg.png"
+            "Y": 27,
+            "Width": 50,
+            "Height": 50,
+            "RelativeFilename": "joystick-yellow.png"
+          },
+          {
+            "Type": "Box",
+            "Name": "joystick box",
+            "X": 128,
+            "Y": 42,
+            "Width": 19,
+            "Height": 19,
+            "Color": {
+              "Red": 12,
+              "Green": 27,
+              "Blue": 55
+            }
           }
         ],
         "Interactions": []

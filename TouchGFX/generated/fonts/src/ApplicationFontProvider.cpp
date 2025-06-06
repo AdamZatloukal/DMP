@@ -24,10 +24,10 @@ touchgfx::Font* ApplicationFontProvider::getFont(touchgfx::FontId typography)
         // verdana_120_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[3]);
     case Typography::SETTINGNAMEFONT:
-        // TCB______TTF_18_4bpp
+        // segoeuib_18_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[4]);
     case Typography::STARTGAMEFONT:
-        // TCB______TTF_25_4bpp
+        // segoeuib_25_4bpp
         return const_cast<touchgfx::Font*>(TypedTextDatabase::getFonts()[5]);
     case Typography::STATNAMEFONT:
         // TCB______TTF_14_4bpp
