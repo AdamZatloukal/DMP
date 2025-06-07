@@ -4,6 +4,7 @@
 #include <gui_generated/screen1_screen/Screen1ViewBase.hpp>
 #include <touchgfx/Color.hpp>
 #include <images/BitmapDatabase.hpp>
+#include <texts/TextKeysAndLanguages.hpp>
 
 Screen1ViewBase::Screen1ViewBase()
 {
@@ -15,11 +16,25 @@ Screen1ViewBase::Screen1ViewBase()
     backgroundBox.setColor(touchgfx::Color::getColorFromRGB(163, 163, 163));
     add(backgroundBox);
 
-    animatedImage1.setXY(0, 30);
-    animatedImage1.setBitmaps(BITMAP_RESIZED1_ID, BITMAP_RESIZED18_ID);
-    animatedImage1.setUpdateTicksInterval(3);
+    animatedImage1.setXY(0, 0);
+    animatedImage1.setBitmaps(BITMAP_LOADING03002_ID, BITMAP_LOADING03050_ID);
+    animatedImage1.setUpdateTicksInterval(2);
     animatedImage1.startAnimation(false, true, false);
     add(animatedImage1);
+
+    box1.setPosition(0, 180, 320, 60);
+    box1.setColor(touchgfx::Color::getColorFromRGB(13, 27, 54));
+    add(box1);
+
+    loadingText.setXY(260, 170);
+    loadingText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    loadingText.setLinespacing(0);
+    loadingText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_H5ER));
+    add(loadingText);
+
+    image1.setXY(22, 170);
+    image1.setBitmap(touchgfx::Bitmap(BITMAP_LOGO_LIGHT_ID));
+    add(image1);
 }
 
 Screen1ViewBase::~Screen1ViewBase()

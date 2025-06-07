@@ -9,7 +9,7 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/containers/playerResultContainer.cpp:20:6:virtual void playerResultContainer::setResultPositionTextAndColor(uint8_t, uint8_t)	16	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/containers/playerResultContainer.cpp:21:6:virtual void playerResultContainer::setResultPositionTextAndColor(uint8_t, uint8_t)	16	static
 ../../TouchGFX/gui/include/gui/containers/playerResultContainer.hpp:10:13:playerResultContainer::~playerResultContainer()	8	static
 ../../TouchGFX/gui/include/gui/containers/playerResultContainer.hpp:10:13:virtual playerResultContainer::~playerResultContainer()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	8	static

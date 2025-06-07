@@ -18,13 +18,49 @@
           {
             "Type": "AnimatedImage",
             "Name": "animatedImage1",
-            "Y": 30,
             "Width": 320,
             "Height": 180,
-            "FileNameFirst": "resized1.png",
-            "FileNameLast": "resized18.png",
-            "UpdateTicksInterval": 50,
+            "FileNameFirst": "_loading\\loading03002.png",
+            "FileNameLast": "_loading\\loading03050.png",
+            "UpdateTicksInterval": 40,
             "StartOnLoad": true
+          },
+          {
+            "Type": "Box",
+            "Name": "box1",
+            "Y": 180,
+            "Width": 320,
+            "Height": 60,
+            "Color": {
+              "Red": 13,
+              "Green": 27,
+              "Blue": 54
+            }
+          },
+          {
+            "Type": "TextArea",
+            "Name": "loadingText",
+            "X": 260,
+            "Y": 170,
+            "Width": 42,
+            "Height": 51,
+            "TextId": "__SingleUse_H5ER",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "Image",
+            "Name": "image1",
+            "X": 22,
+            "Y": 170,
+            "Width": 120,
+            "Height": 80,
+            "RelativeFilename": "logo-light.png"
           }
         ],
         "Interactions": [

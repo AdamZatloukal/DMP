@@ -23,6 +23,7 @@ struct Typography
     static const touchgfx::FontId LARGEBUTSMALLER = 7;
     static const touchgfx::FontId STATNAMEFONTSMALLER = 8;
     static const touchgfx::FontId STATNUMFONTSMALL = 9;
+    static const touchgfx::FontId LOADING = 10;
 };
 
 struct TypographyFontIndex
@@ -37,7 +38,8 @@ struct TypographyFontIndex
     static const touchgfx::FontId LARGEBUTSMALLER = 7;     // TCB______TTF_35_4bpp
     static const touchgfx::FontId STATNAMEFONTSMALLER = 8; // TCB______TTF_12_4bpp
     static const touchgfx::FontId STATNUMFONTSMALL = 9;    // TCB______TTF_16_4bpp
-    static const uint16_t NUMBER_OF_FONTS = 10;
+    static const touchgfx::FontId LOADING = 10;             // segoeuib_50_4bpp
+    static const uint16_t NUMBER_OF_FONTS = 11;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider
