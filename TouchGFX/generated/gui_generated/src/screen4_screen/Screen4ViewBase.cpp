@@ -82,7 +82,7 @@ Screen4ViewBase::Screen4ViewBase()
     diceResultImage6.setVisible(false);
     add(diceResultImage6);
 
-    AIText.setXY(269, 0);
+    AIText.setXY(260, 0);
     AIText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     AIText.setLinespacing(0);
     AIText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QXX9));

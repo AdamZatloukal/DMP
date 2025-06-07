@@ -19750,11 +19750,11 @@ Screen3ViewBase::Screen3ViewBase()
  80077de:	9909      	ldr	r1, [sp, #36]	@ 0x24
  80077e0:	1d20      	adds	r0, r4, #4
  80077e2:	f006 fb82 	bl	800deea <_ZN8touchgfx9Container3addERNS_8DrawableE>
-    AIText.setXY(259, 0);
- 80077e6:	2104      	movs	r1, #4
+    AIText.setXY(260, 0);
+ 80077e6:	2182      	movs	r1, #130	@ 0x82
  80077e8:	0032      	movs	r2, r6
  80077ea:	9804      	ldr	r0, [sp, #16]
- 80077ec:	31ff      	adds	r1, #255	@ 0xff
+ 80077ec:	0049      	lsls	r1, r1, #1
  80077ee:	f7ff fb6b 	bl	8006ec8 <_ZN8touchgfx8Drawable5setXYEss>
         color = newColor;
  80077f2:	9b04      	ldr	r3, [sp, #16]
@@ -20609,11 +20609,11 @@ Screen4ViewBase::Screen4ViewBase()
  8007db4:	77df      	strb	r7, [r3, #31]
  8007db6:	1d28      	adds	r0, r5, #4
  8007db8:	f006 f897 	bl	800deea <_ZN8touchgfx9Container3addERNS_8DrawableE>
-    AIText.setXY(269, 0);
- 8007dbc:	210e      	movs	r1, #14
+    AIText.setXY(260, 0);
+ 8007dbc:	2182      	movs	r1, #130	@ 0x82
  8007dbe:	003a      	movs	r2, r7
  8007dc0:	9803      	ldr	r0, [sp, #12]
- 8007dc2:	31ff      	adds	r1, #255	@ 0xff
+ 8007dc2:	0049      	lsls	r1, r1, #1
  8007dc4:	f7ff f880 	bl	8006ec8 <_ZN8touchgfx8Drawable5setXYEss>
         color = newColor;
  8007dc8:	2201      	movs	r2, #1
@@ -28677,9 +28677,9 @@ void Screen4View::handleArrowAnimation(uint8_t arrow){
  800b13a:	2303      	movs	r3, #3
  800b13c:	5483      	strb	r3, [r0, r2]
 
-			static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen1ScreenNoTransition();
+			static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
  800b13e:	f008 fcf9 	bl	8013b34 <_ZN8touchgfx11Application11getInstanceEv>
- 800b142:	f7fb fa3f 	bl	80065c4 <_ZN23FrontendApplicationBase29gotoScreen1ScreenNoTransitionEv>
+ 800b142:	f7fb fa5b 	bl	80065fc <_ZN23FrontendApplicationBase29gotoScreen3ScreenNoTransitionEv>
 		}
 	}
 
@@ -28789,9 +28789,9 @@ void Screen4View::selectPawn(){
 	game_info.current_event = PAWN_SELECTED;
  800b1da:	2204      	movs	r2, #4
  800b1dc:	701a      	strb	r2, [r3, #0]
-	static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen1ScreenNoTransition();
+	static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
  800b1de:	f008 fca9 	bl	8013b34 <_ZN8touchgfx11Application11getInstanceEv>
- 800b1e2:	f7fb f9ef 	bl	80065c4 <_ZN23FrontendApplicationBase29gotoScreen1ScreenNoTransitionEv>
+ 800b1e2:	f7fb fa0b 	bl	80065fc <_ZN23FrontendApplicationBase29gotoScreen3ScreenNoTransitionEv>
 }
  800b1e6:	bd10      	pop	{r4, pc}
  800b1e8:	20000124 	.word	0x20000124
@@ -29215,9 +29215,9 @@ void Screen4View::handleTickEvent(){
 		game_info.selected_pawn = counter - 1;
  800b49c:	3a01      	subs	r2, #1
  800b49e:	706a      	strb	r2, [r5, #1]
-		static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen1ScreenNoTransition();
+		static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
  800b4a0:	f008 fb48 	bl	8013b34 <_ZN8touchgfx11Application11getInstanceEv>
- 800b4a4:	f7fb f88e 	bl	80065c4 <_ZN23FrontendApplicationBase29gotoScreen1ScreenNoTransitionEv>
+ 800b4a4:	f7fb f8aa 	bl	80065fc <_ZN23FrontendApplicationBase29gotoScreen3ScreenNoTransitionEv>
 	tick++;
  800b4a8:	22d5      	movs	r2, #213	@ 0xd5
  800b4aa:	0092      	lsls	r2, r2, #2

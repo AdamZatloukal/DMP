@@ -390,7 +390,7 @@
           {
             "Type": "TextArea",
             "Name": "AIText",
-            "X": 259,
+            "X": 260,
             "Width": 51,
             "Height": 51,
             "Visible": false,
@@ -569,7 +569,7 @@
           {
             "Type": "TextArea",
             "Name": "AIText",
-            "X": 269,
+            "X": 260,
             "Width": 51,
             "Height": 51,
             "Visible": false,
