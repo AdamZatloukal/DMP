@@ -13,6 +13,9 @@ void Screen2View::setupScreen()
 
     current_widget = START_GAME;
     selectWidget(current_widget);
+
+    iterations = 0;
+    last_tick_event = 0;
 }
 
 void Screen2View::tearDownScreen()
@@ -256,6 +259,19 @@ void Screen2View::handleTickEvent(){
 
 	// Delay event (for arrow left & right)
 	handleArrowAnimation();
+
+	// Changes the visibility of the box every 2/3 of a second
+	if(tick - last_tick_event >= 40 && current_widget == START_GAME){
+		last_tick_event = tick;
+
+		if(iterations % 2 == 0){
+			startGame1.setJoystickBoxVisibility(true);
+		}
+		else{
+			startGame1.setJoystickBoxVisibility(false);
+		}
+		iterations++;
+	}
 }
 
 /*
@@ -311,7 +327,7 @@ void Screen2View::handleArrowAnimation(){
 	if(image == NO_ANIMATION){
 		return;
 	}
-	// 15 tick delay -> is executes every 15 tick if the delay event is ARROW_LEFT_ANIMATION
+	// 15 tick delay -> is executed every 15 ticks if the delay event is ARROW_LEFT_ANIMATION
 	if(tick - last_tick_event >= 15){
 		switch(current_widget){
 			case NUMBER_OF_PLAYERS_TOTAL:

@@ -9,3 +9,9 @@ void startGame::initialize()
 {
     startGameBase::initialize();
 }
+
+void startGame::setJoystickBoxVisibility(bool visibility)
+{
+    joystickBox.setVisible(visibility);
+    joystickBox.invalidate();
+}

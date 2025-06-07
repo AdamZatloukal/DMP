@@ -18,25 +18,26 @@ void Screen1View::tearDownScreen()
 }
 
 void Screen1View::handleTickEvent(){
-	/*
-	 * DONE FOR TESTING POURPOSES!!!
-	switch (game_info.current_event){
-		case ROLL_DICE:		// Dice screen
-			static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
-			break;
-		case SELECT_PAWN:		// Select pawn screen
-			static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen4ScreenNoTransition();
-			break;
-		case MENU:		// Menu
-			static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen2ScreenNoTransition();
-			break;
-		case FINISH_GAME:
-			game_info.finish_milis = miliseconds;
-			static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen5ScreenNoTransition();
-			break;
-		default:
-			break;
+	static uint32_t tick = 0;
 
+	if(tick > 150){		// Screen switches after 2.5s (when the animation finishes)
+		switch (game_info.current_event){
+			case ROLL_DICE:		// Dice screen
+				static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
+				break;
+			case SELECT_PAWN:		// Select pawn screen
+				static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen4ScreenNoTransition();
+				break;
+			case MENU:		// Menu
+				static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen2ScreenNoTransition();
+				break;
+			case FINISH_GAME:
+				game_info.finish_milis = miliseconds;
+				static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen5ScreenNoTransition();
+				break;
+			default:
+				break;
+			}
 	}
-	*/
+	tick++;
 }

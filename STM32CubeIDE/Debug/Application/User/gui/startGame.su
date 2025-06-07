@@ -9,6 +9,7 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:501:18:virtual void touchgfx::Drawable::handleTickEvent()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:588:18:virtual void touchgfx::Drawable::moveTo(int16_t, int16_t)	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	0	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/containers/startGame.cpp:13:6:virtual void startGame::setJoystickBoxVisibility(bool)	8	static
 ../../TouchGFX/gui/include/gui/containers/startGame.hpp:10:13:startGame::~startGame()	8	static
 ../../TouchGFX/gui/include/gui/containers/startGame.hpp:10:13:virtual startGame::~startGame()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	8	static
