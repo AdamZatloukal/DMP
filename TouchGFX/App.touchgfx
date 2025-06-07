@@ -390,7 +390,7 @@
           {
             "Type": "TextArea",
             "Name": "AIText",
-            "X": 269,
+            "X": 259,
             "Width": 51,
             "Height": 51,
             "Visible": false,
@@ -1383,10 +1383,9 @@
           {
             "Type": "TextArea",
             "Name": "AIPlayerTextCounter",
-            "X": 214,
-            "Y": -3,
+            "X": 221,
             "Width": 19,
-            "Height": 35,
+            "Height": 36,
             "TextId": "__SingleUse_E5QY",
             "TextRotation": "0",
             "Color": {
@@ -1404,8 +1403,7 @@
           {
             "Type": "Image",
             "Name": "arrowLeft",
-            "X": 173,
-            "Y": -3,
+            "X": 180,
             "Width": 50,
             "Height": 50,
             "RelativeFilename": "__generated\\icon_theme_images_navigation_arrow_left_50_50_FFD200.svg.png"
@@ -1413,8 +1411,7 @@
           {
             "Type": "Image",
             "Name": "arrowRight",
-            "X": 223,
-            "Y": -3,
+            "X": 230,
             "Width": 50,
             "Height": 50,
             "RelativeFilename": "__generated\\icon_theme_images_navigation_arrow_right_50_50_FFD200.svg.png"
@@ -1525,7 +1522,7 @@
             "Name": "realPlayerTextCounter",
             "X": 223,
             "Width": 19,
-            "Height": 35,
+            "Height": 36,
             "TextId": "__SingleUse_FD7P",
             "TextRotation": "0",
             "Color": {
