@@ -5,13 +5,37 @@
 FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_segoeuib_50_4bpp[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE = {
     {     0, 0x002E,  10,   9,   8,   2,  14,   0,   0, 0x00 },
-    {    45, 0x003F,  20,  38,  37,   1,  22,   0,   0, 0x00 }
+    {    45, 0x0030,  27,  38,  37,   1,  29,   0,   0, 0x00 },
+    {   577, 0x0031,  16,  37,  37,   5,  29,   0,   0, 0x00 },
+    {   873, 0x0032,  24,  37,  37,   2,  29,   0,   0, 0x00 },
+    {  1317, 0x0033,  24,  38,  37,   2,  29,   0,   0, 0x00 },
+    {  1773, 0x0034,  28,  36,  36,   0,  29,   0,   0, 0x00 },
+    {  2277, 0x0035,  23,  37,  36,   3,  29,   0,   0, 0x00 },
+    {  2721, 0x0036,  26,  38,  37,   2,  29,   0,   0, 0x00 },
+    {  3215, 0x0037,  25,  36,  36,   2,  29,   0,   0, 0x00 },
+    {  3683, 0x0038,  25,  38,  37,   2,  29,   0,   0, 0x00 },
+    {  4177, 0x0039,  26,  38,  37,   1,  29,   0,   0, 0x00 },
+    {  4671, 0x003F,  20,  38,  37,   1,  22,   0,   0, 0x00 },
+    {  5051, 0x0041,  35,  36,  36,   0,  35,   0,   0, 0x00 },
+    {  5699, 0x0049,   8,  36,  36,   4,  16,   0,   0, 0x00 }
 };
 
 FONT_SEARCHTABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const uint16_t unicodelist_segoeuib_50_4bpp[] FONT_SEARCHTABLE_LOCATION_FLASH_ATTRIBUTE = {
     0x002E,
-    0x003F
+    0x0030,
+    0x0031,
+    0x0032,
+    0x0033,
+    0x0034,
+    0x0035,
+    0x0036,
+    0x0037,
+    0x0038,
+    0x0039,
+    0x003F,
+    0x0041,
+    0x0049
 };
 
 // segoeuib_50_4bpp
@@ -30,6 +54,6 @@ touchgfx::UnmappedDataFont& getFont_segoeuib_50_4bpp();
 
 touchgfx::UnmappedDataFont& getFont_segoeuib_50_4bpp()
 {
-    static touchgfx::UnmappedDataFont segoeuib_50_4bpp(glyphs_segoeuib_50_4bpp, unicodelist_segoeuib_50_4bpp, 2, 51, 50, 0, 0, 4, 1, 0, 0, unicodes_segoeuib_50_4bpp, kerning_segoeuib_50_4bpp, 63, 0, 0, &segoeuib_contextualFormsTable);
+    static touchgfx::UnmappedDataFont segoeuib_50_4bpp(glyphs_segoeuib_50_4bpp, unicodelist_segoeuib_50_4bpp, 14, 51, 50, 0, 0, 4, 1, 0, 0, unicodes_segoeuib_50_4bpp, kerning_segoeuib_50_4bpp, 63, 0, 0, &segoeuib_contextualFormsTable);
     return segoeuib_50_4bpp;
 }

@@ -44,10 +44,10 @@ protected:
     playerResultContainer playerResultContainer2;
     playerResultContainer playerResultContainer3;
     playerResultContainer playerResultContainer4;
-    touchgfx::TextArea resultsText;
     touchgfx::TextArea downText;
     touchgfx::Image joystickDownImage;
     touchgfx::Box downButtonBox;
+    touchgfx::Image logoImage;
 
 private:
 

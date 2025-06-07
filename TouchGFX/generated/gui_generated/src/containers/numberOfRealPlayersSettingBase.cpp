@@ -21,7 +21,7 @@ numberOfRealPlayersSettingBase::numberOfRealPlayersSettingBase()
     settingNameText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_S3QA));
     add(settingNameText);
 
-    realPlayerTextCounter.setXY(223, 14);
+    realPlayerTextCounter.setXY(223, 0);
     realPlayerTextCounter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     realPlayerTextCounter.setLinespacing(0);
     Unicode::snprintf(realPlayerTextCounterBuffer, REALPLAYERTEXTCOUNTER_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_4FFK).getText());
@@ -30,11 +30,11 @@ numberOfRealPlayersSettingBase::numberOfRealPlayersSettingBase()
     realPlayerTextCounter.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FD7P));
     add(realPlayerTextCounter);
 
-    arrowLeft.setXY(184, 0);
+    arrowLeft.setXY(182, 0);
     arrowLeft.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_LEFT_50_50_FFD200_SVG_ID));
     add(arrowLeft);
 
-    arrowRight.setXY(223, -1);
+    arrowRight.setXY(232, 0);
     arrowRight.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_ARROW_RIGHT_50_50_FFD200_SVG_ID));
     add(arrowRight);
 

@@ -15,11 +15,11 @@ Screen5ViewBase::Screen5ViewBase()
     __background.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     add(__background);
 
-    backgroundImage.setXY(-24, -16);
+    backgroundImage.setXY(-25, -9);
     backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_CLAY_THEME_IMAGES_BACKGROUNDS_480X272_BURLY_ID));
     add(backgroundImage);
 
-    listLayout1.setXY(17, 49);
+    listLayout1.setXY(16, 56);
     listLayout1.setDirection(touchgfx::SOUTH);
 
     listLayout1.add(playerResultContainer1);
@@ -31,12 +31,6 @@ Screen5ViewBase::Screen5ViewBase()
     listLayout1.add(playerResultContainer4);
 
     add(listLayout1);
-
-    resultsText.setXY(9, 3);
-    resultsText.setColor(touchgfx::Color::getColorFromRGB(255, 210, 0));
-    resultsText.setLinespacing(0);
-    resultsText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_J43H));
-    add(resultsText);
 
     downText.setXY(275, 173);
     downText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
@@ -51,6 +45,10 @@ Screen5ViewBase::Screen5ViewBase()
     downButtonBox.setPosition(280, 223, 17, 12);
     downButtonBox.setColor(touchgfx::Color::getColorFromRGB(196, 206, 229));
     add(downButtonBox);
+
+    logoImage.setXY(0, -9);
+    logoImage.setBitmap(touchgfx::Bitmap(BITMAP_LOGO_NEW_ID));
+    add(logoImage);
 }
 
 Screen5ViewBase::~Screen5ViewBase()

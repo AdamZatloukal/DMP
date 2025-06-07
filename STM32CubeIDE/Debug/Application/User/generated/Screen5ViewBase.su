@@ -20,16 +20,15 @@
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:touchgfx::View<Screen5Presenter>::~View()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/mvp/View.hpp:36:7:virtual touchgfx::View<Screen5Presenter>::~View()	8	static
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:61:6:virtual void Screen5ViewBase::setupScreen()	8	static
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:59:6:virtual void Screen5ViewBase::setupScreen()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	8	static
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:69:6:virtual void Screen5ViewBase::handleKeyEvent(uint8_t)	8	static
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:67:6:virtual void Screen5ViewBase::handleKeyEvent(uint8_t)	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:56:1:Screen5ViewBase::~Screen5ViewBase()	16	static
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:56:1:virtual Screen5ViewBase::~Screen5ViewBase()	8	static
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:54:1:Screen5ViewBase::~Screen5ViewBase()	16	static
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:54:1:virtual Screen5ViewBase::~Screen5ViewBase()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	0	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:33:5:touchgfx::Box::Box()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	16	static
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:43:5:touchgfx::TextArea::TextArea()	8	static
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:10:1:Screen5ViewBase::Screen5ViewBase()	96	static
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen5_screen/Screen5ViewBase.cpp:10:1:Screen5ViewBase::Screen5ViewBase()	104	static

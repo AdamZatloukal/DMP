@@ -20,7 +20,7 @@ numberOfAIPlayersSettingBase::numberOfAIPlayersSettingBase()
     settingNameText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_OL82));
     add(settingNameText);
 
-    AIPlayerTextCounter.setXY(217, 10);
+    AIPlayerTextCounter.setXY(214, -3);
     AIPlayerTextCounter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     AIPlayerTextCounter.setLinespacing(0);
     Unicode::snprintf(AIPlayerTextCounterBuffer, AIPLAYERTEXTCOUNTER_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_WBGZ).getText());

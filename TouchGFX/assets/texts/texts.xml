@@ -34,7 +34,7 @@
         <Translation Language="GB">Dolů</Translation>
       </Text>
       <Text Id="__SingleUse_VQXE" Alignment="Right" TypographyId="statNameFont">
-        <Translation Language="GB">Nahoru</Translation>
+        <Translation Language="GB">Zpět</Translation>
       </Text>
       <Text Id="__SingleUse_B4KJ" Alignment="Left" TypographyId="statNumFontSmall">
         <Translation Language="GB">59</Translation>
@@ -72,9 +72,6 @@
       <Text Id="__SingleUse_O13F" Alignment="Left" TypographyId="statNameFont">
         <Translation Language="GB">Doba hry (minuty):</Translation>
       </Text>
-      <Text Id="__SingleUse_PX8H" Alignment="Left" TypographyId="largeButSmaller">
-        <Translation Language="GB">INFORMACE O HŘE</Translation>
-      </Text>
       <Text Id="__SingleUse_BG9O" Alignment="Left" TypographyId="statNameFont">
         <Translation Language="GB"> Celkový počet&#10; hodů:</Translation>
       </Text>
@@ -96,28 +93,25 @@
       <Text Id="__SingleUse_KE16" Alignment="Left" TypographyId="statNumFontSmall">
         <Translation Language="GB">&lt;d&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_J43H" Alignment="Left" TypographyId="Large">
-        <Translation Language="GB">VÝSLEDKY</Translation>
-      </Text>
-      <Text Id="__SingleUse_0N8H" Alignment="Left" TypographyId="Large">
+      <Text Id="__SingleUse_0N8H" Alignment="Left" TypographyId="largeButSmaller">
         <Translation Language="GB">1</Translation>
       </Text>
-      <Text Id="__SingleUse_36GZ" Alignment="Left" TypographyId="Large">
+      <Text Id="__SingleUse_36GZ" Alignment="Left" TypographyId="largeButSmaller">
         <Translation Language="GB">&lt;d&gt;.</Translation>
       </Text>
-      <Text Id="__SingleUse_QXX9" Alignment="Left" TypographyId="Large">
+      <Text Id="__SingleUse_QXX9" Alignment="Left" TypographyId="Loading">
         <Translation Language="GB">AI</Translation>
       </Text>
-      <Text Id="__SingleUse_IJII" Alignment="Left" TypographyId="Large">
+      <Text Id="__SingleUse_IJII" Alignment="Left" TypographyId="Loading">
         <Translation Language="GB">AI</Translation>
       </Text>
-      <Text Id="__SingleUse_WBGZ" Alignment="Left" TypographyId="startGameFont">
+      <Text Id="__SingleUse_WBGZ" Alignment="Left" TypographyId="largeButSmaller">
         <Translation Language="GB">1</Translation>
       </Text>
-      <Text Id="__SingleUse_4FFK" Alignment="Left" TypographyId="startGameFont">
+      <Text Id="__SingleUse_4FFK" Alignment="Left" TypographyId="largeButSmaller">
         <Translation Language="GB">1</Translation>
       </Text>
-      <Text Id="__SingleUse_JZBY" Alignment="Left" TypographyId="startGameFont">
+      <Text Id="__SingleUse_JZBY" Alignment="Left" TypographyId="largeButSmaller">
         <Translation Language="GB">4</Translation>
       </Text>
       <Text Id="__SingleUse_9S4Q" Alignment="Left" TypographyId="startGameFont">
@@ -126,10 +120,10 @@
       <Text Id="__SingleUse_S3QA" Alignment="Left" TypographyId="settingNameFont">
         <Translation Language="GB">Počet skutečných&#10;hráčů</Translation>
       </Text>
-      <Text Id="__SingleUse_FD7P" Alignment="Left" TypographyId="Default">
+      <Text Id="__SingleUse_FD7P" Alignment="Left" TypographyId="largeButSmaller">
         <Translation Language="GB">&lt;d&gt;</Translation>
       </Text>
-      <Text Id="__SingleUse_E5QY" Alignment="Left" TypographyId="Default">
+      <Text Id="__SingleUse_E5QY" Alignment="Left" TypographyId="largeButSmaller">
         <Translation Language="GB">&lt;d&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_OL82" Alignment="Left" TypographyId="settingNameFont">
@@ -138,34 +132,31 @@
       <Text Id="__SingleUse_V41E" Alignment="Left" TypographyId="settingNameFont">
         <Translation Language="GB">AI hráči</Translation>
       </Text>
-      <Text Id="__SingleUse_2ZM8" Alignment="Left" TypographyId="Default">
+      <Text Id="__SingleUse_2ZM8" Alignment="Left" TypographyId="largeButSmaller">
         <Translation Language="GB">&lt;d&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_N2KV" Alignment="Left" TypographyId="settingNameFont">
         <Translation Language="GB">Počet hráčů</Translation>
       </Text>
-      <Text Id="__SingleUse_5PC7" Alignment="Left" TypographyId="Large">
+      <Text Id="__SingleUse_5PC7" Alignment="Left" TypographyId="Loading">
         <Translation Language="GB">1</Translation>
       </Text>
-      <Text Id="ResourceId1" Alignment="Left" TypographyId="Large">
+      <Text Id="ResourceId1" Alignment="Left" TypographyId="Small">
         <Translation Language="GB">New Text</Translation>
       </Text>
-      <Text Id="__SingleUse_54EI" Alignment="Left" TypographyId="Large">
+      <Text Id="__SingleUse_54EI" Alignment="Left" TypographyId="Loading">
         <Translation Language="GB">&lt;d&gt;</Translation>
       </Text>
     </TextGroup>
   </Texts>
   <Typographies>
-    <Typography Id="Default" Font="TCB_____.TTF" Size="20" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
-    <Typography Id="Large" Font="TCB_____.TTF" Size="40" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
     <Typography Id="Small" Font="TCB_____.TTF" Size="10" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
-    <Typography Id="Typography_00" Font="verdana.ttf" Size="120" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
-    <Typography Id="settingNameFont" Font="segoeuib.ttf" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9,a-z,A-Z" />
+    <Typography Id="settingNameFont" Font="segoeuib.ttf" Size="18" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
     <Typography Id="startGameFont" Font="segoeuib.ttf" Size="22" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
     <Typography Id="statNameFont" Font="TCB_____.TTF" Size="14" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
-    <Typography Id="largeButSmaller" Font="TCB_____.TTF" Size="35" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="largeButSmaller" Font="TCB_____.TTF" Size="35" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
     <Typography Id="statNameFontSmaller" Font="TCB_____.TTF" Size="12" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="statNumFontSmall" Font="TCB_____.TTF" Size="16" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
-    <Typography Id="Loading" Font="segoeuib.ttf" Size="50" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Loading" Font="segoeuib.ttf" Size="50" Bpp="4" IsVector="no" Direction="LTR" FallbackCharacter="?" WildcardCharacterRanges="0-9" />
   </Typographies>
 </TextDatabase>

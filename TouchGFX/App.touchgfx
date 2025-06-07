@@ -390,10 +390,9 @@
           {
             "Type": "TextArea",
             "Name": "AIText",
-            "X": 270,
-            "Y": 2,
-            "Width": 38,
-            "Height": 41,
+            "X": 269,
+            "Width": 51,
+            "Height": 51,
             "Visible": false,
             "TextId": "__SingleUse_IJII",
             "TextRotation": "0",
@@ -483,10 +482,10 @@
           {
             "Type": "TextArea",
             "Name": "textCounter",
-            "X": 150,
-            "Y": 160,
-            "Width": 21,
-            "Height": 41,
+            "X": 146,
+            "Y": 150,
+            "Width": 29,
+            "Height": 51,
             "TextId": "__SingleUse_54EI",
             "TextRotation": "0",
             "Color": {
@@ -570,10 +569,9 @@
           {
             "Type": "TextArea",
             "Name": "AIText",
-            "X": 270,
-            "Y": 2,
-            "Width": 38,
-            "Height": 41,
+            "X": 269,
+            "Width": 51,
+            "Height": 51,
             "Visible": false,
             "TextId": "__SingleUse_QXX9",
             "TextRotation": "0",
@@ -630,8 +628,8 @@
           {
             "Type": "Image",
             "Name": "backgroundImage",
-            "X": -24,
-            "Y": -16,
+            "X": -25,
+            "Y": -9,
             "Width": 480,
             "Height": 272,
             "RelativeFilename": "__generated\\clay_theme_images_backgrounds_480x272_burly.png"
@@ -639,8 +637,8 @@
           {
             "Type": "ListLayout",
             "Name": "listLayout1",
-            "X": 17,
-            "Y": 49,
+            "X": 16,
+            "Y": 56,
             "Width": 233,
             "Height": 176,
             "Direction": "South",
@@ -680,21 +678,6 @@
           },
           {
             "Type": "TextArea",
-            "Name": "resultsText",
-            "X": 9,
-            "Y": 3,
-            "Width": 176,
-            "Height": 41,
-            "TextId": "__SingleUse_J43H",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 210
-            },
-            "AutoSize": true
-          },
-          {
-            "Type": "TextArea",
             "Name": "downText",
             "X": 275,
             "Y": 173,
@@ -725,6 +708,14 @@
               "Green": 206,
               "Blue": 229
             }
+          },
+          {
+            "Type": "Image",
+            "Name": "logoImage",
+            "Y": -9,
+            "Width": 120,
+            "Height": 80,
+            "RelativeFilename": "logo-new.png"
           }
         ],
         "Interactions": [
@@ -756,8 +747,8 @@
           {
             "Type": "Box",
             "Name": "gameStatsBox",
-            "X": 8,
-            "Y": 42,
+            "X": 9,
+            "Y": 64,
             "Width": 144,
             "Height": 153,
             "Color": {
@@ -769,8 +760,8 @@
           {
             "Type": "Box",
             "Name": "gameStatsBox_1",
-            "X": 166,
-            "Y": 43,
+            "X": 167,
+            "Y": 65,
             "Width": 145,
             "Height": 152,
             "Color": {
@@ -782,8 +773,8 @@
           {
             "Type": "TextArea",
             "Name": "numOfRollsText",
-            "X": 19,
-            "Y": 55,
+            "X": 20,
+            "Y": 77,
             "Width": 86,
             "Height": 34,
             "TextId": "__SingleUse_BG9O",
@@ -799,8 +790,8 @@
           {
             "Type": "TextArea",
             "Name": "totalGameTimeText",
-            "X": 172,
-            "Y": 51,
+            "X": 173,
+            "Y": 73,
             "Width": 108,
             "Height": 17,
             "TextId": "__SingleUse_O13F",
@@ -816,8 +807,8 @@
           {
             "Type": "TextArea",
             "Name": "firstPlayerTimeText",
-            "X": 172,
-            "Y": 88,
+            "X": 173,
+            "Y": 110,
             "Width": 111,
             "Height": 28,
             "TextId": "__SingleUse_RBUA",
@@ -833,8 +824,8 @@
           {
             "Type": "TextArea",
             "Name": "secondPlayerTimeText",
-            "X": 172,
-            "Y": 122,
+            "X": 173,
+            "Y": 144,
             "Width": 114,
             "Height": 28,
             "TextId": "__SingleUse_NUCY",
@@ -850,8 +841,8 @@
           {
             "Type": "TextArea",
             "Name": "thirdPlayerTimeText",
-            "X": 172,
-            "Y": 154,
+            "X": 173,
+            "Y": 176,
             "Width": 105,
             "Height": 28,
             "TextId": "__SingleUse_R0SH",
@@ -867,8 +858,8 @@
           {
             "Type": "TextArea",
             "Name": "numOfPawnsSetOnBoardText",
-            "X": 19,
-            "Y": 99,
+            "X": 20,
+            "Y": 121,
             "Width": 107,
             "Height": 34,
             "TextId": "__SingleUse_6VLZ",
@@ -884,8 +875,8 @@
           {
             "Type": "TextArea",
             "Name": "numOfPawnsKickedText",
-            "X": 19,
-            "Y": 144,
+            "X": 20,
+            "Y": 166,
             "Width": 108,
             "Height": 34,
             "TextId": "__SingleUse_C291",
@@ -901,8 +892,8 @@
           {
             "Type": "TextArea",
             "Name": "numOfPawnsSetOnBoardTextCounter",
-            "X": 80,
-            "Y": 120,
+            "X": 81,
+            "Y": 142,
             "Width": 27,
             "Height": 17,
             "TextId": "__SingleUse_E17I",
@@ -923,8 +914,8 @@
           {
             "Type": "TextArea",
             "Name": "numOfPawnsKickedTextCounter",
-            "X": 80,
-            "Y": 168,
+            "X": 81,
+            "Y": 190,
             "Width": 27,
             "Height": 17,
             "TextId": "__SingleUse_UNFS",
@@ -945,8 +936,8 @@
           {
             "Type": "TextArea",
             "Name": "numOfRollsTextCounter",
-            "X": 80,
-            "Y": 72,
+            "X": 81,
+            "Y": 94,
             "Width": 27,
             "Height": 17,
             "TextId": "__SingleUse_KE16",
@@ -967,8 +958,8 @@
           {
             "Type": "TextArea",
             "Name": "totalGameTimeTextCounter",
-            "X": 262,
-            "Y": 71,
+            "X": 263,
+            "Y": 93,
             "Width": 40,
             "Height": 17,
             "TextId": "__SingleUse_X21Z",
@@ -994,8 +985,8 @@
           {
             "Type": "TextArea",
             "Name": "firstPlayerEndTimeTextCounter",
-            "X": 262,
-            "Y": 103,
+            "X": 263,
+            "Y": 125,
             "Width": 40,
             "Height": 17,
             "TextId": "__SingleUse_P6BK",
@@ -1021,8 +1012,8 @@
           {
             "Type": "TextArea",
             "Name": "secondPlayerEndTimeTextCounter",
-            "X": 262,
-            "Y": 137,
+            "X": 263,
+            "Y": 159,
             "Width": 40,
             "Height": 17,
             "TextId": "__SingleUse_U7NR",
@@ -1048,8 +1039,8 @@
           {
             "Type": "TextArea",
             "Name": "thirdPlayerEndTimeTextCounter",
-            "X": 262,
-            "Y": 168,
+            "X": 263,
+            "Y": 190,
             "Width": 40,
             "Height": 17,
             "TextId": "__SingleUse_W59O",
@@ -1075,8 +1066,8 @@
           {
             "Type": "TextArea",
             "Name": "restartText",
-            "X": 210,
-            "Y": 200,
+            "X": 211,
+            "Y": 11,
             "Width": 57,
             "Height": 34,
             "TextId": "__SingleUse_QIQX",
@@ -1086,9 +1077,9 @@
           {
             "Type": "TextArea",
             "Name": "upText",
-            "X": 105,
-            "Y": 208,
-            "Width": 42,
+            "X": 128,
+            "Y": 19,
+            "Width": 26,
             "Height": 17,
             "TextId": "__SingleUse_VQXE",
             "TextRotation": "0",
@@ -1097,8 +1088,8 @@
           {
             "Type": "Image",
             "Name": "joystickCentermage",
-            "X": 275,
-            "Y": 197,
+            "X": 276,
+            "Y": 8,
             "Width": 40,
             "Height": 40,
             "RelativeFilename": "joystick.png"
@@ -1106,8 +1097,8 @@
           {
             "Type": "Image",
             "Name": "joystickUpImage",
-            "X": 151,
-            "Y": 197,
+            "X": 160,
+            "Y": 8,
             "Width": 40,
             "Height": 40,
             "RelativeFilename": "joystick.png"
@@ -1115,8 +1106,8 @@
           {
             "Type": "Box",
             "Name": "centerButtonBox",
-            "X": 287,
-            "Y": 209,
+            "X": 288,
+            "Y": 20,
             "Width": 17,
             "Height": 16,
             "Color": {
@@ -1128,8 +1119,8 @@
           {
             "Type": "Box",
             "Name": "upButtonBox",
-            "X": 163,
-            "Y": 197,
+            "X": 172,
+            "Y": 8,
             "Width": 17,
             "Height": 12,
             "Color": {
@@ -1139,18 +1130,13 @@
             }
           },
           {
-            "Type": "TextArea",
-            "Name": "textArea1",
-            "X": 9,
-            "Width": 286,
-            "Height": 35,
-            "TextId": "__SingleUse_PX8H",
-            "TextRotation": "0",
-            "Color": {
-              "Red": 255,
-              "Green": 210
-            },
-            "AutoSize": true
+            "Type": "Image",
+            "Name": "logoImage",
+            "X": 3,
+            "Y": -7,
+            "Width": 120,
+            "Height": 80,
+            "RelativeFilename": "logo-new.png"
           }
         ],
         "Interactions": [
@@ -1213,10 +1199,10 @@
           {
             "Type": "TextArea",
             "Name": "playerTextCounter",
-            "X": 223,
-            "Y": 7,
-            "Width": 11,
-            "Height": 21,
+            "X": 217,
+            "Y": -5,
+            "Width": 19,
+            "Height": 35,
             "TextId": "__SingleUse_2ZM8",
             "TextRotation": "0",
             "Color": {
@@ -1234,7 +1220,7 @@
           {
             "Type": "Image",
             "Name": "arrowLeft",
-            "X": 186,
+            "X": 176,
             "Y": -6,
             "Width": 50,
             "Height": 50,
@@ -1243,7 +1229,7 @@
           {
             "Type": "Image",
             "Name": "arrowRight",
-            "X": 223,
+            "X": 226,
             "Y": -6,
             "Width": 50,
             "Height": 50,
@@ -1397,10 +1383,10 @@
           {
             "Type": "TextArea",
             "Name": "AIPlayerTextCounter",
-            "X": 217,
-            "Y": 10,
-            "Width": 11,
-            "Height": 21,
+            "X": 214,
+            "Y": -3,
+            "Width": 19,
+            "Height": 35,
             "TextId": "__SingleUse_E5QY",
             "TextRotation": "0",
             "Color": {
@@ -1538,9 +1524,8 @@
             "Type": "TextArea",
             "Name": "realPlayerTextCounter",
             "X": 223,
-            "Y": 14,
-            "Width": 11,
-            "Height": 21,
+            "Width": 19,
+            "Height": 35,
             "TextId": "__SingleUse_FD7P",
             "TextRotation": "0",
             "Color": {
@@ -1558,7 +1543,7 @@
           {
             "Type": "Image",
             "Name": "arrowLeft",
-            "X": 184,
+            "X": 182,
             "Width": 50,
             "Height": 50,
             "RelativeFilename": "__generated\\icon_theme_images_navigation_arrow_left_50_50_FFD200.svg.png"
@@ -1566,8 +1551,7 @@
           {
             "Type": "Image",
             "Name": "arrowRight",
-            "X": 223,
-            "Y": -1,
+            "X": 232,
             "Width": 50,
             "Height": 50,
             "RelativeFilename": "__generated\\icon_theme_images_navigation_arrow_right_50_50_FFD200.svg.png"
@@ -1705,17 +1689,13 @@
         "Height": 44,
         "Components": [
           {
-            "Type": "Box",
-            "Name": "backgroundBox",
+            "Type": "Image",
+            "Name": "backgroundImage",
             "X": 4,
-            "Y": 4,
+            "Y": 2,
             "Width": 224,
-            "Height": 36,
-            "Color": {
-              "Red": 3,
-              "Green": 35,
-              "Blue": 75
-            }
+            "Height": 40,
+            "RelativeFilename": "end-background.png"
           },
           {
             "Type": "Circle",
@@ -1738,10 +1718,9 @@
           {
             "Type": "TextArea",
             "Name": "positionText",
-            "X": 13,
-            "Y": -6,
-            "Width": 31,
-            "Height": 41,
+            "X": 14,
+            "Width": 28,
+            "Height": 36,
             "TextId": "__SingleUse_36GZ",
             "TextRotation": "0",
             "Color": {

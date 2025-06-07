@@ -64,7 +64,7 @@ protected:
     touchgfx::Image joystickUpImage;
     touchgfx::Box centerButtonBox;
     touchgfx::Box upButtonBox;
-    touchgfx::TextArea textArea1;
+    touchgfx::Image logoImage;
 
     /*
      * Wildcard Buffers
