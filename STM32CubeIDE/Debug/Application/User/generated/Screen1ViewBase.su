@@ -24,6 +24,7 @@ C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen1_screen/Scre
 C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:40:1:virtual Screen1ViewBase::~Screen1ViewBase()	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	0	static
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/screen1_screen/Screen1ViewBase.cpp:50:6:virtual void Screen1ViewBase::handleKeyEvent(uint8_t)	8	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:233:10:void touchgfx::Drawable::setPosition(int16_t, int16_t, int16_t, int16_t)	16	static
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	0	static

@@ -67,7 +67,8 @@
           {
             "InteractionName": "switchToScreen2",
             "Trigger": {
-              "Type": "TriggerNone"
+              "Type": "TriggerPhysicalButtonClicked",
+              "ButtonKey": 53
             },
             "Action": {
               "Type": "ActionGotoScreen",
@@ -89,7 +90,7 @@
           {
             "InteractionName": "switchToScreen3",
             "Trigger": {
-              "Type": "TriggerNone"
+              "Type": "TriggerPhysicalButtonClicked"
             },
             "Action": {
               "Type": "ActionGotoScreen",
