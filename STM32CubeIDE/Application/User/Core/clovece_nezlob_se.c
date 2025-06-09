@@ -319,6 +319,7 @@ void move_pawn(uint8_t player, uint8_t number){
 			HAL_Delay(200);
 		}
 		kick_out_pawn(player_struct, player);	// kick out pawns only after the player has moved
+		set_position_of_all_pawns();
 		game_info.number_of_rolls++;
 	}
 
