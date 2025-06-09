@@ -54,10 +54,10 @@ protected:
     touchgfx::TextAreaWithOneWildcard numOfPawnsSetOnBoardTextCounter;
     touchgfx::TextAreaWithOneWildcard numOfPawnsKickedTextCounter;
     touchgfx::TextAreaWithOneWildcard numOfRollsTextCounter;
-    touchgfx::TextAreaWithTwoWildcards totalGameTimeTextCounter;
-    touchgfx::TextAreaWithTwoWildcards firstPlayerEndTimeTextCounter;
-    touchgfx::TextAreaWithTwoWildcards secondPlayerEndTimeTextCounter;
-    touchgfx::TextAreaWithTwoWildcards thirdPlayerEndTimeTextCounter;
+    touchgfx::TextAreaWithOneWildcard totalGameTimeTextCounter;
+    touchgfx::TextAreaWithOneWildcard firstPlayerEndTimeTextCounter;
+    touchgfx::TextAreaWithOneWildcard secondPlayerEndTimeTextCounter;
+    touchgfx::TextAreaWithOneWildcard thirdPlayerEndTimeTextCounter;
     touchgfx::TextArea restartText;
     touchgfx::TextArea upText;
     touchgfx::Image joystickCentermage;
@@ -69,28 +69,20 @@ protected:
     /*
      * Wildcard Buffers
      */
-    static const uint16_t NUMOFPAWNSSETONBOARDTEXTCOUNTER_SIZE = 500;
+    static const uint16_t NUMOFPAWNSSETONBOARDTEXTCOUNTER_SIZE = 4;
     touchgfx::Unicode::UnicodeChar numOfPawnsSetOnBoardTextCounterBuffer[NUMOFPAWNSSETONBOARDTEXTCOUNTER_SIZE];
-    static const uint16_t NUMOFPAWNSKICKEDTEXTCOUNTER_SIZE = 500;
+    static const uint16_t NUMOFPAWNSKICKEDTEXTCOUNTER_SIZE = 4;
     touchgfx::Unicode::UnicodeChar numOfPawnsKickedTextCounterBuffer[NUMOFPAWNSKICKEDTEXTCOUNTER_SIZE];
-    static const uint16_t NUMOFROLLSTEXTCOUNTER_SIZE = 500;
+    static const uint16_t NUMOFROLLSTEXTCOUNTER_SIZE = 5;
     touchgfx::Unicode::UnicodeChar numOfRollsTextCounterBuffer[NUMOFROLLSTEXTCOUNTER_SIZE];
-    static const uint16_t TOTALGAMETIMETEXTCOUNTERBUFFER1_SIZE = 500;
-    touchgfx::Unicode::UnicodeChar totalGameTimeTextCounterBuffer1[TOTALGAMETIMETEXTCOUNTERBUFFER1_SIZE];
-    static const uint16_t TOTALGAMETIMETEXTCOUNTERBUFFER2_SIZE = 60;
-    touchgfx::Unicode::UnicodeChar totalGameTimeTextCounterBuffer2[TOTALGAMETIMETEXTCOUNTERBUFFER2_SIZE];
-    static const uint16_t FIRSTPLAYERENDTIMETEXTCOUNTERBUFFER1_SIZE = 500;
-    touchgfx::Unicode::UnicodeChar firstPlayerEndTimeTextCounterBuffer1[FIRSTPLAYERENDTIMETEXTCOUNTERBUFFER1_SIZE];
-    static const uint16_t FIRSTPLAYERENDTIMETEXTCOUNTERBUFFER2_SIZE = 60;
-    touchgfx::Unicode::UnicodeChar firstPlayerEndTimeTextCounterBuffer2[FIRSTPLAYERENDTIMETEXTCOUNTERBUFFER2_SIZE];
-    static const uint16_t SECONDPLAYERENDTIMETEXTCOUNTERBUFFER1_SIZE = 500;
-    touchgfx::Unicode::UnicodeChar secondPlayerEndTimeTextCounterBuffer1[SECONDPLAYERENDTIMETEXTCOUNTERBUFFER1_SIZE];
-    static const uint16_t SECONDPLAYERENDTIMETEXTCOUNTERBUFFER2_SIZE = 60;
-    touchgfx::Unicode::UnicodeChar secondPlayerEndTimeTextCounterBuffer2[SECONDPLAYERENDTIMETEXTCOUNTERBUFFER2_SIZE];
-    static const uint16_t THIRDPLAYERENDTIMETEXTCOUNTERBUFFER1_SIZE = 500;
-    touchgfx::Unicode::UnicodeChar thirdPlayerEndTimeTextCounterBuffer1[THIRDPLAYERENDTIMETEXTCOUNTERBUFFER1_SIZE];
-    static const uint16_t THIRDPLAYERENDTIMETEXTCOUNTERBUFFER2_SIZE = 60;
-    touchgfx::Unicode::UnicodeChar thirdPlayerEndTimeTextCounterBuffer2[THIRDPLAYERENDTIMETEXTCOUNTERBUFFER2_SIZE];
+    static const uint16_t TOTALGAMETIMETEXTCOUNTER_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar totalGameTimeTextCounterBuffer[TOTALGAMETIMETEXTCOUNTER_SIZE];
+    static const uint16_t FIRSTPLAYERENDTIMETEXTCOUNTER_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar firstPlayerEndTimeTextCounterBuffer[FIRSTPLAYERENDTIMETEXTCOUNTER_SIZE];
+    static const uint16_t SECONDPLAYERENDTIMETEXTCOUNTER_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar secondPlayerEndTimeTextCounterBuffer[SECONDPLAYERENDTIMETEXTCOUNTER_SIZE];
+    static const uint16_t THIRDPLAYERENDTIMETEXTCOUNTER_SIZE = 6;
+    touchgfx::Unicode::UnicodeChar thirdPlayerEndTimeTextCounterBuffer[THIRDPLAYERENDTIMETEXTCOUNTER_SIZE];
 
 private:
 

@@ -3,7 +3,6 @@
 
 #include <gui_generated/screen6_screen/Screen6ViewBase.hpp>
 #include <gui/screen6_screen/Screen6Presenter.hpp>
-
 class Screen6View : public Screen6ViewBase
 {
 public:

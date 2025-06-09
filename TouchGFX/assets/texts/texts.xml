@@ -10,25 +10,13 @@
         <Translation Language="GB">...</Translation>
       </Text>
       <Text Id="__SingleUse_EL87" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">500</Translation>
+        <Translation Language="GB">000</Translation>
       </Text>
       <Text Id="__SingleUse_2B9I" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">500</Translation>
+        <Translation Language="GB">000</Translation>
       </Text>
       <Text Id="__SingleUse_PYSZ" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">500</Translation>
-      </Text>
-      <Text Id="__SingleUse_DKTM" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">59</Translation>
-      </Text>
-      <Text Id="__SingleUse_9Q22" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">59</Translation>
-      </Text>
-      <Text Id="__SingleUse_S6BX" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">59</Translation>
-      </Text>
-      <Text Id="__SingleUse_NDJE" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">59</Translation>
+        <Translation Language="GB">0000</Translation>
       </Text>
       <Text Id="__SingleUse_JME4" Alignment="Right" TypographyId="statNameFont">
         <Translation Language="GB">Dolů</Translation>
@@ -37,25 +25,25 @@
         <Translation Language="GB">Zpět</Translation>
       </Text>
       <Text Id="__SingleUse_B4KJ" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">59</Translation>
+        <Translation Language="GB">00:00</Translation>
       </Text>
       <Text Id="__SingleUse_W59O" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">&lt;d&gt;:&lt;d&gt;</Translation>
+        <Translation Language="GB">&lt;d&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_OQTX" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">59</Translation>
+        <Translation Language="GB">00:00</Translation>
       </Text>
       <Text Id="__SingleUse_U7NR" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">&lt;d&gt;:&lt;d&gt;</Translation>
+        <Translation Language="GB">&lt;d&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_R0SH" Alignment="Left" TypographyId="statNameFontSmaller">
         <Translation Language="GB">Čas dokončení třetího&#10;hráče (minuty):</Translation>
       </Text>
       <Text Id="__SingleUse_2AIB" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">59</Translation>
+        <Translation Language="GB">00:00</Translation>
       </Text>
       <Text Id="__SingleUse_P6BK" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">&lt;d&gt;:&lt;d&gt;</Translation>
+        <Translation Language="GB">&lt;d&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_NUCY" Alignment="Left" TypographyId="statNameFontSmaller">
         <Translation Language="GB">Čas dokončení druhého&#10;hráče (minuty):</Translation>
@@ -64,10 +52,10 @@
         <Translation Language="GB">Čas dokončení prvního&#10;hráče (minuty):</Translation>
       </Text>
       <Text Id="__SingleUse_V8BD" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">59</Translation>
+        <Translation Language="GB">00:00</Translation>
       </Text>
       <Text Id="__SingleUse_X21Z" Alignment="Left" TypographyId="statNumFontSmall">
-        <Translation Language="GB">&lt;d&gt;:&lt;d&gt;</Translation>
+        <Translation Language="GB">&lt;s&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_O13F" Alignment="Left" TypographyId="statNameFont">
         <Translation Language="GB">Doba hry (minuty):</Translation>
