@@ -3,6 +3,7 @@
 
 #include <gui_generated/screen2_screen/Screen2ViewBase.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
+#include <milis.h>
 
 class Screen2View : public Screen2ViewBase
 {

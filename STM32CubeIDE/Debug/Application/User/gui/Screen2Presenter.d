@@ -79,7 +79,8 @@ Application/User/gui/Screen2Presenter.o: \
  ../../TouchGFX/gui/include/gui/containers/numberOfRealPlayersSetting.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/numberOfRealPlayersSettingBase.hpp \
  ../../TouchGFX/gui/include/gui/containers/startGame.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/startGameBase.hpp
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/startGameBase.hpp \
+ C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/Core/inc/milis.h
 ../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen2_screen/Screen2ViewBase.hpp:
 ../../TouchGFX/gui/include/gui/common/FrontendApplication.hpp:
@@ -160,3 +161,4 @@ Application/User/gui/Screen2Presenter.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/numberOfRealPlayersSettingBase.hpp:
 ../../TouchGFX/gui/include/gui/containers/startGame.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/startGameBase.hpp:
+C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/Core/inc/milis.h:

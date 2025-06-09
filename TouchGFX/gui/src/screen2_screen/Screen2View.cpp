@@ -62,6 +62,9 @@ void Screen2View::decrementValue(){
 }
 
 void Screen2View::select(){
+	// Board interaction
+	select_board_animation();
+
 	switch(current_widget){
 		case NUMBER_OF_PLAYERS_TOTAL:
 			game_info.number_of_players = num_of_players;

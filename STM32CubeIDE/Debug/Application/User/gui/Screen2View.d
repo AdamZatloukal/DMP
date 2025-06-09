@@ -80,6 +80,7 @@ Application/User/gui/Screen2View.o: \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/numberOfRealPlayersSettingBase.hpp \
  ../../TouchGFX/gui/include/gui/containers/startGame.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/startGameBase.hpp \
+ C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/Core/inc/milis.h \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  ../../Core/Inc/stm32g0xx_hal_conf.h \
@@ -194,6 +195,7 @@ Application/User/gui/Screen2View.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/numberOfRealPlayersSettingBase.hpp:
 ../../TouchGFX/gui/include/gui/containers/startGame.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/startGameBase.hpp:
+C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/Core/inc/milis.h:
 ../../Core/Inc/main.h:
 ../../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:
 ../../Core/Inc/stm32g0xx_hal_conf.h:

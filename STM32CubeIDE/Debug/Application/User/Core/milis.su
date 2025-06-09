@@ -1,7 +1,8 @@
-../Application/User/Core/milis.c:42:6:handle_selected_pawn_delay	16	static
-../Application/User/Core/milis.c:77:6:handle_settings_animation_delay	48	static
-../Application/User/Core/milis.c:129:6:handle_settings_animation_start_delay	56	static
-../Application/User/Core/milis.c:183:6:handle_settings_animation_end_delay	56	static
-../Application/User/Core/milis.c:16:6:delay	8	static
-../Application/User/Core/milis.c:237:6:handle_overlap_animation	16	static
-../Application/User/Core/milis.c:258:6:HAL_TIM_PeriodElapsedCallback	0	static
+../Application/User/Core/milis.c:45:6:handle_selected_pawn_delay	16	static
+../Application/User/Core/milis.c:80:6:handle_settings_animation_delay	48	static
+../Application/User/Core/milis.c:137:6:handle_settings_animation_start_delay	56	static
+../Application/User/Core/milis.c:195:6:handle_settings_animation_end_delay	56	static
+../Application/User/Core/milis.c:19:6:delay	8	static
+../Application/User/Core/milis.c:253:6:handle_overlap_animation	16	static
+../Application/User/Core/milis.c:271:6:select_board_animation	8	static
+../Application/User/Core/milis.c:287:6:HAL_TIM_PeriodElapsedCallback	0	static

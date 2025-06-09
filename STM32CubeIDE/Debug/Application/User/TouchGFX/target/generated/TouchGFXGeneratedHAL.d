@@ -92,6 +92,7 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/numberOfRealPlayersSettingBase.hpp \
  ../../TouchGFX/gui/include/gui/containers/startGame.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/startGameBase.hpp \
+ C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/Core/inc/milis.h \
  ../../TouchGFX/gui/include/gui/screen3_screen/Screen3View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp \
@@ -135,7 +136,6 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
  ../../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp \
  C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/gui/inc/ColorUtils.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp \
- C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/Core/inc/milis.h \
  ../../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/screen5_screen/Screen5ViewBase.hpp \
  ../../TouchGFX/gui/include/gui/screen5_screen/Screen5Presenter.hpp \
@@ -243,6 +243,7 @@ Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/numberOfRealPlayersSettingBase.hpp:
 ../../TouchGFX/gui/include/gui/containers/startGame.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/startGameBase.hpp:
+C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/Core/inc/milis.h:
 ../../TouchGFX/gui/include/gui/screen3_screen/Screen3View.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen3_screen/Screen3ViewBase.hpp:
 ../../TouchGFX/gui/include/gui/screen3_screen/Screen3Presenter.hpp:
@@ -286,7 +287,6 @@ C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/Core/inc/clovece_nezlob_se
 ../../TouchGFX/gui/include/gui/screen4_screen/Screen4Presenter.hpp:
 C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/gui/inc/ColorUtils.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Color.hpp:
-C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/Core/inc/milis.h:
 ../../TouchGFX/gui/include/gui/screen5_screen/Screen5View.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/screen5_screen/Screen5ViewBase.hpp:
 ../../TouchGFX/gui/include/gui/screen5_screen/Screen5Presenter.hpp:
