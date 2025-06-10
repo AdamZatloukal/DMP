@@ -407,6 +407,11 @@ void check_finish_pawn(Player* player_struct, uint8_t player){
 	// Checks if the player has reached the end position (+1 because you need to move the pawn into the end home)
 	if(*pawn_position  == player_struct->board_end_position + 1){
 		player_struct->pawns_in_finish++;
+
+		// turn off the pixel on board before the animation plays
+		set_brightness_individually(player_struct->position[player_struct->selected_pawn], BOARD, 0);
+		send_data(BOARD);
+
 		init_finish(player_struct, player);
 		pawn_finish_animation(player);
 
@@ -576,6 +581,7 @@ void pawn_kick_set_start_animation(uint8_t i, uint8_t player, char* state){
  */
 void pawn_finish_animation(uint8_t player){
 	Player* player_struct = select_player(player);
+
 
 	for(int i = 0; i < 4; i++){
 		if(player == 1 || player == 2){
