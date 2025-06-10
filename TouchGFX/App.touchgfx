@@ -638,8 +638,8 @@
           {
             "Type": "ListLayout",
             "Name": "listLayout1",
-            "X": 16,
-            "Y": 56,
+            "X": 23,
+            "Y": 59,
             "Width": 233,
             "Height": 176,
             "Direction": "South",
@@ -713,7 +713,8 @@
           {
             "Type": "Image",
             "Name": "logoImage",
-            "Y": -9,
+            "X": 3,
+            "Y": -7,
             "Width": 120,
             "Height": 80,
             "RelativeFilename": "logo-new.png"
@@ -746,30 +747,22 @@
             "RelativeFilename": "__generated\\clay_theme_images_backgrounds_480x272_burly.png"
           },
           {
-            "Type": "Box",
-            "Name": "gameStatsBox",
+            "Type": "Image",
+            "Name": "backgroundSettingsImage1",
             "X": 9,
-            "Y": 64,
+            "Y": 68,
             "Width": 144,
             "Height": 153,
-            "Color": {
-              "Red": 3,
-              "Green": 35,
-              "Blue": 75
-            }
+            "RelativeFilename": "background-results2.png"
           },
           {
-            "Type": "Box",
-            "Name": "gameStatsBox_1",
+            "Type": "Image",
+            "Name": "backgroundSettingsImage2",
             "X": 167,
-            "Y": 65,
-            "Width": 145,
-            "Height": 152,
-            "Color": {
-              "Red": 3,
-              "Green": 35,
-              "Blue": 75
-            }
+            "Y": 68,
+            "Width": 144,
+            "Height": 153,
+            "RelativeFilename": "background-results2.png"
           },
           {
             "Type": "TextArea",
@@ -793,7 +786,7 @@
             "Name": "totalGameTimeText",
             "X": 173,
             "Y": 73,
-            "Width": 108,
+            "Width": 56,
             "Height": 17,
             "TextId": "__SingleUse_O13F",
             "TextRotation": "0",

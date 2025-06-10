@@ -788,6 +788,11 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_NEZLOB_SE.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/image_background-results2.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_background-results2.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/image_background-small.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/image_background-small.cpp</locationURI>

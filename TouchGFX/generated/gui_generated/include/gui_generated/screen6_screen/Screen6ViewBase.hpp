@@ -42,8 +42,8 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Image backgroundImage;
-    touchgfx::Box gameStatsBox;
-    touchgfx::Box gameStatsBox_1;
+    touchgfx::Image backgroundSettingsImage1;
+    touchgfx::Image backgroundSettingsImage2;
     touchgfx::TextArea numOfRollsText;
     touchgfx::TextArea totalGameTimeText;
     touchgfx::TextArea firstPlayerTimeText;

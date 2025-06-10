@@ -16,13 +16,13 @@ Screen6ViewBase::Screen6ViewBase()
     backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_CLAY_THEME_IMAGES_BACKGROUNDS_480X272_BURLY_ID));
     add(backgroundImage);
 
-    gameStatsBox.setPosition(9, 64, 144, 153);
-    gameStatsBox.setColor(touchgfx::Color::getColorFromRGB(3, 35, 75));
-    add(gameStatsBox);
+    backgroundSettingsImage1.setXY(9, 68);
+    backgroundSettingsImage1.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_RESULTS2_ID));
+    add(backgroundSettingsImage1);
 
-    gameStatsBox_1.setPosition(167, 65, 145, 152);
-    gameStatsBox_1.setColor(touchgfx::Color::getColorFromRGB(3, 35, 75));
-    add(gameStatsBox_1);
+    backgroundSettingsImage2.setXY(167, 68);
+    backgroundSettingsImage2.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_RESULTS2_ID));
+    add(backgroundSettingsImage2);
 
     numOfRollsText.setXY(20, 77);
     numOfRollsText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));

@@ -37,7 +37,7 @@
         <Translation Language="GB">&lt;d&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_R0SH" Alignment="Left" TypographyId="statNameFontSmaller">
-        <Translation Language="GB">Čas dokončení třetího&#10;hráče (minuty):</Translation>
+        <Translation Language="GB">Čas dokončení třetího&#10;hráče:</Translation>
       </Text>
       <Text Id="__SingleUse_2AIB" Alignment="Left" TypographyId="statNumFontSmall">
         <Translation Language="GB">00:00</Translation>
@@ -46,10 +46,10 @@
         <Translation Language="GB">&lt;d&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_NUCY" Alignment="Left" TypographyId="statNameFontSmaller">
-        <Translation Language="GB">Čas dokončení druhého&#10;hráče (minuty):</Translation>
+        <Translation Language="GB">Čas dokončení druhého&#10;hráče:</Translation>
       </Text>
       <Text Id="__SingleUse_RBUA" Alignment="Left" TypographyId="statNameFontSmaller">
-        <Translation Language="GB">Čas dokončení prvního&#10;hráče (minuty):</Translation>
+        <Translation Language="GB">Čas dokončení prvního&#10;hráče:</Translation>
       </Text>
       <Text Id="__SingleUse_V8BD" Alignment="Left" TypographyId="statNumFontSmall">
         <Translation Language="GB">00:00</Translation>
@@ -58,7 +58,7 @@
         <Translation Language="GB">&lt;s&gt;</Translation>
       </Text>
       <Text Id="__SingleUse_O13F" Alignment="Left" TypographyId="statNameFont">
-        <Translation Language="GB">Doba hry (minuty):</Translation>
+        <Translation Language="GB">Doba hry:</Translation>
       </Text>
       <Text Id="__SingleUse_BG9O" Alignment="Left" TypographyId="statNameFont">
         <Translation Language="GB"> Celkový počet&#10; hodů:</Translation>

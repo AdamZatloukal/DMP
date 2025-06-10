@@ -19,7 +19,7 @@ Screen5ViewBase::Screen5ViewBase()
     backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_CLAY_THEME_IMAGES_BACKGROUNDS_480X272_BURLY_ID));
     add(backgroundImage);
 
-    listLayout1.setXY(16, 56);
+    listLayout1.setXY(23, 59);
     listLayout1.setDirection(touchgfx::SOUTH);
 
     listLayout1.add(playerResultContainer1);
@@ -46,7 +46,7 @@ Screen5ViewBase::Screen5ViewBase()
     downButtonBox.setColor(touchgfx::Color::getColorFromRGB(196, 206, 229));
     add(downButtonBox);
 
-    logoImage.setXY(0, -9);
+    logoImage.setXY(3, -7);
     logoImage.setBitmap(touchgfx::Bitmap(BITMAP_LOGO_NEW_ID));
     add(logoImage);
 }
