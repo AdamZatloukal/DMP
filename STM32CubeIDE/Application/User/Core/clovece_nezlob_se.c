@@ -388,7 +388,7 @@ void kick_out_pawn(Player* player_struct, uint8_t player){
 
 				init_player(current_player);		// Put the pawn back to start
 
-				set_brightness(START, 100);			// Updates the START
+				set_brightness(START, 100);			// Updates the START.
 				send_data(START);
 			}
 		}
