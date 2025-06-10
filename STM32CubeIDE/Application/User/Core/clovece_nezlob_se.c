@@ -365,32 +365,31 @@ void set_position_of_all_pawns(void){
  */
 void kick_out_pawn(Player* player_struct, uint8_t player){
 	for(int current_player = 1;  current_player < 5; current_player++){
-		// Checks if the iterated player is the same as the player whose pawn moved (you cannot kick out your own pawn)
-		if(current_player == player){
-			continue;
-		}
 		// pawns overlap -> pawn that was originally in that place gets kicked out
-		else{
-			Player* iterated_player_struct = select_player(current_player);
+		Player* iterated_player_struct = select_player(current_player);
 
-			for(int pawn = 0; pawn < 4; pawn++){
-				uint8_t* iterated_pawn = &iterated_player_struct->position[pawn];
+		for(int pawn = 0; pawn < 4; pawn++){
+			uint8_t* iterated_pawn = &iterated_player_struct->position[pawn];
 
-				if(*iterated_pawn == player_struct->position[player_struct->selected_pawn] && *iterated_pawn != AT_START_POSITION && *iterated_pawn != IN_FINISH_POSITION && *iterated_pawn != iterated_player_struct->board_start_position){
-					set_LED_color(*iterated_pawn, BOARD, 0, 0, 0);
-					set_LED_color(player_struct->position[player_struct->selected_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+			if(*iterated_pawn == player_struct->position[player_struct->selected_pawn] &&
+			   *iterated_pawn != AT_START_POSITION &&
+			   *iterated_pawn != IN_FINISH_POSITION &&
+			   *iterated_pawn != iterated_player_struct->board_start_position &&
+			   pawn != player_struct->selected_pawn // EXPERIMENTAL!!!
+				){
+				set_LED_color(*iterated_pawn, BOARD, 0, 0, 0);
+				set_LED_color(player_struct->position[player_struct->selected_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
 
-					pawn_kick_set_board_animation(current_player);
+				pawn_kick_set_board_animation(current_player);
 
-					*iterated_pawn = AT_START_POSITION;
-					iterated_player_struct->pawns_at_start++;
-					game_info.number_of_kicked_pawns++;
+				*iterated_pawn = AT_START_POSITION;
+				iterated_player_struct->pawns_at_start++;
+				game_info.number_of_kicked_pawns++;
 
-					init_player(current_player);		// Put the pawn back to start
+				init_player(current_player);		// Put the pawn back to start
 
-					set_brightness(START, 100);			// Updates the START
-					send_data(START);
-				}
+				set_brightness(START, 100);			// Updates the START
+				send_data(START);
 			}
 		}
 	}
