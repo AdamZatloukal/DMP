@@ -444,7 +444,7 @@ void init_finish(Player* player_struct, uint8_t player){
 }
 
 
-/*--------------------- Animations ---------------------*/
+/*--------------------- Animations ----------------------*/
 
 /*
  * Checks if there are any overlapping pawns
