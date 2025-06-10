@@ -86,7 +86,8 @@ void Screen6View::handleBoxAnimation(){
 // WHO CAME UP WITH THESE STUPID BUFFER NAMES!!! It was me.
 void Screen6View::setGameStats(){
 	// Set number of total rolls
-	Unicode::snprintf(numOfRollsTextCounterBuffer, NUMOFROLLSTEXTCOUNTER_SIZE, "%d", game_info.number_of_rolls);
+	int num_of_rolls = game_info.number_of_rolls;
+	Unicode::snprintf(numOfRollsTextCounterBuffer, NUMOFROLLSTEXTCOUNTER_SIZE, "%d", num_of_rolls);
 	numOfRollsTextCounter.invalidate();
 
 	// Set number of set pawns

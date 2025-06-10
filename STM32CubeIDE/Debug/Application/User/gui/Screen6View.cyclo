@@ -8,4 +8,4 @@ C:/TouchGFXProjects/App/TouchGFX/gui/src/screen6_screen/Screen6View.cpp:52:6:vir
 C:/TouchGFXProjects/App/TouchGFX/gui/src/screen6_screen/Screen6View.cpp:9:1:Screen6View::Screen6View()	1
 C:/TouchGFXProjects/App/TouchGFX/gui/src/screen6_screen/Screen6View.cpp:14:6:virtual void Screen6View::setupScreen()	3
 C:/TouchGFXProjects/App/TouchGFX/gui/src/screen6_screen/Screen6View.cpp:65:6:virtual void Screen6View::handleBoxAnimation()	2
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen6_screen/Screen6View.cpp:86:6:virtual void Screen6View::setGameStats()	1
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen6_screen/Screen6View.cpp:87:6:virtual void Screen6View::setGameStats()	1

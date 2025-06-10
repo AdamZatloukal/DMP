@@ -19892,7 +19892,7 @@ LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
 .rel.dyn        0x90681d00        0x0
  .rel.iplt      0x90681d00        0x0 C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.12.3.rel1.win32_1.1.0.202410251130/tools/bin/../lib/gcc/arm-none-eabi/12.3.1/thumb/v6-m/nofp/crtbegin.o
 
-.debug_info     0x00000000   0x1b3649
+.debug_info     0x00000000   0x1b3656
  .debug_info    0x00000000     0x6796 ./Application/User/Core/MB1642ButtonController.o
  .debug_info    0x00006796      0x9a9 ./Application/User/Core/MB1642DataReader.o
  .debug_info    0x0000713f     0x1477 ./Application/User/Core/MB1642DisplayDriver.o
@@ -20052,28 +20052,28 @@ LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_info    0x0014b86b     0xb2d7 ./Application/User/gui/Screen5Presenter.o
  .debug_info    0x00156b42     0xb452 ./Application/User/gui/Screen5View.o
  .debug_info    0x00161f94     0x5cf0 ./Application/User/gui/Screen6Presenter.o
- .debug_info    0x00167c84     0x7b06 ./Application/User/gui/Screen6View.o
- .debug_info    0x0016f78a     0x5938 ./Application/User/gui/fillWithBotsSetting.o
- .debug_info    0x001750c2     0xafb1 ./Application/User/gui/numberOfAIPlayersSetting.o
- .debug_info    0x00180073     0xafbb ./Application/User/gui/numberOfPlayersSetting.o
- .debug_info    0x0018b02e     0xafbb ./Application/User/gui/numberOfRealPlayersSetting.o
- .debug_info    0x00195fe9     0xaad6 ./Application/User/gui/playerResultContainer.o
- .debug_info    0x001a0abf     0x5702 ./Application/User/gui/startGame.o
- .debug_info    0x001a61c1      0x347 ./Drivers/CMSIS/system_stm32g0xx.o
- .debug_info    0x001a6508      0xb4a ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal.o
- .debug_info    0x001a7052      0xa6b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_cortex.o
- .debug_info    0x001a7abd      0x631 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc.o
- .debug_info    0x001a80ee      0x378 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc_ex.o
- .debug_info    0x001a8466      0xa1c ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_dma.o
- .debug_info    0x001a8e82      0x60b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_gpio.o
- .debug_info    0x001a948d      0x835 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_pwr_ex.o
- .debug_info    0x001a9cc2      0xdbd ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc.o
- .debug_info    0x001aaa7f      0x85b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc_ex.o
- .debug_info    0x001ab2da     0x2278 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_spi.o
- .debug_info    0x001ad552     0x4369 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim.o
- .debug_info    0x001b18bb     0x1d8e ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim_ex.o
+ .debug_info    0x00167c84     0x7b13 ./Application/User/gui/Screen6View.o
+ .debug_info    0x0016f797     0x5938 ./Application/User/gui/fillWithBotsSetting.o
+ .debug_info    0x001750cf     0xafb1 ./Application/User/gui/numberOfAIPlayersSetting.o
+ .debug_info    0x00180080     0xafbb ./Application/User/gui/numberOfPlayersSetting.o
+ .debug_info    0x0018b03b     0xafbb ./Application/User/gui/numberOfRealPlayersSetting.o
+ .debug_info    0x00195ff6     0xaad6 ./Application/User/gui/playerResultContainer.o
+ .debug_info    0x001a0acc     0x5702 ./Application/User/gui/startGame.o
+ .debug_info    0x001a61ce      0x347 ./Drivers/CMSIS/system_stm32g0xx.o
+ .debug_info    0x001a6515      0xb4a ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal.o
+ .debug_info    0x001a705f      0xa6b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_cortex.o
+ .debug_info    0x001a7aca      0x631 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc.o
+ .debug_info    0x001a80fb      0x378 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc_ex.o
+ .debug_info    0x001a8473      0xa1c ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_dma.o
+ .debug_info    0x001a8e8f      0x60b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_gpio.o
+ .debug_info    0x001a949a      0x835 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_pwr_ex.o
+ .debug_info    0x001a9ccf      0xdbd ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc.o
+ .debug_info    0x001aaa8c      0x85b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc_ex.o
+ .debug_info    0x001ab2e7     0x2278 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_spi.o
+ .debug_info    0x001ad55f     0x4369 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim.o
+ .debug_info    0x001b18c8     0x1d8e ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim_ex.o
 
-.debug_abbrev   0x00000000    0x2a225
+.debug_abbrev   0x00000000    0x2a235
  .debug_abbrev  0x00000000      0xa43 ./Application/User/Core/MB1642ButtonController.o
  .debug_abbrev  0x00000a43      0x227 ./Application/User/Core/MB1642DataReader.o
  .debug_abbrev  0x00000c6a      0x3e3 ./Application/User/Core/MB1642DisplayDriver.o
@@ -20233,29 +20233,29 @@ LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_abbrev  0x00020875      0xc65 ./Application/User/gui/Screen5Presenter.o
  .debug_abbrev  0x000214da      0xd0c ./Application/User/gui/Screen5View.o
  .debug_abbrev  0x000221e6      0x9b5 ./Application/User/gui/Screen6Presenter.o
- .debug_abbrev  0x00022b9b      0xb7d ./Application/User/gui/Screen6View.o
- .debug_abbrev  0x00023718      0x9c5 ./Application/User/gui/fillWithBotsSetting.o
- .debug_abbrev  0x000240dd      0xd5b ./Application/User/gui/numberOfAIPlayersSetting.o
- .debug_abbrev  0x00024e38      0xd42 ./Application/User/gui/numberOfPlayersSetting.o
- .debug_abbrev  0x00025b7a      0xd42 ./Application/User/gui/numberOfRealPlayersSetting.o
- .debug_abbrev  0x000268bc      0xc4e ./Application/User/gui/playerResultContainer.o
- .debug_abbrev  0x0002750a      0xa19 ./Application/User/gui/startGame.o
- .debug_abbrev  0x00027f23      0x148 ./Drivers/CMSIS/system_stm32g0xx.o
- .debug_abbrev  0x0002806b      0x33d ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal.o
- .debug_abbrev  0x000283a8      0x2cb ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_cortex.o
- .debug_abbrev  0x00028673      0x22e ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc.o
- .debug_abbrev  0x000288a1      0x166 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc_ex.o
- .debug_abbrev  0x00028a07      0x2bd ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_dma.o
- .debug_abbrev  0x00028cc4      0x25e ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_gpio.o
- .debug_abbrev  0x00028f22      0x28b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_pwr_ex.o
- .debug_abbrev  0x000291ad      0x363 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc.o
- .debug_abbrev  0x00029510      0x296 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc_ex.o
- .debug_abbrev  0x000297a6      0x38c ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_spi.o
- .debug_abbrev  0x00029b32      0x3c2 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim.o
- .debug_abbrev  0x00029ef4      0x331 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim_ex.o
+ .debug_abbrev  0x00022b9b      0xb8d ./Application/User/gui/Screen6View.o
+ .debug_abbrev  0x00023728      0x9c5 ./Application/User/gui/fillWithBotsSetting.o
+ .debug_abbrev  0x000240ed      0xd5b ./Application/User/gui/numberOfAIPlayersSetting.o
+ .debug_abbrev  0x00024e48      0xd42 ./Application/User/gui/numberOfPlayersSetting.o
+ .debug_abbrev  0x00025b8a      0xd42 ./Application/User/gui/numberOfRealPlayersSetting.o
+ .debug_abbrev  0x000268cc      0xc4e ./Application/User/gui/playerResultContainer.o
+ .debug_abbrev  0x0002751a      0xa19 ./Application/User/gui/startGame.o
+ .debug_abbrev  0x00027f33      0x148 ./Drivers/CMSIS/system_stm32g0xx.o
+ .debug_abbrev  0x0002807b      0x33d ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal.o
+ .debug_abbrev  0x000283b8      0x2cb ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_cortex.o
+ .debug_abbrev  0x00028683      0x22e ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc.o
+ .debug_abbrev  0x000288b1      0x166 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc_ex.o
+ .debug_abbrev  0x00028a17      0x2bd ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_dma.o
+ .debug_abbrev  0x00028cd4      0x25e ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_gpio.o
+ .debug_abbrev  0x00028f32      0x28b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_pwr_ex.o
+ .debug_abbrev  0x000291bd      0x363 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc.o
+ .debug_abbrev  0x00029520      0x296 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc_ex.o
+ .debug_abbrev  0x000297b6      0x38c ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_spi.o
+ .debug_abbrev  0x00029b42      0x3c2 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim.o
+ .debug_abbrev  0x00029f04      0x331 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim_ex.o
 
 .debug_loclists
-                0x00000000    0x1c116
+                0x00000000    0x1c106
  .debug_loclists
                 0x00000000       0xf5 ./Application/User/Core/MB1642ButtonController.o
  .debug_loclists
@@ -20371,49 +20371,49 @@ LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_loclists
                 0x0001377e       0x7a ./Application/User/gui/Screen5Presenter.o
  .debug_loclists
-                0x000137f8      0x188 ./Application/User/gui/Screen5View.o
+                0x000137f8      0x178 ./Application/User/gui/Screen5View.o
  .debug_loclists
-                0x00013980       0x7a ./Application/User/gui/Screen6Presenter.o
+                0x00013970       0x7a ./Application/User/gui/Screen6Presenter.o
  .debug_loclists
-                0x000139fa      0x333 ./Application/User/gui/Screen6View.o
+                0x000139ea      0x333 ./Application/User/gui/Screen6View.o
  .debug_loclists
-                0x00013d2d      0x151 ./Application/User/gui/fillWithBotsSetting.o
+                0x00013d1d      0x151 ./Application/User/gui/fillWithBotsSetting.o
  .debug_loclists
-                0x00013e7e      0x3cc ./Application/User/gui/numberOfAIPlayersSetting.o
+                0x00013e6e      0x3cc ./Application/User/gui/numberOfAIPlayersSetting.o
  .debug_loclists
-                0x0001424a      0x3b5 ./Application/User/gui/numberOfPlayersSetting.o
+                0x0001423a      0x3b5 ./Application/User/gui/numberOfPlayersSetting.o
  .debug_loclists
-                0x000145ff      0x3b5 ./Application/User/gui/numberOfRealPlayersSetting.o
+                0x000145ef      0x3b5 ./Application/User/gui/numberOfRealPlayersSetting.o
  .debug_loclists
-                0x000149b4      0x14a ./Application/User/gui/playerResultContainer.o
+                0x000149a4      0x14a ./Application/User/gui/playerResultContainer.o
  .debug_loclists
-                0x00014afe      0x158 ./Application/User/gui/startGame.o
+                0x00014aee      0x158 ./Application/User/gui/startGame.o
  .debug_loclists
-                0x00014c56       0xa0 ./Drivers/CMSIS/system_stm32g0xx.o
+                0x00014c46       0xa0 ./Drivers/CMSIS/system_stm32g0xx.o
  .debug_loclists
-                0x00014cf6      0x133 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal.o
+                0x00014ce6      0x133 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal.o
  .debug_loclists
-                0x00014e29      0x28b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_cortex.o
+                0x00014e19      0x28b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_cortex.o
  .debug_loclists
-                0x000150b4      0x358 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc.o
+                0x000150a4      0x358 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc.o
  .debug_loclists
-                0x0001540c       0xe7 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc_ex.o
+                0x000153fc       0xe7 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc_ex.o
  .debug_loclists
-                0x000154f3      0x57a ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_dma.o
+                0x000154e3      0x57a ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_dma.o
  .debug_loclists
-                0x00015a6d      0x257 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_gpio.o
+                0x00015a5d      0x257 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_gpio.o
  .debug_loclists
-                0x00015cc4      0x1d4 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_pwr_ex.o
+                0x00015cb4      0x1d4 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_pwr_ex.o
  .debug_loclists
-                0x00015e98      0x465 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc.o
+                0x00015e88      0x465 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc.o
  .debug_loclists
-                0x000162fd      0x42a ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc_ex.o
+                0x000162ed      0x42a ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc_ex.o
  .debug_loclists
-                0x00016727     0x13e0 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_spi.o
+                0x00016717     0x13e0 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_spi.o
  .debug_loclists
-                0x00017b07     0x3438 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim.o
+                0x00017af7     0x3438 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim.o
  .debug_loclists
-                0x0001af3f     0x11d7 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim_ex.o
+                0x0001af2f     0x11d7 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim_ex.o
 
 .debug_aranges  0x00000000     0x3e40
  .debug_aranges
@@ -21249,188 +21249,188 @@ LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  .debug_macro   0x0002bb79      0x1fc ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim.o
  .debug_macro   0x0002bd75      0x1fa ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim_ex.o
 
-.debug_line     0x00000000    0x745d6
+.debug_line     0x00000000    0x745b8
  .debug_line    0x00000000     0x1172 ./Application/User/Core/MB1642ButtonController.o
  .debug_line    0x00001172      0xd16 ./Application/User/Core/MB1642DataReader.o
  .debug_line    0x00001e88      0xfa2 ./Application/User/Core/MB1642DisplayDriver.o
- .debug_line    0x00002e2a     0x17b5 ./Application/User/Core/clovece_nezlob_se.o
- .debug_line    0x000045df     0x1380 ./Application/User/Core/main.o
- .debug_line    0x0000595f      0xdd8 ./Application/User/Core/milis.o
- .debug_line    0x00006737      0xe5e ./Application/User/Core/stm32g0xx_hal_msp.o
- .debug_line    0x00007595      0x987 ./Application/User/Core/stm32g0xx_it.o
- .debug_line    0x00007f1c      0x99c ./Application/User/Core/syscalls.o
- .debug_line    0x000088b8      0x5b4 ./Application/User/Core/sysmem.o
- .debug_line    0x00008e6c      0xf27 ./Application/User/Core/ws2812b.o
- .debug_line    0x00009d93       0x7b ./Application/User/Startup/startup_stm32g071rbtx.o
- .debug_line    0x00009e0e       0xac ./Application/User/TouchGFX/App/app_touchgfx.o
- .debug_line    0x00009eba      0x675 ./Application/User/TouchGFX/target/STM32TouchController.o
- .debug_line    0x0000a52f      0x6fd ./Application/User/TouchGFX/target/TouchGFXDataReader.o
- .debug_line    0x0000ac2c      0x88b ./Application/User/TouchGFX/target/TouchGFXGPIO.o
- .debug_line    0x0000b4b7     0x167f ./Application/User/TouchGFX/target/TouchGFXHAL.o
- .debug_line    0x0000cb36     0x112e ./Application/User/TouchGFX/target/generated/OSWrappers.o
- .debug_line    0x0000dc64      0xa25 ./Application/User/TouchGFX/target/generated/STM32DMA.o
- .debug_line    0x0000e689     0x25aa ./Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o
- .debug_line    0x00010c33      0xae0 ./Application/User/TouchGFX/target/generated/TouchGFXGeneratedDataReader.o
- .debug_line    0x00011713     0x33ed ./Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o
- .debug_line    0x00014b00      0x7b1 ./Application/User/generated/ApplicationFontProvider.o
- .debug_line    0x000152b1      0x638 ./Application/User/generated/BitmapDatabase.o
- .debug_line    0x000158e9      0xa08 ./Application/User/generated/CachedFont.o
- .debug_line    0x000162f1     0x1515 ./Application/User/generated/FontCache.o
- .debug_line    0x00017806      0x583 ./Application/User/generated/Font_TCB______TTF_10_4bpp_0.o
- .debug_line    0x00017d89      0x583 ./Application/User/generated/Font_TCB______TTF_12_4bpp_0.o
- .debug_line    0x0001830c      0x583 ./Application/User/generated/Font_TCB______TTF_14_4bpp_0.o
- .debug_line    0x0001888f      0x583 ./Application/User/generated/Font_TCB______TTF_16_4bpp_0.o
- .debug_line    0x00018e12      0x583 ./Application/User/generated/Font_TCB______TTF_35_4bpp_0.o
- .debug_line    0x00019395      0x57f ./Application/User/generated/Font_segoeuib_18_4bpp_0.o
- .debug_line    0x00019914      0x57f ./Application/User/generated/Font_segoeuib_22_4bpp_0.o
- .debug_line    0x00019e93      0x57f ./Application/User/generated/Font_segoeuib_50_4bpp_0.o
- .debug_line    0x0001a412     0x30e7 ./Application/User/generated/FrontendApplicationBase.o
- .debug_line    0x0001d4f9      0x5f2 ./Application/User/generated/Kerning_TCB______TTF_10_4bpp.o
- .debug_line    0x0001daeb      0x5f2 ./Application/User/generated/Kerning_TCB______TTF_12_4bpp.o
- .debug_line    0x0001e0dd      0x5f2 ./Application/User/generated/Kerning_TCB______TTF_14_4bpp.o
- .debug_line    0x0001e6cf      0x5f2 ./Application/User/generated/Kerning_TCB______TTF_16_4bpp.o
- .debug_line    0x0001ecc1      0x5f2 ./Application/User/generated/Kerning_TCB______TTF_35_4bpp.o
- .debug_line    0x0001f2b3      0x5ee ./Application/User/generated/Kerning_segoeuib_18_4bpp.o
- .debug_line    0x0001f8a1      0x5ee ./Application/User/generated/Kerning_segoeuib_22_4bpp.o
- .debug_line    0x0001fe8f      0x5ee ./Application/User/generated/Kerning_segoeuib_50_4bpp.o
- .debug_line    0x0002047d      0x5c6 ./Application/User/generated/LanguageGb.o
- .debug_line    0x00020a43     0x1b40 ./Application/User/generated/Screen1ViewBase.o
- .debug_line    0x00022583     0x2365 ./Application/User/generated/Screen2ViewBase.o
- .debug_line    0x000248e8     0x1e64 ./Application/User/generated/Screen3ViewBase.o
- .debug_line    0x0002674c     0x276b ./Application/User/generated/Screen4ViewBase.o
- .debug_line    0x00028eb7     0x1f7c ./Application/User/generated/Screen5ViewBase.o
- .debug_line    0x0002ae33     0x3676 ./Application/User/generated/Screen6ViewBase.o
- .debug_line    0x0002e4a9      0x692 ./Application/User/generated/Table_TCB______TTF_10_4bpp.o
- .debug_line    0x0002eb3b      0x694 ./Application/User/generated/Table_TCB______TTF_12_4bpp.o
- .debug_line    0x0002f1cf      0x695 ./Application/User/generated/Table_TCB______TTF_14_4bpp.o
- .debug_line    0x0002f864      0x692 ./Application/User/generated/Table_TCB______TTF_16_4bpp.o
- .debug_line    0x0002fef6      0x692 ./Application/User/generated/Table_TCB______TTF_35_4bpp.o
- .debug_line    0x00030588      0x692 ./Application/User/generated/Table_segoeuib_18_4bpp.o
- .debug_line    0x00030c1a      0x691 ./Application/User/generated/Table_segoeuib_22_4bpp.o
- .debug_line    0x000312ab      0x68f ./Application/User/generated/Table_segoeuib_50_4bpp.o
- .debug_line    0x0003193a     0x1057 ./Application/User/generated/Texts.o
- .debug_line    0x00032991      0x815 ./Application/User/generated/TypedTextDatabase.o
- .debug_line    0x000331a6      0xb0e ./Application/User/generated/UnmappedDataFont.o
- .debug_line    0x00033cb4     0x1890 ./Application/User/generated/fillWithBotsSettingBase.o
- .debug_line    0x00035544       0xb5 ./Application/User/generated/image_NEZLOB_SE.o
- .debug_line    0x000355f9       0xff ./Application/User/generated/image_alternate_theme_images_widgets_togglebutton_small_round_small_off_light.o
- .debug_line    0x000356f8       0xff ./Application/User/generated/image_alternate_theme_images_widgets_togglebutton_small_round_small_on_action.o
- .debug_line    0x000357f7       0xbc ./Application/User/generated/image_background-small.o
- .debug_line    0x000358b3       0xb5 ./Application/User/generated/image_boom-view.o
- .debug_line    0x00035968       0xe3 ./Application/User/generated/image_clay_theme_images_backgrounds_480x272_burly.o
- .debug_line    0x00035a4b       0xc0 ./Application/User/generated/image_container-background.o
- .debug_line    0x00035b0b       0xba ./Application/User/generated/image_end-background.o
- .debug_line    0x00035bc5       0xea ./Application/User/generated/image_icon_theme_images_action_settings_50_50_FFFFFF.svg.o
- .debug_line    0x00035caf       0xf0 ./Application/User/generated/image_icon_theme_images_navigation_arrow_left_50_50_000000.svg.o
- .debug_line    0x00035d9f       0xf0 ./Application/User/generated/image_icon_theme_images_navigation_arrow_left_50_50_FFD200.svg.o
- .debug_line    0x00035e8f       0xf1 ./Application/User/generated/image_icon_theme_images_navigation_arrow_right_50_50_000000.svg.o
- .debug_line    0x00035f80       0xf1 ./Application/User/generated/image_icon_theme_images_navigation_arrow_right_50_50_FFD200.svg.o
- .debug_line    0x00036071       0xf1 ./Application/User/generated/image_icon_theme_images_navigation_expand_less_70_70_FFD200.svg.o
- .debug_line    0x00036162       0xf1 ./Application/User/generated/image_icon_theme_images_navigation_expand_more_70_70_FFD200.svg.o
- .debug_line    0x00036253       0xba ./Application/User/generated/image_joystick-white.o
- .debug_line    0x0003630d       0xbb ./Application/User/generated/image_joystick-yellow.o
- .debug_line    0x000363c8       0xb4 ./Application/User/generated/image_joystick.o
- .debug_line    0x0003647c       0xc1 ./Application/User/generated/image_loading03002.o
- .debug_line    0x0003653d       0xc1 ./Application/User/generated/image_loading03003.o
- .debug_line    0x000365fe       0xc1 ./Application/User/generated/image_loading03004.o
- .debug_line    0x000366bf       0xc1 ./Application/User/generated/image_loading03006.o
- .debug_line    0x00036780       0xc1 ./Application/User/generated/image_loading03007.o
- .debug_line    0x00036841       0xc1 ./Application/User/generated/image_loading03008.o
- .debug_line    0x00036902       0xc1 ./Application/User/generated/image_loading03009.o
- .debug_line    0x000369c3       0xc1 ./Application/User/generated/image_loading03011.o
- .debug_line    0x00036a84       0xc1 ./Application/User/generated/image_loading03012.o
- .debug_line    0x00036b45       0xc1 ./Application/User/generated/image_loading03013.o
- .debug_line    0x00036c06       0xc1 ./Application/User/generated/image_loading03014.o
- .debug_line    0x00036cc7       0xc1 ./Application/User/generated/image_loading03016.o
- .debug_line    0x00036d88       0xc1 ./Application/User/generated/image_loading03017.o
- .debug_line    0x00036e49       0xc1 ./Application/User/generated/image_loading03019.o
- .debug_line    0x00036f0a       0xc1 ./Application/User/generated/image_loading03021.o
- .debug_line    0x00036fcb       0xc1 ./Application/User/generated/image_loading03022.o
- .debug_line    0x0003708c       0xc1 ./Application/User/generated/image_loading03023.o
- .debug_line    0x0003714d       0xc1 ./Application/User/generated/image_loading03024.o
- .debug_line    0x0003720e       0xc1 ./Application/User/generated/image_loading03026.o
- .debug_line    0x000372cf       0xc1 ./Application/User/generated/image_loading03027.o
- .debug_line    0x00037390       0xc1 ./Application/User/generated/image_loading03029.o
- .debug_line    0x00037451       0xc1 ./Application/User/generated/image_loading03031.o
- .debug_line    0x00037512       0xc1 ./Application/User/generated/image_loading03032.o
- .debug_line    0x000375d3       0xc1 ./Application/User/generated/image_loading03033.o
- .debug_line    0x00037694       0xc1 ./Application/User/generated/image_loading03034.o
- .debug_line    0x00037755       0xc1 ./Application/User/generated/image_loading03037.o
- .debug_line    0x00037816       0xc1 ./Application/User/generated/image_loading03038.o
- .debug_line    0x000378d7       0xc1 ./Application/User/generated/image_loading03039.o
- .debug_line    0x00037998       0xc1 ./Application/User/generated/image_loading03041.o
- .debug_line    0x00037a59       0xc1 ./Application/User/generated/image_loading03042.o
- .debug_line    0x00037b1a       0xc1 ./Application/User/generated/image_loading03043.o
- .debug_line    0x00037bdb       0xc1 ./Application/User/generated/image_loading03044.o
- .debug_line    0x00037c9c       0xc1 ./Application/User/generated/image_loading03046.o
- .debug_line    0x00037d5d       0xc1 ./Application/User/generated/image_loading03047.o
- .debug_line    0x00037e1e       0xc1 ./Application/User/generated/image_loading03049.o
- .debug_line    0x00037edf       0xc1 ./Application/User/generated/image_loading03050.o
- .debug_line    0x00037fa0       0xb6 ./Application/User/generated/image_logo-light.o
- .debug_line    0x00038056       0xb4 ./Application/User/generated/image_logo-new.o
- .debug_line    0x0003810a       0xc1 ./Application/User/generated/image_pawn_icon_large_light.o
- .debug_line    0x000381cb       0xb7 ./Application/User/generated/image_resultDice1.o
- .debug_line    0x00038282       0xb7 ./Application/User/generated/image_resultDice2.o
- .debug_line    0x00038339       0xb7 ./Application/User/generated/image_resultDice3.o
- .debug_line    0x000383f0       0xb7 ./Application/User/generated/image_resultDice4.o
- .debug_line    0x000384a7       0xb7 ./Application/User/generated/image_resultDice5.o
- .debug_line    0x0003855e       0xb7 ./Application/User/generated/image_resultDice6.o
- .debug_line    0x00038615       0xbc ./Application/User/generated/image_resultDiceSmall1.o
- .debug_line    0x000386d1       0xbc ./Application/User/generated/image_resultDiceSmall2.o
- .debug_line    0x0003878d       0xbc ./Application/User/generated/image_resultDiceSmall3.o
- .debug_line    0x00038849       0xbc ./Application/User/generated/image_resultDiceSmall4.o
- .debug_line    0x00038905       0xbc ./Application/User/generated/image_resultDiceSmall5.o
- .debug_line    0x000389c1       0xbc ./Application/User/generated/image_resultDiceSmall6.o
- .debug_line    0x00038a7d       0xb5 ./Application/User/generated/image_rollDice1.o
- .debug_line    0x00038b32       0xb5 ./Application/User/generated/image_rollDice2.o
- .debug_line    0x00038be7       0xb5 ./Application/User/generated/image_rollDice3.o
- .debug_line    0x00038c9c       0xb5 ./Application/User/generated/image_rollDice4.o
- .debug_line    0x00038d51       0xb5 ./Application/User/generated/image_rollDice5.o
- .debug_line    0x00038e06       0xb5 ./Application/User/generated/image_rollDice6.o
- .debug_line    0x00038ebb       0xb5 ./Application/User/generated/image_rollDice7.o
- .debug_line    0x00038f70       0xb5 ./Application/User/generated/image_rollDice8.o
- .debug_line    0x00039025       0xb5 ./Application/User/generated/image_rollDice9.o
- .debug_line    0x000390da     0x29e6 ./Application/User/generated/numberOfAIPlayersSettingBase.o
- .debug_line    0x0003bac0     0x29e2 ./Application/User/generated/numberOfPlayersSettingBase.o
- .debug_line    0x0003e4a2     0x2a0d ./Application/User/generated/numberOfRealPlayersSettingBase.o
- .debug_line    0x00040eaf     0x2109 ./Application/User/generated/playerResultContainerBase.o
- .debug_line    0x00042fb8     0x1876 ./Application/User/generated/startGameBase.o
- .debug_line    0x0004482e     0x1081 ./Application/User/gui/ColorUtils.o
- .debug_line    0x000458af     0x10f7 ./Application/User/gui/FrontendApplication.o
- .debug_line    0x000469a6       0xcf ./Application/User/gui/Model.o
- .debug_line    0x00046a75     0x115a ./Application/User/gui/Screen1Presenter.o
- .debug_line    0x00047bcf     0x15c9 ./Application/User/gui/Screen1View.o
- .debug_line    0x00049198     0x160c ./Application/User/gui/Screen2Presenter.o
- .debug_line    0x0004a7a4     0x23f1 ./Application/User/gui/Screen2View.o
- .debug_line    0x0004cb95     0x1561 ./Application/User/gui/Screen3Presenter.o
- .debug_line    0x0004e0f6     0x1b45 ./Application/User/gui/Screen3View.o
- .debug_line    0x0004fc3b     0x185b ./Application/User/gui/Screen4Presenter.o
- .debug_line    0x00051496     0x1fb6 ./Application/User/gui/Screen4View.o
- .debug_line    0x0005344c     0x1912 ./Application/User/gui/Screen5Presenter.o
- .debug_line    0x00054d5e     0x1b07 ./Application/User/gui/Screen5View.o
- .debug_line    0x00056865     0x1161 ./Application/User/gui/Screen6Presenter.o
- .debug_line    0x000579c6     0x1f6c ./Application/User/gui/Screen6View.o
- .debug_line    0x00059932     0x12bc ./Application/User/gui/fillWithBotsSetting.o
- .debug_line    0x0005abee     0x17ea ./Application/User/gui/numberOfAIPlayersSetting.o
- .debug_line    0x0005c3d8     0x181e ./Application/User/gui/numberOfPlayersSetting.o
- .debug_line    0x0005dbf6     0x182e ./Application/User/gui/numberOfRealPlayersSetting.o
- .debug_line    0x0005f424     0x15ad ./Application/User/gui/playerResultContainer.o
- .debug_line    0x000609d1     0x1278 ./Application/User/gui/startGame.o
- .debug_line    0x00061c49      0x8a3 ./Drivers/CMSIS/system_stm32g0xx.o
- .debug_line    0x000624ec      0xd0a ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal.o
- .debug_line    0x000631f6      0xced ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_cortex.o
- .debug_line    0x00063ee3      0xbd6 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc.o
- .debug_line    0x00064ab9      0x8de ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc_ex.o
- .debug_line    0x00065397     0x11c0 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_dma.o
- .debug_line    0x00066557      0xd08 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_gpio.o
- .debug_line    0x0006725f      0xcfc ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_pwr_ex.o
- .debug_line    0x00067f5b     0x1466 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc.o
- .debug_line    0x000693c1      0xfbf ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc_ex.o
- .debug_line    0x0006a380     0x2fa7 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_spi.o
- .debug_line    0x0006d327     0x51d4 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim.o
- .debug_line    0x000724fb     0x20db ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim_ex.o
+ .debug_line    0x00002e2a     0x17b7 ./Application/User/Core/clovece_nezlob_se.o
+ .debug_line    0x000045e1     0x1380 ./Application/User/Core/main.o
+ .debug_line    0x00005961      0xdd8 ./Application/User/Core/milis.o
+ .debug_line    0x00006739      0xe5e ./Application/User/Core/stm32g0xx_hal_msp.o
+ .debug_line    0x00007597      0x987 ./Application/User/Core/stm32g0xx_it.o
+ .debug_line    0x00007f1e      0x99c ./Application/User/Core/syscalls.o
+ .debug_line    0x000088ba      0x5b4 ./Application/User/Core/sysmem.o
+ .debug_line    0x00008e6e      0xf27 ./Application/User/Core/ws2812b.o
+ .debug_line    0x00009d95       0x7b ./Application/User/Startup/startup_stm32g071rbtx.o
+ .debug_line    0x00009e10       0xac ./Application/User/TouchGFX/App/app_touchgfx.o
+ .debug_line    0x00009ebc      0x675 ./Application/User/TouchGFX/target/STM32TouchController.o
+ .debug_line    0x0000a531      0x6fd ./Application/User/TouchGFX/target/TouchGFXDataReader.o
+ .debug_line    0x0000ac2e      0x88b ./Application/User/TouchGFX/target/TouchGFXGPIO.o
+ .debug_line    0x0000b4b9     0x167f ./Application/User/TouchGFX/target/TouchGFXHAL.o
+ .debug_line    0x0000cb38     0x112e ./Application/User/TouchGFX/target/generated/OSWrappers.o
+ .debug_line    0x0000dc66      0xa25 ./Application/User/TouchGFX/target/generated/STM32DMA.o
+ .debug_line    0x0000e68b     0x25aa ./Application/User/TouchGFX/target/generated/TouchGFXConfiguration.o
+ .debug_line    0x00010c35      0xae0 ./Application/User/TouchGFX/target/generated/TouchGFXGeneratedDataReader.o
+ .debug_line    0x00011715     0x33ed ./Application/User/TouchGFX/target/generated/TouchGFXGeneratedHAL.o
+ .debug_line    0x00014b02      0x7b1 ./Application/User/generated/ApplicationFontProvider.o
+ .debug_line    0x000152b3      0x638 ./Application/User/generated/BitmapDatabase.o
+ .debug_line    0x000158eb      0xa08 ./Application/User/generated/CachedFont.o
+ .debug_line    0x000162f3     0x1515 ./Application/User/generated/FontCache.o
+ .debug_line    0x00017808      0x583 ./Application/User/generated/Font_TCB______TTF_10_4bpp_0.o
+ .debug_line    0x00017d8b      0x583 ./Application/User/generated/Font_TCB______TTF_12_4bpp_0.o
+ .debug_line    0x0001830e      0x583 ./Application/User/generated/Font_TCB______TTF_14_4bpp_0.o
+ .debug_line    0x00018891      0x583 ./Application/User/generated/Font_TCB______TTF_16_4bpp_0.o
+ .debug_line    0x00018e14      0x583 ./Application/User/generated/Font_TCB______TTF_35_4bpp_0.o
+ .debug_line    0x00019397      0x57f ./Application/User/generated/Font_segoeuib_18_4bpp_0.o
+ .debug_line    0x00019916      0x57f ./Application/User/generated/Font_segoeuib_22_4bpp_0.o
+ .debug_line    0x00019e95      0x57f ./Application/User/generated/Font_segoeuib_50_4bpp_0.o
+ .debug_line    0x0001a414     0x30e7 ./Application/User/generated/FrontendApplicationBase.o
+ .debug_line    0x0001d4fb      0x5f2 ./Application/User/generated/Kerning_TCB______TTF_10_4bpp.o
+ .debug_line    0x0001daed      0x5f2 ./Application/User/generated/Kerning_TCB______TTF_12_4bpp.o
+ .debug_line    0x0001e0df      0x5f2 ./Application/User/generated/Kerning_TCB______TTF_14_4bpp.o
+ .debug_line    0x0001e6d1      0x5f2 ./Application/User/generated/Kerning_TCB______TTF_16_4bpp.o
+ .debug_line    0x0001ecc3      0x5f2 ./Application/User/generated/Kerning_TCB______TTF_35_4bpp.o
+ .debug_line    0x0001f2b5      0x5ee ./Application/User/generated/Kerning_segoeuib_18_4bpp.o
+ .debug_line    0x0001f8a3      0x5ee ./Application/User/generated/Kerning_segoeuib_22_4bpp.o
+ .debug_line    0x0001fe91      0x5ee ./Application/User/generated/Kerning_segoeuib_50_4bpp.o
+ .debug_line    0x0002047f      0x5c6 ./Application/User/generated/LanguageGb.o
+ .debug_line    0x00020a45     0x1b40 ./Application/User/generated/Screen1ViewBase.o
+ .debug_line    0x00022585     0x2365 ./Application/User/generated/Screen2ViewBase.o
+ .debug_line    0x000248ea     0x1e64 ./Application/User/generated/Screen3ViewBase.o
+ .debug_line    0x0002674e     0x276b ./Application/User/generated/Screen4ViewBase.o
+ .debug_line    0x00028eb9     0x1f7c ./Application/User/generated/Screen5ViewBase.o
+ .debug_line    0x0002ae35     0x3676 ./Application/User/generated/Screen6ViewBase.o
+ .debug_line    0x0002e4ab      0x692 ./Application/User/generated/Table_TCB______TTF_10_4bpp.o
+ .debug_line    0x0002eb3d      0x694 ./Application/User/generated/Table_TCB______TTF_12_4bpp.o
+ .debug_line    0x0002f1d1      0x695 ./Application/User/generated/Table_TCB______TTF_14_4bpp.o
+ .debug_line    0x0002f866      0x692 ./Application/User/generated/Table_TCB______TTF_16_4bpp.o
+ .debug_line    0x0002fef8      0x692 ./Application/User/generated/Table_TCB______TTF_35_4bpp.o
+ .debug_line    0x0003058a      0x692 ./Application/User/generated/Table_segoeuib_18_4bpp.o
+ .debug_line    0x00030c1c      0x691 ./Application/User/generated/Table_segoeuib_22_4bpp.o
+ .debug_line    0x000312ad      0x68f ./Application/User/generated/Table_segoeuib_50_4bpp.o
+ .debug_line    0x0003193c     0x1057 ./Application/User/generated/Texts.o
+ .debug_line    0x00032993      0x815 ./Application/User/generated/TypedTextDatabase.o
+ .debug_line    0x000331a8      0xb0e ./Application/User/generated/UnmappedDataFont.o
+ .debug_line    0x00033cb6     0x1890 ./Application/User/generated/fillWithBotsSettingBase.o
+ .debug_line    0x00035546       0xb5 ./Application/User/generated/image_NEZLOB_SE.o
+ .debug_line    0x000355fb       0xff ./Application/User/generated/image_alternate_theme_images_widgets_togglebutton_small_round_small_off_light.o
+ .debug_line    0x000356fa       0xff ./Application/User/generated/image_alternate_theme_images_widgets_togglebutton_small_round_small_on_action.o
+ .debug_line    0x000357f9       0xbc ./Application/User/generated/image_background-small.o
+ .debug_line    0x000358b5       0xb5 ./Application/User/generated/image_boom-view.o
+ .debug_line    0x0003596a       0xe3 ./Application/User/generated/image_clay_theme_images_backgrounds_480x272_burly.o
+ .debug_line    0x00035a4d       0xc0 ./Application/User/generated/image_container-background.o
+ .debug_line    0x00035b0d       0xba ./Application/User/generated/image_end-background.o
+ .debug_line    0x00035bc7       0xea ./Application/User/generated/image_icon_theme_images_action_settings_50_50_FFFFFF.svg.o
+ .debug_line    0x00035cb1       0xf0 ./Application/User/generated/image_icon_theme_images_navigation_arrow_left_50_50_000000.svg.o
+ .debug_line    0x00035da1       0xf0 ./Application/User/generated/image_icon_theme_images_navigation_arrow_left_50_50_FFD200.svg.o
+ .debug_line    0x00035e91       0xf1 ./Application/User/generated/image_icon_theme_images_navigation_arrow_right_50_50_000000.svg.o
+ .debug_line    0x00035f82       0xf1 ./Application/User/generated/image_icon_theme_images_navigation_arrow_right_50_50_FFD200.svg.o
+ .debug_line    0x00036073       0xf1 ./Application/User/generated/image_icon_theme_images_navigation_expand_less_70_70_FFD200.svg.o
+ .debug_line    0x00036164       0xf1 ./Application/User/generated/image_icon_theme_images_navigation_expand_more_70_70_FFD200.svg.o
+ .debug_line    0x00036255       0xba ./Application/User/generated/image_joystick-white.o
+ .debug_line    0x0003630f       0xbb ./Application/User/generated/image_joystick-yellow.o
+ .debug_line    0x000363ca       0xb4 ./Application/User/generated/image_joystick.o
+ .debug_line    0x0003647e       0xc1 ./Application/User/generated/image_loading03002.o
+ .debug_line    0x0003653f       0xc1 ./Application/User/generated/image_loading03003.o
+ .debug_line    0x00036600       0xc1 ./Application/User/generated/image_loading03004.o
+ .debug_line    0x000366c1       0xc1 ./Application/User/generated/image_loading03006.o
+ .debug_line    0x00036782       0xc1 ./Application/User/generated/image_loading03007.o
+ .debug_line    0x00036843       0xc1 ./Application/User/generated/image_loading03008.o
+ .debug_line    0x00036904       0xc1 ./Application/User/generated/image_loading03009.o
+ .debug_line    0x000369c5       0xc1 ./Application/User/generated/image_loading03011.o
+ .debug_line    0x00036a86       0xc1 ./Application/User/generated/image_loading03012.o
+ .debug_line    0x00036b47       0xc1 ./Application/User/generated/image_loading03013.o
+ .debug_line    0x00036c08       0xc1 ./Application/User/generated/image_loading03014.o
+ .debug_line    0x00036cc9       0xc1 ./Application/User/generated/image_loading03016.o
+ .debug_line    0x00036d8a       0xc1 ./Application/User/generated/image_loading03017.o
+ .debug_line    0x00036e4b       0xc1 ./Application/User/generated/image_loading03019.o
+ .debug_line    0x00036f0c       0xc1 ./Application/User/generated/image_loading03021.o
+ .debug_line    0x00036fcd       0xc1 ./Application/User/generated/image_loading03022.o
+ .debug_line    0x0003708e       0xc1 ./Application/User/generated/image_loading03023.o
+ .debug_line    0x0003714f       0xc1 ./Application/User/generated/image_loading03024.o
+ .debug_line    0x00037210       0xc1 ./Application/User/generated/image_loading03026.o
+ .debug_line    0x000372d1       0xc1 ./Application/User/generated/image_loading03027.o
+ .debug_line    0x00037392       0xc1 ./Application/User/generated/image_loading03029.o
+ .debug_line    0x00037453       0xc1 ./Application/User/generated/image_loading03031.o
+ .debug_line    0x00037514       0xc1 ./Application/User/generated/image_loading03032.o
+ .debug_line    0x000375d5       0xc1 ./Application/User/generated/image_loading03033.o
+ .debug_line    0x00037696       0xc1 ./Application/User/generated/image_loading03034.o
+ .debug_line    0x00037757       0xc1 ./Application/User/generated/image_loading03037.o
+ .debug_line    0x00037818       0xc1 ./Application/User/generated/image_loading03038.o
+ .debug_line    0x000378d9       0xc1 ./Application/User/generated/image_loading03039.o
+ .debug_line    0x0003799a       0xc1 ./Application/User/generated/image_loading03041.o
+ .debug_line    0x00037a5b       0xc1 ./Application/User/generated/image_loading03042.o
+ .debug_line    0x00037b1c       0xc1 ./Application/User/generated/image_loading03043.o
+ .debug_line    0x00037bdd       0xc1 ./Application/User/generated/image_loading03044.o
+ .debug_line    0x00037c9e       0xc1 ./Application/User/generated/image_loading03046.o
+ .debug_line    0x00037d5f       0xc1 ./Application/User/generated/image_loading03047.o
+ .debug_line    0x00037e20       0xc1 ./Application/User/generated/image_loading03049.o
+ .debug_line    0x00037ee1       0xc1 ./Application/User/generated/image_loading03050.o
+ .debug_line    0x00037fa2       0xb6 ./Application/User/generated/image_logo-light.o
+ .debug_line    0x00038058       0xb4 ./Application/User/generated/image_logo-new.o
+ .debug_line    0x0003810c       0xc1 ./Application/User/generated/image_pawn_icon_large_light.o
+ .debug_line    0x000381cd       0xb7 ./Application/User/generated/image_resultDice1.o
+ .debug_line    0x00038284       0xb7 ./Application/User/generated/image_resultDice2.o
+ .debug_line    0x0003833b       0xb7 ./Application/User/generated/image_resultDice3.o
+ .debug_line    0x000383f2       0xb7 ./Application/User/generated/image_resultDice4.o
+ .debug_line    0x000384a9       0xb7 ./Application/User/generated/image_resultDice5.o
+ .debug_line    0x00038560       0xb7 ./Application/User/generated/image_resultDice6.o
+ .debug_line    0x00038617       0xbc ./Application/User/generated/image_resultDiceSmall1.o
+ .debug_line    0x000386d3       0xbc ./Application/User/generated/image_resultDiceSmall2.o
+ .debug_line    0x0003878f       0xbc ./Application/User/generated/image_resultDiceSmall3.o
+ .debug_line    0x0003884b       0xbc ./Application/User/generated/image_resultDiceSmall4.o
+ .debug_line    0x00038907       0xbc ./Application/User/generated/image_resultDiceSmall5.o
+ .debug_line    0x000389c3       0xbc ./Application/User/generated/image_resultDiceSmall6.o
+ .debug_line    0x00038a7f       0xb5 ./Application/User/generated/image_rollDice1.o
+ .debug_line    0x00038b34       0xb5 ./Application/User/generated/image_rollDice2.o
+ .debug_line    0x00038be9       0xb5 ./Application/User/generated/image_rollDice3.o
+ .debug_line    0x00038c9e       0xb5 ./Application/User/generated/image_rollDice4.o
+ .debug_line    0x00038d53       0xb5 ./Application/User/generated/image_rollDice5.o
+ .debug_line    0x00038e08       0xb5 ./Application/User/generated/image_rollDice6.o
+ .debug_line    0x00038ebd       0xb5 ./Application/User/generated/image_rollDice7.o
+ .debug_line    0x00038f72       0xb5 ./Application/User/generated/image_rollDice8.o
+ .debug_line    0x00039027       0xb5 ./Application/User/generated/image_rollDice9.o
+ .debug_line    0x000390dc     0x29e6 ./Application/User/generated/numberOfAIPlayersSettingBase.o
+ .debug_line    0x0003bac2     0x29e2 ./Application/User/generated/numberOfPlayersSettingBase.o
+ .debug_line    0x0003e4a4     0x2a0d ./Application/User/generated/numberOfRealPlayersSettingBase.o
+ .debug_line    0x00040eb1     0x2109 ./Application/User/generated/playerResultContainerBase.o
+ .debug_line    0x00042fba     0x1876 ./Application/User/generated/startGameBase.o
+ .debug_line    0x00044830     0x1081 ./Application/User/gui/ColorUtils.o
+ .debug_line    0x000458b1     0x10f7 ./Application/User/gui/FrontendApplication.o
+ .debug_line    0x000469a8       0xcf ./Application/User/gui/Model.o
+ .debug_line    0x00046a77     0x115a ./Application/User/gui/Screen1Presenter.o
+ .debug_line    0x00047bd1     0x15c9 ./Application/User/gui/Screen1View.o
+ .debug_line    0x0004919a     0x160c ./Application/User/gui/Screen2Presenter.o
+ .debug_line    0x0004a7a6     0x23f1 ./Application/User/gui/Screen2View.o
+ .debug_line    0x0004cb97     0x1561 ./Application/User/gui/Screen3Presenter.o
+ .debug_line    0x0004e0f8     0x1b45 ./Application/User/gui/Screen3View.o
+ .debug_line    0x0004fc3d     0x185b ./Application/User/gui/Screen4Presenter.o
+ .debug_line    0x00051498     0x1fb6 ./Application/User/gui/Screen4View.o
+ .debug_line    0x0005344e     0x1912 ./Application/User/gui/Screen5Presenter.o
+ .debug_line    0x00054d60     0x1ae3 ./Application/User/gui/Screen5View.o
+ .debug_line    0x00056843     0x1161 ./Application/User/gui/Screen6Presenter.o
+ .debug_line    0x000579a4     0x1f70 ./Application/User/gui/Screen6View.o
+ .debug_line    0x00059914     0x12bc ./Application/User/gui/fillWithBotsSetting.o
+ .debug_line    0x0005abd0     0x17ea ./Application/User/gui/numberOfAIPlayersSetting.o
+ .debug_line    0x0005c3ba     0x181e ./Application/User/gui/numberOfPlayersSetting.o
+ .debug_line    0x0005dbd8     0x182e ./Application/User/gui/numberOfRealPlayersSetting.o
+ .debug_line    0x0005f406     0x15ad ./Application/User/gui/playerResultContainer.o
+ .debug_line    0x000609b3     0x1278 ./Application/User/gui/startGame.o
+ .debug_line    0x00061c2b      0x8a3 ./Drivers/CMSIS/system_stm32g0xx.o
+ .debug_line    0x000624ce      0xd0a ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal.o
+ .debug_line    0x000631d8      0xced ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_cortex.o
+ .debug_line    0x00063ec5      0xbd6 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc.o
+ .debug_line    0x00064a9b      0x8de ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc_ex.o
+ .debug_line    0x00065379     0x11c0 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_dma.o
+ .debug_line    0x00066539      0xd08 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_gpio.o
+ .debug_line    0x00067241      0xcfc ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_pwr_ex.o
+ .debug_line    0x00067f3d     0x1466 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc.o
+ .debug_line    0x000693a3      0xfbf ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc_ex.o
+ .debug_line    0x0006a362     0x2fa7 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_spi.o
+ .debug_line    0x0006d309     0x51d4 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim.o
+ .debug_line    0x000724dd     0x20db ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim_ex.o
 
-.debug_str      0x00000000    0xc81d1
+.debug_str      0x00000000    0xc81de
  .debug_str     0x00000000    0xa3f1e ./Application/User/Core/MB1642ButtonController.o
                               0xa478a (size before relaxing)
  .debug_str     0x000a3f1e      0x7d8 ./Application/User/Core/MB1642DataReader.o
@@ -21749,45 +21749,45 @@ LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
                               0xac8b9 (size before relaxing)
  .debug_str     0x000c4261       0x74 ./Application/User/gui/Screen6Presenter.o
                               0x10dd6 (size before relaxing)
- .debug_str     0x000c42d5      0xda5 ./Application/User/gui/Screen6View.o
-                              0xa6f57 (size before relaxing)
- .debug_str     0x000c507a       0x69 ./Application/User/gui/fillWithBotsSetting.o
+ .debug_str     0x000c42d5      0xdb2 ./Application/User/gui/Screen6View.o
+                              0xa6f64 (size before relaxing)
+ .debug_str     0x000c5087       0x69 ./Application/User/gui/fillWithBotsSetting.o
                               0x106b4 (size before relaxing)
- .debug_str     0x000c50e3       0xb5 ./Application/User/gui/numberOfAIPlayersSetting.o
+ .debug_str     0x000c50f0       0xb5 ./Application/User/gui/numberOfAIPlayersSetting.o
                               0x19105 (size before relaxing)
- .debug_str     0x000c5198       0x90 ./Application/User/gui/numberOfPlayersSetting.o
+ .debug_str     0x000c51a5       0x90 ./Application/User/gui/numberOfPlayersSetting.o
                               0x190a0 (size before relaxing)
- .debug_str     0x000c5228       0x9c ./Application/User/gui/numberOfRealPlayersSetting.o
+ .debug_str     0x000c5235       0x9c ./Application/User/gui/numberOfRealPlayersSetting.o
                               0x1911c (size before relaxing)
- .debug_str     0x000c52c4       0x6d ./Application/User/gui/playerResultContainer.o
+ .debug_str     0x000c52d1       0x6d ./Application/User/gui/playerResultContainer.o
                               0x18f51 (size before relaxing)
- .debug_str     0x000c5331       0x5f ./Application/User/gui/startGame.o
+ .debug_str     0x000c533e       0x5f ./Application/User/gui/startGame.o
                               0x101d5 (size before relaxing)
- .debug_str     0x000c5390       0xa3 ./Drivers/CMSIS/system_stm32g0xx.o
+ .debug_str     0x000c539d       0xa3 ./Drivers/CMSIS/system_stm32g0xx.o
                               0x96cc7 (size before relaxing)
- .debug_str     0x000c5433      0x4cd ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal.o
+ .debug_str     0x000c5440      0x4cd ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal.o
                               0x974c4 (size before relaxing)
- .debug_str     0x000c5900      0x276 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_cortex.o
+ .debug_str     0x000c590d      0x276 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_cortex.o
                               0x97180 (size before relaxing)
- .debug_str     0x000c5b76       0xd3 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc.o
+ .debug_str     0x000c5b83       0xd3 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc.o
                               0x96e52 (size before relaxing)
- .debug_str     0x000c5c49       0x7e ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc_ex.o
+ .debug_str     0x000c5c56       0x7e ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_crc_ex.o
                               0x96df8 (size before relaxing)
- .debug_str     0x000c5cc7      0x284 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_dma.o
+ .debug_str     0x000c5cd4      0x284 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_dma.o
                               0x97161 (size before relaxing)
- .debug_str     0x000c5f4b       0xe3 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_gpio.o
+ .debug_str     0x000c5f58       0xe3 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_gpio.o
                               0x96e02 (size before relaxing)
- .debug_str     0x000c602e      0x39b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_pwr_ex.o
+ .debug_str     0x000c603b      0x39b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_pwr_ex.o
                               0x97154 (size before relaxing)
- .debug_str     0x000c63c9      0x4bd ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc.o
+ .debug_str     0x000c63d6      0x4bd ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc.o
                               0x9741d (size before relaxing)
- .debug_str     0x000c6886      0x19a ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc_ex.o
+ .debug_str     0x000c6893      0x19a ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_rcc_ex.o
                               0x97091 (size before relaxing)
- .debug_str     0x000c6a20      0x563 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_spi.o
+ .debug_str     0x000c6a2d      0x563 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_spi.o
                               0x976ad (size before relaxing)
- .debug_str     0x000c6f83      0xd33 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim.o
+ .debug_str     0x000c6f90      0xd33 ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim.o
                               0x981fb (size before relaxing)
- .debug_str     0x000c7cb6      0x51b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim_ex.o
+ .debug_str     0x000c7cc3      0x51b ./Drivers/STM32G0xx_HAL_Driver/stm32g0xx_hal_tim_ex.o
                               0x97b89 (size before relaxing)
 
 .comment        0x00000000       0xc2

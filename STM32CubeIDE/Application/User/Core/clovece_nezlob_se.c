@@ -145,6 +145,7 @@ void init_player_data(uint8_t number_of_players){
 	player_data.player3.is_finished = false;
 	player_data.player4.is_finished = false;
 
+
 	// Sets AI player bool if it said so in the settings (Screen2View.cpp)
 	for(int player = game_info.number_of_players; player > game_info.number_of_players - game_info.number_of_ai_players; player--){
 		Player* player_struct = select_player(player);
