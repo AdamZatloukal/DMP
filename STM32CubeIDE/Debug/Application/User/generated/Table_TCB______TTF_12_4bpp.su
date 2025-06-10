@@ -1,2 +1,2 @@
-C:/TouchGFXProjects/App/TouchGFX/generated/fonts/src/Table_TCB______TTF_12_4bpp.cpp:82:225:void __tcf_0()	0	static
-C:/TouchGFXProjects/App/TouchGFX/generated/fonts/src/Table_TCB______TTF_12_4bpp.cpp:80:29:touchgfx::UnmappedDataFont& getFont_TCB______TTF_12_4bpp()	72	static
+C:/TouchGFXProjects/App/TouchGFX/generated/fonts/src/Table_TCB______TTF_12_4bpp.cpp:72:225:void __tcf_0()	0	static
+C:/TouchGFXProjects/App/TouchGFX/generated/fonts/src/Table_TCB______TTF_12_4bpp.cpp:70:29:touchgfx::UnmappedDataFont& getFont_TCB______TTF_12_4bpp()	72	static

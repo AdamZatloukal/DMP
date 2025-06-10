@@ -107,6 +107,21 @@ void Screen2View::scrollUp(){
 		return;
 	}
 
+	// Make the textbox of the current widget (before switching visible) (https://github.com/AdamZatloukal/DMP/issues/12)
+	switch(current_widget){
+		case NUMBER_OF_PLAYERS_TOTAL:
+			numberOfPlayersSetting1.showText();
+			break;
+
+		case NUMBER_OF_PLAYERS_REAL:
+			numberOfRealPlayersSetting1.showText();
+			break;
+
+		case NUMBER_OF_PLAYERS_AI:
+			numberOfAIPlayersSetting1.showText();
+			break;
+	}
+
 	current_widget++;
 	selectWidget(current_widget);
 
@@ -130,6 +145,21 @@ void Screen2View::scrollDown(){
 	if(scroll_number < 0){
 		scroll_number = 0;
 		return;
+	}
+
+	// Make the textbox of the current widget (before switching visible) (https://github.com/AdamZatloukal/DMP/issues/12)
+	switch(current_widget){
+		case NUMBER_OF_PLAYERS_TOTAL:
+			numberOfPlayersSetting1.showText();
+			break;
+
+		case NUMBER_OF_PLAYERS_REAL:
+			numberOfRealPlayersSetting1.showText();
+			break;
+
+		case NUMBER_OF_PLAYERS_AI:
+			numberOfAIPlayersSetting1.showText();
+			break;
 	}
 
 	current_widget--;
