@@ -19,6 +19,7 @@ public:
 
     virtual void rollDice();
     virtual void handleRollDice();
+    virtual void setImageVisibility(bool state, uint8_t number);
 
 protected:
     typedef enum{
@@ -30,6 +31,7 @@ protected:
     int tick;
     uint8_t hasRolled;
     Player* player_struct;
+    uint8_t number_of_rolls = 0;
 };
 
 #endif // SCREEN3VIEW_HPP
