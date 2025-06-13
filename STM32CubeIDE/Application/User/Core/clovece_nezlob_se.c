@@ -276,7 +276,7 @@ void move_pawn(uint8_t player, uint8_t number){
 		game_info.number_of_set_pawns++; // Used to keep track of game stats
 
 		init_player(player);		// updates the pawns at start
-		pawn_kick_set_board_animation(player);
+		pawn_set_board_animation(player);
 
 		set_LED_color(*pawn_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE)); // puts the pawn on the board
 
@@ -386,7 +386,7 @@ void kick_out_pawn(Player* player_struct, uint8_t player){
 						set_LED_color(*iterated_pawn, BOARD, 0, 0, 0);
 							set_LED_color(player_struct->position[player_struct->selected_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
 
-							pawn_kick_set_board_animation(current_player);
+							pawn_kick_board_animation(current_player, pawn);
 
 							*iterated_pawn = AT_START_POSITION;
 							iterated_player_struct->pawns_at_start++;
@@ -515,7 +515,7 @@ void selected_pawn_animation(uint8_t player){
  * Parameters:
  * player - (1 - 4)
  */
-void pawn_kick_set_board_animation(uint8_t player){
+void pawn_set_board_animation(uint8_t player){
 	Player* player_struct = select_player(player);
 
 	for(int i = 0; i < 7; i++){
@@ -538,10 +538,39 @@ void pawn_kick_set_board_animation(uint8_t player){
 }
 
 /*
- * Part of pawn_kick_set_board_animation
+ * Blink animation when a pawn is set on the board
+ * or kicked from it
+ * Parameters:
+ * player - (1 - 4)
+ */
+void pawn_kick_board_animation(uint8_t player, uint8_t iterated_pawn){
+	Player* iterated_player_struct = select_player(player);
+
+
+	for(int i = 0; i < 7; i++){
+		if(i % 2 == 0){
+			HAL_Delay(200);
+			set_LED_color(iterated_player_struct->position[iterated_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+			set_brightness_individually(iterated_player_struct->position[iterated_pawn], BOARD, 30);
+			pawn_kick_set_start_animation(i, player, "low_brightness");
+			send_data(BOARD);
+		}
+		else{
+			HAL_Delay(250);
+			set_LED_color(iterated_player_struct->position[iterated_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+			set_brightness_individually(iterated_player_struct->position[iterated_pawn], BOARD, 250);
+			pawn_kick_set_start_animation(i, player, "high_brightness");
+			send_data(BOARD);
+		}
+	}
+	init_player(player);
+}
+
+/*
+ * Part of pawn_kick_board_animation and pawn_set_board_animation
  * Applies the animation to START
  * Parameters:
- * i - current iteration of pawn_kick_set_board_animation
+ * i - current iteration of pawn_kick or set_board_animation
  * player - (1 - 4)
  * state - state of the animation
  * 		"low_brightness"
