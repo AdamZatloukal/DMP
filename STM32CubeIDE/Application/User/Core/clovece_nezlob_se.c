@@ -373,22 +373,26 @@ void kick_out_pawn(Player* player_struct, uint8_t player){
 			if(*iterated_pawn == player_struct->position[player_struct->selected_pawn] &&
 			   *iterated_pawn != AT_START_POSITION &&
 			   *iterated_pawn != IN_FINISH_POSITION &&
-			   *iterated_pawn != iterated_player_struct->board_start_position &&
-			   pawn != player_struct->selected_pawn // EXPERIMENTAL!!!
+			   *iterated_pawn != iterated_player_struct->board_start_position // MIGHT BE WRONG SINCE WE ALSO NEED TO CHECK THE STATR POSITION OF PLAYER
 				){
-				set_LED_color(*iterated_pawn, BOARD, 0, 0, 0);
-				set_LED_color(player_struct->position[player_struct->selected_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+					if (current_player == player && pawn == player_struct->selected_pawn){
+						continue;
+					}
+					else {
+						set_LED_color(*iterated_pawn, BOARD, 0, 0, 0);
+							set_LED_color(player_struct->position[player_struct->selected_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
 
-				pawn_kick_set_board_animation(current_player);
+							pawn_kick_set_board_animation(current_player);
 
-				*iterated_pawn = AT_START_POSITION;
-				iterated_player_struct->pawns_at_start++;
-				game_info.number_of_kicked_pawns++;
+							*iterated_pawn = AT_START_POSITION;
+							iterated_player_struct->pawns_at_start++;
+							game_info.number_of_kicked_pawns++;
 
-				init_player(current_player);		// Put the pawn back to start
+							init_player(current_player);		// Put the pawn back to start
 
-				set_brightness(START, 100);			// Updates the START
-				send_data(START);
+							set_brightness(START, 100);			// Updates the START
+							send_data(START);
+					}
 			}
 		}
 	}
