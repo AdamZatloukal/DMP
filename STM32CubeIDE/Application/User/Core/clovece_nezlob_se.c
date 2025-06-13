@@ -277,7 +277,6 @@ void move_pawn(uint8_t player, uint8_t number){
 
 		init_player(player);		// updates the pawns at start
 		pawn_kick_set_board_animation(player);
-		kick_out_pawn(player_struct, player);   // If a pawn from another player is at start it gets kicked out
 
 		set_LED_color(*pawn_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE)); // puts the pawn on the board
 
