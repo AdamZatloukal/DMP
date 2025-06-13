@@ -367,15 +367,19 @@ void kick_out_pawn(Player* player_struct, uint8_t player){
 		// pawns overlap -> pawn that was originally in that place gets kicked out
 		Player* iterated_player_struct = select_player(current_player);
 
+		uint8_t pos = player_struct->position[player_struct->selected_pawn];
+
 		for(int pawn = 0; pawn < 4; pawn++){
 			uint8_t* iterated_pawn = &iterated_player_struct->position[pawn];
 
 			if(*iterated_pawn == player_struct->position[player_struct->selected_pawn] &&
 			   *iterated_pawn != AT_START_POSITION &&
-			   *iterated_pawn != IN_FINISH_POSITION &&
-			   *iterated_pawn != iterated_player_struct->board_start_position // MIGHT BE WRONG SINCE WE ALSO NEED TO CHECK THE STATR POSITION OF PLAYER
+			   *iterated_pawn != IN_FINISH_POSITION
 				){
 					if (current_player == player && pawn == player_struct->selected_pawn){
+						continue;
+					}
+					else if (pos ==  2 || pos == 12 || pos == 22 || pos == 32) {	// you cannot kick out a pawn on home positions
 						continue;
 					}
 					else {
