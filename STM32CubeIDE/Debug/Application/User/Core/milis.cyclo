@@ -5,4 +5,4 @@
 ../Application/User/Core/milis.c:19:6:delay	5
 ../Application/User/Core/milis.c:264:6:handle_overlap_animation	3
 ../Application/User/Core/milis.c:282:6:select_board_animation	1
-../Application/User/Core/milis.c:298:6:HAL_TIM_PeriodElapsedCallback	1
+../Application/User/Core/milis.c:290:6:HAL_TIM_PeriodElapsedCallback	1

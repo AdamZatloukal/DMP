@@ -30,6 +30,8 @@ public:
     virtual void handleArrowAnimation();
 
     virtual void handleTickEvent();
+    virtual void setBoxVisibility();
+    virtual void arrowAnimationInner();
 
 
 protected:

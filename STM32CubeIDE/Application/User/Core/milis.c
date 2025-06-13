@@ -187,7 +187,7 @@ void handle_settings_animation_start_delay(void){
 
 		}
 
-		// EXPERIMENTAL !!!
+
 		if(is_select_triggered){
 			set_brightness(START, 255);
 		}
@@ -282,14 +282,6 @@ void handle_overlap_animation(uint8_t overlap_index){
 void select_board_animation(void){
 	is_select_triggered = true;
 	last_toggle_select = miliseconds;
-
-	set_brightness(START, 50);
-	set_brightness(BOARD, 50);
-	set_brightness(END, 50);
-
-	send_data(START);
-	send_data(BOARD);
-	send_data(END);
 }
 
 /*
