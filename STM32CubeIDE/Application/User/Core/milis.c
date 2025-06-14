@@ -43,10 +43,11 @@ void delay(int animation_delay_event){
  * (upper layer function is in clovece_nezlob_se.c)
  */
 void handle_selected_pawn_delay(void){
-	Player* player_struct = select_player(game_info.current_player);
+	uint8_t player = game_info.current_player;
+	Player* player_struct = select_player(player);
 	uint8_t* selected_pawn = &player_struct->selected_pawn;
 
-	static uint8_t last_selected_pawn = 255;		// defined on the first execute of this function
+	static uint8_t last_selected_pawn = 255;		// defined on the first execution of this function
 	static uint8_t last_brightness = 1; 			//0 - no light, 1 - light
 
 	// Makes sure the Pixel lights up when the last animation stage was brightness 0 and selected pawn changed
@@ -63,6 +64,9 @@ void handle_selected_pawn_delay(void){
 	if(player_struct->position[*selected_pawn] != AT_START_POSITION && player_struct->position[*selected_pawn] != IN_FINISH_POSITION){
 		if(miliseconds - last_toggle_time >= 500){
 			last_toggle_time = miliseconds;
+
+			// sets the correct color of the animated pawn (https://github.com/AdamZatloukal/DMP/issues/21)
+			set_LED_color(player_struct->position[*selected_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
 
 			if(last_brightness == 1){
 				set_brightness_individually(player_struct->position[*selected_pawn], BOARD, 0);
