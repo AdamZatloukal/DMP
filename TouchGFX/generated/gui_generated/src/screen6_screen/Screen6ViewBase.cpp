@@ -16,64 +16,64 @@ Screen6ViewBase::Screen6ViewBase()
     backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_CLAY_THEME_IMAGES_BACKGROUNDS_480X272_BURLY_ID));
     add(backgroundImage);
 
-    gameStatsBox.setPosition(8, 42, 144, 153);
-    gameStatsBox.setColor(touchgfx::Color::getColorFromRGB(3, 35, 75));
-    add(gameStatsBox);
+    backgroundSettingsImage1.setXY(9, 68);
+    backgroundSettingsImage1.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_RESULTS2_ID));
+    add(backgroundSettingsImage1);
 
-    gameStatsBox_1.setPosition(166, 43, 145, 152);
-    gameStatsBox_1.setColor(touchgfx::Color::getColorFromRGB(3, 35, 75));
-    add(gameStatsBox_1);
+    backgroundSettingsImage2.setXY(167, 68);
+    backgroundSettingsImage2.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_RESULTS2_ID));
+    add(backgroundSettingsImage2);
 
-    numOfRollsText.setXY(19, 55);
+    numOfRollsText.setXY(20, 77);
     numOfRollsText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     numOfRollsText.setLinespacing(0);
     numOfRollsText.setWideTextAction(WIDE_TEXT_WORDWRAP);
     numOfRollsText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_BG9O));
     add(numOfRollsText);
 
-    totalGameTimeText.setXY(172, 51);
+    totalGameTimeText.setXY(173, 73);
     totalGameTimeText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     totalGameTimeText.setLinespacing(0);
     totalGameTimeText.setWideTextAction(WIDE_TEXT_WORDWRAP);
     totalGameTimeText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_O13F));
     add(totalGameTimeText);
 
-    firstPlayerTimeText.setXY(172, 88);
+    firstPlayerTimeText.setXY(173, 110);
     firstPlayerTimeText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     firstPlayerTimeText.setLinespacing(0);
     firstPlayerTimeText.setWideTextAction(WIDE_TEXT_WORDWRAP);
     firstPlayerTimeText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RBUA));
     add(firstPlayerTimeText);
 
-    secondPlayerTimeText.setXY(172, 122);
+    secondPlayerTimeText.setXY(173, 144);
     secondPlayerTimeText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     secondPlayerTimeText.setLinespacing(0);
     secondPlayerTimeText.setWideTextAction(WIDE_TEXT_WORDWRAP);
     secondPlayerTimeText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_NUCY));
     add(secondPlayerTimeText);
 
-    thirdPlayerTimeText.setXY(172, 154);
+    thirdPlayerTimeText.setXY(173, 176);
     thirdPlayerTimeText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     thirdPlayerTimeText.setLinespacing(0);
     thirdPlayerTimeText.setWideTextAction(WIDE_TEXT_WORDWRAP);
     thirdPlayerTimeText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_R0SH));
     add(thirdPlayerTimeText);
 
-    numOfPawnsSetOnBoardText.setXY(19, 99);
+    numOfPawnsSetOnBoardText.setXY(20, 121);
     numOfPawnsSetOnBoardText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     numOfPawnsSetOnBoardText.setLinespacing(0);
     numOfPawnsSetOnBoardText.setWideTextAction(WIDE_TEXT_WORDWRAP);
     numOfPawnsSetOnBoardText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_6VLZ));
     add(numOfPawnsSetOnBoardText);
 
-    numOfPawnsKickedText.setXY(19, 144);
+    numOfPawnsKickedText.setXY(20, 166);
     numOfPawnsKickedText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     numOfPawnsKickedText.setLinespacing(0);
     numOfPawnsKickedText.setWideTextAction(WIDE_TEXT_WORDWRAP);
     numOfPawnsKickedText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_C291));
     add(numOfPawnsKickedText);
 
-    numOfPawnsSetOnBoardTextCounter.setXY(80, 120);
+    numOfPawnsSetOnBoardTextCounter.setXY(81, 142);
     numOfPawnsSetOnBoardTextCounter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     numOfPawnsSetOnBoardTextCounter.setLinespacing(0);
     numOfPawnsSetOnBoardTextCounter.setWideTextAction(WIDE_TEXT_WORDWRAP);
@@ -83,7 +83,7 @@ Screen6ViewBase::Screen6ViewBase()
     numOfPawnsSetOnBoardTextCounter.setTypedText(touchgfx::TypedText(T___SINGLEUSE_E17I));
     add(numOfPawnsSetOnBoardTextCounter);
 
-    numOfPawnsKickedTextCounter.setXY(80, 168);
+    numOfPawnsKickedTextCounter.setXY(81, 190);
     numOfPawnsKickedTextCounter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     numOfPawnsKickedTextCounter.setLinespacing(0);
     numOfPawnsKickedTextCounter.setWideTextAction(WIDE_TEXT_WORDWRAP);
@@ -93,7 +93,7 @@ Screen6ViewBase::Screen6ViewBase()
     numOfPawnsKickedTextCounter.setTypedText(touchgfx::TypedText(T___SINGLEUSE_UNFS));
     add(numOfPawnsKickedTextCounter);
 
-    numOfRollsTextCounter.setXY(80, 72);
+    numOfRollsTextCounter.setXY(81, 94);
     numOfRollsTextCounter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     numOfRollsTextCounter.setLinespacing(0);
     numOfRollsTextCounter.setWideTextAction(WIDE_TEXT_WORDWRAP);
@@ -103,87 +103,77 @@ Screen6ViewBase::Screen6ViewBase()
     numOfRollsTextCounter.setTypedText(touchgfx::TypedText(T___SINGLEUSE_KE16));
     add(numOfRollsTextCounter);
 
-    totalGameTimeTextCounter.setXY(262, 71);
+    totalGameTimeTextCounter.setXY(263, 93);
     totalGameTimeTextCounter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     totalGameTimeTextCounter.setLinespacing(0);
     totalGameTimeTextCounter.setWideTextAction(WIDE_TEXT_WORDWRAP);
-    touchgfx::Unicode::snprintf(totalGameTimeTextCounterBuffer1, TOTALGAMETIMETEXTCOUNTERBUFFER1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V8BD).getText());
-    totalGameTimeTextCounter.setWildcard1(totalGameTimeTextCounterBuffer1);
-    touchgfx::Unicode::snprintf(totalGameTimeTextCounterBuffer2, TOTALGAMETIMETEXTCOUNTERBUFFER2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_DKTM).getText());
-    totalGameTimeTextCounter.setWildcard2(totalGameTimeTextCounterBuffer2);
+    Unicode::snprintf(totalGameTimeTextCounterBuffer, TOTALGAMETIMETEXTCOUNTER_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_V8BD).getText());
+    totalGameTimeTextCounter.setWildcard(totalGameTimeTextCounterBuffer);
     totalGameTimeTextCounter.resizeToCurrentText();
     totalGameTimeTextCounter.setTypedText(touchgfx::TypedText(T___SINGLEUSE_X21Z));
     add(totalGameTimeTextCounter);
 
-    firstPlayerEndTimeTextCounter.setXY(262, 103);
+    firstPlayerEndTimeTextCounter.setXY(263, 125);
     firstPlayerEndTimeTextCounter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     firstPlayerEndTimeTextCounter.setLinespacing(0);
     firstPlayerEndTimeTextCounter.setWideTextAction(WIDE_TEXT_WORDWRAP);
-    touchgfx::Unicode::snprintf(firstPlayerEndTimeTextCounterBuffer1, FIRSTPLAYERENDTIMETEXTCOUNTERBUFFER1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_2AIB).getText());
-    firstPlayerEndTimeTextCounter.setWildcard1(firstPlayerEndTimeTextCounterBuffer1);
-    touchgfx::Unicode::snprintf(firstPlayerEndTimeTextCounterBuffer2, FIRSTPLAYERENDTIMETEXTCOUNTERBUFFER2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_9Q22).getText());
-    firstPlayerEndTimeTextCounter.setWildcard2(firstPlayerEndTimeTextCounterBuffer2);
+    Unicode::snprintf(firstPlayerEndTimeTextCounterBuffer, FIRSTPLAYERENDTIMETEXTCOUNTER_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_2AIB).getText());
+    firstPlayerEndTimeTextCounter.setWildcard(firstPlayerEndTimeTextCounterBuffer);
     firstPlayerEndTimeTextCounter.resizeToCurrentText();
     firstPlayerEndTimeTextCounter.setTypedText(touchgfx::TypedText(T___SINGLEUSE_P6BK));
     add(firstPlayerEndTimeTextCounter);
 
-    secondPlayerEndTimeTextCounter.setXY(262, 137);
+    secondPlayerEndTimeTextCounter.setXY(263, 159);
     secondPlayerEndTimeTextCounter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     secondPlayerEndTimeTextCounter.setLinespacing(0);
     secondPlayerEndTimeTextCounter.setWideTextAction(WIDE_TEXT_WORDWRAP);
-    touchgfx::Unicode::snprintf(secondPlayerEndTimeTextCounterBuffer1, SECONDPLAYERENDTIMETEXTCOUNTERBUFFER1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_OQTX).getText());
-    secondPlayerEndTimeTextCounter.setWildcard1(secondPlayerEndTimeTextCounterBuffer1);
-    touchgfx::Unicode::snprintf(secondPlayerEndTimeTextCounterBuffer2, SECONDPLAYERENDTIMETEXTCOUNTERBUFFER2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_S6BX).getText());
-    secondPlayerEndTimeTextCounter.setWildcard2(secondPlayerEndTimeTextCounterBuffer2);
+    Unicode::snprintf(secondPlayerEndTimeTextCounterBuffer, SECONDPLAYERENDTIMETEXTCOUNTER_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_OQTX).getText());
+    secondPlayerEndTimeTextCounter.setWildcard(secondPlayerEndTimeTextCounterBuffer);
     secondPlayerEndTimeTextCounter.resizeToCurrentText();
     secondPlayerEndTimeTextCounter.setTypedText(touchgfx::TypedText(T___SINGLEUSE_U7NR));
     add(secondPlayerEndTimeTextCounter);
 
-    thirdPlayerEndTimeTextCounter.setXY(262, 168);
+    thirdPlayerEndTimeTextCounter.setXY(263, 190);
     thirdPlayerEndTimeTextCounter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     thirdPlayerEndTimeTextCounter.setLinespacing(0);
     thirdPlayerEndTimeTextCounter.setWideTextAction(WIDE_TEXT_WORDWRAP);
-    touchgfx::Unicode::snprintf(thirdPlayerEndTimeTextCounterBuffer1, THIRDPLAYERENDTIMETEXTCOUNTERBUFFER1_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_B4KJ).getText());
-    thirdPlayerEndTimeTextCounter.setWildcard1(thirdPlayerEndTimeTextCounterBuffer1);
-    touchgfx::Unicode::snprintf(thirdPlayerEndTimeTextCounterBuffer2, THIRDPLAYERENDTIMETEXTCOUNTERBUFFER2_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_NDJE).getText());
-    thirdPlayerEndTimeTextCounter.setWildcard2(thirdPlayerEndTimeTextCounterBuffer2);
+    Unicode::snprintf(thirdPlayerEndTimeTextCounterBuffer, THIRDPLAYERENDTIMETEXTCOUNTER_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_B4KJ).getText());
+    thirdPlayerEndTimeTextCounter.setWildcard(thirdPlayerEndTimeTextCounterBuffer);
     thirdPlayerEndTimeTextCounter.resizeToCurrentText();
     thirdPlayerEndTimeTextCounter.setTypedText(touchgfx::TypedText(T___SINGLEUSE_W59O));
     add(thirdPlayerEndTimeTextCounter);
 
-    restartText.setXY(210, 200);
+    restartText.setXY(211, 11);
     restartText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     restartText.setLinespacing(0);
     restartText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QIQX));
     add(restartText);
 
-    upText.setXY(105, 208);
+    upText.setXY(128, 19);
     upText.setColor(touchgfx::Color::getColorFromRGB(0, 0, 0));
     upText.setLinespacing(0);
     upText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_VQXE));
     add(upText);
 
-    joystickCentermage.setXY(275, 197);
+    joystickCentermage.setXY(276, 8);
     joystickCentermage.setBitmap(touchgfx::Bitmap(BITMAP_JOYSTICK_ID));
     add(joystickCentermage);
 
-    joystickUpImage.setXY(151, 197);
+    joystickUpImage.setXY(160, 8);
     joystickUpImage.setBitmap(touchgfx::Bitmap(BITMAP_JOYSTICK_ID));
     add(joystickUpImage);
 
-    centerButtonBox.setPosition(287, 209, 17, 16);
+    centerButtonBox.setPosition(288, 20, 17, 16);
     centerButtonBox.setColor(touchgfx::Color::getColorFromRGB(198, 208, 230));
     add(centerButtonBox);
 
-    upButtonBox.setPosition(163, 197, 17, 12);
+    upButtonBox.setPosition(172, 8, 17, 12);
     upButtonBox.setColor(touchgfx::Color::getColorFromRGB(192, 203, 227));
     add(upButtonBox);
 
-    textArea1.setXY(9, 0);
-    textArea1.setColor(touchgfx::Color::getColorFromRGB(255, 210, 0));
-    textArea1.setLinespacing(0);
-    textArea1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_PX8H));
-    add(textArea1);
+    logoImage.setXY(3, -7);
+    logoImage.setBitmap(touchgfx::Bitmap(BITMAP_LOGO_NEW_ID));
+    add(logoImage);
 }
 
 Screen6ViewBase::~Screen6ViewBase()

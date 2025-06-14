@@ -48,11 +48,11 @@ Application/User/gui/Screen2View.o: \
  ../../TouchGFX/gui/include/gui/model/ModelListener.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp \
+ ../../TouchGFX/gui/include/gui/containers/fillWithBotsSetting.hpp \
+ ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/fillWithBotsSettingBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp \
- ../../TouchGFX/gui/include/gui/containers/fillWithBotsSetting.hpp \
- ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/fillWithBotsSettingBase.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp \
  ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp \
@@ -80,6 +80,7 @@ Application/User/gui/Screen2View.o: \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/numberOfRealPlayersSettingBase.hpp \
  ../../TouchGFX/gui/include/gui/containers/startGame.hpp \
  ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/startGameBase.hpp \
+ C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/Core/inc/milis.h \
  ../../Core/Inc/main.h \
  ../../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  ../../Core/Inc/stm32g0xx_hal_conf.h \
@@ -162,11 +163,11 @@ Application/User/gui/Screen2View.o: \
 ../../TouchGFX/gui/include/gui/model/ModelListener.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Box.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:
+../../TouchGFX/gui/include/gui/containers/fillWithBotsSetting.hpp:
+../../TouchGFX/generated/gui_generated/include/gui_generated/containers/fillWithBotsSettingBase.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/TextArea.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Texts.hpp:
-../../TouchGFX/gui/include/gui/containers/fillWithBotsSetting.hpp:
-../../TouchGFX/generated/gui_generated/include/gui_generated/containers/fillWithBotsSettingBase.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/ToggleButton.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Button.hpp:
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/AbstractButton.hpp:
@@ -194,6 +195,7 @@ Application/User/gui/Screen2View.o: \
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/numberOfRealPlayersSettingBase.hpp:
 ../../TouchGFX/gui/include/gui/containers/startGame.hpp:
 ../../TouchGFX/generated/gui_generated/include/gui_generated/containers/startGameBase.hpp:
+C:/TouchGFXProjects/App/STM32CubeIDE/Application/User/Core/inc/milis.h:
 ../../Core/Inc/main.h:
 ../../Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:
 ../../Core/Inc/stm32g0xx_hal_conf.h:

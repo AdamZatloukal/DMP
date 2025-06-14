@@ -2,12 +2,15 @@
 #include <milis.h>
 #include <clovece_nezlob_se.h>
 #include <ws2812b.h>
+#include <stdbool.h>
 
 
 uint32_t last_toggle_time = 0;
 uint32_t last_toggle = 0;
 uint32_t last_toggle_end = 0;
 uint32_t last_toggle_overlap = 0;
+uint32_t last_toggle_select = 0;
+bool is_select_triggered = false;
 
 volatile int miliseconds = 0;
 
@@ -40,10 +43,11 @@ void delay(int animation_delay_event){
  * (upper layer function is in clovece_nezlob_se.c)
  */
 void handle_selected_pawn_delay(void){
-	Player* player_struct = select_player(game_info.current_player);
+	uint8_t player = game_info.current_player;
+	Player* player_struct = select_player(player);
 	uint8_t* selected_pawn = &player_struct->selected_pawn;
 
-	static uint8_t last_selected_pawn = 255;		// defined on the first execute of this function
+	static uint8_t last_selected_pawn = 255;		// defined on the first execution of this function
 	static uint8_t last_brightness = 1; 			//0 - no light, 1 - light
 
 	// Makes sure the Pixel lights up when the last animation stage was brightness 0 and selected pawn changed
@@ -61,6 +65,9 @@ void handle_selected_pawn_delay(void){
 		if(miliseconds - last_toggle_time >= 500){
 			last_toggle_time = miliseconds;
 
+			// sets the correct color of the animated pawn (https://github.com/AdamZatloukal/DMP/issues/21)
+			set_LED_color(player_struct->position[*selected_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+
 			if(last_brightness == 1){
 				set_brightness_individually(player_struct->position[*selected_pawn], BOARD, 0);
 				last_brightness = 0;
@@ -75,12 +82,17 @@ void handle_selected_pawn_delay(void){
 }
 
 void handle_settings_animation_delay(void){
+	// When the game starts we want to turn off every Pixel
 	if(game_info.game_stage != INITIALIZATION){
 		turn_on_all_led(BOARD, 0, 0, 0);
 		set_brightness(BOARD, 0);
 		send_data(BOARD);
 		return;
 	}
+
+	// If the flag is set to true the rest of this function wont execute -> it is set true after pressing center button on Screen2 and will be set to back false after 300 ms
+	is_select_triggered = miliseconds - last_toggle_select >=  500 ? false : true;
+
 
 	static uint32_t last_toggle = 0;
 	static int board_i = 0;
@@ -110,6 +122,12 @@ void handle_settings_animation_delay(void){
 			set_brightness_individually(board_i + 22, BOARD, 0);
 			set_brightness_individually(board_i_player_4, BOARD, 0);
 		}
+
+		// EXPERIMENTAL!!!!
+		if(is_select_triggered){
+			set_brightness(BOARD, 0);
+		}
+
 		send_data(BOARD);
 
 		board_i++;
@@ -133,6 +151,9 @@ void handle_settings_animation_start_delay(void){
 		send_data(START);
 		return;
 	}
+
+	// If the flag is set to true the rest of this function wont execute -> it is set true after pressing center button on Screen2 and will be set to back false after 300 ms
+	is_select_triggered = miliseconds - last_toggle_select >=  500 ? false : true;
 
 	static uint8_t step1 = 0;
 	static uint8_t step2 = 1;
@@ -162,14 +183,18 @@ void handle_settings_animation_start_delay(void){
 				set_brightness_individually(colorIndex[player][previous_step2], START, 0);
 			}
 
-			set_LED_color(colorIndex[player][step1], START, color[player][0], color[player][1], color[player][2]); //Změneno (index) - step1 a step2
-			set_LED_color(colorIndex[player][step2], START, color[player][0], color[player][1], color[player][2]); // Asi je špatně
+			set_LED_color(colorIndex[player][step1], START, color[player][0], color[player][1], color[player][2]);
+			set_LED_color(colorIndex[player][step2], START, color[player][0], color[player][1], color[player][2]);
 
 			set_brightness_individually(colorIndex[player][step1], START, 200);
-			set_brightness_individually(colorIndex[player][step2], START, 50);
+			set_brightness_individually(colorIndex[player][step2], START, 30);
 
 		}
 
+
+		if(is_select_triggered){
+			set_brightness(START, 255);
+		}
 		send_data(START);
 
 		previous_step1 = step1;
@@ -187,6 +212,9 @@ void handle_settings_animation_end_delay(void){
 		send_data(END);
 		return;
 	}
+
+	// If the flag is set to true the rest of this function wont execute -> it is set true after pressing center button on Screen2 and will be set to back false after 300 ms
+	is_select_triggered = miliseconds - last_toggle_select >=  500 ? false : true;
 
 	static int colorIndex[4][4] = {{0,1,2,3},{4,5,6,7},{11,10,9,8},{15,14,13,12}};
 	static int color[4][3] =  {{255, 0, 0},{0, 0, 255},{255, 255, 0},{0, 255, 0}};
@@ -223,6 +251,9 @@ void handle_settings_animation_end_delay(void){
 			set_brightness_individually(colorIndex[player][step2], END, 30);
 		}
 
+		if(is_select_triggered){
+			set_brightness(END, 255);
+		}
 
 		send_data(END);
 
@@ -250,6 +281,11 @@ void handle_overlap_animation(uint8_t overlap_index){
 		}
 		switches++;
 	}
+}
+
+void select_board_animation(void){
+	is_select_triggered = true;
+	last_toggle_select = miliseconds;
 }
 
 /*

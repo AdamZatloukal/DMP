@@ -145,6 +145,7 @@ void init_player_data(uint8_t number_of_players){
 	player_data.player3.is_finished = false;
 	player_data.player4.is_finished = false;
 
+
 	// Sets AI player bool if it said so in the settings (Screen2View.cpp)
 	for(int player = game_info.number_of_players; player > game_info.number_of_players - game_info.number_of_ai_players; player--){
 		Player* player_struct = select_player(player);
@@ -257,12 +258,11 @@ Player* select_player(uint8_t player){
  * Parameters:
  * player - player whose turn currently is
  * number - number that was rolled
- *
+ * 
  * Notes:
  * Position 254 -> START
  * Position 255 -> END
  * 
- * Needs to be updated for new rules
  */
 void move_pawn(uint8_t player, uint8_t number){
 	Player* player_struct = select_player(player);
@@ -276,8 +276,7 @@ void move_pawn(uint8_t player, uint8_t number){
 		game_info.number_of_set_pawns++; // Used to keep track of game stats
 
 		init_player(player);		// updates the pawns at start
-		pawn_kick_set_board_animation(player);
-		kick_out_pawn(player_struct, player);   // If a pawn from another player is at start it gets kicked out
+		pawn_set_board_animation(player);
 
 		set_LED_color(*pawn_position, BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE)); // puts the pawn on the board
 
@@ -320,6 +319,7 @@ void move_pawn(uint8_t player, uint8_t number){
 			HAL_Delay(200);
 		}
 		kick_out_pawn(player_struct, player);	// kick out pawns only after the player has moved
+		set_position_of_all_pawns();
 		game_info.number_of_rolls++;
 	}
 
@@ -364,32 +364,39 @@ void set_position_of_all_pawns(void){
  */
 void kick_out_pawn(Player* player_struct, uint8_t player){
 	for(int current_player = 1;  current_player < 5; current_player++){
-		// Checks if the iterated player is the same as the player whose pawn moved (you cannot kick out your own pawn)
-		if(current_player == player){
-			continue;
-		}
 		// pawns overlap -> pawn that was originally in that place gets kicked out
-		else{
-			Player* iterated_player_struct = select_player(current_player);
+		Player* iterated_player_struct = select_player(current_player);
 
-			for(int pawn = 0; pawn < 4; pawn++){
-				uint8_t* iterated_pawn = &iterated_player_struct->position[pawn];
+		uint8_t pos = player_struct->position[player_struct->selected_pawn];
 
-				if(*iterated_pawn == player_struct->position[player_struct->selected_pawn] && *iterated_pawn != AT_START_POSITION && *iterated_pawn != IN_FINISH_POSITION && *iterated_pawn != iterated_player_struct->board_start_position){
-					set_LED_color(*iterated_pawn, BOARD, 0, 0, 0);
-					set_LED_color(player_struct->position[player_struct->selected_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+		for(int pawn = 0; pawn < 4; pawn++){
+			uint8_t* iterated_pawn = &iterated_player_struct->position[pawn];
 
-					pawn_kick_set_board_animation(current_player);
+			if(*iterated_pawn == player_struct->position[player_struct->selected_pawn] &&
+			   *iterated_pawn != AT_START_POSITION &&
+			   *iterated_pawn != IN_FINISH_POSITION
+				){
+					if (current_player == player && pawn == player_struct->selected_pawn){
+						continue;
+					}
+					else if (pos ==  2 || pos == 12 || pos == 22 || pos == 32) {	// you cannot kick out a pawn on home positions
+						continue;
+					}
+					else {
+						set_LED_color(*iterated_pawn, BOARD, 0, 0, 0);
+							set_LED_color(player_struct->position[player_struct->selected_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
 
-					*iterated_pawn = AT_START_POSITION;
-					iterated_player_struct->pawns_at_start++;
-					game_info.number_of_kicked_pawns++;
+							pawn_kick_board_animation(current_player, pawn);
 
-					init_player(current_player);		// Put the pawn back to start
+							*iterated_pawn = AT_START_POSITION;
+							iterated_player_struct->pawns_at_start++;
+							game_info.number_of_kicked_pawns++;
 
-					set_brightness(START, 100);			// Updates the START
-					send_data(START);
-				}
+							init_player(current_player);		// Put the pawn back to start
+
+							set_brightness(START, 100);			// Updates the START
+							send_data(START);
+					}
 			}
 		}
 	}
@@ -407,6 +414,11 @@ void check_finish_pawn(Player* player_struct, uint8_t player){
 	// Checks if the player has reached the end position (+1 because you need to move the pawn into the end home)
 	if(*pawn_position  == player_struct->board_end_position + 1){
 		player_struct->pawns_in_finish++;
+
+		// turn off the pixel on board before the animation plays
+		set_brightness_individually(player_struct->position[player_struct->selected_pawn], BOARD, 0);
+		send_data(BOARD);
+
 		init_finish(player_struct, player);
 		pawn_finish_animation(player);
 
@@ -444,7 +456,7 @@ void init_finish(Player* player_struct, uint8_t player){
 }
 
 
-/*--------------------- Animations ---------------------*/
+/*--------------------- Animations ----------------------*/
 
 /*
  * Checks if there are any overlapping pawns
@@ -503,7 +515,7 @@ void selected_pawn_animation(uint8_t player){
  * Parameters:
  * player - (1 - 4)
  */
-void pawn_kick_set_board_animation(uint8_t player){
+void pawn_set_board_animation(uint8_t player){
 	Player* player_struct = select_player(player);
 
 	for(int i = 0; i < 7; i++){
@@ -526,10 +538,39 @@ void pawn_kick_set_board_animation(uint8_t player){
 }
 
 /*
- * Part of pawn_kick_set_board_animation
+ * Blink animation when a pawn is set on the board
+ * or kicked from it
+ * Parameters:
+ * player - (1 - 4)
+ */
+void pawn_kick_board_animation(uint8_t player, uint8_t iterated_pawn){
+	Player* iterated_player_struct = select_player(player);
+
+
+	for(int i = 0; i < 7; i++){
+		if(i % 2 == 0){
+			HAL_Delay(200);
+			set_LED_color(iterated_player_struct->position[iterated_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+			set_brightness_individually(iterated_player_struct->position[iterated_pawn], BOARD, 30);
+			pawn_kick_set_start_animation(i, player, "low_brightness");
+			send_data(BOARD);
+		}
+		else{
+			HAL_Delay(250);
+			set_LED_color(iterated_player_struct->position[iterated_pawn], BOARD, set_color(player, RED), set_color(player, GREEN), set_color(player, BLUE));
+			set_brightness_individually(iterated_player_struct->position[iterated_pawn], BOARD, 250);
+			pawn_kick_set_start_animation(i, player, "high_brightness");
+			send_data(BOARD);
+		}
+	}
+	init_player(player);
+}
+
+/*
+ * Part of pawn_kick_board_animation and pawn_set_board_animation
  * Applies the animation to START
  * Parameters:
- * i - current iteration of pawn_kick_set_board_animation
+ * i - current iteration of pawn_kick or set_board_animation
  * player - (1 - 4)
  * state - state of the animation
  * 		"low_brightness"
@@ -576,6 +617,7 @@ void pawn_kick_set_start_animation(uint8_t i, uint8_t player, char* state){
  */
 void pawn_finish_animation(uint8_t player){
 	Player* player_struct = select_player(player);
+
 
 	for(int i = 0; i < 4; i++){
 		if(player == 1 || player == 2){

@@ -8,6 +8,7 @@
 #include <touchgfx/containers/Container.hpp>
 #include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/Box.hpp>
 
 class startGameBase : public touchgfx::Container
 {
@@ -26,7 +27,8 @@ protected:
      */
     touchgfx::Image backgroundImage;
     touchgfx::TextArea settingNameText;
-    touchgfx::Image startGameImage;
+    touchgfx::Image joystick;
+    touchgfx::Box joystickBox;
 
 private:
 

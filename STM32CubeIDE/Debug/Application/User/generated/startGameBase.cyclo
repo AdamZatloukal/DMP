@@ -12,13 +12,13 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:703:18:virtual void touchgfx::Drawable::setupDrawChain(const touchgfx::Rect&, touchgfx::Drawable**)	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/containers/Container.hpp:165:23:virtual touchgfx::Drawable* touchgfx::Container::getFirstChild()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:touchgfx::TypedText::~TypedText()	1
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/containers/startGameBase.cpp:28:1:startGameBase::~startGameBase()	1
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/containers/startGameBase.cpp:33:6:virtual void startGameBase::initialize()	1
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/containers/startGameBase.cpp:32:1:startGameBase::~startGameBase()	1
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/containers/startGameBase.cpp:37:6:virtual void startGameBase::initialize()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/TypedText.hpp:65:13:virtual touchgfx::TypedText::~TypedText()	1
-C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/containers/startGameBase.cpp:28:1:virtual startGameBase::~startGameBase()	1
+C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/containers/startGameBase.cpp:32:1:virtual startGameBase::~startGameBase()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:121:18:virtual void touchgfx::Drawable::invalidateContent() const	2
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:45:18:virtual void touchgfx::Widget::getLastChild(int16_t, int16_t, touchgfx::Drawable**)	3
-../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:48:5:touchgfx::Drawable::Drawable()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Drawable.hpp:343:10:void touchgfx::Drawable::setXY(int16_t, int16_t)	1
+../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Widget.hpp:36:7:touchgfx::Widget::Widget()	1
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/widgets/Image.hpp:50:5:touchgfx::Image::Image(const touchgfx::Bitmap&)	1
 C:/TouchGFXProjects/App/TouchGFX/generated/gui_generated/src/containers/startGameBase.cpp:9:1:startGameBase::startGameBase()	1

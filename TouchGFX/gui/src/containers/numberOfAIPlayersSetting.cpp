@@ -66,12 +66,12 @@ void numberOfAIPlayersSetting::handleColorCircles(uint8_t num_of_players, uint8_
 	}
 
 	// Makes visible only some of the circles (depends on how many players are playing)
-	do{
+	while(player < num_of_players){
 		circles[player]->setVisible(true);
 		circles[player]->invalidate();
 
 		player++;
-	}while(player < num_of_players);
+	}
 }
 
 void numberOfAIPlayersSetting::hideText(){

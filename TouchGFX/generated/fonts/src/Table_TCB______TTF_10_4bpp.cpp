@@ -4,6 +4,7 @@
 
 FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_TCB______TTF_10_4bpp[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE = {
+    {     0, 0x0020,   0,   0,   0,   0,   3,   0,   0, 0x00 }, // space
     {     0, 0x0030,   6,   6,   6,   0,   5,   0,   0, 0x00 }, // zero
     {    18, 0x0031,   3,   6,   6,   1,   5,   0,   0, 0x00 }, // one
     {    30, 0x0032,   5,   6,   6,   0,   5,   0,   0, 0x00 }, // two
@@ -14,11 +15,18 @@ KEEP extern const touchgfx::GlyphNode glyphs_TCB______TTF_10_4bpp[] FONT_TABLE_L
     {   120, 0x0037,   5,   6,   6,   0,   5,   0,   0, 0x00 }, // seven
     {   138, 0x0038,   5,   6,   6,   0,   5,   0,   0, 0x00 }, // eight
     {   156, 0x0039,   5,   6,   6,   0,   5,   0,   0, 0x00 }, // nine
-    {   174, 0x003F,   5,   6,   6,   0,   5,   0,   0, 0x00 }  // question
+    {   174, 0x003F,   5,   6,   6,   0,   5,   0,   0, 0x00 }, // question
+    {   192, 0x004E,   7,   6,   6,   0,   7,   0,   0, 0x00 }, // N
+    {   216, 0x0054,   5,   6,   6,   0,   5,   0,   0, 0x00 }, // T
+    {   234, 0x0065,   5,   4,   4,   0,   5,   0,   0, 0x00 }, // e
+    {   246, 0x0074,   3,   6,   6,   0,   3,   0,   0, 0x00 }, // t
+    {   258, 0x0077,   8,   4,   4,   0,   8,   0,   0, 0x00 }, // w
+    {   274, 0x0078,   5,   4,   4,   0,   5,   0,   0, 0x00 }  // x
 };
 
 FONT_SEARCHTABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const uint16_t unicodelist_TCB______TTF_10_4bpp[] FONT_SEARCHTABLE_LOCATION_FLASH_ATTRIBUTE = {
+    0x0020,
     0x0030,
     0x0031,
     0x0032,
@@ -29,7 +37,13 @@ KEEP extern const uint16_t unicodelist_TCB______TTF_10_4bpp[] FONT_SEARCHTABLE_L
     0x0037,
     0x0038,
     0x0039,
-    0x003F
+    0x003F,
+    0x004E,
+    0x0054,
+    0x0065,
+    0x0074,
+    0x0077,
+    0x0078
 };
 
 // TCB______TTF_10_4bpp
@@ -47,6 +61,6 @@ touchgfx::UnmappedDataFont& getFont_TCB______TTF_10_4bpp();
 
 touchgfx::UnmappedDataFont& getFont_TCB______TTF_10_4bpp()
 {
-    static touchgfx::UnmappedDataFont TCB______TTF_10_4bpp(glyphs_TCB______TTF_10_4bpp, unicodelist_TCB______TTF_10_4bpp, 11, 10, 10, 0, 0, 4, 1, 0, 1, unicodes_TCB______TTF_10_4bpp, kerning_TCB______TTF_10_4bpp, 63, 0, 0, 0);
+    static touchgfx::UnmappedDataFont TCB______TTF_10_4bpp(glyphs_TCB______TTF_10_4bpp, unicodelist_TCB______TTF_10_4bpp, 18, 10, 10, 0, 0, 4, 1, 0, 1, unicodes_TCB______TTF_10_4bpp, kerning_TCB______TTF_10_4bpp, 63, 0, 0, 0);
     return TCB______TTF_10_4bpp;
 }

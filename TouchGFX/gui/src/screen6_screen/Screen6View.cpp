@@ -83,9 +83,11 @@ void Screen6View::handleBoxAnimation(){
 	}
 }
 
+// WHO CAME UP WITH THESE STUPID BUFFER NAMES!!! It was me.
 void Screen6View::setGameStats(){
 	// Set number of total rolls
-	Unicode::snprintf(numOfRollsTextCounterBuffer, NUMOFROLLSTEXTCOUNTER_SIZE, "%d", game_info.number_of_rolls);
+	int num_of_rolls = game_info.number_of_rolls;
+	Unicode::snprintf(numOfRollsTextCounterBuffer, NUMOFROLLSTEXTCOUNTER_SIZE, "%d", num_of_rolls);
 	numOfRollsTextCounter.invalidate();
 
 	// Set number of set pawns
@@ -101,9 +103,8 @@ void Screen6View::setGameStats(){
 	int total_time_minutes = total_time_seconds / 60;
 	total_time_seconds = total_time_seconds % 60;
 
-	Unicode::snprintf(totalGameTimeTextCounterBuffer1, TOTALGAMETIMETEXTCOUNTERBUFFER1_SIZE, "%d", total_time_minutes);
-	Unicode::snprintf(totalGameTimeTextCounterBuffer2, TOTALGAMETIMETEXTCOUNTERBUFFER2_SIZE, "%d", total_time_seconds);
-
+	// Format the string !!!!!!!!!!!WORK WITH WILDCARDS WITH CODE NOT TOUCHGFXDESIGNER!!!!!!!!!!!!!!!!!!
+	Unicode::snprintf(totalGameTimeTextCounterBuffer, TOTALGAMETIMETEXTCOUNTER_SIZE, "%02d:%02d", total_time_minutes, total_time_seconds);
 	totalGameTimeTextCounter.invalidate();
 
 	// Set first player finish time
@@ -114,8 +115,7 @@ void Screen6View::setGameStats(){
 	int first_player_mins = first_player_secs / 60;
 	first_player_secs = first_player_secs % 60;
 
-	Unicode::snprintf(firstPlayerEndTimeTextCounterBuffer1, FIRSTPLAYERENDTIMETEXTCOUNTERBUFFER1_SIZE, "%d", first_player_mins);
-	Unicode::snprintf(firstPlayerEndTimeTextCounterBuffer2, FIRSTPLAYERENDTIMETEXTCOUNTERBUFFER2_SIZE, "%d", first_player_secs);
+	Unicode::snprintf(firstPlayerEndTimeTextCounterBuffer, FIRSTPLAYERENDTIMETEXTCOUNTER_SIZE, "%02d:%02d", first_player_mins, first_player_secs);
 	firstPlayerEndTimeTextCounter.invalidate();
 
 	// Set second player finish
@@ -126,8 +126,7 @@ void Screen6View::setGameStats(){
 	int second_player_mins = second_player_secs / 60;
 	second_player_secs = second_player_secs % 60;
 
-	Unicode::snprintf(secondPlayerEndTimeTextCounterBuffer1, SECONDPLAYERENDTIMETEXTCOUNTERBUFFER1_SIZE, "%d", second_player_mins);
-	Unicode::snprintf(secondPlayerEndTimeTextCounterBuffer2, SECONDPLAYERENDTIMETEXTCOUNTERBUFFER2_SIZE, "%d", second_player_secs);
+	Unicode::snprintf(secondPlayerEndTimeTextCounterBuffer, SECONDPLAYERENDTIMETEXTCOUNTER_SIZE, "%02d:%02d", second_player_mins, second_player_secs);
 	secondPlayerEndTimeTextCounter.invalidate();
 
 	// Set third player finish
@@ -138,8 +137,7 @@ void Screen6View::setGameStats(){
 	int third_player_mins = third_player_secs / 60;
 	third_player_secs = third_player_secs % 60;
 
-	Unicode::snprintf(thirdPlayerEndTimeTextCounterBuffer1, THIRDPLAYERENDTIMETEXTCOUNTERBUFFER1_SIZE, "%d", third_player_mins);
-	Unicode::snprintf(thirdPlayerEndTimeTextCounterBuffer2, THIRDPLAYERENDTIMETEXTCOUNTERBUFFER2_SIZE, "%d", third_player_secs);
+	Unicode::snprintf(thirdPlayerEndTimeTextCounterBuffer, THIRDPLAYERENDTIMETEXTCOUNTER_SIZE, "%02d:%02d", third_player_mins, third_player_secs);
 	thirdPlayerEndTimeTextCounter.invalidate();
 
 }

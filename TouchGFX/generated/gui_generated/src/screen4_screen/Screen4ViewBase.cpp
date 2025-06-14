@@ -35,7 +35,7 @@ Screen4ViewBase::Screen4ViewBase()
     pawnImage4.setAlpha(150);
     add(pawnImage4);
 
-    textCounter.setXY(150, 160);
+    textCounter.setXY(146, 150);
     textCounter.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     textCounter.setLinespacing(0);
     Unicode::snprintf(textCounterBuffer, TEXTCOUNTER_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_5PC7).getText());
@@ -79,9 +79,10 @@ Screen4ViewBase::Screen4ViewBase()
 
     diceResultImage6.setXY(0, 0);
     diceResultImage6.setBitmap(touchgfx::Bitmap(BITMAP_RESULTDICESMALL6_ID));
+    diceResultImage6.setVisible(false);
     add(diceResultImage6);
 
-    AIText.setXY(270, 2);
+    AIText.setXY(260, 0);
     AIText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     AIText.setLinespacing(0);
     AIText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_QXX9));

@@ -8,6 +8,11 @@
 #ifndef APPLICATION_USER_CORE_INC_MILIS_H_
 #define APPLICATION_USER_CORE_INC_MILIS_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+
 void delay(int animation_delay_event);
 
 extern volatile int miliseconds;
@@ -22,5 +27,10 @@ void handle_settings_animation_delay(void);
 void handle_settings_animation_start_delay(void);
 void handle_settings_animation_end_delay(void);
 void handle_overlap_animation(uint8_t overlap_index);
+void select_board_animation(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* APPLICATION_USER_CORE_INC_MILIS_H_ */

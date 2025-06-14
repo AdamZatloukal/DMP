@@ -110,6 +110,8 @@ void sync_info(void);
 uint8_t handle_ai_player_movement(void);
 void check_player_finish(Player* player_struct);
 void check_end_game(void);
+void pawn_kick_board_animation(uint8_t iterated_player, uint8_t iterated_pawn);
+void pawn_set_board_animation(uint8_t player);
 
 #ifdef __cplusplus
 }

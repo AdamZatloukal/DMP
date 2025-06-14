@@ -13,31 +13,27 @@ class FlashDataReader;
 
 struct Typography
 {
-    static const touchgfx::FontId DEFAULT = 0;
-    static const touchgfx::FontId LARGE = 1;
-    static const touchgfx::FontId SMALL = 2;
-    static const touchgfx::FontId TYPOGRAPHY_00 = 3;
-    static const touchgfx::FontId SETTINGNAMEFONT = 4;
-    static const touchgfx::FontId STARTGAMEFONT = 5;
-    static const touchgfx::FontId STATNAMEFONT = 6;
-    static const touchgfx::FontId LARGEBUTSMALLER = 7;
-    static const touchgfx::FontId STATNAMEFONTSMALLER = 8;
-    static const touchgfx::FontId STATNUMFONTSMALL = 9;
+    static const touchgfx::FontId SMALL = 0;
+    static const touchgfx::FontId SETTINGNAMEFONT = 1;
+    static const touchgfx::FontId STARTGAMEFONT = 2;
+    static const touchgfx::FontId STATNAMEFONT = 3;
+    static const touchgfx::FontId LARGEBUTSMALLER = 4;
+    static const touchgfx::FontId STATNAMEFONTSMALLER = 5;
+    static const touchgfx::FontId STATNUMFONTSMALL = 6;
+    static const touchgfx::FontId LOADING = 7;
 };
 
 struct TypographyFontIndex
 {
-    static const touchgfx::FontId DEFAULT = 0;             // TCB______TTF_20_4bpp
-    static const touchgfx::FontId LARGE = 1;               // TCB______TTF_40_4bpp
-    static const touchgfx::FontId SMALL = 2;               // TCB______TTF_10_4bpp
-    static const touchgfx::FontId TYPOGRAPHY_00 = 3;       // verdana_120_4bpp
-    static const touchgfx::FontId SETTINGNAMEFONT = 4;     // TCB______TTF_18_4bpp
-    static const touchgfx::FontId STARTGAMEFONT = 5;       // TCB______TTF_25_4bpp
-    static const touchgfx::FontId STATNAMEFONT = 6;        // TCB______TTF_14_4bpp
-    static const touchgfx::FontId LARGEBUTSMALLER = 7;     // TCB______TTF_35_4bpp
-    static const touchgfx::FontId STATNAMEFONTSMALLER = 8; // TCB______TTF_12_4bpp
-    static const touchgfx::FontId STATNUMFONTSMALL = 9;    // TCB______TTF_16_4bpp
-    static const uint16_t NUMBER_OF_FONTS = 10;
+    static const touchgfx::FontId SMALL = 0;               // TCB______TTF_10_4bpp
+    static const touchgfx::FontId SETTINGNAMEFONT = 1;     // segoeuib_18_4bpp
+    static const touchgfx::FontId STARTGAMEFONT = 2;       // segoeuib_22_4bpp
+    static const touchgfx::FontId STATNAMEFONT = 3;        // TCB______TTF_14_4bpp
+    static const touchgfx::FontId LARGEBUTSMALLER = 4;     // TCB______TTF_35_4bpp
+    static const touchgfx::FontId STATNAMEFONTSMALLER = 5; // TCB______TTF_12_4bpp
+    static const touchgfx::FontId STATNUMFONTSMALL = 6;    // TCB______TTF_16_4bpp
+    static const touchgfx::FontId LOADING = 7;             // segoeuib_50_4bpp
+    static const uint16_t NUMBER_OF_FONTS = 8;
 };
 
 class ApplicationFontProvider : public touchgfx::FontProvider

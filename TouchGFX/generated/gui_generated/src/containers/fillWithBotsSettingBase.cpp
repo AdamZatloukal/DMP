@@ -8,10 +8,10 @@
 
 fillWithBotsSettingBase::fillWithBotsSettingBase()
 {
-    setWidth(273);
-    setHeight(48);
-    backgroundImage.setXY(-49, -89);
-    backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_CONTAINERS_MEDIUM_WIDE_DARK_ID));
+    setWidth(280);
+    setHeight(50);
+    backgroundImage.setXY(0, 0);
+    backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_BACKGROUND_SMALL_ID));
     add(backgroundImage);
 
     settingNameText.setXY(8, 12);

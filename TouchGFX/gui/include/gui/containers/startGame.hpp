@@ -8,6 +8,7 @@ class startGame : public startGameBase
 public:
     startGame();
     virtual ~startGame() {}
+    virtual void setJoystickBoxVisibility(bool visibility);
 
     virtual void initialize();
 protected:

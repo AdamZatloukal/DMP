@@ -8,7 +8,9 @@
 #include <mvp/View.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/AnimatedImage.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/Image.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -16,6 +18,7 @@ public:
     Screen1ViewBase();
     virtual ~Screen1ViewBase();
     virtual void setupScreen();
+    virtual void handleKeyEvent(uint8_t key);
 
 protected:
     FrontendApplication& application() {
@@ -26,8 +29,11 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
+    touchgfx::Box backgroundBox;
+    touchgfx::AnimatedImage animatedImage1;
     touchgfx::Box box1;
-    touchgfx::TextArea textArea1;
+    touchgfx::TextArea loadingText;
+    touchgfx::Image image1;
 
 private:
 

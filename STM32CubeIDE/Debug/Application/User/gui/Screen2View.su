@@ -1,18 +1,20 @@
 ../../Middlewares/ST/touchgfx/framework/include/touchgfx/Screen.hpp:104:18:virtual void touchgfx::Screen::afterTransition()	0	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:23:6:virtual void Screen2View::tearDownScreen()	0	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:28:6:virtual void Screen2View::incrementValue()	8	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:47:6:virtual void Screen2View::decrementValue()	8	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:259:6:virtual void Screen2View::handleTickEvent()	8	static
-../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:11:13:Screen2View::~Screen2View()	8	static
-../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:11:13:virtual Screen2View::~Screen2View()	8	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:10:1:Screen2View::Screen2View()	8	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:15:6:virtual void Screen2View::setupScreen()	8	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:66:6:virtual void Screen2View::select()	8	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:101:6:virtual void Screen2View::scrollUp()	8	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:119:6:virtual void Screen2View::scrollDown()	8	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:148:6:virtual void Screen2View::selectWidget(uint8_t)	32	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:212:6:virtual void Screen2View::handleNumberOfPlayersTotal(uint8_t)	24	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:249:6:virtual void Screen2View::handleFillWithBots(uint8_t)	8	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:269:6:virtual void Screen2View::handleArrowAnimation()	16	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:340:6:virtual void Screen2View::handleNumberOfPlayersReal(uint8_t)	24	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:379:6:virtual void Screen2View::handleNumberOfPlayersAI(uint8_t)	24	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:21:6:virtual void Screen2View::tearDownScreen()	0	static
+../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:12:13:Screen2View::~Screen2View()	8	static
+../../TouchGFX/gui/include/gui/screen2_screen/Screen2View.hpp:12:13:virtual Screen2View::~Screen2View()	8	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:5:1:Screen2View::Screen2View()	8	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:10:6:virtual void Screen2View::setupScreen()	8	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:26:6:virtual void Screen2View::incrementValue()	8	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:50:6:virtual void Screen2View::decrementValue()	8	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:471:6:virtual void Screen2View::arrowAnimationInner()	16	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:75:6:virtual void Screen2View::select()	16	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:120:6:virtual void Screen2View::scrollUp()	24	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:155:6:virtual void Screen2View::scrollDown()	24	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:201:6:virtual void Screen2View::selectWidget(uint8_t)	32	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:265:6:virtual void Screen2View::handleNumberOfPlayersTotal(uint8_t)	24	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:302:6:virtual void Screen2View::handleFillWithBots(uint8_t)	8	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:312:6:virtual void Screen2View::handleTickEvent()	16	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:335:6:virtual void Screen2View::handleArrowAnimation()	16	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:454:6:virtual void Screen2View::setBoxVisibility()	8	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:377:6:virtual void Screen2View::handleNumberOfPlayersReal(uint8_t)	24	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen2_screen/Screen2View.cpp:416:6:virtual void Screen2View::handleNumberOfPlayersAI(uint8_t)	24	static

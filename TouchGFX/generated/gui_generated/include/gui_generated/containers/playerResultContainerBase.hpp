@@ -6,7 +6,7 @@
 
 #include <gui/common/FrontendApplication.hpp>
 #include <touchgfx/containers/Container.hpp>
-#include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/Image.hpp>
 #include <touchgfx/widgets/canvas/Circle.hpp>
 #include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
@@ -26,7 +26,7 @@ protected:
     /*
      * Member Declarations
      */
-    touchgfx::Box backgroundBox;
+    touchgfx::Image backgroundImage;
     touchgfx::Circle playerColorCircle;
     touchgfx::PainterRGB565 playerColorCirclePainter;
     touchgfx::TextAreaWithOneWildcard positionText;

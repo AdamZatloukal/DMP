@@ -13,6 +13,9 @@ void Screen2View::setupScreen()
 
     current_widget = START_GAME;
     selectWidget(current_widget);
+
+    iterations = 0;
+    last_tick_event = 0;
 }
 
 void Screen2View::tearDownScreen()
@@ -21,8 +24,11 @@ void Screen2View::tearDownScreen()
 }
 
 void Screen2View::incrementValue(){
+	setBoxVisibility();
+
 	switch(current_widget){
 		case NUMBER_OF_PLAYERS_TOTAL:
+			numberOfPlayersSetting1.showArrow(ARROW_LEFT_ANIMATION);
 			handleNumberOfPlayersTotal(INCREMENT);
 			break;
 
@@ -31,17 +37,23 @@ void Screen2View::incrementValue(){
 			break;
 
 		case NUMBER_OF_PLAYERS_REAL:
+			numberOfRealPlayersSetting1.showArrow(ARROW_LEFT_ANIMATION);
 			handleNumberOfPlayersReal(INCREMENT);
 			break;
 		case NUMBER_OF_PLAYERS_AI:
+			numberOfAIPlayersSetting1.showArrow(ARROW_LEFT_ANIMATION);
 			handleNumberOfPlayersAI(INCREMENT);
 			break;
 	}
 }
 
 void Screen2View::decrementValue(){
+	setBoxVisibility();
+	arrowAnimationInner();
+
 	switch(current_widget){
 		case NUMBER_OF_PLAYERS_TOTAL:
+			numberOfPlayersSetting1.showArrow(ARROW_RIGHT_ANIMATION);
 			handleNumberOfPlayersTotal(DECREMENT);
 			break;
 
@@ -50,17 +62,25 @@ void Screen2View::decrementValue(){
 			break;
 
 		case NUMBER_OF_PLAYERS_REAL:
+			numberOfRealPlayersSetting1.showArrow(ARROW_RIGHT_ANIMATION);
 			handleNumberOfPlayersReal(DECREMENT);
 			break;
 		case NUMBER_OF_PLAYERS_AI:
+			numberOfAIPlayersSetting1.showArrow(ARROW_RIGHT_ANIMATION);
 			handleNumberOfPlayersAI(DECREMENT);
 			break;
 	}
 }
 
 void Screen2View::select(){
+	// Board interaction
+	select_board_animation();
+
+
 	switch(current_widget){
 		case NUMBER_OF_PLAYERS_TOTAL:
+			numberOfPlayersSetting1.showArrow(ARROW_LEFT_ANIMATION);
+			numberOfPlayersSetting1.showArrow(ARROW_RIGHT_ANIMATION);
 			game_info.number_of_players = num_of_players;
 
 			// Select animation
@@ -75,6 +95,8 @@ void Screen2View::select(){
 			break;
 
 		case NUMBER_OF_PLAYERS_REAL:
+			numberOfRealPlayersSetting1.showArrow(ARROW_LEFT_ANIMATION);
+			numberOfRealPlayersSetting1.showArrow(ARROW_RIGHT_ANIMATION);
 
 			// Select animation
 			delay_event = TEXT_ANIMATION;
@@ -84,6 +106,8 @@ void Screen2View::select(){
 
 		case NUMBER_OF_PLAYERS_AI:
 			game_info.number_of_ai_players = num_of_AI_players;
+			numberOfAIPlayersSetting1.showArrow(ARROW_LEFT_ANIMATION);
+			numberOfAIPlayersSetting1.showArrow(ARROW_RIGHT_ANIMATION);
 
 			// Select animation
 			delay_event = TEXT_ANIMATION;
@@ -94,12 +118,29 @@ void Screen2View::select(){
 }
 
 void Screen2View::scrollUp(){
+	switch(current_widget) {
+		case NUMBER_OF_PLAYERS_TOTAL:
+			numberOfPlayersSetting1.showArrow(ARROW_LEFT_ANIMATION);
+			numberOfPlayersSetting1.showArrow(ARROW_RIGHT_ANIMATION);
+			break;
+		case NUMBER_OF_PLAYERS_REAL:
+			numberOfRealPlayersSetting1.showArrow(ARROW_LEFT_ANIMATION);
+			numberOfRealPlayersSetting1.showArrow(ARROW_RIGHT_ANIMATION);
+			break;
+		case NUMBER_OF_PLAYERS_AI:
+			numberOfAIPlayersSetting1.showArrow(ARROW_LEFT_ANIMATION);
+			numberOfAIPlayersSetting1.showArrow(ARROW_RIGHT_ANIMATION);
+			break;
+	}
+
 	scroll_number++;
 
 	if(scroll_number > NUMBER_OF_SETTINGS){
 		scroll_number = NUMBER_OF_SETTINGS;
 		return;
 	}
+
+	setBoxVisibility();
 
 	current_widget++;
 	selectWidget(current_widget);
@@ -112,6 +153,21 @@ void Screen2View::scrollUp(){
 }
 
 void Screen2View::scrollDown(){
+	switch(current_widget) {
+		case NUMBER_OF_PLAYERS_TOTAL:
+			numberOfPlayersSetting1.showArrow(ARROW_LEFT_ANIMATION);
+			numberOfPlayersSetting1.showArrow(ARROW_RIGHT_ANIMATION);
+			break;
+		case NUMBER_OF_PLAYERS_REAL:
+			numberOfRealPlayersSetting1.showArrow(ARROW_LEFT_ANIMATION);
+			numberOfRealPlayersSetting1.showArrow(ARROW_RIGHT_ANIMATION);
+			break;
+		case NUMBER_OF_PLAYERS_AI:
+			numberOfAIPlayersSetting1.showArrow(ARROW_LEFT_ANIMATION);
+			numberOfAIPlayersSetting1.showArrow(ARROW_RIGHT_ANIMATION);
+			break;
+	}
+
 	scroll_number--;
 
 	//AI players are OFF
@@ -125,6 +181,8 @@ void Screen2View::scrollDown(){
 		scroll_number = 0;
 		return;
 	}
+
+	setBoxVisibility();
 
 	current_widget--;
 	selectWidget(current_widget);
@@ -256,6 +314,19 @@ void Screen2View::handleTickEvent(){
 
 	// Delay event (for arrow left & right)
 	handleArrowAnimation();
+
+	// Changes the visibility of the box every 2/3 of a second
+	if(tick - last_tick_event >= 40 && current_widget == START_GAME){
+		last_tick_event = tick;
+
+		if(iterations % 2 == 0){
+			startGame1.setJoystickBoxVisibility(true);
+		}
+		else{
+			startGame1.setJoystickBoxVisibility(false);
+		}
+		iterations++;
+	}
 }
 
 /*
@@ -280,7 +351,7 @@ void Screen2View::handleArrowAnimation(){
 	}
 
 	if(delay_event == TEXT_ANIMATION){
-		if(tick - last_tick_event >= 20){
+		if(tick - last_tick_event >= 30){
 			switch(current_widget){
 				case NUMBER_OF_PLAYERS_TOTAL:
 					numberOfPlayersSetting1.showText();
@@ -300,36 +371,7 @@ void Screen2View::handleArrowAnimation(){
 		}
 	}
 
-	uint8_t image;
-
-	// If delay event is left -> 0 if not and delay event is arrow right -> 1 else NONE
-	image = (delay_event == ARROW_LEFT_ANIMATION) ? 0
-			: (delay_event == ARROW_RIGHT_ANIMATION) ? 1
-			: NO_ANIMATION;
-
-	// Return before the animation because we don't want an array out of bounds
-	if(image == NO_ANIMATION){
-		return;
-	}
-	// 15 tick delay -> is executes every 15 tick if the delay event is ARROW_LEFT_ANIMATION
-	if(tick - last_tick_event >= 15){
-		switch(current_widget){
-			case NUMBER_OF_PLAYERS_TOTAL:
-				numberOfPlayersSetting1.showArrow(image);
-				break;
-
-			case NUMBER_OF_PLAYERS_REAL:
-				numberOfRealPlayersSetting1.showArrow(image);
-				break;
-
-			case NUMBER_OF_PLAYERS_AI:
-				numberOfAIPlayersSetting1.showArrow(image);
-				break;
-
-		}
-
-		delay_event = NO_ANIMATION;
-	}
+	arrowAnimationInner();
 }
 
 void Screen2View::handleNumberOfPlayersReal(uint8_t handle_type){
@@ -366,7 +408,7 @@ void Screen2View::handleNumberOfPlayersReal(uint8_t handle_type){
 	game_info.number_of_ai_players = num_of_AI_players;
 
 	numberOfRealPlayersSetting1.changeNumberOfPlayers(num_of_real_players);
-	numberOfAIPlayersSetting1.changeNumberOfPlayers(num_of_AI_players);	// Not created yet
+	numberOfAIPlayersSetting1.changeNumberOfPlayers(num_of_AI_players);
 
 	numberOfRealPlayersSetting1.handleColorCircles(num_of_real_players);
 }
@@ -407,4 +449,54 @@ void Screen2View::handleNumberOfPlayersAI(uint8_t handle_type){
 	numberOfRealPlayersSetting1.changeNumberOfPlayers(num_of_real_players);
 
 	numberOfAIPlayersSetting1.handleColorCircles(num_of_players, num_of_real_players);
+}
+
+void Screen2View::setBoxVisibility() {
+	// Make the textbox of the current widget (before switching visible) (https://github.com/AdamZatloukal/DMP/issues/12)
+	switch(current_widget){
+		case NUMBER_OF_PLAYERS_TOTAL:
+			numberOfPlayersSetting1.showText();
+			break;
+
+		case NUMBER_OF_PLAYERS_REAL:
+			numberOfRealPlayersSetting1.showText();
+			break;
+
+		case NUMBER_OF_PLAYERS_AI:
+			numberOfAIPlayersSetting1.showText();
+			break;
+		}
+}
+
+void Screen2View::arrowAnimationInner() {
+	uint8_t image;
+
+	// If delay event is left -> 0 if not and delay event is arrow right -> 1 else NONE
+	image = (delay_event == ARROW_LEFT_ANIMATION) ? 0
+			: (delay_event == ARROW_RIGHT_ANIMATION) ? 1
+			: NO_ANIMATION;
+
+	// Return before the animation because we don't want an array out of bounds
+	if(image == NO_ANIMATION){
+		return;
+	}
+	// 15 tick delay -> is executed every 15 ticks if the delay event is ARROW_LEFT_ANIMATION
+	if(tick - last_tick_event >= 15){
+		switch(current_widget){
+			case NUMBER_OF_PLAYERS_TOTAL:
+				numberOfPlayersSetting1.showArrow(image);
+				break;
+
+			case NUMBER_OF_PLAYERS_REAL:
+				numberOfRealPlayersSetting1.showArrow(image);
+				break;
+
+			case NUMBER_OF_PLAYERS_AI:
+				numberOfAIPlayersSetting1.showArrow(image);
+				break;
+
+		}
+
+		delay_event = NO_ANIMATION;
+	}
 }

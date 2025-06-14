@@ -21,8 +21,9 @@ void Screen5View::setupScreen()
     	if(!player_struct->is_finished){
     		game_info.results[game_info.number_of_players - 1] = player;
     	}
-
-    	game_info.results[player_struct->finish_position - 1] = player;	// For example if a player finished third the player number would be at index [2]
+		else{
+			game_info.results[player_struct->finish_position - 1] = player;	// For example if a player finished third the player number would be at index [2]
+		}
     }
 
     playerResultContainer* result_containers[4] = {&playerResultContainer1, &playerResultContainer2, &playerResultContainer3, &playerResultContainer4};

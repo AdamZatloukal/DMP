@@ -5,48 +5,39 @@
 FONT_TABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const touchgfx::GlyphNode glyphs_TCB______TTF_12_4bpp[] FONT_TABLE_LOCATION_FLASH_ATTRIBUTE = {
     {     0, 0x0020,   0,   0,   0,   0,   3,   0,   0, 0x00 }, // space
-    {     0, 0x0028,   4,  10,   8,   0,   4,   0,   0, 0x00 }, // parenleft
-    {    20, 0x0029,   3,  10,   8,   0,   4,   0,   0, 0x00 }, // parenright
-    {    40, 0x003A,   3,   5,   5,   0,   3,   0,   0, 0x00 }, // colon
-    {    50, 0x003F,   6,   7,   7,   0,   6,   0,   0, 0x00 }, // question
-    {    71, 0x0061,   6,   5,   5,   0,   6,   0,   0, 0x00 }, // a
-    {    86, 0x0064,   6,   8,   8,   0,   6,   0,   0, 0x00 }, // d
-    {   110, 0x0065,   6,   5,   5,   0,   6,   0,   0, 0x00 }, // e
-    {   125, 0x0068,   6,   8,   8,   0,   6,   0,   0, 0x00 }, // h
-    {   149, 0x0069,   3,   8,   8,   0,   3,   0,   0, 0x00 }, // i
-    {   165, 0x006B,   6,   8,   8,   0,   6,   0,   0, 0x00 }, // k
-    {   189, 0x006D,   9,   5,   5,   0,  10,   0,   0, 0x00 }, // m
-    {   214, 0x006E,   6,   5,   5,   0,   6,   0,   0, 0x00 }, // n
-    {   229, 0x006F,   6,   5,   5,   0,   6,   0,   0, 0x00 }, // o
-    {   244, 0x0070,   6,   7,   5,   0,   6,   0,   0, 0x00 }, // p
-    {   265, 0x0072,   4,   5,   5,   0,   4,   0,   0, 0x00 }, // r
-    {   275, 0x0073,   5,   5,   5,   0,   5,   0,   0, 0x00 }, // s
-    {   290, 0x0074,   3,   7,   7,   0,   3,   0,   0, 0x00 }, // t
-    {   304, 0x0075,   6,   5,   5,   0,   6,   0,   0, 0x00 }, // u
-    {   319, 0x0076,   6,   5,   5,   0,   6,   0,   0, 0x00 }, // v
-    {   334, 0x0079,   6,   7,   5,   0,   6,   0,   0, 0x00 }, // y
-    {   355, 0x00E1,   6,   7,   7,   0,   6,   0,   0, 0x00 }, // aacute
-    {   376, 0x00E9,   6,   7,   7,   0,   6,   0,   0, 0x00 }, // eacute
-    {   397, 0x00ED,   4,   7,   7,   0,   3,   0,   0, 0x00 }, // iacute
-    {   411, 0x010C,   7,  10,  10,   0,   7,   0,   0, 0x00 }, // Ccaron
-    {   451, 0x010D,   5,   7,   7,   0,   5,   0,   0, 0x00 }, // ccaron
-    {   472, 0x0159,   4,   7,   7,   0,   4,   0,   0, 0x00 }  // rcaron
+    {     0, 0x003A,   3,   5,   5,   0,   3,   0,   0, 0x00 }, // colon
+    {    10, 0x003F,   6,   7,   7,   0,   6,   0,   0, 0x00 }, // question
+    {    31, 0x0061,   6,   5,   5,   0,   6,   0,   0, 0x00 }, // a
+    {    46, 0x0064,   6,   8,   8,   0,   6,   0,   0, 0x00 }, // d
+    {    70, 0x0065,   6,   5,   5,   0,   6,   0,   0, 0x00 }, // e
+    {    85, 0x0068,   6,   8,   8,   0,   6,   0,   0, 0x00 }, // h
+    {   109, 0x006B,   6,   8,   8,   0,   6,   0,   0, 0x00 }, // k
+    {   133, 0x006E,   6,   5,   5,   0,   6,   0,   0, 0x00 }, // n
+    {   148, 0x006F,   6,   5,   5,   0,   6,   0,   0, 0x00 }, // o
+    {   163, 0x0070,   6,   7,   5,   0,   6,   0,   0, 0x00 }, // p
+    {   184, 0x0072,   4,   5,   5,   0,   4,   0,   0, 0x00 }, // r
+    {   194, 0x0073,   5,   5,   5,   0,   5,   0,   0, 0x00 }, // s
+    {   209, 0x0074,   3,   7,   7,   0,   3,   0,   0, 0x00 }, // t
+    {   223, 0x0075,   6,   5,   5,   0,   6,   0,   0, 0x00 }, // u
+    {   238, 0x0076,   6,   5,   5,   0,   6,   0,   0, 0x00 }, // v
+    {   253, 0x00E1,   6,   7,   7,   0,   6,   0,   0, 0x00 }, // aacute
+    {   274, 0x00E9,   6,   7,   7,   0,   6,   0,   0, 0x00 }, // eacute
+    {   295, 0x00ED,   4,   7,   7,   0,   3,   0,   0, 0x00 }, // iacute
+    {   309, 0x010C,   7,  10,  10,   0,   7,   0,   0, 0x00 }, // Ccaron
+    {   349, 0x010D,   5,   7,   7,   0,   5,   0,   0, 0x00 }, // ccaron
+    {   370, 0x0159,   4,   7,   7,   0,   4,   0,   0, 0x00 }  // rcaron
 };
 
 FONT_SEARCHTABLE_LOCATION_FLASH_PRAGMA
 KEEP extern const uint16_t unicodelist_TCB______TTF_12_4bpp[] FONT_SEARCHTABLE_LOCATION_FLASH_ATTRIBUTE = {
     0x0020,
-    0x0028,
-    0x0029,
     0x003A,
     0x003F,
     0x0061,
     0x0064,
     0x0065,
     0x0068,
-    0x0069,
     0x006B,
-    0x006D,
     0x006E,
     0x006F,
     0x0070,
@@ -55,7 +46,6 @@ KEEP extern const uint16_t unicodelist_TCB______TTF_12_4bpp[] FONT_SEARCHTABLE_L
     0x0074,
     0x0075,
     0x0076,
-    0x0079,
     0x00E1,
     0x00E9,
     0x00ED,
@@ -79,6 +69,6 @@ touchgfx::UnmappedDataFont& getFont_TCB______TTF_12_4bpp();
 
 touchgfx::UnmappedDataFont& getFont_TCB______TTF_12_4bpp()
 {
-    static touchgfx::UnmappedDataFont TCB______TTF_12_4bpp(glyphs_TCB______TTF_12_4bpp, unicodelist_TCB______TTF_12_4bpp, 27, 14, 12, 0, 0, 4, 1, 0, 1, unicodes_TCB______TTF_12_4bpp, kerning_TCB______TTF_12_4bpp, 63, 0, 0, 0);
+    static touchgfx::UnmappedDataFont TCB______TTF_12_4bpp(glyphs_TCB______TTF_12_4bpp, unicodelist_TCB______TTF_12_4bpp, 22, 14, 12, 0, 0, 4, 1, 0, 1, unicodes_TCB______TTF_12_4bpp, kerning_TCB______TTF_12_4bpp, 63, 0, 0, 0);
     return TCB______TTF_12_4bpp;
 }

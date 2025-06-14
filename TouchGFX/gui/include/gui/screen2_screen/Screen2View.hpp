@@ -3,6 +3,7 @@
 
 #include <gui_generated/screen2_screen/Screen2ViewBase.hpp>
 #include <gui/screen2_screen/Screen2Presenter.hpp>
+#include <milis.h>
 
 class Screen2View : public Screen2ViewBase
 {
@@ -29,6 +30,8 @@ public:
     virtual void handleArrowAnimation();
 
     virtual void handleTickEvent();
+    virtual void setBoxVisibility();
+    virtual void arrowAnimationInner();
 
 
 protected:
@@ -65,6 +68,7 @@ protected:
 	uint8_t delay_event = NO_ANIMATION;
 	int tick;
 	int last_tick_event;
+	int iterations;
 
     uint8_t current_widget = NUMBER_OF_PLAYERS_TOTAL;
     int scroll_number = 4; // Depends on the number of setting widgets

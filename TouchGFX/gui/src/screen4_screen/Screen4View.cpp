@@ -190,7 +190,7 @@ void Screen4View::selectPawn(){
 	game_info.selected_pawn = counter - 1;
 	game_info.current_event = PAWN_SELECTED;
 
-	static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen1ScreenNoTransition();
+	static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
 }
 
 /*
@@ -210,7 +210,7 @@ void Screen4View::handleTickEvent(){
 		game_info.selected_pawn = counter - 1;
 		game_info.current_event = PAWN_SELECTED;
 
-		static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen1ScreenNoTransition();
+		static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
 	}
 
 
@@ -272,7 +272,7 @@ void Screen4View::handleArrowAnimation(uint8_t arrow){
 			game_info.current_event = PAWN_SELECTED;
 			delay_event = NO_ANIMATION;
 
-			static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen1ScreenNoTransition();
+			static_cast<FrontendApplication*>(Application::getInstance())->gotoScreen3ScreenNoTransition();
 		}
 	}
 

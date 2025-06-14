@@ -9,12 +9,13 @@
 #include <gui/screen2_screen/Screen2Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
-#include <touchgfx/widgets/TextArea.hpp>
 #include <gui/containers/fillWithBotsSetting.hpp>
 #include <gui/containers/numberOfPlayersSetting.hpp>
 #include <gui/containers/numberOfAIPlayersSetting.hpp>
 #include <gui/containers/numberOfRealPlayersSetting.hpp>
 #include <gui/containers/startGame.hpp>
+#include <touchgfx/widgets/canvas/Circle.hpp>
+#include <touchgfx/widgets/canvas/PainterRGB565.hpp>
 
 class Screen2ViewBase : public touchgfx::View<Screen2Presenter>
 {
@@ -58,7 +59,6 @@ protected:
      */
     touchgfx::Box __background;
     touchgfx::Image backgroundImage;
-    touchgfx::TextArea textArea1;
     fillWithBotsSetting fillWithBotsSetting1;
     numberOfPlayersSetting numberOfPlayersSetting1;
     numberOfAIPlayersSetting numberOfAIPlayersSetting1;
@@ -66,6 +66,10 @@ protected:
     startGame startGame1;
     touchgfx::Image scrollUpImage;
     touchgfx::Image scrollDownImage;
+    touchgfx::Circle settingsCircle;
+    touchgfx::PainterRGB565 settingsCirclePainter;
+    touchgfx::Image settingsImage;
+    touchgfx::Image image1;
 
 private:
 

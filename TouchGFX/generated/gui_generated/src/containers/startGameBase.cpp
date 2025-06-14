@@ -8,21 +8,25 @@
 
 startGameBase::startGameBase()
 {
-    setWidth(273);
-    setHeight(85);
-    backgroundImage.setXY(-49, -83);
-    backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_CONTAINERS_MEDIUM_WIDE_DARK_ID));
+    setWidth(280);
+    setHeight(90);
+    backgroundImage.setXY(0, 0);
+    backgroundImage.setBitmap(touchgfx::Bitmap(BITMAP_CONTAINER_BACKGROUND_ID));
     add(backgroundImage);
 
-    settingNameText.setXY(90, 7);
+    settingNameText.setXY(28, 30);
     settingNameText.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
     settingNameText.setLinespacing(0);
     settingNameText.setTypedText(touchgfx::TypedText(T___SINGLEUSE_9S4Q));
     add(settingNameText);
 
-    startGameImage.setXY(112, 33);
-    startGameImage.setBitmap(touchgfx::Bitmap(BITMAP_ICON_THEME_IMAGES_NAVIGATION_UNFOLD_LESS_51_48_FFD200_SVG_ID));
-    add(startGameImage);
+    joystick.setXY(182, 17);
+    joystick.setBitmap(touchgfx::Bitmap(BITMAP_JOYSTICK_YELLOW_ID));
+    add(joystick);
+
+    joystickBox.setPosition(198, 33, 19, 19);
+    joystickBox.setColor(touchgfx::Color::getColorFromRGB(12, 27, 55));
+    add(joystickBox);
 }
 
 startGameBase::~startGameBase()
