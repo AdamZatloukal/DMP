@@ -3,8 +3,8 @@ C:/TouchGFXProjects/App/TouchGFX/gui/src/screen3_screen/Screen3View.cpp:30:6:vir
 C:/TouchGFXProjects/App/TouchGFX/gui/src/screen3_screen/Screen3View.cpp:35:6:virtual void Screen3View::handleTickEvent()	16	static
 ../../TouchGFX/gui/include/gui/screen3_screen/Screen3View.hpp:14:13:Screen3View::~Screen3View()	8	static
 ../../TouchGFX/gui/include/gui/screen3_screen/Screen3View.hpp:14:13:virtual Screen3View::~Screen3View()	8	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen3_screen/Screen3View.cpp:65:6:virtual void Screen3View::rollDice()	8	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen3_screen/Screen3View.cpp:73:6:virtual void Screen3View::handleRollDice()	16	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen3_screen/Screen3View.cpp:66:6:virtual void Screen3View::rollDice()	8	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen3_screen/Screen3View.cpp:74:6:virtual void Screen3View::handleRollDice()	16	static
 C:/TouchGFXProjects/App/TouchGFX/gui/src/screen3_screen/Screen3View.cpp:4:1:Screen3View::Screen3View()	8	static
 C:/TouchGFXProjects/App/TouchGFX/gui/src/screen3_screen/Screen3View.cpp:9:6:virtual void Screen3View::setupScreen()	16	static
-C:/TouchGFXProjects/App/TouchGFX/gui/src/screen3_screen/Screen3View.cpp:101:6:virtual void Screen3View::setImageVisibility(bool, uint8_t)	8	static
+C:/TouchGFXProjects/App/TouchGFX/gui/src/screen3_screen/Screen3View.cpp:103:6:virtual void Screen3View::setImageVisibility(bool, uint8_t)	8	static

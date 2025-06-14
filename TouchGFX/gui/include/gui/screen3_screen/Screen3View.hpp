@@ -32,6 +32,7 @@ protected:
     uint8_t hasRolled;
     Player* player_struct;
     uint8_t number_of_rolls = 0;
+    bool can_roll_again = true;
 };
 
 #endif // SCREEN3VIEW_HPP

@@ -46,6 +46,7 @@ void Screen3View::handleTickEvent(){	// Called 60x per second (60Hz)
 				setImageVisibility(false, i);
 			}
 			tick = 0;
+			can_roll_again = true;
 
 			if(player_struct->is_ai_player){
 				delay_event = AI_ROLL;
@@ -64,7 +65,7 @@ void Screen3View::handleTickEvent(){	// Called 60x per second (60Hz)
 
 void Screen3View::rollDice()
 {
-	if(player_struct->is_ai_player){
+	if(player_struct->is_ai_player || !can_roll_again){
 		return;
 	}
 	handleRollDice(); // The routine is in a function just so it can be used when AI players play
@@ -95,6 +96,7 @@ void Screen3View::handleRollDice(){
 		diceAnimatedImage.setVisible(false);
 		setImageVisibility(true, number);
 		delay_event = ROLL;	// 1 second delay
+		can_roll_again = false;
 	}
 }
 
