@@ -47,15 +47,15 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  21 .debug_macro  0002bf89  00000000  00000000  008bc583  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 22 .debug_line   000749ab  00000000  00000000  008e850c  2**0
+ 22 .debug_line   00074984  00000000  00000000  008e850c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 23 .debug_str    000c8342  00000000  00000000  0095ceb7  2**0
+ 23 .debug_str    000c8342  00000000  00000000  0095ce90  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 24 .comment      000000c2  00000000  00000000  00a251f9  2**0
+ 24 .comment      000000c2  00000000  00000000  00a251d2  2**0
                   CONTENTS, READONLY
- 25 .debug_frame  00009278  00000000  00000000  00a252bc  2**2
+ 25 .debug_frame  00009278  00000000  00000000  00a25294  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 26 .debug_line_str 0000005f  00000000  00000000  00a2e534  2**0
+ 26 .debug_line_str 0000005f  00000000  00000000  00a2e50c  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -10986,7 +10986,7 @@ void handle_settings_animation_delay(void){
  8004aec:	b5f0      	push	{r4, r5, r6, r7, lr}
 	// When the game starts we want to turn off every Pixel
 	if(game_info.game_stage != INITIALIZATION){
- 8004aee:	4b70      	ldr	r3, [pc, #448]	@ (8004cb0 <handle_settings_animation_delay+0x1c4>)
+ 8004aee:	4b71      	ldr	r3, [pc, #452]	@ (8004cb4 <handle_settings_animation_delay+0x1c8>)
 void handle_settings_animation_delay(void){
  8004af0:	b087      	sub	sp, #28
 	if(game_info.game_stage != INITIALIZATION){
@@ -11014,232 +11014,231 @@ void handle_settings_animation_delay(void){
 }
  8004b12:	b007      	add	sp, #28
  8004b14:	bdf0      	pop	{r4, r5, r6, r7, pc}
-	is_select_triggered = miliseconds - last_toggle_select >=  750 ? false : true;
- 8004b16:	0028      	movs	r0, r5
- 8004b18:	4966      	ldr	r1, [pc, #408]	@ (8004cb4 <handle_settings_animation_delay+0x1c8>)
- 8004b1a:	4b67      	ldr	r3, [pc, #412]	@ (8004cb8 <handle_settings_animation_delay+0x1cc>)
- 8004b1c:	9102      	str	r1, [sp, #8]
- 8004b1e:	4967      	ldr	r1, [pc, #412]	@ (8004cbc <handle_settings_animation_delay+0x1d0>)
- 8004b20:	681a      	ldr	r2, [r3, #0]
- 8004b22:	6809      	ldr	r1, [r1, #0]
- 8004b24:	1a52      	subs	r2, r2, r1
- 8004b26:	4966      	ldr	r1, [pc, #408]	@ (8004cc0 <handle_settings_animation_delay+0x1d4>)
- 8004b28:	4291      	cmp	r1, r2
- 8004b2a:	4168      	adcs	r0, r5
+	is_select_triggered = miliseconds - last_toggle_select >=  500 ? false : true;
+ 8004b16:	4968      	ldr	r1, [pc, #416]	@ (8004cb8 <handle_settings_animation_delay+0x1cc>)
+ 8004b18:	4a68      	ldr	r2, [pc, #416]	@ (8004cbc <handle_settings_animation_delay+0x1d0>)
+ 8004b1a:	9102      	str	r1, [sp, #8]
+ 8004b1c:	4968      	ldr	r1, [pc, #416]	@ (8004cc0 <handle_settings_animation_delay+0x1d4>)
+ 8004b1e:	6813      	ldr	r3, [r2, #0]
+ 8004b20:	6809      	ldr	r1, [r1, #0]
+ 8004b22:	1a5b      	subs	r3, r3, r1
+ 8004b24:	21fa      	movs	r1, #250	@ 0xfa
+ 8004b26:	0049      	lsls	r1, r1, #1
+ 8004b28:	428b      	cmp	r3, r1
+ 8004b2a:	419b      	sbcs	r3, r3
  8004b2c:	9902      	ldr	r1, [sp, #8]
-	if(miliseconds - last_toggle >= 40){
- 8004b2e:	681a      	ldr	r2, [r3, #0]
-	is_select_triggered = miliseconds - last_toggle_select >=  750 ? false : true;
- 8004b30:	7008      	strb	r0, [r1, #0]
+ 8004b2e:	425b      	negs	r3, r3
+ 8004b30:	700b      	strb	r3, [r1, #0]
 	if(miliseconds - last_toggle >= 40){
  8004b32:	4964      	ldr	r1, [pc, #400]	@ (8004cc4 <handle_settings_animation_delay+0x1d8>)
- 8004b34:	6808      	ldr	r0, [r1, #0]
- 8004b36:	1a12      	subs	r2, r2, r0
- 8004b38:	2a27      	cmp	r2, #39	@ 0x27
- 8004b3a:	d9ea      	bls.n	8004b12 <handle_settings_animation_delay+0x26>
+ 8004b34:	6813      	ldr	r3, [r2, #0]
+ 8004b36:	6808      	ldr	r0, [r1, #0]
+ 8004b38:	1a1b      	subs	r3, r3, r0
+ 8004b3a:	2b27      	cmp	r3, #39	@ 0x27
+ 8004b3c:	d9e9      	bls.n	8004b12 <handle_settings_animation_delay+0x26>
 		if(num_of_switches % 2 == 0){
- 8004b3c:	2401      	movs	r4, #1
+ 8004b3e:	2401      	movs	r4, #1
 		last_toggle = miliseconds;
- 8004b3e:	681b      	ldr	r3, [r3, #0]
+ 8004b40:	6813      	ldr	r3, [r2, #0]
 			set_LED_color(board_i + 2, BOARD, set_color(1, RED), set_color(1, GREEN), set_color(1 , BLUE));
- 8004b40:	4e61      	ldr	r6, [pc, #388]	@ (8004cc8 <handle_settings_animation_delay+0x1dc>)
+ 8004b42:	4e61      	ldr	r6, [pc, #388]	@ (8004cc8 <handle_settings_animation_delay+0x1dc>)
 		last_toggle = miliseconds;
- 8004b42:	600b      	str	r3, [r1, #0]
+ 8004b44:	600b      	str	r3, [r1, #0]
 		if(num_of_switches % 2 == 0){
- 8004b44:	4b61      	ldr	r3, [pc, #388]	@ (8004ccc <handle_settings_animation_delay+0x1e0>)
+ 8004b46:	4b61      	ldr	r3, [pc, #388]	@ (8004ccc <handle_settings_animation_delay+0x1e0>)
 			set_LED_color(board_i + 2, BOARD, set_color(1, RED), set_color(1, GREEN), set_color(1 , BLUE));
- 8004b46:	6837      	ldr	r7, [r6, #0]
+ 8004b48:	6837      	ldr	r7, [r6, #0]
 		if(num_of_switches % 2 == 0){
- 8004b48:	681b      	ldr	r3, [r3, #0]
- 8004b4a:	3702      	adds	r7, #2
- 8004b4c:	4223      	tst	r3, r4
- 8004b4e:	d000      	beq.n	8004b52 <handle_settings_animation_delay+0x66>
- 8004b50:	e097      	b.n	8004c82 <handle_settings_animation_delay+0x196>
+ 8004b4a:	681b      	ldr	r3, [r3, #0]
+ 8004b4c:	3702      	adds	r7, #2
+ 8004b4e:	4223      	tst	r3, r4
+ 8004b50:	d000      	beq.n	8004b54 <handle_settings_animation_delay+0x68>
+ 8004b52:	e097      	b.n	8004c84 <handle_settings_animation_delay+0x198>
 			set_LED_color(board_i + 2, BOARD, set_color(1, RED), set_color(1, GREEN), set_color(1 , BLUE));
- 8004b52:	0029      	movs	r1, r5
- 8004b54:	0020      	movs	r0, r4
- 8004b56:	f7fe ff61 	bl	8003a1c <set_color>
- 8004b5a:	0021      	movs	r1, r4
- 8004b5c:	9003      	str	r0, [sp, #12]
- 8004b5e:	0020      	movs	r0, r4
- 8004b60:	f7fe ff5c 	bl	8003a1c <set_color>
- 8004b64:	2102      	movs	r1, #2
- 8004b66:	9004      	str	r0, [sp, #16]
- 8004b68:	0020      	movs	r0, r4
- 8004b6a:	f7fe ff57 	bl	8003a1c <set_color>
- 8004b6e:	9b04      	ldr	r3, [sp, #16]
- 8004b70:	9a03      	ldr	r2, [sp, #12]
- 8004b72:	0021      	movs	r1, r4
- 8004b74:	9000      	str	r0, [sp, #0]
- 8004b76:	0038      	movs	r0, r7
- 8004b78:	f000 fd26 	bl	80055c8 <set_LED_color>
+ 8004b54:	0029      	movs	r1, r5
+ 8004b56:	0020      	movs	r0, r4
+ 8004b58:	f7fe ff60 	bl	8003a1c <set_color>
+ 8004b5c:	0021      	movs	r1, r4
+ 8004b5e:	9003      	str	r0, [sp, #12]
+ 8004b60:	0020      	movs	r0, r4
+ 8004b62:	f7fe ff5b 	bl	8003a1c <set_color>
+ 8004b66:	2102      	movs	r1, #2
+ 8004b68:	9004      	str	r0, [sp, #16]
+ 8004b6a:	0020      	movs	r0, r4
+ 8004b6c:	f7fe ff56 	bl	8003a1c <set_color>
+ 8004b70:	9b04      	ldr	r3, [sp, #16]
+ 8004b72:	9a03      	ldr	r2, [sp, #12]
+ 8004b74:	0021      	movs	r1, r4
+ 8004b76:	9000      	str	r0, [sp, #0]
+ 8004b78:	0038      	movs	r0, r7
+ 8004b7a:	f000 fd25 	bl	80055c8 <set_LED_color>
 			set_LED_color(board_i + 12, BOARD, set_color(2, RED), set_color(2, GREEN), set_color(2, BLUE));
- 8004b7c:	0029      	movs	r1, r5
- 8004b7e:	2002      	movs	r0, #2
- 8004b80:	6837      	ldr	r7, [r6, #0]
- 8004b82:	f7fe ff4b 	bl	8003a1c <set_color>
- 8004b86:	0021      	movs	r1, r4
- 8004b88:	9003      	str	r0, [sp, #12]
- 8004b8a:	2002      	movs	r0, #2
- 8004b8c:	f7fe ff46 	bl	8003a1c <set_color>
- 8004b90:	2102      	movs	r1, #2
- 8004b92:	9004      	str	r0, [sp, #16]
- 8004b94:	0008      	movs	r0, r1
- 8004b96:	f7fe ff41 	bl	8003a1c <set_color>
- 8004b9a:	370c      	adds	r7, #12
- 8004b9c:	9b04      	ldr	r3, [sp, #16]
- 8004b9e:	9a03      	ldr	r2, [sp, #12]
- 8004ba0:	0021      	movs	r1, r4
- 8004ba2:	9000      	str	r0, [sp, #0]
- 8004ba4:	0038      	movs	r0, r7
- 8004ba6:	f000 fd0f 	bl	80055c8 <set_LED_color>
+ 8004b7e:	0029      	movs	r1, r5
+ 8004b80:	2002      	movs	r0, #2
+ 8004b82:	6837      	ldr	r7, [r6, #0]
+ 8004b84:	f7fe ff4a 	bl	8003a1c <set_color>
+ 8004b88:	0021      	movs	r1, r4
+ 8004b8a:	9003      	str	r0, [sp, #12]
+ 8004b8c:	2002      	movs	r0, #2
+ 8004b8e:	f7fe ff45 	bl	8003a1c <set_color>
+ 8004b92:	2102      	movs	r1, #2
+ 8004b94:	9004      	str	r0, [sp, #16]
+ 8004b96:	0008      	movs	r0, r1
+ 8004b98:	f7fe ff40 	bl	8003a1c <set_color>
+ 8004b9c:	370c      	adds	r7, #12
+ 8004b9e:	9b04      	ldr	r3, [sp, #16]
+ 8004ba0:	9a03      	ldr	r2, [sp, #12]
+ 8004ba2:	0021      	movs	r1, r4
+ 8004ba4:	9000      	str	r0, [sp, #0]
+ 8004ba6:	0038      	movs	r0, r7
+ 8004ba8:	f000 fd0e 	bl	80055c8 <set_LED_color>
 			set_LED_color(board_i + 22, BOARD, set_color(3, RED), set_color(3, GREEN), set_color(3, BLUE));
- 8004baa:	0029      	movs	r1, r5
- 8004bac:	2003      	movs	r0, #3
- 8004bae:	6837      	ldr	r7, [r6, #0]
- 8004bb0:	f7fe ff34 	bl	8003a1c <set_color>
- 8004bb4:	0021      	movs	r1, r4
- 8004bb6:	9003      	str	r0, [sp, #12]
- 8004bb8:	2003      	movs	r0, #3
- 8004bba:	f7fe ff2f 	bl	8003a1c <set_color>
- 8004bbe:	2102      	movs	r1, #2
- 8004bc0:	9004      	str	r0, [sp, #16]
- 8004bc2:	2003      	movs	r0, #3
- 8004bc4:	f7fe ff2a 	bl	8003a1c <set_color>
- 8004bc8:	3716      	adds	r7, #22
- 8004bca:	9a03      	ldr	r2, [sp, #12]
- 8004bcc:	0021      	movs	r1, r4
- 8004bce:	9b04      	ldr	r3, [sp, #16]
- 8004bd0:	9000      	str	r0, [sp, #0]
- 8004bd2:	0038      	movs	r0, r7
- 8004bd4:	f000 fcf8 	bl	80055c8 <set_LED_color>
+ 8004bac:	0029      	movs	r1, r5
+ 8004bae:	2003      	movs	r0, #3
+ 8004bb0:	6837      	ldr	r7, [r6, #0]
+ 8004bb2:	f7fe ff33 	bl	8003a1c <set_color>
+ 8004bb6:	0021      	movs	r1, r4
+ 8004bb8:	9003      	str	r0, [sp, #12]
+ 8004bba:	2003      	movs	r0, #3
+ 8004bbc:	f7fe ff2e 	bl	8003a1c <set_color>
+ 8004bc0:	2102      	movs	r1, #2
+ 8004bc2:	9004      	str	r0, [sp, #16]
+ 8004bc4:	2003      	movs	r0, #3
+ 8004bc6:	f7fe ff29 	bl	8003a1c <set_color>
+ 8004bca:	3716      	adds	r7, #22
+ 8004bcc:	9a03      	ldr	r2, [sp, #12]
+ 8004bce:	0021      	movs	r1, r4
+ 8004bd0:	9b04      	ldr	r3, [sp, #16]
+ 8004bd2:	9000      	str	r0, [sp, #0]
+ 8004bd4:	0038      	movs	r0, r7
+ 8004bd6:	f000 fcf7 	bl	80055c8 <set_LED_color>
 			set_LED_color(board_i_player_4, BOARD, set_color(4, RED), set_color(4, GREEN), set_color(4, BLUE));
- 8004bd8:	4f3d      	ldr	r7, [pc, #244]	@ (8004cd0 <handle_settings_animation_delay+0x1e4>)
- 8004bda:	0029      	movs	r1, r5
- 8004bdc:	783b      	ldrb	r3, [r7, #0]
- 8004bde:	2004      	movs	r0, #4
- 8004be0:	9303      	str	r3, [sp, #12]
- 8004be2:	f7fe ff1b 	bl	8003a1c <set_color>
- 8004be6:	0021      	movs	r1, r4
- 8004be8:	9004      	str	r0, [sp, #16]
- 8004bea:	2004      	movs	r0, #4
- 8004bec:	f7fe ff16 	bl	8003a1c <set_color>
- 8004bf0:	2102      	movs	r1, #2
- 8004bf2:	9005      	str	r0, [sp, #20]
- 8004bf4:	2004      	movs	r0, #4
- 8004bf6:	f7fe ff11 	bl	8003a1c <set_color>
- 8004bfa:	9b05      	ldr	r3, [sp, #20]
- 8004bfc:	0021      	movs	r1, r4
- 8004bfe:	9a04      	ldr	r2, [sp, #16]
- 8004c00:	9000      	str	r0, [sp, #0]
- 8004c02:	9803      	ldr	r0, [sp, #12]
- 8004c04:	f000 fce0 	bl	80055c8 <set_LED_color>
+ 8004bda:	4f3d      	ldr	r7, [pc, #244]	@ (8004cd0 <handle_settings_animation_delay+0x1e4>)
+ 8004bdc:	0029      	movs	r1, r5
+ 8004bde:	783b      	ldrb	r3, [r7, #0]
+ 8004be0:	2004      	movs	r0, #4
+ 8004be2:	9303      	str	r3, [sp, #12]
+ 8004be4:	f7fe ff1a 	bl	8003a1c <set_color>
+ 8004be8:	0021      	movs	r1, r4
+ 8004bea:	9004      	str	r0, [sp, #16]
+ 8004bec:	2004      	movs	r0, #4
+ 8004bee:	f7fe ff15 	bl	8003a1c <set_color>
+ 8004bf2:	2102      	movs	r1, #2
+ 8004bf4:	9005      	str	r0, [sp, #20]
+ 8004bf6:	2004      	movs	r0, #4
+ 8004bf8:	f7fe ff10 	bl	8003a1c <set_color>
+ 8004bfc:	9b05      	ldr	r3, [sp, #20]
+ 8004bfe:	0021      	movs	r1, r4
+ 8004c00:	9a04      	ldr	r2, [sp, #16]
+ 8004c02:	9000      	str	r0, [sp, #0]
+ 8004c04:	9803      	ldr	r0, [sp, #12]
+ 8004c06:	f000 fcdf 	bl	80055c8 <set_LED_color>
 			set_brightness_individually(board_i + 2, BOARD, 200);
- 8004c08:	6830      	ldr	r0, [r6, #0]
- 8004c0a:	22c8      	movs	r2, #200	@ 0xc8
- 8004c0c:	3002      	adds	r0, #2
- 8004c0e:	0021      	movs	r1, r4
- 8004c10:	b2c0      	uxtb	r0, r0
- 8004c12:	f000 fea5 	bl	8005960 <set_brightness_individually>
+ 8004c0a:	6830      	ldr	r0, [r6, #0]
+ 8004c0c:	22c8      	movs	r2, #200	@ 0xc8
+ 8004c0e:	3002      	adds	r0, #2
+ 8004c10:	0021      	movs	r1, r4
+ 8004c12:	b2c0      	uxtb	r0, r0
+ 8004c14:	f000 fea4 	bl	8005960 <set_brightness_individually>
 			set_brightness_individually(board_i + 12, BOARD, 200);
- 8004c16:	6830      	ldr	r0, [r6, #0]
- 8004c18:	22c8      	movs	r2, #200	@ 0xc8
- 8004c1a:	300c      	adds	r0, #12
- 8004c1c:	0021      	movs	r1, r4
- 8004c1e:	b2c0      	uxtb	r0, r0
- 8004c20:	f000 fe9e 	bl	8005960 <set_brightness_individually>
+ 8004c18:	6830      	ldr	r0, [r6, #0]
+ 8004c1a:	22c8      	movs	r2, #200	@ 0xc8
+ 8004c1c:	300c      	adds	r0, #12
+ 8004c1e:	0021      	movs	r1, r4
+ 8004c20:	b2c0      	uxtb	r0, r0
+ 8004c22:	f000 fe9d 	bl	8005960 <set_brightness_individually>
 			set_brightness_individually(board_i + 22, BOARD, 200);
- 8004c24:	6830      	ldr	r0, [r6, #0]
- 8004c26:	22c8      	movs	r2, #200	@ 0xc8
- 8004c28:	3016      	adds	r0, #22
- 8004c2a:	b2c0      	uxtb	r0, r0
- 8004c2c:	0021      	movs	r1, r4
- 8004c2e:	f000 fe97 	bl	8005960 <set_brightness_individually>
+ 8004c26:	6830      	ldr	r0, [r6, #0]
+ 8004c28:	22c8      	movs	r2, #200	@ 0xc8
+ 8004c2a:	3016      	adds	r0, #22
+ 8004c2c:	b2c0      	uxtb	r0, r0
+ 8004c2e:	0021      	movs	r1, r4
+ 8004c30:	f000 fe96 	bl	8005960 <set_brightness_individually>
 			set_brightness_individually(board_i_player_4, BOARD, 200);
- 8004c32:	22c8      	movs	r2, #200	@ 0xc8
- 8004c34:	7838      	ldrb	r0, [r7, #0]
+ 8004c34:	22c8      	movs	r2, #200	@ 0xc8
+ 8004c36:	7838      	ldrb	r0, [r7, #0]
 			set_brightness_individually(board_i_player_4, BOARD, 0);
- 8004c36:	0021      	movs	r1, r4
- 8004c38:	f000 fe92 	bl	8005960 <set_brightness_individually>
+ 8004c38:	0021      	movs	r1, r4
+ 8004c3a:	f000 fe91 	bl	8005960 <set_brightness_individually>
 		if(is_select_triggered){
- 8004c3c:	9b02      	ldr	r3, [sp, #8]
- 8004c3e:	781b      	ldrb	r3, [r3, #0]
- 8004c40:	2b00      	cmp	r3, #0
- 8004c42:	d003      	beq.n	8004c4c <handle_settings_animation_delay+0x160>
+ 8004c3e:	9b02      	ldr	r3, [sp, #8]
+ 8004c40:	781b      	ldrb	r3, [r3, #0]
+ 8004c42:	2b00      	cmp	r3, #0
+ 8004c44:	d003      	beq.n	8004c4e <handle_settings_animation_delay+0x162>
 			set_brightness(BOARD, 0);
- 8004c44:	2100      	movs	r1, #0
- 8004c46:	2001      	movs	r0, #1
- 8004c48:	f000 fe38 	bl	80058bc <set_brightness>
+ 8004c46:	2100      	movs	r1, #0
+ 8004c48:	2001      	movs	r0, #1
+ 8004c4a:	f000 fe37 	bl	80058bc <set_brightness>
 		send_data(BOARD);
- 8004c4c:	2001      	movs	r0, #1
- 8004c4e:	f000 fdbf 	bl	80057d0 <send_data>
+ 8004c4e:	2001      	movs	r0, #1
+ 8004c50:	f000 fdbe 	bl	80057d0 <send_data>
 		board_i++;
- 8004c52:	491d      	ldr	r1, [pc, #116]	@ (8004cc8 <handle_settings_animation_delay+0x1dc>)
+ 8004c54:	491c      	ldr	r1, [pc, #112]	@ (8004cc8 <handle_settings_animation_delay+0x1dc>)
 		board_i_player_4++;
- 8004c54:	4b1e      	ldr	r3, [pc, #120]	@ (8004cd0 <handle_settings_animation_delay+0x1e4>)
+ 8004c56:	4b1e      	ldr	r3, [pc, #120]	@ (8004cd0 <handle_settings_animation_delay+0x1e4>)
 		board_i++;
- 8004c56:	680a      	ldr	r2, [r1, #0]
+ 8004c58:	680a      	ldr	r2, [r1, #0]
 		board_i_player_4++;
- 8004c58:	7818      	ldrb	r0, [r3, #0]
+ 8004c5a:	7818      	ldrb	r0, [r3, #0]
 		board_i++;
- 8004c5a:	3201      	adds	r2, #1
+ 8004c5c:	3201      	adds	r2, #1
 		board_i_player_4++;
- 8004c5c:	3001      	adds	r0, #1
+ 8004c5e:	3001      	adds	r0, #1
 		board_i++;
- 8004c5e:	600a      	str	r2, [r1, #0]
+ 8004c60:	600a      	str	r2, [r1, #0]
 		board_i_player_4++;
- 8004c60:	7018      	strb	r0, [r3, #0]
+ 8004c62:	7018      	strb	r0, [r3, #0]
 		if(board_i == 10){
- 8004c62:	2a0a      	cmp	r2, #10
- 8004c64:	d107      	bne.n	8004c76 <handle_settings_animation_delay+0x18a>
+ 8004c64:	2a0a      	cmp	r2, #10
+ 8004c66:	d107      	bne.n	8004c78 <handle_settings_animation_delay+0x18c>
 			board_i = 0;
- 8004c66:	2200      	movs	r2, #0
- 8004c68:	600a      	str	r2, [r1, #0]
+ 8004c68:	2200      	movs	r2, #0
+ 8004c6a:	600a      	str	r2, [r1, #0]
 			num_of_switches++;
- 8004c6a:	4918      	ldr	r1, [pc, #96]	@ (8004ccc <handle_settings_animation_delay+0x1e0>)
+ 8004c6c:	4917      	ldr	r1, [pc, #92]	@ (8004ccc <handle_settings_animation_delay+0x1e0>)
 			board_i_player_4 = 32;
- 8004c6c:	3220      	adds	r2, #32
- 8004c6e:	701a      	strb	r2, [r3, #0]
+ 8004c6e:	3220      	adds	r2, #32
+ 8004c70:	701a      	strb	r2, [r3, #0]
 			num_of_switches++;
- 8004c70:	680a      	ldr	r2, [r1, #0]
- 8004c72:	3201      	adds	r2, #1
- 8004c74:	600a      	str	r2, [r1, #0]
+ 8004c72:	680a      	ldr	r2, [r1, #0]
+ 8004c74:	3201      	adds	r2, #1
+ 8004c76:	600a      	str	r2, [r1, #0]
 		board_i_player_4 = board_i_player_4 == 40 ? 0 : board_i_player_4; // Wraps to the start of the board
- 8004c76:	781a      	ldrb	r2, [r3, #0]
- 8004c78:	2a28      	cmp	r2, #40	@ 0x28
- 8004c7a:	d000      	beq.n	8004c7e <handle_settings_animation_delay+0x192>
- 8004c7c:	0015      	movs	r5, r2
- 8004c7e:	701d      	strb	r5, [r3, #0]
- 8004c80:	e747      	b.n	8004b12 <handle_settings_animation_delay+0x26>
+ 8004c78:	781a      	ldrb	r2, [r3, #0]
+ 8004c7a:	2a28      	cmp	r2, #40	@ 0x28
+ 8004c7c:	d000      	beq.n	8004c80 <handle_settings_animation_delay+0x194>
+ 8004c7e:	0015      	movs	r5, r2
+ 8004c80:	701d      	strb	r5, [r3, #0]
+ 8004c82:	e746      	b.n	8004b12 <handle_settings_animation_delay+0x26>
 			set_brightness_individually(board_i + 2, BOARD, 0);
- 8004c82:	002a      	movs	r2, r5
- 8004c84:	0021      	movs	r1, r4
- 8004c86:	b2f8      	uxtb	r0, r7
- 8004c88:	f000 fe6a 	bl	8005960 <set_brightness_individually>
+ 8004c84:	002a      	movs	r2, r5
+ 8004c86:	0021      	movs	r1, r4
+ 8004c88:	b2f8      	uxtb	r0, r7
+ 8004c8a:	f000 fe69 	bl	8005960 <set_brightness_individually>
 			set_brightness_individually(board_i + 12, BOARD, 0);
- 8004c8c:	6830      	ldr	r0, [r6, #0]
- 8004c8e:	002a      	movs	r2, r5
- 8004c90:	300c      	adds	r0, #12
- 8004c92:	0021      	movs	r1, r4
- 8004c94:	b2c0      	uxtb	r0, r0
- 8004c96:	f000 fe63 	bl	8005960 <set_brightness_individually>
+ 8004c8e:	6830      	ldr	r0, [r6, #0]
+ 8004c90:	002a      	movs	r2, r5
+ 8004c92:	300c      	adds	r0, #12
+ 8004c94:	0021      	movs	r1, r4
+ 8004c96:	b2c0      	uxtb	r0, r0
+ 8004c98:	f000 fe62 	bl	8005960 <set_brightness_individually>
 			set_brightness_individually(board_i + 22, BOARD, 0);
- 8004c9a:	6830      	ldr	r0, [r6, #0]
- 8004c9c:	002a      	movs	r2, r5
- 8004c9e:	3016      	adds	r0, #22
- 8004ca0:	b2c0      	uxtb	r0, r0
- 8004ca2:	0021      	movs	r1, r4
- 8004ca4:	f000 fe5c 	bl	8005960 <set_brightness_individually>
+ 8004c9c:	6830      	ldr	r0, [r6, #0]
+ 8004c9e:	002a      	movs	r2, r5
+ 8004ca0:	3016      	adds	r0, #22
+ 8004ca2:	b2c0      	uxtb	r0, r0
+ 8004ca4:	0021      	movs	r1, r4
+ 8004ca6:	f000 fe5b 	bl	8005960 <set_brightness_individually>
 			set_brightness_individually(board_i_player_4, BOARD, 0);
- 8004ca8:	4b09      	ldr	r3, [pc, #36]	@ (8004cd0 <handle_settings_animation_delay+0x1e4>)
- 8004caa:	002a      	movs	r2, r5
- 8004cac:	7818      	ldrb	r0, [r3, #0]
- 8004cae:	e7c2      	b.n	8004c36 <handle_settings_animation_delay+0x14a>
- 8004cb0:	20000124 	.word	0x20000124
- 8004cb4:	20000554 	.word	0x20000554
- 8004cb8:	20000550 	.word	0x20000550
- 8004cbc:	20000558 	.word	0x20000558
- 8004cc0:	000002ed 	.word	0x000002ed
+ 8004caa:	4b09      	ldr	r3, [pc, #36]	@ (8004cd0 <handle_settings_animation_delay+0x1e4>)
+ 8004cac:	002a      	movs	r2, r5
+ 8004cae:	7818      	ldrb	r0, [r3, #0]
+ 8004cb0:	e7c2      	b.n	8004c38 <handle_settings_animation_delay+0x14c>
+ 8004cb2:	46c0      	nop			@ (mov r8, r8)
+ 8004cb4:	20000124 	.word	0x20000124
+ 8004cb8:	20000554 	.word	0x20000554
+ 8004cbc:	20000550 	.word	0x20000550
+ 8004cc0:	20000558 	.word	0x20000558
  8004cc4:	2000054c 	.word	0x2000054c
  8004cc8:	20000544 	.word	0x20000544
  8004ccc:	20000548 	.word	0x20000548
@@ -11250,12 +11249,12 @@ void handle_settings_animation_delay(void){
 void handle_settings_animation_start_delay(void){
  8004cd4:	b5f0      	push	{r4, r5, r6, r7, lr}
 	if(game_info.game_stage != INITIALIZATION){
- 8004cd6:	4b61      	ldr	r3, [pc, #388]	@ (8004e5c <handle_settings_animation_start_delay+0x188>)
+ 8004cd6:	4b62      	ldr	r3, [pc, #392]	@ (8004e60 <handle_settings_animation_start_delay+0x18c>)
 void handle_settings_animation_start_delay(void){
  8004cd8:	b089      	sub	sp, #36	@ 0x24
 	if(game_info.game_stage != INITIALIZATION){
- 8004cda:	795b      	ldrb	r3, [r3, #5]
- 8004cdc:	2b00      	cmp	r3, #0
+ 8004cda:	795a      	ldrb	r2, [r3, #5]
+ 8004cdc:	2a00      	cmp	r2, #0
  8004cde:	d00e      	beq.n	8004cfe <handle_settings_animation_start_delay+0x2a>
 		turn_on_all_led(START, 0, 0, 0);
  8004ce0:	2300      	movs	r3, #0
@@ -11278,207 +11277,206 @@ void handle_settings_animation_start_delay(void){
 }
  8004cfa:	b009      	add	sp, #36	@ 0x24
  8004cfc:	bdf0      	pop	{r4, r5, r6, r7, pc}
-	is_select_triggered = miliseconds - last_toggle_select >=  750 ? false : true;
- 8004cfe:	001d      	movs	r5, r3
- 8004d00:	4a57      	ldr	r2, [pc, #348]	@ (8004e60 <handle_settings_animation_start_delay+0x18c>)
- 8004d02:	4c58      	ldr	r4, [pc, #352]	@ (8004e64 <handle_settings_animation_start_delay+0x190>)
- 8004d04:	6810      	ldr	r0, [r2, #0]
- 8004d06:	6824      	ldr	r4, [r4, #0]
- 8004d08:	4957      	ldr	r1, [pc, #348]	@ (8004e68 <handle_settings_animation_start_delay+0x194>)
- 8004d0a:	1b00      	subs	r0, r0, r4
- 8004d0c:	4c57      	ldr	r4, [pc, #348]	@ (8004e6c <handle_settings_animation_start_delay+0x198>)
- 8004d0e:	4284      	cmp	r4, r0
- 8004d10:	415d      	adcs	r5, r3
+	is_select_triggered = miliseconds - last_toggle_select >=  500 ? false : true;
+ 8004cfe:	4959      	ldr	r1, [pc, #356]	@ (8004e64 <handle_settings_animation_start_delay+0x190>)
+ 8004d00:	4c59      	ldr	r4, [pc, #356]	@ (8004e68 <handle_settings_animation_start_delay+0x194>)
+ 8004d02:	680b      	ldr	r3, [r1, #0]
+ 8004d04:	6824      	ldr	r4, [r4, #0]
+ 8004d06:	4859      	ldr	r0, [pc, #356]	@ (8004e6c <handle_settings_animation_start_delay+0x198>)
+ 8004d08:	1b1b      	subs	r3, r3, r4
+ 8004d0a:	24fa      	movs	r4, #250	@ 0xfa
+ 8004d0c:	0064      	lsls	r4, r4, #1
+ 8004d0e:	42a3      	cmp	r3, r4
+ 8004d10:	419b      	sbcs	r3, r3
+ 8004d12:	425b      	negs	r3, r3
+ 8004d14:	7003      	strb	r3, [r0, #0]
 	step1 = step1 > 3 ? 0 : step1;
- 8004d12:	4857      	ldr	r0, [pc, #348]	@ (8004e70 <handle_settings_animation_start_delay+0x19c>)
-	is_select_triggered = miliseconds - last_toggle_select >=  750 ? false : true;
- 8004d14:	700d      	strb	r5, [r1, #0]
-	step1 = step1 > 3 ? 0 : step1;
- 8004d16:	7801      	ldrb	r1, [r0, #0]
- 8004d18:	2903      	cmp	r1, #3
- 8004d1a:	d900      	bls.n	8004d1e <handle_settings_animation_start_delay+0x4a>
- 8004d1c:	0019      	movs	r1, r3
- 8004d1e:	7001      	strb	r1, [r0, #0]
+ 8004d16:	4856      	ldr	r0, [pc, #344]	@ (8004e70 <handle_settings_animation_start_delay+0x19c>)
+ 8004d18:	7803      	ldrb	r3, [r0, #0]
+ 8004d1a:	2b03      	cmp	r3, #3
+ 8004d1c:	d900      	bls.n	8004d20 <handle_settings_animation_start_delay+0x4c>
+ 8004d1e:	0013      	movs	r3, r2
+ 8004d20:	7003      	strb	r3, [r0, #0]
 	step2 = step2 > 3 ? 0 : step2;
- 8004d20:	4954      	ldr	r1, [pc, #336]	@ (8004e74 <handle_settings_animation_start_delay+0x1a0>)
- 8004d22:	7808      	ldrb	r0, [r1, #0]
- 8004d24:	2803      	cmp	r0, #3
- 8004d26:	d800      	bhi.n	8004d2a <handle_settings_animation_start_delay+0x56>
- 8004d28:	0003      	movs	r3, r0
- 8004d2a:	700b      	strb	r3, [r1, #0]
+ 8004d22:	4b54      	ldr	r3, [pc, #336]	@ (8004e74 <handle_settings_animation_start_delay+0x1a0>)
+ 8004d24:	7818      	ldrb	r0, [r3, #0]
+ 8004d26:	2803      	cmp	r0, #3
+ 8004d28:	d800      	bhi.n	8004d2c <handle_settings_animation_start_delay+0x58>
+ 8004d2a:	0002      	movs	r2, r0
+ 8004d2c:	701a      	strb	r2, [r3, #0]
 	if(miliseconds - last_toggle >= 120){
- 8004d2c:	4952      	ldr	r1, [pc, #328]	@ (8004e78 <handle_settings_animation_start_delay+0x1a4>)
- 8004d2e:	6813      	ldr	r3, [r2, #0]
- 8004d30:	6808      	ldr	r0, [r1, #0]
- 8004d32:	1a1b      	subs	r3, r3, r0
- 8004d34:	2b77      	cmp	r3, #119	@ 0x77
- 8004d36:	d9e0      	bls.n	8004cfa <handle_settings_animation_start_delay+0x26>
+ 8004d2e:	4a52      	ldr	r2, [pc, #328]	@ (8004e78 <handle_settings_animation_start_delay+0x1a4>)
+ 8004d30:	680b      	ldr	r3, [r1, #0]
+ 8004d32:	6810      	ldr	r0, [r2, #0]
+ 8004d34:	1a1b      	subs	r3, r3, r0
+ 8004d36:	2b77      	cmp	r3, #119	@ 0x77
+ 8004d38:	d9df      	bls.n	8004cfa <handle_settings_animation_start_delay+0x26>
 		last_toggle = miliseconds;
- 8004d38:	6813      	ldr	r3, [r2, #0]
- 8004d3a:	600b      	str	r3, [r1, #0]
+ 8004d3a:	680b      	ldr	r3, [r1, #0]
+ 8004d3c:	6013      	str	r3, [r2, #0]
 		for(int player = 0; player < 4; player++){
- 8004d3c:	4b4f      	ldr	r3, [pc, #316]	@ (8004e7c <handle_settings_animation_start_delay+0x1a8>)
- 8004d3e:	9304      	str	r3, [sp, #16]
- 8004d40:	2300      	movs	r3, #0
- 8004d42:	9303      	str	r3, [sp, #12]
+ 8004d3e:	4b4f      	ldr	r3, [pc, #316]	@ (8004e7c <handle_settings_animation_start_delay+0x1a8>)
+ 8004d40:	9304      	str	r3, [sp, #16]
+ 8004d42:	2300      	movs	r3, #0
+ 8004d44:	9303      	str	r3, [sp, #12]
 			if(previous_step1 >= 0){
- 8004d44:	4f4e      	ldr	r7, [pc, #312]	@ (8004e80 <handle_settings_animation_start_delay+0x1ac>)
- 8004d46:	683b      	ldr	r3, [r7, #0]
- 8004d48:	2b00      	cmp	r3, #0
- 8004d4a:	db15      	blt.n	8004d78 <handle_settings_animation_start_delay+0xa4>
+ 8004d46:	4f4e      	ldr	r7, [pc, #312]	@ (8004e80 <handle_settings_animation_start_delay+0x1ac>)
+ 8004d48:	683b      	ldr	r3, [r7, #0]
+ 8004d4a:	2b00      	cmp	r3, #0
+ 8004d4c:	db15      	blt.n	8004d7a <handle_settings_animation_start_delay+0xa6>
 				set_LED_color(colorIndex[player][previous_step1], START, 0, 0, 0);
- 8004d4c:	2500      	movs	r5, #0
- 8004d4e:	9a03      	ldr	r2, [sp, #12]
- 8004d50:	4e4c      	ldr	r6, [pc, #304]	@ (8004e84 <handle_settings_animation_start_delay+0x1b0>)
- 8004d52:	0094      	lsls	r4, r2, #2
- 8004d54:	18e3      	adds	r3, r4, r3
- 8004d56:	0098      	lsls	r0, r3, #2
- 8004d58:	002a      	movs	r2, r5
- 8004d5a:	002b      	movs	r3, r5
- 8004d5c:	2102      	movs	r1, #2
- 8004d5e:	5980      	ldr	r0, [r0, r6]
- 8004d60:	9500      	str	r5, [sp, #0]
- 8004d62:	f000 fc31 	bl	80055c8 <set_LED_color>
+ 8004d4e:	2500      	movs	r5, #0
+ 8004d50:	9a03      	ldr	r2, [sp, #12]
+ 8004d52:	4e4c      	ldr	r6, [pc, #304]	@ (8004e84 <handle_settings_animation_start_delay+0x1b0>)
+ 8004d54:	0094      	lsls	r4, r2, #2
+ 8004d56:	18e3      	adds	r3, r4, r3
+ 8004d58:	0098      	lsls	r0, r3, #2
+ 8004d5a:	002a      	movs	r2, r5
+ 8004d5c:	002b      	movs	r3, r5
+ 8004d5e:	2102      	movs	r1, #2
+ 8004d60:	5980      	ldr	r0, [r0, r6]
+ 8004d62:	9500      	str	r5, [sp, #0]
+ 8004d64:	f000 fc30 	bl	80055c8 <set_LED_color>
 				set_brightness_individually(colorIndex[player][previous_step1], START, 0);
- 8004d66:	683b      	ldr	r3, [r7, #0]
- 8004d68:	002a      	movs	r2, r5
- 8004d6a:	18e4      	adds	r4, r4, r3
- 8004d6c:	00a4      	lsls	r4, r4, #2
- 8004d6e:	59a0      	ldr	r0, [r4, r6]
- 8004d70:	2102      	movs	r1, #2
- 8004d72:	b2c0      	uxtb	r0, r0
- 8004d74:	f000 fdf4 	bl	8005960 <set_brightness_individually>
+ 8004d68:	683b      	ldr	r3, [r7, #0]
+ 8004d6a:	002a      	movs	r2, r5
+ 8004d6c:	18e4      	adds	r4, r4, r3
+ 8004d6e:	00a4      	lsls	r4, r4, #2
+ 8004d70:	59a0      	ldr	r0, [r4, r6]
+ 8004d72:	2102      	movs	r1, #2
+ 8004d74:	b2c0      	uxtb	r0, r0
+ 8004d76:	f000 fdf3 	bl	8005960 <set_brightness_individually>
 			if(previous_step2 >= 0 ){
- 8004d78:	4f43      	ldr	r7, [pc, #268]	@ (8004e88 <handle_settings_animation_start_delay+0x1b4>)
- 8004d7a:	683b      	ldr	r3, [r7, #0]
- 8004d7c:	2b00      	cmp	r3, #0
- 8004d7e:	db15      	blt.n	8004dac <handle_settings_animation_start_delay+0xd8>
+ 8004d7a:	4f43      	ldr	r7, [pc, #268]	@ (8004e88 <handle_settings_animation_start_delay+0x1b4>)
+ 8004d7c:	683b      	ldr	r3, [r7, #0]
+ 8004d7e:	2b00      	cmp	r3, #0
+ 8004d80:	db15      	blt.n	8004dae <handle_settings_animation_start_delay+0xda>
 				set_LED_color(colorIndex[player][previous_step2], START, 0, 0, 0);
- 8004d80:	2500      	movs	r5, #0
- 8004d82:	9a03      	ldr	r2, [sp, #12]
- 8004d84:	4e3f      	ldr	r6, [pc, #252]	@ (8004e84 <handle_settings_animation_start_delay+0x1b0>)
- 8004d86:	0094      	lsls	r4, r2, #2
- 8004d88:	18e3      	adds	r3, r4, r3
- 8004d8a:	0098      	lsls	r0, r3, #2
- 8004d8c:	002a      	movs	r2, r5
- 8004d8e:	002b      	movs	r3, r5
- 8004d90:	2102      	movs	r1, #2
- 8004d92:	5980      	ldr	r0, [r0, r6]
- 8004d94:	9500      	str	r5, [sp, #0]
- 8004d96:	f000 fc17 	bl	80055c8 <set_LED_color>
+ 8004d82:	2500      	movs	r5, #0
+ 8004d84:	9a03      	ldr	r2, [sp, #12]
+ 8004d86:	4e3f      	ldr	r6, [pc, #252]	@ (8004e84 <handle_settings_animation_start_delay+0x1b0>)
+ 8004d88:	0094      	lsls	r4, r2, #2
+ 8004d8a:	18e3      	adds	r3, r4, r3
+ 8004d8c:	0098      	lsls	r0, r3, #2
+ 8004d8e:	002a      	movs	r2, r5
+ 8004d90:	002b      	movs	r3, r5
+ 8004d92:	2102      	movs	r1, #2
+ 8004d94:	5980      	ldr	r0, [r0, r6]
+ 8004d96:	9500      	str	r5, [sp, #0]
+ 8004d98:	f000 fc16 	bl	80055c8 <set_LED_color>
 				set_brightness_individually(colorIndex[player][previous_step2], START, 0);
- 8004d9a:	683b      	ldr	r3, [r7, #0]
- 8004d9c:	002a      	movs	r2, r5
- 8004d9e:	18e4      	adds	r4, r4, r3
- 8004da0:	00a4      	lsls	r4, r4, #2
- 8004da2:	59a0      	ldr	r0, [r4, r6]
- 8004da4:	2102      	movs	r1, #2
- 8004da6:	b2c0      	uxtb	r0, r0
- 8004da8:	f000 fdda 	bl	8005960 <set_brightness_individually>
+ 8004d9c:	683b      	ldr	r3, [r7, #0]
+ 8004d9e:	002a      	movs	r2, r5
+ 8004da0:	18e4      	adds	r4, r4, r3
+ 8004da2:	00a4      	lsls	r4, r4, #2
+ 8004da4:	59a0      	ldr	r0, [r4, r6]
+ 8004da6:	2102      	movs	r1, #2
+ 8004da8:	b2c0      	uxtb	r0, r0
+ 8004daa:	f000 fdd9 	bl	8005960 <set_brightness_individually>
 			set_LED_color(colorIndex[player][step1], START, color[player][0], color[player][1], color[player][2]);
- 8004dac:	9b04      	ldr	r3, [sp, #16]
- 8004dae:	4f30      	ldr	r7, [pc, #192]	@ (8004e70 <handle_settings_animation_start_delay+0x19c>)
- 8004db0:	681b      	ldr	r3, [r3, #0]
- 8004db2:	7838      	ldrb	r0, [r7, #0]
- 8004db4:	b2db      	uxtb	r3, r3
- 8004db6:	9305      	str	r3, [sp, #20]
- 8004db8:	9b04      	ldr	r3, [sp, #16]
- 8004dba:	4c32      	ldr	r4, [pc, #200]	@ (8004e84 <handle_settings_animation_start_delay+0x1b0>)
- 8004dbc:	685b      	ldr	r3, [r3, #4]
- 8004dbe:	2102      	movs	r1, #2
- 8004dc0:	b2db      	uxtb	r3, r3
- 8004dc2:	9306      	str	r3, [sp, #24]
- 8004dc4:	9b04      	ldr	r3, [sp, #16]
- 8004dc6:	9a05      	ldr	r2, [sp, #20]
- 8004dc8:	689b      	ldr	r3, [r3, #8]
- 8004dca:	b2db      	uxtb	r3, r3
- 8004dcc:	9307      	str	r3, [sp, #28]
- 8004dce:	9b03      	ldr	r3, [sp, #12]
- 8004dd0:	009e      	lsls	r6, r3, #2
- 8004dd2:	1830      	adds	r0, r6, r0
- 8004dd4:	9b07      	ldr	r3, [sp, #28]
- 8004dd6:	0080      	lsls	r0, r0, #2
- 8004dd8:	5900      	ldr	r0, [r0, r4]
- 8004dda:	9300      	str	r3, [sp, #0]
- 8004ddc:	9b06      	ldr	r3, [sp, #24]
- 8004dde:	f000 fbf3 	bl	80055c8 <set_LED_color>
+ 8004dae:	9b04      	ldr	r3, [sp, #16]
+ 8004db0:	4f2f      	ldr	r7, [pc, #188]	@ (8004e70 <handle_settings_animation_start_delay+0x19c>)
+ 8004db2:	681b      	ldr	r3, [r3, #0]
+ 8004db4:	7838      	ldrb	r0, [r7, #0]
+ 8004db6:	b2db      	uxtb	r3, r3
+ 8004db8:	9305      	str	r3, [sp, #20]
+ 8004dba:	9b04      	ldr	r3, [sp, #16]
+ 8004dbc:	4c31      	ldr	r4, [pc, #196]	@ (8004e84 <handle_settings_animation_start_delay+0x1b0>)
+ 8004dbe:	685b      	ldr	r3, [r3, #4]
+ 8004dc0:	2102      	movs	r1, #2
+ 8004dc2:	b2db      	uxtb	r3, r3
+ 8004dc4:	9306      	str	r3, [sp, #24]
+ 8004dc6:	9b04      	ldr	r3, [sp, #16]
+ 8004dc8:	9a05      	ldr	r2, [sp, #20]
+ 8004dca:	689b      	ldr	r3, [r3, #8]
+ 8004dcc:	b2db      	uxtb	r3, r3
+ 8004dce:	9307      	str	r3, [sp, #28]
+ 8004dd0:	9b03      	ldr	r3, [sp, #12]
+ 8004dd2:	009e      	lsls	r6, r3, #2
+ 8004dd4:	1830      	adds	r0, r6, r0
+ 8004dd6:	9b07      	ldr	r3, [sp, #28]
+ 8004dd8:	0080      	lsls	r0, r0, #2
+ 8004dda:	5900      	ldr	r0, [r0, r4]
+ 8004ddc:	9300      	str	r3, [sp, #0]
+ 8004dde:	9b06      	ldr	r3, [sp, #24]
+ 8004de0:	f000 fbf2 	bl	80055c8 <set_LED_color>
 			set_LED_color(colorIndex[player][step2], START, color[player][0], color[player][1], color[player][2]);
- 8004de2:	4d24      	ldr	r5, [pc, #144]	@ (8004e74 <handle_settings_animation_start_delay+0x1a0>)
- 8004de4:	9b07      	ldr	r3, [sp, #28]
- 8004de6:	7828      	ldrb	r0, [r5, #0]
- 8004de8:	2102      	movs	r1, #2
- 8004dea:	1830      	adds	r0, r6, r0
- 8004dec:	0080      	lsls	r0, r0, #2
- 8004dee:	9a05      	ldr	r2, [sp, #20]
- 8004df0:	5900      	ldr	r0, [r0, r4]
- 8004df2:	9300      	str	r3, [sp, #0]
- 8004df4:	9b06      	ldr	r3, [sp, #24]
- 8004df6:	f000 fbe7 	bl	80055c8 <set_LED_color>
+ 8004de4:	4d23      	ldr	r5, [pc, #140]	@ (8004e74 <handle_settings_animation_start_delay+0x1a0>)
+ 8004de6:	9b07      	ldr	r3, [sp, #28]
+ 8004de8:	7828      	ldrb	r0, [r5, #0]
+ 8004dea:	2102      	movs	r1, #2
+ 8004dec:	1830      	adds	r0, r6, r0
+ 8004dee:	0080      	lsls	r0, r0, #2
+ 8004df0:	9a05      	ldr	r2, [sp, #20]
+ 8004df2:	5900      	ldr	r0, [r0, r4]
+ 8004df4:	9300      	str	r3, [sp, #0]
+ 8004df6:	9b06      	ldr	r3, [sp, #24]
+ 8004df8:	f000 fbe6 	bl	80055c8 <set_LED_color>
 			set_brightness_individually(colorIndex[player][step1], START, 200);
- 8004dfa:	783b      	ldrb	r3, [r7, #0]
- 8004dfc:	22c8      	movs	r2, #200	@ 0xc8
- 8004dfe:	18f3      	adds	r3, r6, r3
- 8004e00:	009b      	lsls	r3, r3, #2
- 8004e02:	5918      	ldr	r0, [r3, r4]
- 8004e04:	2102      	movs	r1, #2
- 8004e06:	b2c0      	uxtb	r0, r0
- 8004e08:	f000 fdaa 	bl	8005960 <set_brightness_individually>
+ 8004dfc:	783b      	ldrb	r3, [r7, #0]
+ 8004dfe:	22c8      	movs	r2, #200	@ 0xc8
+ 8004e00:	18f3      	adds	r3, r6, r3
+ 8004e02:	009b      	lsls	r3, r3, #2
+ 8004e04:	5918      	ldr	r0, [r3, r4]
+ 8004e06:	2102      	movs	r1, #2
+ 8004e08:	b2c0      	uxtb	r0, r0
+ 8004e0a:	f000 fda9 	bl	8005960 <set_brightness_individually>
 			set_brightness_individually(colorIndex[player][step2], START, 30);
- 8004e0c:	782b      	ldrb	r3, [r5, #0]
- 8004e0e:	221e      	movs	r2, #30
- 8004e10:	18f6      	adds	r6, r6, r3
- 8004e12:	00b6      	lsls	r6, r6, #2
- 8004e14:	5930      	ldr	r0, [r6, r4]
- 8004e16:	2102      	movs	r1, #2
- 8004e18:	b2c0      	uxtb	r0, r0
- 8004e1a:	f000 fda1 	bl	8005960 <set_brightness_individually>
+ 8004e0e:	782b      	ldrb	r3, [r5, #0]
+ 8004e10:	221e      	movs	r2, #30
+ 8004e12:	18f6      	adds	r6, r6, r3
+ 8004e14:	00b6      	lsls	r6, r6, #2
+ 8004e16:	5930      	ldr	r0, [r6, r4]
+ 8004e18:	2102      	movs	r1, #2
+ 8004e1a:	b2c0      	uxtb	r0, r0
+ 8004e1c:	f000 fda0 	bl	8005960 <set_brightness_individually>
 		for(int player = 0; player < 4; player++){
- 8004e1e:	9b03      	ldr	r3, [sp, #12]
- 8004e20:	3301      	adds	r3, #1
- 8004e22:	9303      	str	r3, [sp, #12]
- 8004e24:	9b04      	ldr	r3, [sp, #16]
- 8004e26:	330c      	adds	r3, #12
- 8004e28:	9304      	str	r3, [sp, #16]
- 8004e2a:	9b03      	ldr	r3, [sp, #12]
- 8004e2c:	2b04      	cmp	r3, #4
- 8004e2e:	d189      	bne.n	8004d44 <handle_settings_animation_start_delay+0x70>
+ 8004e20:	9b03      	ldr	r3, [sp, #12]
+ 8004e22:	3301      	adds	r3, #1
+ 8004e24:	9303      	str	r3, [sp, #12]
+ 8004e26:	9b04      	ldr	r3, [sp, #16]
+ 8004e28:	330c      	adds	r3, #12
+ 8004e2a:	9304      	str	r3, [sp, #16]
+ 8004e2c:	9b03      	ldr	r3, [sp, #12]
+ 8004e2e:	2b04      	cmp	r3, #4
+ 8004e30:	d189      	bne.n	8004d46 <handle_settings_animation_start_delay+0x72>
 		if(is_select_triggered){
- 8004e30:	4b0d      	ldr	r3, [pc, #52]	@ (8004e68 <handle_settings_animation_start_delay+0x194>)
- 8004e32:	781b      	ldrb	r3, [r3, #0]
- 8004e34:	2b00      	cmp	r3, #0
- 8004e36:	d003      	beq.n	8004e40 <handle_settings_animation_start_delay+0x16c>
+ 8004e32:	4b0e      	ldr	r3, [pc, #56]	@ (8004e6c <handle_settings_animation_start_delay+0x198>)
+ 8004e34:	781b      	ldrb	r3, [r3, #0]
+ 8004e36:	2b00      	cmp	r3, #0
+ 8004e38:	d003      	beq.n	8004e42 <handle_settings_animation_start_delay+0x16e>
 			set_brightness(START, 255);
- 8004e38:	21ff      	movs	r1, #255	@ 0xff
- 8004e3a:	2002      	movs	r0, #2
- 8004e3c:	f000 fd3e 	bl	80058bc <set_brightness>
+ 8004e3a:	21ff      	movs	r1, #255	@ 0xff
+ 8004e3c:	2002      	movs	r0, #2
+ 8004e3e:	f000 fd3d 	bl	80058bc <set_brightness>
 		send_data(START);
- 8004e40:	2002      	movs	r0, #2
- 8004e42:	f000 fcc5 	bl	80057d0 <send_data>
+ 8004e42:	2002      	movs	r0, #2
+ 8004e44:	f000 fcc4 	bl	80057d0 <send_data>
 		previous_step1 = step1;
- 8004e46:	783a      	ldrb	r2, [r7, #0]
- 8004e48:	4b0d      	ldr	r3, [pc, #52]	@ (8004e80 <handle_settings_animation_start_delay+0x1ac>)
+ 8004e48:	783a      	ldrb	r2, [r7, #0]
+ 8004e4a:	4b0d      	ldr	r3, [pc, #52]	@ (8004e80 <handle_settings_animation_start_delay+0x1ac>)
 		previous_step2 = step2;
- 8004e4a:	490f      	ldr	r1, [pc, #60]	@ (8004e88 <handle_settings_animation_start_delay+0x1b4>)
+ 8004e4c:	490e      	ldr	r1, [pc, #56]	@ (8004e88 <handle_settings_animation_start_delay+0x1b4>)
 		previous_step1 = step1;
- 8004e4c:	601a      	str	r2, [r3, #0]
+ 8004e4e:	601a      	str	r2, [r3, #0]
 		previous_step2 = step2;
- 8004e4e:	782b      	ldrb	r3, [r5, #0]
+ 8004e50:	782b      	ldrb	r3, [r5, #0]
 		step1++;
- 8004e50:	3201      	adds	r2, #1
+ 8004e52:	3201      	adds	r2, #1
 		previous_step2 = step2;
- 8004e52:	600b      	str	r3, [r1, #0]
+ 8004e54:	600b      	str	r3, [r1, #0]
 		step2++;
- 8004e54:	3301      	adds	r3, #1
+ 8004e56:	3301      	adds	r3, #1
 		step1++;
- 8004e56:	703a      	strb	r2, [r7, #0]
+ 8004e58:	703a      	strb	r2, [r7, #0]
 		step2++;
- 8004e58:	702b      	strb	r3, [r5, #0]
- 8004e5a:	e74e      	b.n	8004cfa <handle_settings_animation_start_delay+0x26>
- 8004e5c:	20000124 	.word	0x20000124
- 8004e60:	20000550 	.word	0x20000550
- 8004e64:	20000558 	.word	0x20000558
- 8004e68:	20000554 	.word	0x20000554
- 8004e6c:	000002ed 	.word	0x000002ed
+ 8004e5a:	702b      	strb	r3, [r5, #0]
+ 8004e5c:	e74d      	b.n	8004cfa <handle_settings_animation_start_delay+0x26>
+ 8004e5e:	46c0      	nop			@ (mov r8, r8)
+ 8004e60:	20000124 	.word	0x20000124
+ 8004e64:	20000550 	.word	0x20000550
+ 8004e68:	20000558 	.word	0x20000558
+ 8004e6c:	20000554 	.word	0x20000554
  8004e70:	20000540 	.word	0x20000540
  8004e74:	2000001c 	.word	0x2000001c
  8004e78:	2000053c 	.word	0x2000053c
@@ -11492,12 +11490,12 @@ void handle_settings_animation_start_delay(void){
 void handle_settings_animation_end_delay(void){
  8004e8c:	b5f0      	push	{r4, r5, r6, r7, lr}
 	if(game_info.game_stage != INITIALIZATION){
- 8004e8e:	4b61      	ldr	r3, [pc, #388]	@ (8005014 <handle_settings_animation_end_delay+0x188>)
+ 8004e8e:	4b62      	ldr	r3, [pc, #392]	@ (8005018 <handle_settings_animation_end_delay+0x18c>)
 void handle_settings_animation_end_delay(void){
  8004e90:	b089      	sub	sp, #36	@ 0x24
 	if(game_info.game_stage != INITIALIZATION){
- 8004e92:	795b      	ldrb	r3, [r3, #5]
- 8004e94:	2b00      	cmp	r3, #0
+ 8004e92:	795a      	ldrb	r2, [r3, #5]
+ 8004e94:	2a00      	cmp	r2, #0
  8004e96:	d00e      	beq.n	8004eb6 <handle_settings_animation_end_delay+0x2a>
 		turn_on_all_led(END, 0, 0, 0);
  8004e98:	2300      	movs	r3, #0
@@ -11520,207 +11518,206 @@ void handle_settings_animation_end_delay(void){
 }
  8004eb2:	b009      	add	sp, #36	@ 0x24
  8004eb4:	bdf0      	pop	{r4, r5, r6, r7, pc}
-	is_select_triggered = miliseconds - last_toggle_select >=  750 ? false : true;
- 8004eb6:	001d      	movs	r5, r3
- 8004eb8:	4a57      	ldr	r2, [pc, #348]	@ (8005018 <handle_settings_animation_end_delay+0x18c>)
- 8004eba:	4c58      	ldr	r4, [pc, #352]	@ (800501c <handle_settings_animation_end_delay+0x190>)
- 8004ebc:	6810      	ldr	r0, [r2, #0]
- 8004ebe:	6824      	ldr	r4, [r4, #0]
- 8004ec0:	4957      	ldr	r1, [pc, #348]	@ (8005020 <handle_settings_animation_end_delay+0x194>)
- 8004ec2:	1b00      	subs	r0, r0, r4
- 8004ec4:	4c57      	ldr	r4, [pc, #348]	@ (8005024 <handle_settings_animation_end_delay+0x198>)
- 8004ec6:	4284      	cmp	r4, r0
- 8004ec8:	415d      	adcs	r5, r3
+	is_select_triggered = miliseconds - last_toggle_select >=  500 ? false : true;
+ 8004eb6:	4959      	ldr	r1, [pc, #356]	@ (800501c <handle_settings_animation_end_delay+0x190>)
+ 8004eb8:	4c59      	ldr	r4, [pc, #356]	@ (8005020 <handle_settings_animation_end_delay+0x194>)
+ 8004eba:	680b      	ldr	r3, [r1, #0]
+ 8004ebc:	6824      	ldr	r4, [r4, #0]
+ 8004ebe:	4859      	ldr	r0, [pc, #356]	@ (8005024 <handle_settings_animation_end_delay+0x198>)
+ 8004ec0:	1b1b      	subs	r3, r3, r4
+ 8004ec2:	24fa      	movs	r4, #250	@ 0xfa
+ 8004ec4:	0064      	lsls	r4, r4, #1
+ 8004ec6:	42a3      	cmp	r3, r4
+ 8004ec8:	419b      	sbcs	r3, r3
+ 8004eca:	425b      	negs	r3, r3
+ 8004ecc:	7003      	strb	r3, [r0, #0]
 	step1 = step1 > 3 ? 0 : step1;
- 8004eca:	4857      	ldr	r0, [pc, #348]	@ (8005028 <handle_settings_animation_end_delay+0x19c>)
-	is_select_triggered = miliseconds - last_toggle_select >=  750 ? false : true;
- 8004ecc:	700d      	strb	r5, [r1, #0]
-	step1 = step1 > 3 ? 0 : step1;
- 8004ece:	7801      	ldrb	r1, [r0, #0]
- 8004ed0:	2903      	cmp	r1, #3
- 8004ed2:	d900      	bls.n	8004ed6 <handle_settings_animation_end_delay+0x4a>
- 8004ed4:	0019      	movs	r1, r3
- 8004ed6:	7001      	strb	r1, [r0, #0]
+ 8004ece:	4856      	ldr	r0, [pc, #344]	@ (8005028 <handle_settings_animation_end_delay+0x19c>)
+ 8004ed0:	7803      	ldrb	r3, [r0, #0]
+ 8004ed2:	2b03      	cmp	r3, #3
+ 8004ed4:	d900      	bls.n	8004ed8 <handle_settings_animation_end_delay+0x4c>
+ 8004ed6:	0013      	movs	r3, r2
+ 8004ed8:	7003      	strb	r3, [r0, #0]
 	step2 = step2 > 3 ? 0 : step2;
- 8004ed8:	4954      	ldr	r1, [pc, #336]	@ (800502c <handle_settings_animation_end_delay+0x1a0>)
- 8004eda:	7808      	ldrb	r0, [r1, #0]
- 8004edc:	2803      	cmp	r0, #3
- 8004ede:	d800      	bhi.n	8004ee2 <handle_settings_animation_end_delay+0x56>
- 8004ee0:	0003      	movs	r3, r0
- 8004ee2:	700b      	strb	r3, [r1, #0]
+ 8004eda:	4b54      	ldr	r3, [pc, #336]	@ (800502c <handle_settings_animation_end_delay+0x1a0>)
+ 8004edc:	7818      	ldrb	r0, [r3, #0]
+ 8004ede:	2803      	cmp	r0, #3
+ 8004ee0:	d800      	bhi.n	8004ee4 <handle_settings_animation_end_delay+0x58>
+ 8004ee2:	0002      	movs	r2, r0
+ 8004ee4:	701a      	strb	r2, [r3, #0]
 	if(miliseconds - last_toggle_end >= 120){
- 8004ee4:	4952      	ldr	r1, [pc, #328]	@ (8005030 <handle_settings_animation_end_delay+0x1a4>)
- 8004ee6:	6813      	ldr	r3, [r2, #0]
- 8004ee8:	6808      	ldr	r0, [r1, #0]
- 8004eea:	1a1b      	subs	r3, r3, r0
- 8004eec:	2b77      	cmp	r3, #119	@ 0x77
- 8004eee:	d9e0      	bls.n	8004eb2 <handle_settings_animation_end_delay+0x26>
+ 8004ee6:	4a52      	ldr	r2, [pc, #328]	@ (8005030 <handle_settings_animation_end_delay+0x1a4>)
+ 8004ee8:	680b      	ldr	r3, [r1, #0]
+ 8004eea:	6810      	ldr	r0, [r2, #0]
+ 8004eec:	1a1b      	subs	r3, r3, r0
+ 8004eee:	2b77      	cmp	r3, #119	@ 0x77
+ 8004ef0:	d9df      	bls.n	8004eb2 <handle_settings_animation_end_delay+0x26>
 		last_toggle_end = miliseconds;
- 8004ef0:	6813      	ldr	r3, [r2, #0]
- 8004ef2:	600b      	str	r3, [r1, #0]
+ 8004ef2:	680b      	ldr	r3, [r1, #0]
+ 8004ef4:	6013      	str	r3, [r2, #0]
 		for(int player = 0; player < 4; player++){
- 8004ef4:	4b4f      	ldr	r3, [pc, #316]	@ (8005034 <handle_settings_animation_end_delay+0x1a8>)
- 8004ef6:	9304      	str	r3, [sp, #16]
- 8004ef8:	2300      	movs	r3, #0
- 8004efa:	9303      	str	r3, [sp, #12]
+ 8004ef6:	4b4f      	ldr	r3, [pc, #316]	@ (8005034 <handle_settings_animation_end_delay+0x1a8>)
+ 8004ef8:	9304      	str	r3, [sp, #16]
+ 8004efa:	2300      	movs	r3, #0
+ 8004efc:	9303      	str	r3, [sp, #12]
 			if(previous_step1 >= 0){
- 8004efc:	4f4e      	ldr	r7, [pc, #312]	@ (8005038 <handle_settings_animation_end_delay+0x1ac>)
- 8004efe:	683b      	ldr	r3, [r7, #0]
- 8004f00:	2b00      	cmp	r3, #0
- 8004f02:	db15      	blt.n	8004f30 <handle_settings_animation_end_delay+0xa4>
+ 8004efe:	4f4e      	ldr	r7, [pc, #312]	@ (8005038 <handle_settings_animation_end_delay+0x1ac>)
+ 8004f00:	683b      	ldr	r3, [r7, #0]
+ 8004f02:	2b00      	cmp	r3, #0
+ 8004f04:	db15      	blt.n	8004f32 <handle_settings_animation_end_delay+0xa6>
 				set_LED_color(colorIndex[player][previous_step1], END, 0, 0, 0);
- 8004f04:	2500      	movs	r5, #0
- 8004f06:	9a03      	ldr	r2, [sp, #12]
- 8004f08:	4e4c      	ldr	r6, [pc, #304]	@ (800503c <handle_settings_animation_end_delay+0x1b0>)
- 8004f0a:	0094      	lsls	r4, r2, #2
- 8004f0c:	18e3      	adds	r3, r4, r3
- 8004f0e:	0098      	lsls	r0, r3, #2
- 8004f10:	002a      	movs	r2, r5
- 8004f12:	002b      	movs	r3, r5
- 8004f14:	2103      	movs	r1, #3
- 8004f16:	5980      	ldr	r0, [r0, r6]
- 8004f18:	9500      	str	r5, [sp, #0]
- 8004f1a:	f000 fb55 	bl	80055c8 <set_LED_color>
+ 8004f06:	2500      	movs	r5, #0
+ 8004f08:	9a03      	ldr	r2, [sp, #12]
+ 8004f0a:	4e4c      	ldr	r6, [pc, #304]	@ (800503c <handle_settings_animation_end_delay+0x1b0>)
+ 8004f0c:	0094      	lsls	r4, r2, #2
+ 8004f0e:	18e3      	adds	r3, r4, r3
+ 8004f10:	0098      	lsls	r0, r3, #2
+ 8004f12:	002a      	movs	r2, r5
+ 8004f14:	002b      	movs	r3, r5
+ 8004f16:	2103      	movs	r1, #3
+ 8004f18:	5980      	ldr	r0, [r0, r6]
+ 8004f1a:	9500      	str	r5, [sp, #0]
+ 8004f1c:	f000 fb54 	bl	80055c8 <set_LED_color>
 				set_brightness_individually(colorIndex[player][previous_step1], END, 0);
- 8004f1e:	683b      	ldr	r3, [r7, #0]
- 8004f20:	002a      	movs	r2, r5
- 8004f22:	18e4      	adds	r4, r4, r3
- 8004f24:	00a4      	lsls	r4, r4, #2
- 8004f26:	59a0      	ldr	r0, [r4, r6]
- 8004f28:	2103      	movs	r1, #3
- 8004f2a:	b2c0      	uxtb	r0, r0
- 8004f2c:	f000 fd18 	bl	8005960 <set_brightness_individually>
+ 8004f20:	683b      	ldr	r3, [r7, #0]
+ 8004f22:	002a      	movs	r2, r5
+ 8004f24:	18e4      	adds	r4, r4, r3
+ 8004f26:	00a4      	lsls	r4, r4, #2
+ 8004f28:	59a0      	ldr	r0, [r4, r6]
+ 8004f2a:	2103      	movs	r1, #3
+ 8004f2c:	b2c0      	uxtb	r0, r0
+ 8004f2e:	f000 fd17 	bl	8005960 <set_brightness_individually>
 			if(previous_step2 >= 0 ){
- 8004f30:	4f43      	ldr	r7, [pc, #268]	@ (8005040 <handle_settings_animation_end_delay+0x1b4>)
- 8004f32:	683b      	ldr	r3, [r7, #0]
- 8004f34:	2b00      	cmp	r3, #0
- 8004f36:	db15      	blt.n	8004f64 <handle_settings_animation_end_delay+0xd8>
+ 8004f32:	4f43      	ldr	r7, [pc, #268]	@ (8005040 <handle_settings_animation_end_delay+0x1b4>)
+ 8004f34:	683b      	ldr	r3, [r7, #0]
+ 8004f36:	2b00      	cmp	r3, #0
+ 8004f38:	db15      	blt.n	8004f66 <handle_settings_animation_end_delay+0xda>
 				set_LED_color(colorIndex[player][previous_step2], END, 0, 0, 0);
- 8004f38:	2500      	movs	r5, #0
- 8004f3a:	9a03      	ldr	r2, [sp, #12]
- 8004f3c:	4e3f      	ldr	r6, [pc, #252]	@ (800503c <handle_settings_animation_end_delay+0x1b0>)
- 8004f3e:	0094      	lsls	r4, r2, #2
- 8004f40:	18e3      	adds	r3, r4, r3
- 8004f42:	0098      	lsls	r0, r3, #2
- 8004f44:	002a      	movs	r2, r5
- 8004f46:	002b      	movs	r3, r5
- 8004f48:	2103      	movs	r1, #3
- 8004f4a:	5980      	ldr	r0, [r0, r6]
- 8004f4c:	9500      	str	r5, [sp, #0]
- 8004f4e:	f000 fb3b 	bl	80055c8 <set_LED_color>
+ 8004f3a:	2500      	movs	r5, #0
+ 8004f3c:	9a03      	ldr	r2, [sp, #12]
+ 8004f3e:	4e3f      	ldr	r6, [pc, #252]	@ (800503c <handle_settings_animation_end_delay+0x1b0>)
+ 8004f40:	0094      	lsls	r4, r2, #2
+ 8004f42:	18e3      	adds	r3, r4, r3
+ 8004f44:	0098      	lsls	r0, r3, #2
+ 8004f46:	002a      	movs	r2, r5
+ 8004f48:	002b      	movs	r3, r5
+ 8004f4a:	2103      	movs	r1, #3
+ 8004f4c:	5980      	ldr	r0, [r0, r6]
+ 8004f4e:	9500      	str	r5, [sp, #0]
+ 8004f50:	f000 fb3a 	bl	80055c8 <set_LED_color>
 				set_brightness_individually(colorIndex[player][previous_step2], END, 0);
- 8004f52:	683b      	ldr	r3, [r7, #0]
- 8004f54:	002a      	movs	r2, r5
- 8004f56:	18e4      	adds	r4, r4, r3
- 8004f58:	00a4      	lsls	r4, r4, #2
- 8004f5a:	59a0      	ldr	r0, [r4, r6]
- 8004f5c:	2103      	movs	r1, #3
- 8004f5e:	b2c0      	uxtb	r0, r0
- 8004f60:	f000 fcfe 	bl	8005960 <set_brightness_individually>
+ 8004f54:	683b      	ldr	r3, [r7, #0]
+ 8004f56:	002a      	movs	r2, r5
+ 8004f58:	18e4      	adds	r4, r4, r3
+ 8004f5a:	00a4      	lsls	r4, r4, #2
+ 8004f5c:	59a0      	ldr	r0, [r4, r6]
+ 8004f5e:	2103      	movs	r1, #3
+ 8004f60:	b2c0      	uxtb	r0, r0
+ 8004f62:	f000 fcfd 	bl	8005960 <set_brightness_individually>
 			set_LED_color(colorIndex[player][step1], END, color[player][0], color[player][1], color[player][2]);
- 8004f64:	9b04      	ldr	r3, [sp, #16]
- 8004f66:	4f30      	ldr	r7, [pc, #192]	@ (8005028 <handle_settings_animation_end_delay+0x19c>)
- 8004f68:	681b      	ldr	r3, [r3, #0]
- 8004f6a:	7838      	ldrb	r0, [r7, #0]
- 8004f6c:	b2db      	uxtb	r3, r3
- 8004f6e:	9305      	str	r3, [sp, #20]
- 8004f70:	9b04      	ldr	r3, [sp, #16]
- 8004f72:	4c32      	ldr	r4, [pc, #200]	@ (800503c <handle_settings_animation_end_delay+0x1b0>)
- 8004f74:	685b      	ldr	r3, [r3, #4]
- 8004f76:	2103      	movs	r1, #3
- 8004f78:	b2db      	uxtb	r3, r3
- 8004f7a:	9306      	str	r3, [sp, #24]
- 8004f7c:	9b04      	ldr	r3, [sp, #16]
- 8004f7e:	9a05      	ldr	r2, [sp, #20]
- 8004f80:	689b      	ldr	r3, [r3, #8]
- 8004f82:	b2db      	uxtb	r3, r3
- 8004f84:	9307      	str	r3, [sp, #28]
- 8004f86:	9b03      	ldr	r3, [sp, #12]
- 8004f88:	009e      	lsls	r6, r3, #2
- 8004f8a:	1830      	adds	r0, r6, r0
- 8004f8c:	9b07      	ldr	r3, [sp, #28]
- 8004f8e:	0080      	lsls	r0, r0, #2
- 8004f90:	5900      	ldr	r0, [r0, r4]
- 8004f92:	9300      	str	r3, [sp, #0]
- 8004f94:	9b06      	ldr	r3, [sp, #24]
- 8004f96:	f000 fb17 	bl	80055c8 <set_LED_color>
+ 8004f66:	9b04      	ldr	r3, [sp, #16]
+ 8004f68:	4f2f      	ldr	r7, [pc, #188]	@ (8005028 <handle_settings_animation_end_delay+0x19c>)
+ 8004f6a:	681b      	ldr	r3, [r3, #0]
+ 8004f6c:	7838      	ldrb	r0, [r7, #0]
+ 8004f6e:	b2db      	uxtb	r3, r3
+ 8004f70:	9305      	str	r3, [sp, #20]
+ 8004f72:	9b04      	ldr	r3, [sp, #16]
+ 8004f74:	4c31      	ldr	r4, [pc, #196]	@ (800503c <handle_settings_animation_end_delay+0x1b0>)
+ 8004f76:	685b      	ldr	r3, [r3, #4]
+ 8004f78:	2103      	movs	r1, #3
+ 8004f7a:	b2db      	uxtb	r3, r3
+ 8004f7c:	9306      	str	r3, [sp, #24]
+ 8004f7e:	9b04      	ldr	r3, [sp, #16]
+ 8004f80:	9a05      	ldr	r2, [sp, #20]
+ 8004f82:	689b      	ldr	r3, [r3, #8]
+ 8004f84:	b2db      	uxtb	r3, r3
+ 8004f86:	9307      	str	r3, [sp, #28]
+ 8004f88:	9b03      	ldr	r3, [sp, #12]
+ 8004f8a:	009e      	lsls	r6, r3, #2
+ 8004f8c:	1830      	adds	r0, r6, r0
+ 8004f8e:	9b07      	ldr	r3, [sp, #28]
+ 8004f90:	0080      	lsls	r0, r0, #2
+ 8004f92:	5900      	ldr	r0, [r0, r4]
+ 8004f94:	9300      	str	r3, [sp, #0]
+ 8004f96:	9b06      	ldr	r3, [sp, #24]
+ 8004f98:	f000 fb16 	bl	80055c8 <set_LED_color>
 			set_LED_color(colorIndex[player][step2], END, color[player][0], color[player][1], color[player][2]);
- 8004f9a:	4d24      	ldr	r5, [pc, #144]	@ (800502c <handle_settings_animation_end_delay+0x1a0>)
- 8004f9c:	9b07      	ldr	r3, [sp, #28]
- 8004f9e:	7828      	ldrb	r0, [r5, #0]
- 8004fa0:	2103      	movs	r1, #3
- 8004fa2:	1830      	adds	r0, r6, r0
- 8004fa4:	0080      	lsls	r0, r0, #2
- 8004fa6:	9a05      	ldr	r2, [sp, #20]
- 8004fa8:	5900      	ldr	r0, [r0, r4]
- 8004faa:	9300      	str	r3, [sp, #0]
- 8004fac:	9b06      	ldr	r3, [sp, #24]
- 8004fae:	f000 fb0b 	bl	80055c8 <set_LED_color>
+ 8004f9c:	4d23      	ldr	r5, [pc, #140]	@ (800502c <handle_settings_animation_end_delay+0x1a0>)
+ 8004f9e:	9b07      	ldr	r3, [sp, #28]
+ 8004fa0:	7828      	ldrb	r0, [r5, #0]
+ 8004fa2:	2103      	movs	r1, #3
+ 8004fa4:	1830      	adds	r0, r6, r0
+ 8004fa6:	0080      	lsls	r0, r0, #2
+ 8004fa8:	9a05      	ldr	r2, [sp, #20]
+ 8004faa:	5900      	ldr	r0, [r0, r4]
+ 8004fac:	9300      	str	r3, [sp, #0]
+ 8004fae:	9b06      	ldr	r3, [sp, #24]
+ 8004fb0:	f000 fb0a 	bl	80055c8 <set_LED_color>
 			set_brightness_individually(colorIndex[player][step1], END, 200);
- 8004fb2:	783b      	ldrb	r3, [r7, #0]
- 8004fb4:	22c8      	movs	r2, #200	@ 0xc8
- 8004fb6:	18f3      	adds	r3, r6, r3
- 8004fb8:	009b      	lsls	r3, r3, #2
- 8004fba:	5918      	ldr	r0, [r3, r4]
- 8004fbc:	2103      	movs	r1, #3
- 8004fbe:	b2c0      	uxtb	r0, r0
- 8004fc0:	f000 fcce 	bl	8005960 <set_brightness_individually>
+ 8004fb4:	783b      	ldrb	r3, [r7, #0]
+ 8004fb6:	22c8      	movs	r2, #200	@ 0xc8
+ 8004fb8:	18f3      	adds	r3, r6, r3
+ 8004fba:	009b      	lsls	r3, r3, #2
+ 8004fbc:	5918      	ldr	r0, [r3, r4]
+ 8004fbe:	2103      	movs	r1, #3
+ 8004fc0:	b2c0      	uxtb	r0, r0
+ 8004fc2:	f000 fccd 	bl	8005960 <set_brightness_individually>
 			set_brightness_individually(colorIndex[player][step2], END, 30);
- 8004fc4:	782b      	ldrb	r3, [r5, #0]
- 8004fc6:	221e      	movs	r2, #30
- 8004fc8:	18f6      	adds	r6, r6, r3
- 8004fca:	00b6      	lsls	r6, r6, #2
- 8004fcc:	5930      	ldr	r0, [r6, r4]
- 8004fce:	2103      	movs	r1, #3
- 8004fd0:	b2c0      	uxtb	r0, r0
- 8004fd2:	f000 fcc5 	bl	8005960 <set_brightness_individually>
+ 8004fc6:	782b      	ldrb	r3, [r5, #0]
+ 8004fc8:	221e      	movs	r2, #30
+ 8004fca:	18f6      	adds	r6, r6, r3
+ 8004fcc:	00b6      	lsls	r6, r6, #2
+ 8004fce:	5930      	ldr	r0, [r6, r4]
+ 8004fd0:	2103      	movs	r1, #3
+ 8004fd2:	b2c0      	uxtb	r0, r0
+ 8004fd4:	f000 fcc4 	bl	8005960 <set_brightness_individually>
 		for(int player = 0; player < 4; player++){
- 8004fd6:	9b03      	ldr	r3, [sp, #12]
- 8004fd8:	3301      	adds	r3, #1
- 8004fda:	9303      	str	r3, [sp, #12]
- 8004fdc:	9b04      	ldr	r3, [sp, #16]
- 8004fde:	330c      	adds	r3, #12
- 8004fe0:	9304      	str	r3, [sp, #16]
- 8004fe2:	9b03      	ldr	r3, [sp, #12]
- 8004fe4:	2b04      	cmp	r3, #4
- 8004fe6:	d189      	bne.n	8004efc <handle_settings_animation_end_delay+0x70>
+ 8004fd8:	9b03      	ldr	r3, [sp, #12]
+ 8004fda:	3301      	adds	r3, #1
+ 8004fdc:	9303      	str	r3, [sp, #12]
+ 8004fde:	9b04      	ldr	r3, [sp, #16]
+ 8004fe0:	330c      	adds	r3, #12
+ 8004fe2:	9304      	str	r3, [sp, #16]
+ 8004fe4:	9b03      	ldr	r3, [sp, #12]
+ 8004fe6:	2b04      	cmp	r3, #4
+ 8004fe8:	d189      	bne.n	8004efe <handle_settings_animation_end_delay+0x72>
 		if(is_select_triggered){
- 8004fe8:	4b0d      	ldr	r3, [pc, #52]	@ (8005020 <handle_settings_animation_end_delay+0x194>)
- 8004fea:	781b      	ldrb	r3, [r3, #0]
- 8004fec:	2b00      	cmp	r3, #0
- 8004fee:	d003      	beq.n	8004ff8 <handle_settings_animation_end_delay+0x16c>
+ 8004fea:	4b0e      	ldr	r3, [pc, #56]	@ (8005024 <handle_settings_animation_end_delay+0x198>)
+ 8004fec:	781b      	ldrb	r3, [r3, #0]
+ 8004fee:	2b00      	cmp	r3, #0
+ 8004ff0:	d003      	beq.n	8004ffa <handle_settings_animation_end_delay+0x16e>
 			set_brightness(END, 255);
- 8004ff0:	21ff      	movs	r1, #255	@ 0xff
- 8004ff2:	2003      	movs	r0, #3
- 8004ff4:	f000 fc62 	bl	80058bc <set_brightness>
+ 8004ff2:	21ff      	movs	r1, #255	@ 0xff
+ 8004ff4:	2003      	movs	r0, #3
+ 8004ff6:	f000 fc61 	bl	80058bc <set_brightness>
 		send_data(END);
- 8004ff8:	2003      	movs	r0, #3
- 8004ffa:	f000 fbe9 	bl	80057d0 <send_data>
+ 8004ffa:	2003      	movs	r0, #3
+ 8004ffc:	f000 fbe8 	bl	80057d0 <send_data>
 			previous_step1 = step1;
- 8004ffe:	783a      	ldrb	r2, [r7, #0]
- 8005000:	4b0d      	ldr	r3, [pc, #52]	@ (8005038 <handle_settings_animation_end_delay+0x1ac>)
+ 8005000:	783a      	ldrb	r2, [r7, #0]
+ 8005002:	4b0d      	ldr	r3, [pc, #52]	@ (8005038 <handle_settings_animation_end_delay+0x1ac>)
 			previous_step2 = step2;
- 8005002:	490f      	ldr	r1, [pc, #60]	@ (8005040 <handle_settings_animation_end_delay+0x1b4>)
+ 8005004:	490e      	ldr	r1, [pc, #56]	@ (8005040 <handle_settings_animation_end_delay+0x1b4>)
 			previous_step1 = step1;
- 8005004:	601a      	str	r2, [r3, #0]
+ 8005006:	601a      	str	r2, [r3, #0]
 			previous_step2 = step2;
- 8005006:	782b      	ldrb	r3, [r5, #0]
+ 8005008:	782b      	ldrb	r3, [r5, #0]
 			step1++;
- 8005008:	3201      	adds	r2, #1
+ 800500a:	3201      	adds	r2, #1
 			previous_step2 = step2;
- 800500a:	600b      	str	r3, [r1, #0]
+ 800500c:	600b      	str	r3, [r1, #0]
 			step2++;
- 800500c:	3301      	adds	r3, #1
+ 800500e:	3301      	adds	r3, #1
 			step1++;
- 800500e:	703a      	strb	r2, [r7, #0]
+ 8005010:	703a      	strb	r2, [r7, #0]
 			step2++;
- 8005010:	702b      	strb	r3, [r5, #0]
- 8005012:	e74e      	b.n	8004eb2 <handle_settings_animation_end_delay+0x26>
- 8005014:	20000124 	.word	0x20000124
- 8005018:	20000550 	.word	0x20000550
- 800501c:	20000558 	.word	0x20000558
- 8005020:	20000554 	.word	0x20000554
- 8005024:	000002ed 	.word	0x000002ed
+ 8005012:	702b      	strb	r3, [r5, #0]
+ 8005014:	e74d      	b.n	8004eb2 <handle_settings_animation_end_delay+0x26>
+ 8005016:	46c0      	nop			@ (mov r8, r8)
+ 8005018:	20000124 	.word	0x20000124
+ 800501c:	20000550 	.word	0x20000550
+ 8005020:	20000558 	.word	0x20000558
+ 8005024:	20000554 	.word	0x20000554
  8005028:	20000538 	.word	0x20000538
  800502c:	20000010 	.word	0x20000010
  8005030:	20000560 	.word	0x20000560
@@ -28074,13 +28071,13 @@ void Screen2View::handleArrowAnimation(){
 	if(delay_event == TEXT_ANIMATION){
  800af08:	2b02      	cmp	r3, #2
  800af0a:	d1dd      	bne.n	800aec8 <_ZN11Screen2View20handleArrowAnimationEv+0x30>
-		if(tick - last_tick_event >= 45){
+		if(tick - last_tick_event >= 30){
  800af0c:	4b0b      	ldr	r3, [pc, #44]	@ (800af3c <_ZN11Screen2View20handleArrowAnimationEv+0xa4>)
  800af0e:	4a0c      	ldr	r2, [pc, #48]	@ (800af40 <_ZN11Screen2View20handleArrowAnimationEv+0xa8>)
  800af10:	58e3      	ldr	r3, [r4, r3]
  800af12:	58a2      	ldr	r2, [r4, r2]
  800af14:	1a9b      	subs	r3, r3, r2
- 800af16:	2b2c      	cmp	r3, #44	@ 0x2c
+ 800af16:	2b1d      	cmp	r3, #29
  800af18:	ddd6      	ble.n	800aec8 <_ZN11Screen2View20handleArrowAnimationEv+0x30>
 			switch(current_widget){
  800af1a:	4b0d      	ldr	r3, [pc, #52]	@ (800af50 <_ZN11Screen2View20handleArrowAnimationEv+0xb8>)

@@ -87,7 +87,7 @@ void handle_settings_animation_delay(void){
 	}
 
 	// If the flag is set to true the rest of this function wont execute -> it is set true after pressing center button on Screen2 and will be set to back false after 300 ms
-	is_select_triggered = miliseconds - last_toggle_select >=  750 ? false : true;
+	is_select_triggered = miliseconds - last_toggle_select >=  500 ? false : true;
 
 
 	static uint32_t last_toggle = 0;
@@ -149,7 +149,7 @@ void handle_settings_animation_start_delay(void){
 	}
 
 	// If the flag is set to true the rest of this function wont execute -> it is set true after pressing center button on Screen2 and will be set to back false after 300 ms
-	is_select_triggered = miliseconds - last_toggle_select >=  750 ? false : true;
+	is_select_triggered = miliseconds - last_toggle_select >=  500 ? false : true;
 
 	static uint8_t step1 = 0;
 	static uint8_t step2 = 1;
@@ -210,7 +210,7 @@ void handle_settings_animation_end_delay(void){
 	}
 
 	// If the flag is set to true the rest of this function wont execute -> it is set true after pressing center button on Screen2 and will be set to back false after 300 ms
-	is_select_triggered = miliseconds - last_toggle_select >=  750 ? false : true;
+	is_select_triggered = miliseconds - last_toggle_select >=  500 ? false : true;
 
 	static int colorIndex[4][4] = {{0,1,2,3},{4,5,6,7},{11,10,9,8},{15,14,13,12}};
 	static int color[4][3] =  {{255, 0, 0},{0, 0, 255},{255, 255, 0},{0, 255, 0}};

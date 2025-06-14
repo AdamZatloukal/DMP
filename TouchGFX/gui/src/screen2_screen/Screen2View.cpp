@@ -351,7 +351,7 @@ void Screen2View::handleArrowAnimation(){
 	}
 
 	if(delay_event == TEXT_ANIMATION){
-		if(tick - last_tick_event >= 45){
+		if(tick - last_tick_event >= 30){
 			switch(current_widget){
 				case NUMBER_OF_PLAYERS_TOTAL:
 					numberOfPlayersSetting1.showText();
