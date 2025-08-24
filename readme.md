@@ -1,7 +1,7 @@
 # Člověče, nezlob se!
 ### Interaktivní desková hra s možností hry s hráči řízenými algoritmem
 
-<video src='./Documentation/overview.mp4' width=180 />
+[![Přehled](https://raw.githubusercontent.com/AdamZatloukal/DMP/main/Documentation/untitled.png)](https://raw.githubusercontent.com/AdamZatloukal/DMP/main/Documentation/overview.mp4)
 
 #### Dokumentace k projektu se nachází [zde](./Documentation/Hra.pdf)
 
