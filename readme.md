@@ -7,8 +7,8 @@
 
 ### Vytvořeno ve spolupráci s:
 <p align="center">
-  <img src="Documentation/st-logo.png" alt="ST logo", width = 500, height = 250 />
-  <img src="Documentation/spseol-logo.png", alt = "SPSEOL logo"/)
+  <img src="Documentation/st-logo.png" alt="ST logo" />
+  <img src="Documentation/spseol-logo.png" alt = "SPSEOL logo"/>
 </p>
 
  ### ✔️3. Místo KK SOČ 
